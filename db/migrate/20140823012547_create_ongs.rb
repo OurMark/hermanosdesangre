@@ -13,9 +13,13 @@ class CreateOngs < ActiveRecord::Migration
       t.string :email
       t.string :website
       t.string :facebook
+      t.string :twitter
       t.string :national_network
       t.string :international_network
       t.string :comments
+      t.float :latitude
+      t.float :longitude
+      t.integer :ourmark_id
 
       t.timestamps
     end

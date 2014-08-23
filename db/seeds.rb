@@ -5,3 +5,26 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+f = File.open('bancos.csv', 'r')
+f.each_line do |l|
+  Ong.new(  name: l[],
+            street1: l[],
+            street2: l[],
+            city: l[],
+            state: l[],
+            country: l[],
+            zip: l[],
+            phone: l[],
+            email: l[],
+            website: l[],
+            facebook: l[],
+            twitter: l[],
+            national_network: l[],
+            international_network: l[],
+            comments: l[],
+            latitude: l[],
+            longitude: l[],
+            ourmark_id: l[]
+          )
+end
