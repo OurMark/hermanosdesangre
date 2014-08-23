@@ -30,12 +30,16 @@
                     </ul>
                 </li>
                 <% if current_user %>
-                    <li class="sobre-derecha"><%= link_to "BIENVENIDO #{current_user.first_name.upcase}", edit_user_registration_path %></li>
-                    <li class="sobre-derecha"><%= link_to "SALIR", destroy_user_session_path, :method => :delete %>
+                    <li class="sobre_derecha"><%= link_to "SALIR", destroy_user_session_path, :method => :delete %>
+                    <li class="sobre_derecha"><%= link_to "BIENVENIDO #{current_user.first_name}", edit_user_registration_path %></li>
                 <% else %>
                     <li class="sobre_derecha"><%= link_to "ENTRAR", user_session_path %></li>
                     <li class="sobre_derecha"><%= link_to "REGISTRARSE", new_user_registration_path %></li>
-                <% end %>
+                <% end %>    
+<li class="sobre_derecha"><span class='st_facebook_large' displayText='Facebook'></span>
+<span class='st_twitter_large' displayText='Tweet'></span>
+<span class='st_linkedin_large' displayText='LinkedIn'></span>
+<span class='st_pinterest_large' displayText='Pinterest'></span></li>
             </ul>
         </div>
     </div>
