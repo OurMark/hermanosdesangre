@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   end
   devise_for :users
 
+  get '/nosotros', to: 'static#about_us', as: 'about_us'
+
   root to: 'static#home'
 end

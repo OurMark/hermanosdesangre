@@ -1,40 +1,42 @@
 <div class="faldon_top_container">
-  <div class="faldon_top">
-    <div class="logo_top_container">
-      <%= link_to image_tag("logo.png"), root_path, alt: 'Hermanos de Sangre' %>
+    <div class="faldon_top">
+        <div class="logo_top_container">
+            <%= link_to image_tag("logo.png"), root_path, alt: 'Hermanos de Sangre' %>
+        </div>
+
+        <div class="textos_container">
+            <ul id="menu">
+                <li>
+                    <a href="#">DONANTES</a>
+
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">Información</a>
+                        </li>
+                        <li>
+                            <a href="#">Contacto</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">INFO</a>
+
+                    <ul class="sub-menu">
+                        <li>
+                            <%= link_to "NOSOTROS", about_us_path %>
+                        </li>
+                        <li>
+                            <a href="#">Campaña</a>
+                        </li>
+                    </ul>
+                </li>
+                <% if current_user %>
+                    <li class="sobre-derecha"><%= link_to "BIENVENIDO #{current_user.first_name.upcase}", edit_user_registration_path %></li>
+                    <li class="sobre-derecha"><%= link_to "SALIR", destroy_user_session_path, :method => :delete %>
+                <% else %>
+                    <li class="sobre_derecha"><%= link_to "ENTRAR", user_session_path %></li>
+                    <li class="sobre_derecha"><%= link_to "REGISTRARSE", new_user_registration_path %></li>
+                <% end %>
+            </ul>
+        </div>
     </div>
-
-    <div class="textos_container">
-      <ul id="menu">
-        <li>
-          <a href="#">Menu 1</a>
-        </li>
-        <li><a href="#">Menu 2</a>
-
-          <ul class="sub-menu">
-            <li>
-              <a href="#">Sub Menu 1</a>
-            </li>
-            <li>
-              <a href="#">Sub Menu 2</a>
-            </li>
-          </ul>
-        </li>
-        <li class="sobre_derecha"><a href="#">Menu 3</a>
-
-        </li>
-        <li class="sobre_derecha"><a href="#">Menu 4</a>
-
-          <ul class="sub-menu">
-            <li>
-              <a href="#">Sub Menu 1</a>
-            </li>
-            <li>
-              <a href="#">Sub Menu 2</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
 </div>

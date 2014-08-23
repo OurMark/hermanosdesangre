@@ -2,7 +2,7 @@ html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
+small, strike, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, li,
 fieldset, form, label, legend,
@@ -17,6 +17,7 @@ time, mark, audio, video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -70,9 +71,9 @@ table {
 
 .textos_container{
     position: relative;
-    width: 600px;
+    width: 645px;
     float: right;
-    margin-top: 45px;
+    margin-top: 44px;
 }
 
 .texto_faldon{
@@ -101,7 +102,7 @@ table {
     height: 316px;
     display: block;
     margin: 0 auto;
-    margin-top: 200px;
+    margin-top: 275px;
     float: right;
     margin-right: 55px;
 }
@@ -123,14 +124,14 @@ table {
 
 .text_home_container{
     position: relative;
-    font: 12px Arial;
+    font: italic 12px Arial;
     color: #000;
-    width: 300px;
+    width: 330px;
     height: auto;
     margin-bottom: 25px;
     text-align: justify;
     margin-left: 38px;
-    margin-top: 200px;
+    margin-top: 275px;
 }
 
 .video_container{
@@ -246,9 +247,17 @@ ul#menu li, ul#menu ul.sub-menu li {
     display: inline-block;
 }
 /*Link Appearance*/
-ul#menu li a, ul#menu li ul.sub-menu li a {
+ul#menu li ul.sub-menu li a {
     text-decoration: none;
+    color: #cb666a;
+    padding: 5px;
+    display:inline-block;
+    font: 14px Arial;
+}
+
+ul#menu li a{
     color: #fff;
+    text-decoration: none;
     padding: 5px;
     display:inline-block;
     font: 14px Arial;
@@ -261,7 +270,6 @@ ul#menu li {
 ul#menu li ul.sub-menu {
     display:none;
     position: absolute;
-    top: 30px;
     left: 0;
     width: 100px;
 }
@@ -278,5 +286,106 @@ ul,li{
 }
 
 ul.sub-menu li{
-    background: grey;
+    background: #fff;
+    width: 125px;
+    height: 25px;
+}
+
+/*-----------*/
+
+.h_container{
+    position: relative;
+    margin-bottom: 50px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+h1{
+    font: 30px Arial;
+    font-weight: normal;
+    color: #000;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.inputs_container{
+    position: relative;
+    width: 300px;
+    margin-left: 30px;
+}
+
+.inputs_container INPUT{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    border: solid 1px #000;
+    margin-bottom: 10px;
+    font-size: 1em;
+    padding-left: 15px;
+}
+
+.email_input{
+    width: 298px;
+    height: 30px;
+    border: solid 1px #000;
+    font-size: 17px;
+    margin-bottom: 20px;
+    font-family: Arial;
+    padding-left: 5px;
+}
+
+.titulo_ingresar{
+    position: relative;
+    width: 100%;
+    margin-top: 300px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.btn_ingresar{
+    position: relative;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 120px;
+}
+
+.infos_container{
+    position: relative;
+    width: 350px;
+    margin-left: 38px;
+    margin-top: 275px;
+}
+
+.col_texto{
+    position: relative;
+    float: left;
+    width: 140px;
+    height: auto;
+}
+
+.img_container{
+    position: relative;
+    float: right;
+    width: 160px;
+    height: auto;
+}
+
+.titulo_nosotros{
+    position: relative;
+    font: 14px Arial;
+}
+
+.descr_nosotros{
+    position: relative;
+    font: 11px Arial;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.logos_nosotros{
+    position: relative;
+    width: 350px;
+    height: auto;
 }
