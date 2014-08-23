@@ -7,6 +7,7 @@ class CreateChallenges < ActiveRecord::Migration
       t.boolean :active
       t.date :start
       t.date :end
+      t.date 
 
       t.timestamps
     end

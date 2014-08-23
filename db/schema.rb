@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140823024722) do
+ActiveRecord::Schema.define(version: 20140823173323) do
+
+  create_table "badges", force: true do |t|
+    t.string   "name"
+    t.string   "value"
+    t.string   "icon"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "badges_users", id: false, force: true do |t|
+    t.integer "user_id",  null: false
+    t.integer "badge_id", null: false
+  end
 
   create_table "bookings", force: true do |t|
     t.datetime "start_time"
@@ -21,6 +35,11 @@ ActiveRecord::Schema.define(version: 20140823024722) do
   end
 
   add_index "bookings", ["ong_id"], name: "index_bookings_on_ong_id"
+
+  create_table "bookings_users", id: false, force: true do |t|
+    t.integer "user_id",    null: false
+    t.integer "booking_id", null: false
+  end
 
   create_table "challenges", force: true do |t|
     t.integer  "ong_id"
