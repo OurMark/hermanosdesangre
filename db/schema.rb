@@ -11,7 +11,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140823002344) do
+ActiveRecord::Schema.define(version: 20140823020325) do
+
+  create_table "challenges", force: true do |t|
+    t.integer  "ong_id"
+    t.integer  "objective"
+    t.integer  "progress"
+    t.boolean  "active"
+    t.date     "start"
+    t.date     "end"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "challenges", ["ong_id"], name: "index_challenges_on_ong_id"
+
+  create_table "ongs", force: true do |t|
+    t.string   "name"
+    t.string   "street1"
+    t.string   "street2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
+    t.integer  "zip"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "website"
+    t.string   "facebook"
+    t.string   "national_network"
+    t.string   "international_network"
+    t.string   "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ongs_users", id: false, force: true do |t|
+    t.integer "user_id"
+    t.integer "ong_id"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -32,6 +69,9 @@ ActiveRecord::Schema.define(version: 20140823002344) do
     t.integer  "dni"
     t.string   "bloodtype"
     t.string   "gender"
+    t.string   "city"
+    t.string   "state"
+    t.string   "country"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

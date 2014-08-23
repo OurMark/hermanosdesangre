@@ -1,0 +1,53 @@
+<h1>Listing ongs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Street1</th>
+      <th>Street2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>Zip</th>
+      <th>Country</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Website</th>
+      <th>Facebook</th>
+      <th>National network</th>
+      <th>International network</th>
+      <th>Comments</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ongs.each do |ong| %>
+      <tr>
+        <td><%= ong.name %></td>
+        <td><%= ong.street1 %></td>
+        <td><%= ong.street2 %></td>
+        <td><%= ong.city %></td>
+        <td><%= ong.state %></td>
+        <td><%= ong.country %></td>
+        <td><%= ong.zip %></td>
+        <td><%= ong.country %></td>
+        <td><%= ong.phone %></td>
+        <td><%= ong.email %></td>
+        <td><%= ong.website %></td>
+        <td><%= ong.facebook %></td>
+        <td><%= ong.national_network %></td>
+        <td><%= ong.international_network %></td>
+        <td><%= ong.comments %></td>
+        <td><%= link_to 'Show', ong %></td>
+        <td><%= link_to 'Edit', edit_ong_path(ong) %></td>
+        <td><%= link_to 'Destroy', ong, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ong', new_ong_path %>
