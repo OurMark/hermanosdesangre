@@ -5,13 +5,13 @@ one:
   objective: 1
   progress: 1
   active: false
-  start: 2014-08-22
-  end: 2014-08-22
+  start: 2014-08-23
+  end: 2014-08-23
 
 two:
   ong_id: 
   objective: 1
   progress: 1
   active: false
-  start: 2014-08-22
-  end: 2014-08-22
+  start: 2014-08-23
+  end: 2014-08-23
