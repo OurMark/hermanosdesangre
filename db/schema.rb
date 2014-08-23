@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140823020325) do
+ActiveRecord::Schema.define(version: 20140823024722) do
+
+  create_table "bookings", force: true do |t|
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.integer  "length"
+    t.integer  "ong_id"
+  end
+
+  add_index "bookings", ["ong_id"], name: "index_bookings_on_ong_id"
 
   create_table "challenges", force: true do |t|
     t.integer  "ong_id"
@@ -48,6 +57,10 @@ ActiveRecord::Schema.define(version: 20140823020325) do
   create_table "ongs_users", id: false, force: true do |t|
     t.integer "user_id"
     t.integer "ong_id"
+  end
+
+  create_table "resources", force: true do |t|
+    t.string "name"
   end
 
   create_table "users", force: true do |t|

@@ -1,6 +1,6 @@
 class OngsController < ApplicationController
   before_filter :authenticate_user!, :except => [:show, :index]
-  before_action :set_ong, only: [:show, :edit, :update, :destroy]
+  before_action :set_ong, only: [:show]
 
   # GET /ongs
   # GET /ongs.json
@@ -15,7 +15,7 @@ class OngsController < ApplicationController
 
   # GET /ongs/new
   def new
-    @ong = Ong.new
+    @ong = current_user.ongs.new
   end
 
   # GET /ongs/1/edit
@@ -41,6 +41,7 @@ class OngsController < ApplicationController
   # PATCH/PUT /ongs/1
   # PATCH/PUT /ongs/1.json
   def update
+    @ong = current_user.ongs.find(params[:ong_id])
     respond_to do |format|
       if @ong.update(ong_params)
         format.html { redirect_to @ong, notice: 'Ong was successfully updated.' }
@@ -55,6 +56,7 @@ class OngsController < ApplicationController
   # DELETE /ongs/1
   # DELETE /ongs/1.json
   def destroy
+    @ong = current_user.ongs.find(params[:ong_id])
     @ong.destroy
     respond_to do |format|
       format.html { redirect_to ongs_url, notice: 'Ong was successfully destroyed.' }
@@ -65,7 +67,7 @@ class OngsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_ong
-      @ong = current_user.ongs.find(params[:id])
+      @ong = Ong.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
