@@ -39,14 +39,17 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-
+/*---------------*/
 .main_container{
     position: relative;
     width: 100%;
     height: auto;
+    min-height: 100%;
 }
 
+/*estos son los específicos de la cabecera------------------*/
 .faldon_top_container{
+    font-family: 'Oswald', sans-serif;
     position: relative;
     width: 100%;
     background: #000;
@@ -62,18 +65,19 @@ table {
 
 .logo_top_container{
     position: absolute;
-    top: 50%;
+    top: 10px;
     left: 0;
-    width: 136px;
-    height: 65px;
+    border-bottom: solid 1px #D35555;
+    -webkit-box-shadow: black 0px 0px 25px -5px;
+    box-shadow: black 0px 0px 25px -5px;
     z-index: 9999;
 }
 
 .textos_container{
     position: relative;
-    width: 645px;
+    width: 570px;
     float: right;
-    margin-top: 34px;
+    margin-top: 38px;
 }
 
 .texto_faldon{
@@ -81,161 +85,9 @@ table {
     display: block;
     float: left;
     margin-right: 20px;
-    font: 14px Arial;
     color: #fff;
     text-decoration: none;
 }
-
-.derecha{
-    float: right !important;
-}
-
-.content_container{
-    position: relative;
-    width: 100%;
-    height: 600px;
-}
-
-.boton_donar{
-    position: relative;
-    width: 282px;
-    height: 316px;
-    display: block;
-    margin: 0 auto;
-    margin-top: 275px;
-    float: right;
-    margin-right: 55px;
-}
-
-.columna{
-    position: relative;
-    float: left;
-    width: 50%;
-    height: 100%;
-}
-
-.col_izq{
-    background: #cb666a;
-}
-
-.col_der{
-    background: #fff;
-}
-
-.text_home_container{
-    position: relative;
-    font: italic 12px Arial;
-    color: #000;
-    width: 330px;
-    height: auto;
-    margin-bottom: 25px;
-    text-align: justify;
-    margin-left: 38px;
-    margin-top: 275px;
-}
-
-.video_container{
-    position: relative;
-    width: 300px;
-    height: 160px;
-    background: grey;
-    margin-left: 38px;
-}
-
-.barra_container{
-    position: absolute;
-    top: 55px;
-    left: 0;
-    right: 0;
-    margin: auto auto;
-    width: 800px;
-    height: 69px;
-    z-index: 999999;
-}
-
-.localidad{
-    position: relative;
-    width: 97%;
-    height: 14px;
-    font-family: Arial;
-    font-weight: normal;
-    font-size: 0.9em;
-    color: #FFF;
-    padding-left: 1%;
-    margin-bottom: 6px;
-}
-
-/*estos son los específicos de la barra--------------------*/
-
-.bar-main-container {
-    width: 800px;
-    height: 39px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    font-family: sans-serif;
-    font-weight: normal;
-    font-size: 0.8em;
-    color: #FFF;
-    text-align: center;
-}
-
-.wrap { padding: 0; }
-
-.bar-percentage {
-    float: left;
-    background: rgba(0,0,0,0.13);
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    padding: 9px 0px;
-    width: 0;
-    height: 0;
-    overflow: hidden;
-}
-
-.bar-container {
-    float: right;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    height: 37px;
-    background: #cb666a;
-    width: 100%;
-    overflow: hidden;
-    border: solid 1px #fff;
-    text-align: right;
-    line-height: 2.9;
-    color: #fff;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 1em;
-
-}
-
-.bar {
-    float: left;
-    background: #bf524d;
-    height: 100%;
-    -webkit-border-radius: 10px 0px 0px 10px;
-    -moz-border-radius: 10px 0px 0px 10px;
-    border-radius: 10px 0px 0px 10px;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    filter: alpha(opacity=100);
-    -moz-opacity: 1;
-    -khtml-opacity: 1;
-    opacity: 1;
-    border-radius: 8px;
-    color: #fff;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 1em;
-    line-height: 2.9;
-    text-align: center;
-}
-
-
-/*dropdown menu css----------------------*/
 
 /*Initialize*/
 ul#menu, ul#menu ul.sub-menu {
@@ -249,10 +101,10 @@ ul#menu li, ul#menu ul.sub-menu li {
 /*Link Appearance*/
 ul#menu li ul.sub-menu li a {
     text-decoration: none;
-    color: #cb666a;
+    /*p*/color: #D35555;
     padding: 5px;
     display:inline-block;
-    font: 14px Arial;
+    /*font: 14px Arial;*/
 }
 
 ul#menu li a{
@@ -260,7 +112,7 @@ ul#menu li a{
     text-decoration: none;
     padding: 5px;
     display:inline-block;
-    font: 14px Arial;
+    /*font: 14px Arial;*/
 }
 /*Make the parent of sub-menu relative*/
 ul#menu li {
@@ -293,21 +145,185 @@ ul.sub-menu li{
 
 /*-----------*/
 
-.h_container{
-    position: relative;
-    margin-bottom: 50px;
-    width: 100%;
-    height: auto;
-    text-align: center;
+.derecha{
+    float: right !important;
 }
 
-h1{
-    font: 30px Arial;
-    font-weight: normal;
+.content_container{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    min-height: 100%;
+}
+
+.boton_donar{
+    position: relative;
+    width: 282px;
+    height: 316px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 275px;
+    float: right;
+    margin-right: 55px;
+}
+
+.columna{
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.col_izq{
+    background: #F16B6B;
+}
+
+.col_der{
+    background: #FFF;
+}
+
+.text_home_container{
+    position: relative;
+    font-size: 13px;
+    font-family: Oswald, sans-serif;
+    font-weight: 300;
+    line-height: 1.3;
+    color: #000;
+    width: 330px;
+    height: auto;
+    margin-bottom: 25px;
+    text-align: justify;
+    margin-left: 38px;
+    margin-top: 275px;
+}
+
+.video_container{
+    position: relative;
+    width: 300px;
+    height: 160px;
+    background: grey;
+    margin-left: 38px;
+}
+
+.h_container{
+    position: absolute;
+    top: 55px;
+    left: 0;
+    right: 0;
+    margin: auto auto;
+    max-width: 800px;
+    width: auto;
+    height: 35px;
+    z-index: 15;
+    text-align: center;
+}
+.h_container h1{
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;  
     color: #000;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 35px;
+    background-color: whitesmoke;
+    display: inline-block;
 }
+
+/*estos son los específicos de la barra--------------------*/
+.campania{
+    width: 69%;
+    font-weight: 300;
+    font-size: 14px;
+    color: #FFF;
+    margin-left: 1%;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+.campania:before{ content: "Donantes en: "; font-weight:400;}
+
+.faltandias{
+    position: relative;
+    width: 29%;
+    font-size: 14px;
+    color: #F16B6B;
+    text-align: right;
+    margin-right: 1%;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+.faltandias:before{content: "faltan ";} 
+.faltandias:after{content: " días";}
+
+.bar-main-container {
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+    text-align: left;
+}
+
+.bar-container {
+    position: relative;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    height: 37px;
+    background: #cb666a;
+    width: 100%;
+    overflow: hidden;
+    border: solid 1px #fff;
+    color: #fff;
+}
+
+.bar, .registrados, .objetivo{ font-size: 20px; line-height: 2;}
+.bar {
+    float: left;
+    height: 100%;
+    position:relative;
+}
+.bar div {
+    background: #D35555;
+    height: 100%;
+    width: 100%
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-align: right;
+    -webkit-animation: ensanchar 3s;
+    animation: ensanchar 3s;
+}
+.bar div:after{
+  content: " ";
+  background: url('http://nicolasfigliozzi.com.ar/blodbrother/gotas.png') -23px 1px no-repeat;
+  display: inline-block;
+  width: 20px; height: 27px;
+  position:relative; top:2px;
+  margin: 0 10px;
+}
+
+.objetivo:before , .registrados:after{
+  font-size: 13px;
+  font-weight: 300;
+}
+.objetivo{
+  position: absolute;
+  right:6px;
+}
+
+.registrados{
+  position: absolute;
+  left:1px;
+  padding: 0 9px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #D35555;
+  height: 36px;
+}
+.registrados:after {content:" REGISTRADOS";}
+.objetivo:before {content:"OBJETIVO: ";}
+
+/*animación de barra*/
+@-webkit-@keyframes ensanchar{from {width:30%;} to {width:100%}}
+@keyframes ensanchar{from {width:1%;} to {width:100%}}
+
+/*-----------*/
 
 .inputs_container{
     position: relative;
