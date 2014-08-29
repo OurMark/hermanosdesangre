@@ -8,6 +8,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <div class="main_container">
@@ -16,8 +17,7 @@
     <div class="content_container">
 
     <%= yield %>
-
-
+    </div></div>
   </body>
   <%= render partial: 'layouts/script' %>
 </html>
