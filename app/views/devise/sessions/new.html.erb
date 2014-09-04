@@ -1,22 +1,22 @@
-<div class="columna col_izq">
-    <a class="boton_donar" href="quiero_donar.html" title="Quiero donar">
-        <%= image_tag "quierodonar_btn.png" %>
-    </a>
+<div class="h_container">
+  <h1>&nbsp;<strong>INGRESAR</strong>&nbsp;</h1>
 </div>
-<div class="columna col_der">
-  <div class="titulo_ingresar">INGRESAR</div>
-    <div class="inputs_container">
+<div class="col_der">
+  <div class="col_div">
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <%= f.email_field :email, autofocus: true, class: "email_input" %>
-
+        
         <%= f.password_field :password, autocomplete: "off", class: "email_input" %>
-
+        
         <% if devise_mapping.rememberable? -%>
         <%= f.check_box :remember_me %> <%= f.label :remember_me %>
         <% end -%>
-
+        
         <%= f.submit "Sign in", class: "btn_ingresar" %>
       <% end %>
-    </div>
   </div>
+</div>
+
+<div class="col_izq">
+  <%= render partial: 'shared/gota_donar' %> <!-- y acá vendría el botón gota, que tambien lo guardo en shared-->
 </div>
