@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe,
+﻿html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -136,75 +136,11 @@ ul.sub-menu li{
     width: 125px;
     height: 25px;
 }
-
 /*-----------*/
-
-.derecha{
-    float: right !important;
-}
-
 .content_container{
     position: relative;
     width: 100%;
 }
-
-.boton_donar{
-    position: relative;
-    width: 282px;
-    height: 316px;
-    display: block;
-    margin: 0 auto;
-    margin-top: 275px;
-    float: right;
-    margin-right: 55px;
-}
-.col_izq{
-    position: absolute;
-    width:50%; height:100%;
-    top: 0; left: 0;
-    background: #F16B6B;
-}
-.col_der{
-  background: #FFF;
-  min-height: 550px;
-  padding-left: 50%;
-}
-
-.col_texto{
-    position: relative;
-    float: left;
-    width: 140px;
-    height: auto;
-}
-
-.col_panel{
-  background: red;
-  max-width: 400px;
-  overflow: hidden;
-}
-
-.text_home_container{
-    font-size: 13px;
-    font-family: Oswald, sans-serif;
-    font-weight: 300;
-    line-height: 1.3;
-    color: #000;
-    width: 330px;
-    height: auto;
-    margin-bottom: 25px;
-    text-align: justify;
-    margin-left: 38px;
-    padding-top: 275px;
-}
-
-.video_container{
-    position: relative;
-    width: 300px;
-    height: 160px;
-    background: grey;
-    margin-left: 38px;
-}
-
 .h_container{
     position: absolute;
     top: 55px;
@@ -226,6 +162,51 @@ ul.sub-menu li{
     background-color: whitesmoke;
     display: inline-block;
 }
+.h_container~.col_der {padding-top: 110px;}
+
+.col_der{
+  background: #FFF;
+  min-height: 500px;
+  padding-left: 50%;
+}
+.col_izq{
+    position: absolute;
+    width:50%; height:100%;
+    top: 0; left: 0;
+    background: #F16B6B;
+}
+
+.col_izq .col_div {float: right;}
+.col_div{
+  max-width: 400px;
+  overflow: hidden;
+  font-family: Oswald, sans-serif;
+}
+.col_div p{
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.3;
+  text-align: justify;
+}
+.col_div .imagen{
+    position: relative;
+    float: right;
+    width: 160px;
+    height: auto;
+}
+.col_div p, .col_div iframe, .col_div>div, .col_div img {
+  margin: 0 35px 35px 35px;
+}
+.col_div h2 {
+  margin: 5px 35px;  
+}
+
+/* de la home*/
+.col_div.home {
+  padding-top: 150px;
+  padding-bottom: 35px;
+}
+/* de nosotros */
 
 /*estos son los específicos de la barra--------------------*/
 .campania{
@@ -325,6 +306,16 @@ ul.sub-menu li{
 
 /*-----------*/
 
+.boton_donar{
+    position: relative;
+    width: 282px;
+    height: 316px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 275px;
+    float: right;
+    margin-right: 55px;
+}
 .inputs_container{
     position: relative;
     width: 300px;
@@ -365,36 +356,4 @@ ul.sub-menu li{
     cursor: pointer;
     margin-top: 5px;
     margin-left: 120px;
-}
-
-.infos_container{
-    position: relative;
-    width: 350px;
-    margin-left: 38px;
-    margin-top: 275px;
-}
-
-.img_container{
-    position: relative;
-    float: right;
-    width: 160px;
-    height: auto;
-}
-
-.titulo_nosotros{
-    position: relative;
-    font: 14px Arial;
-}
-
-.descr_nosotros{
-    position: relative;
-    font: 11px Arial;
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
-
-.logos_nosotros{
-    position: relative;
-    width: 350px;
-    height: auto;
 }
