@@ -4,20 +4,22 @@
     <title>Hermanos de sangre</title>
     <meta http-equiv="content-language" content="es-AR" />
     <meta name="copyright" content="Copyright 2014" />
+    <meta name="description" content="Ayuda a difundir y culminar campañas de donacion de sangre en tu comunidad.">
+    <meta name="keywords" content="donar,sangre,donacion,argentina">
+    <meta name="author" content="Patricio Boyd">
     <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div class="main_container">
     <%= render partial: 'layouts/navbar' %>
-
-    <div class="content_container">
+    <div class="container">
 
     <%= yield %>
 
-
+    </div>
+    <%= render partial: 'layouts/footer' %>
   </body>
   <%= render partial: 'layouts/script' %>
 </html>

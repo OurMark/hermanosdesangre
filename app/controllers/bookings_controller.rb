@@ -1,6 +1,5 @@
 class BookingsController < ApplicationController
   respond_to :html, :xml, :json
-  
   before_action :find_ong
 
   def index

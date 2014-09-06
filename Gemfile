@@ -7,7 +7,9 @@ gem 'rails', '4.1.4'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails'
+gem 'autoprefixer-rails'
+gem 'bootstrap-sass', '~> 3.2.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -16,7 +18,6 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'bookable'
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -42,10 +43,11 @@ gem 'devise'
 # gem 'capistrano-rails', group: :development
 
 # Use debugger
-gem 'byebug', group: [:development, :test]
 
 group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
 
+gem 'byebug', group: [:development, :test]
+gem 'bookable'
