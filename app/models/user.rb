@@ -8,4 +8,5 @@ class User < ActiveRecord::Base
   has_many :challenges, through: :ongs
   has_and_belongs_to_many :bookings
   has_and_belongs_to_many :badges
+  validates_presence_of :first_name
 end
