@@ -4,13 +4,12 @@ module Bookable
   included do
     belongs_to :ong
 
-    validates :start_time, presence: true 
+    validates :start_time, presence: true
     validate :start_date_cannot_be_in_the_past
     validate :overlaps
 
     before_validation { |s| s.length = 1 }
     before_validation :calculate_end_time
-  
 
     scope :end_during, ->(new_start_time, new_end_time) do
       if (!new_start_time.nil?) && (!new_end_time.nil?)
@@ -33,7 +32,7 @@ module Bookable
         where('start_time > ? AND end_time < ?', new_start_time, new_end_time)
       else
         return nil
-      end 
+      end
     end
 
     scope :enveloping, ->(new_start_time, new_end_time) do
@@ -54,7 +53,7 @@ module Bookable
   end
 
   def overlaps
-    overlapping_bookings = [ 
+    overlapping_bookings = [
       ong.bookings.end_during(start_time, end_time),
       ong.bookings.start_during(start_time, end_time),
       ong.bookings.happening_during(start_time, end_time),
@@ -83,15 +82,15 @@ module Bookable
   end
 
 
-  def as_json(options = {})  
-   {  
-    :id => self.id,  
-    :start => self.start_time,  
-    :end => self.end_time + 60,  
-    :recurring => false, 
+  def as_json(options = {})
+   {
+    :id => self.id,
+    :start => self.start_time,
+    :end => self.end_time + 60,
+    :recurring => false,
     :allDay => false
-   }  
-  end  
+   }
+  end
 
   private
 
