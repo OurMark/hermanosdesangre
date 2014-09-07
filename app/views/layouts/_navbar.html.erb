@@ -33,11 +33,10 @@
       <div class="nav pull-right">
         <ul class="nav navbar-nav">
           <% if current_user %>
-            <li><%= link_to "BIENVENIDO #{current_user.first_name.upcase}", edit_user_registration_path %></li>
-            <li><%= link_to "SALIR", destroy_user_session_path, :method => :delete %></li>
+            <%= render partial: 'layouts/logged' %>
           <% else %>
-            <li><%= link_to "ENTRAR", user_session_path, class: "btn btn-default" %></li>
-            <li><%= link_to "REGISTRARSE", new_user_registration_path, class: "btn btn-default" %></li>
+            <li><%= link_to "ENTRAR", user_session_path %></li>
+            <li><%= link_to "REGISTRARSE", new_user_registration_path %></li>
           <% end %>
         </ul>
       </div>
