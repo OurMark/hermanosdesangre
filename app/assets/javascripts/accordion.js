@@ -35,7 +35,7 @@ Spry.Widget.Accordion = function(element, opts)
 {
 	this.element = this.getElement(element);
 	this.defaultPanel = 0;
-	this.hoverClass = "tituloSeleccionado";
+	this.hoverClass = "preguntaSeleccionada";
 	this.openClass = "pestaniaAbierta";
 	this.closedClass = "pestaniaCerrada";
 	this.focusedClass = "enlaMira";
