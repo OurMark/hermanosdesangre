@@ -1,4 +1,4 @@
-﻿html, body, div, span, applet, object, iframe,
+html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -24,9 +24,11 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+html,body { overflow-x:hidden;}
 body {
     line-height: 1;
     background-color:#D35555;
+    
 }
 blockquote, q {
     quotes: none;
@@ -44,10 +46,15 @@ table {
 /*estos son los específicos de la cabecera------------------*/
 .faldon_top_container{
     font-family: 'Oswald', sans-serif;
-    position: relative;
+    font-size: 14px;
+    position: fixed; z-index:2;
     width: 100%;
-    background: #000;
+    background: white;
+    background:rgba(255, 255, 255, 0.9);
     height: 70px;
+    border-bottom: 1px solid #D35555;
+    -webkit-box-shadow:inset 0 35px 35px -35px #699;
+    box-shadow:inset 0 35px 35px -35px #699;
 }
 
 .faldon_top{
@@ -59,8 +66,9 @@ table {
 
 .logo_top_container{
     position: absolute;
-    top: 10px;
-    left: 0;
+    top: 12px;
+    left: 4px;
+    background: #D35555;
     border-bottom: solid 1px #D35555;
     -webkit-box-shadow: black 0px 0px 25px -5px;
     box-shadow: black 0px 0px 25px -5px;
@@ -69,18 +77,10 @@ table {
 
 .textos_container{
     position: relative;
-    width: 570px;
+    width: 601px;
     float: right;
-    margin-top: 38px;
-}
-
-.texto_faldon{
-    position: relative;
-    display: block;
-    float: left;
-    margin-right: 20px;
-    color: #fff;
-    text-decoration: none;
+    margin-top: 34px;
+    padding-right: 4px;
 }
 
 /*Initialize*/
@@ -95,18 +95,23 @@ ul#menu li, ul#menu ul.sub-menu li {
 /*Link Appearance*/
 ul#menu li ul.sub-menu li a {
     text-decoration: none;
-    /*p*/color: #D35555;
+    color: #D35555;
     padding: 5px;
     display:inline-block;
-    /*font: 14px Arial;*/
 }
 
-ul#menu li a{
-    color: #fff;
+ul#menu li>a{
+    color: #F16B6B;
     text-decoration: none;
-    padding: 5px;
-    display:inline-block;
-    /*font: 14px Arial;*/
+    padding: 6px 9px;
+    display: inline-block;
+    border-right: 1px solid #D35555;
+}
+ul#menu li.sobre_derecha a:hover{
+  font-style: italic;
+}
+ul#menu li ul li a:hover{
+  font-weight: 700;
 }
 /*Make the parent of sub-menu relative*/
 ul#menu li {
@@ -122,35 +127,71 @@ ul#menu li ul.sub-menu {
 ul#menu li:hover ul.sub-menu {
     display:block;
 }
-
+ul#menu li ul.sub-menu li a {
+    border-right:none;
+}
 ul,li{
     z-index: 9999999999;
 }
-
-.sobre_derecha{
-    float: right;
-}
-
 ul.sub-menu li{
     background: #fff;
-    width: 125px;
+    width: 100px;
     height: 25px;
 }
-/*-----------*/
+.sobre_derecha{
+    float: right;
+    position:relative;
+    bottom: 4px;
+}
+.sobre_derecha>a{
+    background-color:#F16B6B;
+    color: white !important;
+    padding: 9px !important;
+    margin-left: 2px;
+}
+.sobre_derecha:nth-child(2n)>a{
+    background-color: whitesmoke;
+    color: #F16B6B !important;
+}
+.sobre_derecha>span {
+  position: relative;
+  top: 7px;
+  right: 32px;
+}
+.sobre_derecha>.HS_email {
+  background-color: whitesmoke;
+  background-image:url("http://w.sharethis.com/images/email_16.png");
+  background-repeat:no-repeat;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  display: inline-block;
+  top: 8px;
+  right: 12px;
+  position: absolute;
+  z-index: 10;
+  transition: width 500ms ease;
+} .HS_email:hover {width: 75px;}
+.HS_email a {
+  padding: 0 21px;
+  color: #F16B6B;
+}
+
+/*----general contenido de toda la app-------*/
 .content_container{
     position: relative;
     width: 100%;
+    border-top: solid 70px white;
 }
 .h_container{
     position: absolute;
-    top: 55px;
-    left: 0;
-    right: 0;
-    margin: auto auto;
+    top: 65px;
+    left: 50%;
+    margin-left: -400px;
     max-width: 800px;
-    width: auto;
+    width: 800px;
     height: 35px;
-    z-index: 15;
+    z-index: 1;
     text-align: center;
 }
 .h_container h1{
@@ -162,7 +203,7 @@ ul.sub-menu li{
     background-color: whitesmoke;
     display: inline-block;
 }
-.h_container~.col_der {padding-top: 110px;}
+.h_container~.col_der {padding-top: 120px;}
 
 .col_der{
   background: #FFF;
@@ -194,20 +235,82 @@ ul.sub-menu li{
     width: 160px;
     height: auto;
 }
-.col_div p, .col_div iframe, .col_div>div, .col_div img {
+.col_div p, .col_div iframe, .col_div form, .col_div img {
   margin: 0 35px 35px 35px;
 }
 .col_div h2 {
   margin: 5px 35px;  
 }
+/* formularios en una columna*/
+.col_div form INPUT{
+    margin-bottom: 10px;
+}
+.col_div form INPUT[type="password"],
+.col_div form INPUT[type="text"],
+.col_div form INPUT[type="email"]{
+    width: 315px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px dashed #D35555;
+    background-color: whitesmoke;
+    font-size: 17px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    transition: background 500ms ease;
+}
+.col_div form INPUT[type="password"]:focus,
+.col_div form INPUT[type="text"]:focus,
+.col_div form INPUT[type="email"]:focus{
+    background-color: #D35555;
+    color: white;
+    outline: none;
+}
+.col_div form INPUT[type="submit"]{
+    cursor: pointer;
+    float: right;
+}
+input:focus::-webkit-input-placeholder{ color: #fff; }
+input:focus::-moz-placeholder{ color: #fff; }
+input:focus:-ms-input-placeholder{ color: #fff; }
+input:focus:-moz-placeholder{ color: #fff; }
 
-/* de la home*/
+/* exclusivos de la home*/
 .col_div.home {
   padding-top: 150px;
   padding-bottom: 35px;
 }
-/* de nosotros */
+/* exclusivos de la pag. ENTRAR */
+.col_div.ingresar {
+  padding-top: 65px;
+}
+/* especificos de Info útil: */
+#preguntas>div {
+	margin: 0px;
+	padding: 0px;
+}
+.pregunta{
+  margin: 8px 35px;
+	cursor: pointer;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+}
+.respuesta {
+	overflow: auto;
+	padding: 0px; /* NO CAMBIaR EL PAddiNG! */
+}
 
+.enlaMira { outline: none;}
+.enlaMira .pregunta { color: whitesmoke; }
+.enlaMira .pestaniaAbierta .pregunta {color: black;}
+
+.preguntaSeleccionada,
+.enlaMira .preguntaSeleccionada {
+	color: #F16B6B;
+}
+.pestaniaAbierta .preguntaSeleccionada,
+.enlaMira .pestaniaAbierta .preguntaSeleccionada {
+	color: #D35555;
+}
 /*estos son los específicos de la barra--------------------*/
 .campania{
     width: 69%;
@@ -234,9 +337,10 @@ ul.sub-menu li{
 .faltandias:after{content: " días";}
 
 .bar-main-container {
-    width: 100%;
+    width: 99%;
     font-family: 'Oswald', sans-serif;
     text-align: left;
+    margin: 0 auto;
 }
 
 .bar-container {
@@ -304,56 +408,29 @@ ul.sub-menu li{
 @-webkit-@keyframes ensanchar{from {width:30%;} to {width:100%}}
 @keyframes ensanchar{from {width:1%;} to {width:100%}}
 
-/*-----------*/
-
-.boton_donar{
+/*----Slogan-------*/
+.slogan {width: 330px; height: 80px; position: relative; margin: 90px 35px;}
+.slogan p, .slogan h2, .slogan h3 {margin:0px; position: absolute; font-weight:bold; color:#D35555;}
+.slogan p {top:48px; left: 0; font-size: 20px;}
+.slogan p:first-child {top: 0; left: 0; font-size: 16px;}
+.slogan p:nth-child(2) {top: 18px; left: 50px; font-size: 28px;}
+.slogan h2 {top: 0; right:1px; font-size: 28px;}
+.slogan h3 {top:36px; right:0; font-size: 36px;}
+.slogan h3:hover, .slogan h2:hover {font-size: 39px; background:white;}
+/*----especificos de la gota-------*/
+.boton_donar, .boton_donar:visited{
     position: relative;
-    width: 282px;
-    height: 316px;
+    font-family: Oswald;
+    font-size: 28px;
+    font-weight: 700;
+    text-align:center;
+    color: #D35555;
+    width: 85px;
+    height: 65px;
+    padding: 112px 37px 50px 37px;
     display: block;
-    margin: 0 auto;
-    margin-top: 275px;
-    float: right;
-    margin-right: 55px;
-}
-.inputs_container{
-    position: relative;
-    width: 300px;
-    margin-left: 30px;
-}
-
-.inputs_container INPUT{
-    position: relative;
-    width: 100%;
-    height: 30px;
-    border: solid 1px #000;
-    margin-bottom: 10px;
-    font-size: 1em;
-    padding-left: 15px;
-}
-
-.email_input{
-    width: 298px;
-    height: 30px;
-    border: solid 1px #000;
-    font-size: 17px;
-    margin-bottom: 20px;
-    font-family: Arial;
-    padding-left: 5px;
-}
-
-.titulo_ingresar{
-    position: relative;
-    width: 100%;
-    margin-top: 300px;
-    margin-left: 30px;
-    margin-bottom: 30px;
-    font-weight: bold;
-}
-
-.btn_ingresar{
-    position: relative;
-    cursor: pointer;
-    margin-top: 5px;
-    margin-left: 120px;
+    margin-right: 120px; float:right;
+    margin-top: 270px;
+    background-image: url("http://nicolasfigliozzi.com.ar/blodbrother/quierodonar_btn.png");
+    background-repeat:no-repeat;
 }

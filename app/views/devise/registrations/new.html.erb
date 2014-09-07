@@ -1,9 +1,3 @@
-<div class="columna col_izq">
-    <a class="boton_donar" style="margin-top: 80px;" href="quiero_donar.html" title="Quiero donar">
-        <%= image_tag "quierodonar_btn.png" %>
-    </a>
-</div>
-
 <div class="columna col_der">
   <div class="titulo_ingresar" style="margin-top: 25px;">REGISTRARSE</div>
   <div class="inputs_container">
@@ -22,4 +16,8 @@
         <%= f.submit "Sign up" %>
       <% end %>
   </div>
+</div>
+
+<div class="col_izq">
+  <%= render partial: 'shared/gota_donar' %>
 </div>

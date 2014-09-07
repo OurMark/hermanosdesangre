@@ -1,4 +1,4 @@
-﻿<div class="faldon_top_container">
+<div class="faldon_top_container">
     <div class="faldon_top">
         <div class="logo_top_container">
             <%= link_to image_tag("logo.gif"), root_path, alt: 'Hermanos de Sangre' %>
@@ -11,10 +11,10 @@
 
                     <ul class="sub-menu">
                         <li>
-                            <%= link_to "Información", donantes_path %>
+                            <%= link_to "Información útil", donantes_path %>
                         </li>
                         <li>
-                            <%= link_to "Campaña", campania_path %>
+                            <%= link_to "Objetivo", objetivo_path %>
                         </li>
                     </ul>
                 </li>
@@ -22,10 +22,10 @@
 
                     <ul class="sub-menu">
                         <li>
-                            <%= link_to "NOSOTROS", nosotros_path %>
+                            <%= link_to "Nosotros", nosotros_path %>
                         </li>
                         <li>
-                            <a href="#">Contacto</a>
+                            <%= link_to "Campaña", campania_path %>
                         </li>
                     </ul>
                 </li>
@@ -35,11 +35,8 @@
                 <% else %>
                     <li class="sobre_derecha"><%= link_to "ENTRAR", user_session_path %></li>
                     <li class="sobre_derecha"><%= link_to "REGISTRARSE", new_user_registration_path %></li>
-                <% end %>    
-<li class="sobre_derecha"><span class='st_facebook_large' displayText='Facebook'></span>
-<span class='st_twitter_large' displayText='Tweet'></span>
-<span class='st_linkedin_large' displayText='LinkedIn'></span>
-<span class='st_pinterest_large' displayText='Pinterest'></span></li>
+                <% end %>
+                <li class="sobre_derecha"><span class='HS_email'><a href="mailto:mail@mail.com">contácto</a></span><span class='st_facebook'></span><span class='st_twitter'></span></li>
             </ul>
         </div>
     </div>
