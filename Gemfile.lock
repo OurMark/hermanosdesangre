@@ -143,7 +143,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bookable
-  bootstrap-sass (~> 3.2.0)
+  bootstrap-sass
   byebug
   coffee-rails (~> 4.0.0)
   devise
