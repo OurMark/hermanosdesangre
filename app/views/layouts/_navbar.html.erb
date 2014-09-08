@@ -4,7 +4,7 @@
             <%= link_to image_tag("logo.gif"), root_path, alt: 'Hermanos de Sangre' %>
         </div>
 
-        <div class="textos_container">
+        <div class="menus">
             <ul id="menu">
                 <li>
                     <a href="#">DONANTES</a>
@@ -29,15 +29,23 @@
                         </li>
                     </ul>
                 </li>
+            </ul>
+            <ul id="sobre_derecha">
+                <li><span class='HS_email'><a href="mailto:mail@mail.com">contacto</a></span><span class='st_facebook'></span><span class='st_twitter'></span></li>
                 <% if current_user %>
-                    <li class="sobre_derecha"><%= link_to "SALIR", destroy_user_session_path, :method => :delete %>
-                    <li class="sobre_derecha"><%= link_to "BIENVENIDO #{current_user.first_name}", edit_user_registration_path %></li>
+                    <li><%= link_to "SALIR", destroy_user_session_path, :method => :delete %>
+                    <li><%= link_to "#{current_user.first_name}", edit_user_registration_path %></li>
                 <% else %>
-                    <li class="sobre_derecha"><%= link_to "ENTRAR", user_session_path %></li>
-                    <li class="sobre_derecha"><%= link_to "REGISTRARSE", new_user_registration_path %></li>
+                    <li><%= link_to "REGISTRARSE", new_user_registration_path %></li>
+                    <li><%= link_to "ENTRAR", user_session_path %></li>
                 <% end %>
-                <li class="sobre_derecha"><span class='HS_email'><a href="mailto:mail@mail.com">contácto</a></span><span class='st_facebook'></span><span class='st_twitter'></span></li>
             </ul>
         </div>
+        <div class="abrir-menu"><div></div></div>
+        <script type="text/javascript">
+            $(".abrir-menu").click(function(){
+                $(".abrir-menu, .abrir-menu div, .menus").toggleClass("mAbierto");
+            });
+        </script>
     </div>
 </div>
