@@ -189,10 +189,11 @@ ul#sobre_derecha>li:last-child a{
     padding: 5px 10px 25px 10px;
     min-height: inherit;
 }
-.col_div.home {
+.col_div {
+    margin: 0 auto;
+}.col_div.home {
     padding-top: inherit;
     padding-bottom: inherit;
-    margin: 0 auto;
 }
 .col_div p, .col_div iframe, .col_div form, .col_div img {
 margin: 5px 0;
@@ -211,5 +212,38 @@ margin: 5px 0;
 }
 .campania {
     color: #d35555;
+}
+.col_div .imagen{
+    float: none;
+    width: 60%;
+    margin: 0 20% 12px 20%;
+}
+.col_div h2 {
+    margin-left: 0;
+    margin-right: 0;
+}
+.col_div form INPUT[type="password"], .col_div form INPUT[type="text"], .col_div form INPUT[type="email"]{
+    width:100%;  
+}
+.slogan {
+    margin: 25px auto;
+}   
+.pregunta {
+    margin: 8px 0px;
+}
+}
+@media (max-width: 365px) {
+.slogan{
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+.slogan p, .slogan h2, .slogan h3 {
+    position: relative;
+    display: inline-block;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
 }
 }
