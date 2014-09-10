@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="col-lg-6">
     <a class="boton_donar" href="quiero_donar.html" title="Quiero donar">
         <%= image_tag "quierodonar_btn.png" %>
@@ -13,12 +14,35 @@
         <%= f.password_field :password, placeholder: "PASSWORD", autocomplete: "off", class: "form-control" %>
       </div>
       <div class="form-group">
+=======
+<div class="h_container">
+  <h1>&nbsp;<strong>INGRESAR</strong>&nbsp;</h1>
+</div>
+<div class="col_der">
+  <div class="col_div ingresar">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%= f.email_field :email, autofocus: true %>
+        
+        <%= f.password_field :password, autocomplete: "off" %>
+        
+>>>>>>> 585a04953c3adce1472c84d04d61b14147642e56
         <% if devise_mapping.rememberable? -%>
           <%= f.check_box :remember_me %> <%= f.label :remember_me %>
         <% end -%>
+<<<<<<< HEAD
       </div>
 
         <%= f.submit "Sign in", class: "btn btn-lg btn-default" %>
       <% end %>
     </div>
+=======
+        
+        <%= f.submit "ingresar", class: "btn_ingresar" %>
+      <% end %>
+  </div>
+</div>
+
+<div class="col_izq">
+  <%= render partial: 'shared/gota_donar' %>
+>>>>>>> 585a04953c3adce1472c84d04d61b14147642e56
 </div>
