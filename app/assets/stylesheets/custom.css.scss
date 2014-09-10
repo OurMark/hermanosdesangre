@@ -28,7 +28,7 @@ html,body { overflow-x: hidden;}
 body {
     line-height: 1;
     background-color:#D35555;
-    
+
 }
 blockquote, q {
     quotes: none;
@@ -140,11 +140,11 @@ ul#sobre_derecha li a:hover{
   width: 16px;
   height: 16px;
   overflow: hidden;
-  right: 9px; 
+  right: 9px;
   position: absolute;
   z-index: 10;
   transition: width 500ms ease;
-} 
+}
 #sobre_derecha .HS_email:hover {width: 75px;}
 .HS_email a {
   padding: 0 21px;
@@ -170,7 +170,7 @@ ul#sobre_derecha li a:hover{
 }
 .h_container h1{
     font-family: 'Oswald', sans-serif;
-    font-size: 30px;  
+    font-size: 30px;
     color: #000;
     text-align: center;
     margin-bottom: 35px;
@@ -213,7 +213,7 @@ ul#sobre_derecha li a:hover{
   margin: 0 35px 35px 35px;
 }
 .col_div h2 {
-  margin: 5px 35px;  
+  margin: 5px 35px;
 }
 /* formularios en una columna*/
 .col_div form INPUT{
@@ -307,7 +307,7 @@ input:focus:-moz-placeholder{ color: #fff; }
     margin-bottom: 6px;
     display: inline-block;
 }
-.faltandias:before{content: "faltan ";} 
+.faltandias:before{content: "faltan ";}
 .faltandias:after{content: " días";}
 
 .bar-main-container {
@@ -339,7 +339,7 @@ input:focus:-moz-placeholder{ color: #fff; }
 .bar div {
     background: #D35555;
     height: 100%;
-    width: 100%
+    width: 100%;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -377,10 +377,6 @@ input:focus:-moz-placeholder{ color: #fff; }
 }
 .registrados:after {content:" REGISTRADOS";}
 .objetivo:before {content:"OBJETIVO: ";}
-
-/*animación de barra*/
-@-webkit-@keyframes ensanchar{from {width:30%;} to {width:100%}}
-@keyframes ensanchar{from {width:1%;} to {width:100%}}
 
 /*----Slogan-------*/
 .slogan {width: 330px; height: 80px; position: relative; margin: 90px 35px;}
