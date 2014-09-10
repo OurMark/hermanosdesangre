@@ -259,18 +259,18 @@ input:focus:-moz-placeholder{ color: #fff; }
 }
 /* especificos de Info útil: */
 #preguntas>div {
-	margin: 0px;
-	padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 .pregunta{
   margin: 8px 35px;
-	cursor: pointer;
-	-moz-user-select: none;
-	-khtml-user-select: none;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
 }
 .respuesta {
-	overflow: auto;
-	padding: 0px; /* NO CAMBIaR EL PAddiNG! */
+  overflow: auto;
+  padding: 0px; /* NO CAMBIaR EL PAddiNG! */
 }
 
 .enlaMira { outline: none;}
@@ -279,11 +279,11 @@ input:focus:-moz-placeholder{ color: #fff; }
 
 .preguntaSeleccionada,
 .enlaMira .preguntaSeleccionada {
-	color: #F16B6B;
+  color: #F16B6B;
 }
 .pestaniaAbierta .preguntaSeleccionada,
 .enlaMira .pestaniaAbierta .preguntaSeleccionada {
-	color: #D35555;
+  color: #D35555;
 }
 /*estos son los específicos de la barra--------------------*/
 .campania{

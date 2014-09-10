@@ -13,4 +13,10 @@ class StaticController < ApplicationController
 
   def campaign
   end
+
+  def objective
+  end
+
+  def donors
+  end
 end

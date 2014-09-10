@@ -85,7 +85,7 @@ ul#sobre_derecha>li:last-child a{
     display: inline-block;
     margin: 0;
     padding: 12px;
-    text-transform: uppercase;    
+    text-transform: uppercase;
 }
 .HS_email:hover {width: auto;}
 .HS_email a{padding: 0;}
@@ -95,7 +95,7 @@ ul#sobre_derecha>li:last-child a{
 /*-----botón abrir menú-------*/
 .abrir-menu {
     cursor: pointer;
-    height: 36px; 
+    height: 36px;
     width: 36px;
     position: absolute;
     right: 10px; bottom: 25px;
@@ -167,7 +167,7 @@ ul#sobre_derecha>li:last-child a{
 }
 
 /*----cuerpo de la página-----*/
-.content_container {    
+.content_container {
     border-top: none;
     background: white;
 }
@@ -223,11 +223,11 @@ margin: 5px 0;
     margin-right: 0;
 }
 .col_div form INPUT[type="password"], .col_div form INPUT[type="text"], .col_div form INPUT[type="email"]{
-    width:100%;  
+    width:100%;
 }
 .slogan {
     margin: 25px auto;
-}   
+}
 .pregunta {
     margin: 8px 0px;
 }
