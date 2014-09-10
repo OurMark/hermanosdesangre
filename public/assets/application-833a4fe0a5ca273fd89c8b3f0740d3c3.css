@@ -1,0 +1,1009 @@
+@charset "UTF-8";
+/* line 13, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 24, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 27, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+html, body {
+  overflow-x: hidden;
+}
+
+/* line 28, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+body {
+  line-height: 1;
+  background-color: #D35555;
+}
+
+/* line 33, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 37, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 41, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*estos son los específicos de la cabecera------------------*/
+/* line 47, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.faldon_top_container {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  background: white;
+  background: rgba(255, 255, 255, 0.9);
+  height: 70px;
+  border-bottom: 1px solid #D35555;
+  -webkit-box-shadow: inset 0 35px 35px -35px #699;
+  box-shadow: inset 0 35px 35px -35px #699;
+}
+
+/* line 59, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.faldon_top {
+  position: relative;
+  width: 800px;
+  height: 70px;
+  margin: 0 auto;
+}
+
+/* line 65, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.logo_top_container {
+  position: absolute;
+  top: 12px;
+  left: 4px;
+  background: #D35555;
+  border-bottom: solid 2px #D35555;
+  -webkit-box-shadow: black 0px 0px 25px -5px;
+  box-shadow: black 0px 0px 25px -5px;
+  z-index: 9999;
+}
+
+/*MENU*/
+/* line 77, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+ul#menu, ul.sub-menu, ul#sobre_derecha {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+}
+
+/* line 82, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+ul#menu {
+  left: 195px;
+  top: 34px;
+}
+
+/* line 82, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+ul#sobre_derecha {
+  right: 4px;
+  top: 30px;
+}
+
+/* line 84, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+ul#menu li, ul.sub-menu li, ul#sobre_derecha li {
+  list-style-type: none;
+  display: inline-block;
+  position: relative;
+}
+
+/*SUB MENU*/
+/* line 90, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+li ul.sub-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+}
+
+/* line 95, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+li:hover ul.sub-menu {
+  display: block;
+}
+
+/* line 99, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+ul.sub-menu li {
+  background: #fff;
+  width: 130px;
+  padding: 5px;
+}
+
+/*Links*/
+/* line 105, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+ul#menu > li > a, ul#sobre_derecha > li > a {
+  color: #F16B6B;
+  text-decoration: none;
+  padding: 6px 9px;
+  display: inline-block;
+  border-right: 1px solid #D35555;
+}
+
+/* line 112, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+ul.sub-menu li > a {
+  color: #D35555;
+  padding: 5px;
+}
+
+/* line 116, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+ul.sub-menu li > a:hover {
+  font-weight: 700;
+}
+
+/* line 119, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+ul#sobre_derecha li a:hover {
+  font-style: italic;
+}
+
+/*sobre derecha*/
+/* line 123, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+#sobre_derecha li > a {
+  padding: 9px !important;
+  background-color: whitesmoke;
+}
+
+/* line 127, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+#sobre_derecha li:last-child > a {
+  background-color: #F16B6B;
+  color: white;
+}
+
+/* line 131, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+#sobre_derecha li > span {
+  position: relative;
+  right: 28px;
+  bottom: 1px;
+}
+
+/* line 136, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+#sobre_derecha .HS_email {
+  background-color: whitesmoke;
+  background-image: url("http://w.sharethis.com/images/email_16.png");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  right: 9px;
+  position: absolute;
+  z-index: 10;
+  transition: width 500ms ease;
+}
+
+/* line 148, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+#sobre_derecha .HS_email:hover {
+  width: 75px;
+}
+
+/* line 149, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.HS_email a {
+  padding: 0 21px;
+  color: #F16B6B;
+}
+
+/*----general contenido de toda la app-------*/
+/* line 155, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.content_container {
+  position: relative;
+  width: 100%;
+  border-top: solid 70px white;
+}
+
+/* line 160, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.h_container {
+  position: absolute;
+  top: 65px;
+  left: 50%;
+  margin-left: -400px;
+  max-width: 800px;
+  width: 800px;
+  height: 35px;
+  z-index: 1;
+  text-align: center;
+}
+
+/* line 171, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.h_container h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 35px;
+  background-color: whitesmoke;
+  display: inline-block;
+}
+
+/* line 180, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.h_container ~ .col_der {
+  padding-top: 120px;
+}
+
+/* line 182, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.col_der {
+  background: #FFF;
+  min-height: 500px;
+  padding-left: 50%;
+}
+
+/* line 187, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.col_izq {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #F16B6B;
+}
+
+/* line 194, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.col_izq .col_div {
+  float: right;
+}
+
+/* line 195, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.col_div {
+  max-width: 400px;
+  overflow: hidden;
+  font-family: Oswald, sans-serif;
+}
+
+/* line 200, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.col_div p {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.3;
+  text-align: justify;
+}
+
+/* line 206, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.col_div .imagen {
+  position: relative;
+  float: right;
+  width: 160px;
+  height: auto;
+}
+
+/* line 212, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.col_div p, .col_div iframe, .col_div form, .col_div img {
+  margin: 0 35px 35px 35px;
+}
+
+/* line 215, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.col_div h2 {
+  margin: 5px 35px;
+}
+
+/* formularios en una columna*/
+/* line 219, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.col_div form INPUT {
+  margin-bottom: 10px;
+}
+
+/* line 224, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.col_div form INPUT[type="password"],
+.col_div form INPUT[type="text"],
+.col_div form INPUT[type="email"] {
+  width: 315px;
+  height: 30px;
+  border: none;
+  border-bottom: 1px dashed #D35555;
+  background-color: whitesmoke;
+  font-size: 17px;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  transition: background 500ms ease;
+}
+
+/* line 237, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.col_div form INPUT[type="password"]:focus,
+.col_div form INPUT[type="text"]:focus,
+.col_div form INPUT[type="email"]:focus {
+  background-color: #D35555;
+  color: white;
+  outline: none;
+}
+
+/* line 242, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.col_div form INPUT[type="submit"] {
+  cursor: pointer;
+  float: right;
+}
+
+/* line 246, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+input:focus::-webkit-input-placeholder {
+  color: #fff;
+}
+
+/* line 247, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+input:focus::-moz-placeholder {
+  color: #fff;
+}
+
+/* line 248, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+input:focus:-ms-input-placeholder {
+  color: #fff;
+}
+
+/* line 249, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+input:focus:-moz-placeholder {
+  color: #fff;
+}
+
+/* exclusivos de la home*/
+/* line 252, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.col_div.home {
+  padding-top: 150px;
+  padding-bottom: 35px;
+}
+
+/* exclusivos de la pag. ENTRAR */
+/* line 257, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.col_div.ingresar {
+  padding-top: 65px;
+}
+
+/* especificos de Info útil: */
+/* line 261, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+#preguntas > div {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 265, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.pregunta {
+  margin: 8px 35px;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+}
+
+/* line 271, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.respuesta {
+  overflow: auto;
+  padding: 0px;
+  /* NO CAMBIaR EL PAddiNG! */
+}
+
+/* line 276, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.enlaMira {
+  outline: none;
+}
+
+/* line 277, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.enlaMira .pregunta {
+  color: whitesmoke;
+}
+
+/* line 278, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.enlaMira .pestaniaAbierta .pregunta {
+  color: black;
+}
+
+/* line 281, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.preguntaSeleccionada,
+.enlaMira .preguntaSeleccionada {
+  color: #F16B6B;
+}
+
+/* line 285, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.pestaniaAbierta .preguntaSeleccionada,
+.enlaMira .pestaniaAbierta .preguntaSeleccionada {
+  color: #D35555;
+}
+
+/*estos son los específicos de la barra--------------------*/
+/* line 289, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.campania {
+  width: 69%;
+  font-weight: 300;
+  font-size: 14px;
+  color: #FFF;
+  margin-left: 1%;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+/* line 298, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.campania:before {
+  content: "Donantes en: ";
+  font-weight: 400;
+}
+
+/* line 300, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.faltandias {
+  position: relative;
+  width: 29%;
+  font-size: 14px;
+  color: #F16B6B;
+  text-align: right;
+  margin-right: 1%;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+/* line 310, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.faltandias:before {
+  content: "faltan ";
+}
+
+/* line 311, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.faltandias:after {
+  content: " días";
+}
+
+/* line 313, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.bar-main-container {
+  width: 99%;
+  font-family: 'Oswald', sans-serif;
+  text-align: left;
+  margin: 0 auto;
+}
+
+/* line 320, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.bar-container {
+  position: relative;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  height: 37px;
+  background: #F16B6B;
+  width: 100%;
+  overflow: hidden;
+  border: solid 1px #fff;
+  color: #fff;
+}
+
+/* line 333, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.bar, .registrados, .objetivo {
+  font-size: 20px;
+  line-height: 2;
+}
+
+/* line 334, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.bar {
+  float: left;
+  height: 100%;
+  position: relative;
+}
+
+/* line 339, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.bar div {
+  background: #D35555;
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  text-align: right;
+  -webkit-animation: ensanchar 3s;
+  animation: ensanchar 3s;
+}
+
+/* line 350, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.bar div:after {
+  content: " ";
+  background: url("http://nicolasfigliozzi.com.ar/blodbrother/gotas.png") -23px 1px no-repeat;
+  display: inline-block;
+  width: 20px;
+  height: 27px;
+  position: relative;
+  top: 2px;
+  margin: 0 10px;
+}
+
+/* line 359, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.objetivo:before, .registrados:after {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+/* line 363, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.objetivo {
+  position: absolute;
+  right: 6px;
+}
+
+/* line 368, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.registrados {
+  position: absolute;
+  left: 1px;
+  padding: 0 9px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #D35555;
+  height: 36px;
+}
+
+/* line 378, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.registrados:after {
+  content: " REGISTRADOS";
+}
+
+/* line 379, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.objetivo:before {
+  content: "OBJETIVO: ";
+}
+
+/*----Slogan-------*/
+/* line 382, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.slogan {
+  width: 330px;
+  height: 80px;
+  position: relative;
+  margin: 90px 35px;
+}
+
+/* line 383, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.slogan p, .slogan h2, .slogan h3 {
+  margin: 0px;
+  position: absolute;
+  font-weight: bold;
+  color: #D35555;
+}
+
+/* line 384, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.slogan p {
+  top: 48px;
+  left: 0;
+  font-size: 20px;
+}
+
+/* line 385, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.slogan p:first-child {
+  top: 0;
+  left: 0;
+  font-size: 16px;
+}
+
+/* line 386, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.slogan p:nth-child(2) {
+  top: 18px;
+  left: 50px;
+  font-size: 28px;
+}
+
+/* line 387, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.slogan h2 {
+  top: 0;
+  right: 1px;
+  font-size: 28px;
+}
+
+/* line 388, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.slogan h3 {
+  top: 36px;
+  right: 0;
+  font-size: 36px;
+}
+
+/* line 389, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.slogan h3:hover, .slogan h2:hover {
+  font-size: 39px;
+  background: white;
+}
+
+/*----especificos de la gota-------*/
+/* line 391, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/custom.css.scss */
+.boton_donar, .boton_donar:visited {
+  position: relative;
+  font-family: Oswald;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  color: #D35555;
+  width: 85px;
+  height: 65px;
+  padding: 112px 37px 50px 37px;
+  display: block;
+  margin-right: 120px;
+  float: right;
+  margin-top: 270px;
+  background-image: url("http://nicolasfigliozzi.com.ar/blodbrother/quierodonar_btn.png");
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 798px) {
+  /* line 2, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  html, body {
+    overflow: visible;
+  }
+
+  /*----------menú--------------*/
+  /* line 5, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .faldon_top_container {
+    position: relative;
+    width: 100%;
+    background: white;
+    height: auto;
+  }
+
+  /* line 12, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .faldon_top {
+    width: 100%;
+    height: auto;
+  }
+
+  /* line 17, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .logo_top_container {
+    position: relative;
+    top: 0;
+    left: 0;
+    background: #F16B6B;
+    text-align: center;
+  }
+
+  /* line 24, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .menus {
+    height: 0px;
+    overflow: hidden;
+    background-color: #f16b6b;
+    border-bottom: 0px solid #d35555;
+    -webkit-box-shadow: black 0px 0px 25px -5px;
+    box-shadow: black 0px 0px 25px -5px;
+  }
+
+  /* line 32, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  ul#menu, ul#sobre_derecha {
+    position: relative;
+    left: auto;
+    top: auto;
+    right: auto;
+  }
+
+  /* line 37, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  ul#menu li,
+  ul#sobre_derecha li {
+    display: block;
+    width: auto;
+    position: relative;
+    text-align: center;
+  }
+
+  /* line 43, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  ul#menu ul.sub-menu li {
+    display: inline-block;
+    background: none;
+  }
+
+  /* line 47, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  ul#menu li ul.sub-menu {
+    display: block;
+    position: relative;
+    text-align: center;
+  }
+
+  /* line 53, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  ul#menu > li > a:after {
+    content: " :";
+  }
+
+  /* line 54, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  ul#sobre_derecha li > a:after {
+    content: none;
+  }
+
+  /* line 57, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  ul#menu > li a,
+  ul#sobre_derecha > li a {
+    border-right: none;
+    background: none !important;
+  }
+
+  /* line 61, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  ul#sobre_derecha > li:last-child a {
+    color: #f16b6b;
+  }
+
+  /* line 65, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .menus > ul > li:first-child {
+    background: white;
+    padding-top: 4px;
+  }
+
+  /* line 69, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .menus > ul > li:nth-child(2) {
+    background: whitesmoke;
+  }
+
+  /* line 72, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .menus #sobre_derecha > li:last-child a {
+    color: white;
+  }
+
+  /* line 77, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  #sobre_derecha > span,
+  #sobre_derecha .HS_email {
+    width: auto;
+    height: auto;
+    overflow: initial;
+    top: 0;
+    right: 0;
+    position: relative;
+    background: none;
+    display: inline-block;
+    margin: 0;
+    padding: 12px;
+    text-transform: uppercase;
+  }
+
+  /* line 90, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .HS_email:hover {
+    width: auto;
+  }
+
+  /* line 91, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .HS_email a {
+    padding: 0;
+  }
+
+  /* line 92, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .st_facebook, .st_twitter {
+    display: none;
+  }
+
+  /*-----botón abrir menú-------*/
+  /* line 96, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .abrir-menu {
+    cursor: pointer;
+    height: 36px;
+    width: 36px;
+    position: absolute;
+    right: 10px;
+    bottom: 25px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 9999;
+    border-radius: 50% 0% 50% 50%;
+    -webkit-transform: translateY(0px) rotate(-45deg);
+    -ms-transform: translateY(0px) rotate(-45deg);
+    transform: translateY(0px) rotate(-45deg);
+  }
+
+  /* line 112, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .abrir-menu.mAbierto {
+    bottom: -16px;
+  }
+
+  /* line 115, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .abrir-menu:hover, .abrir-menu.mAbierto {
+    background: whitesmoke;
+  }
+
+  /* line 119, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .abrir-menu div {
+    background: #d35555;
+    height: 4px;
+    width: 20px;
+    margin-left: 8px;
+    margin-top: 16px;
+    -webkit-transform: translateY(0px) rotate(45deg);
+    -ms-transform: translateY(0px) rotate(45deg);
+    transform: translateY(0px) rotate(45deg);
+  }
+
+  /* line 128, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .abrir-menu div::before, .abrir-menu div::after {
+    background: #D35555;
+    content: '';
+    display: block;
+    height: 4px;
+    width: 20px;
+  }
+
+  /* line 135, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .abrir-menu div::before {
+    -webkit-transform: translateY(-7px);
+    -ms-transform: translateY(-7px);
+    transform: translateY(-7px);
+  }
+
+  /* line 140, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .abrir-menu div::after {
+    -webkit-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    transform: translateY(3px);
+  }
+
+  /*----- animación menú -------*/
+  /* line 147, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .abrir-menu, .abrir-menu:hover, .abrir-menu.mAbierto, .abrir-menu div, .abrir-menu div::before, .abrir-menu div::after, .menus, .menus.mAbierto {
+    -webkit-transition: 600ms all;
+    transition: 600ms all;
+  }
+
+  /* line 151, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .abrir-menu div.mAbierto {
+    background: transparent;
+  }
+
+  /* line 154, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .abrir-menu div.mAbierto::before {
+    -webkit-transform: translateY(0px) rotate(-45deg);
+    -ms-transform: translateY(0rem) rotate(-45deg);
+    transform: translateY(0px) rotate(-45deg);
+  }
+
+  /* line 159, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .abrir-menu div.mAbierto::after {
+    -webkit-transform: translateY(-4px) rotate(45deg);
+    -ms-transform: translateY(-4px) rotate(45deg);
+    transform: translateY(-4px) rotate(45deg);
+  }
+
+  /* line 164, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .menus.mAbierto {
+    height: 215px;
+    border-bottom-width: 2px;
+  }
+
+  /*----cuerpo de la página-----*/
+  /* line 170, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .content_container {
+    border-top: none;
+    background: white;
+  }
+
+  /* line 174, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .h_container {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-left: 0;
+    width: auto;
+    height: auto;
+    text-align: center;
+    padding: 25px 5px;
+  }
+
+  /* line 182, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .h_container h1 {
+    background-color: white;
+  }
+
+  /* line 185, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .h_container ~ .col_der {
+    padding-top: 5px;
+  }
+
+  /* line 188, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .col_der {
+    padding: 5px 10px 25px 10px;
+    min-height: inherit;
+  }
+
+  /* line 192, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .col_div {
+    margin: 0 auto;
+  }
+
+  /* line 194, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .col_div.home {
+    padding-top: inherit;
+    padding-bottom: inherit;
+  }
+
+  /* line 198, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .col_div p, .col_div iframe, .col_div form, .col_div img {
+    margin: 5px 0;
+  }
+
+  /* line 201, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .col_div iframe {
+    width: 100% !important;
+  }
+
+  /* line 204, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .col_izq {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 55px 10px;
+  }
+
+  /* line 209, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .boton_donar, .boton_donar:visited {
+    margin: 0 auto;
+    float: none;
+  }
+
+  /* line 213, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .campania {
+    color: #d35555;
+  }
+
+  /* line 216, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .col_div .imagen {
+    float: none;
+    width: 60%;
+    margin: 0 20% 12px 20%;
+  }
+
+  /* line 221, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .col_div h2 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 225, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .col_div form INPUT[type="password"], .col_div form INPUT[type="text"], .col_div form INPUT[type="email"] {
+    width: 100%;
+  }
+
+  /* line 228, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .slogan {
+    margin: 25px auto;
+  }
+
+  /* line 231, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .pregunta {
+    margin: 8px 0px;
+  }
+}
+@media (max-width: 365px) {
+  /* line 236, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .slogan {
+    width: auto;
+    height: auto;
+    text-align: center;
+  }
+
+  /* line 241, /home/tebayoso/workspace/bloodbrothers/app/assets/stylesheets/mobile.css.scss */
+  .slogan p, .slogan h2, .slogan h3 {
+    position: relative;
+    display: inline-block;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+  }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+/*
+
+
+ */
