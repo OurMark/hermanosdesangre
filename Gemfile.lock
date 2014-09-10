@@ -28,14 +28,10 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
-    autoprefixer-rails (2.2.0.20140804)
-      execjs
     bcrypt (3.1.7)
     bookable (0.0.52)
       jbuilder (~> 1.2)
       rails_12factor
-    bootstrap-sass (3.2.0.1)
-      sass (~> 3.2)
     builder (3.2.2)
     byebug (3.2.0)
       columnize (~> 0.8)
@@ -141,9 +137,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  autoprefixer-rails
   bookable
-  bootstrap-sass
   byebug
   coffee-rails (~> 4.0.0)
   devise
