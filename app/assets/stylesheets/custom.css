@@ -156,6 +156,7 @@ ul#sobre_derecha li a:hover{
     position: relative;
     width: 100%;
     border-top: solid 70px white;
+    background: white;
 }
 .h_container{
     position: absolute;
@@ -296,6 +297,8 @@ input:focus:-moz-placeholder{ color: #fff; }
     display: inline-block;
 }
 .campania:before{ content: "Donantes en: "; font-weight:400;}
+.banco .campania{color: black;}
+.banco .campania:before{content: "";}
 
 .faltandias{
     position: relative;
@@ -407,4 +410,38 @@ input:focus:-moz-placeholder{ color: #fff; }
     margin-top: 270px;
     background-image: url("http://nicolasfigliozzi.com.ar/blodbrother/quierodonar_btn.png");
     background-repeat:no-repeat;
+}
+
+/*-----pagina con menu y sin columnas----------*/
+.container_menu {
+    border-bottom: 1px solid #D35555 ;
+    background-color: #f16b6b;
+    background-color: rgba(241, 107, 107, 0.9);
+    position: fixed; z-index:1;
+    width: 100%; height: 55px;
+    overflow: hidden;
+}
+.container_menu~.col_none {margin-top:  55px;}
+.container_menu .faldon_top{
+    margin-top: 12px;
+}
+.container_menu INPUT{
+    float: right;
+}
+.col_none{
+    max-width: 800px;
+    margin-left: auto; margin-right: auto;
+}
+.banco {
+    border: solid 1px whitesmoke;
+    margin: 42px 4px;
+    padding: 22px 8px;
+    -webkit-box-shadow: 0 35px 35px -35px #699;
+    box-shadow: 0 30px 35px -35px #699;
+}
+
+.ficha_banco {
+    float: right;
+    width: 65%;
+    padding-left: 8px;
 }

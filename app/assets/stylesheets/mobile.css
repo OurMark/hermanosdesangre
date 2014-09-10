@@ -169,7 +169,6 @@ ul#sobre_derecha>li:last-child a{
 /*----cuerpo de la página-----*/
 .content_container {    
     border-top: none;
-    background: white;
 }
 .h_container {
     position: relative;
