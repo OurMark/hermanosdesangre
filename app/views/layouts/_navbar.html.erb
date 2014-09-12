@@ -8,15 +8,13 @@
         <li>
           <%= link_to "DONANTES", donors_path %>
           <ul class="sub-menu">
-            <li>
-              <%= link_to "Información útil", information_path %>
-            </li>
-            <li>
-              <%= link_to "Objetivo", objective_path %>
-            </li>
+            <li><%= link_to "Yo? Donante?", meDonors_path %></li>
+            <li><%= link_to "Requisitos", requirements_path %></li>
+            <li><%= link_to "Consejos", advises_path %></li>
+            <li><%= link_to "Procesos", procedures_path %></li>
           </ul>
         </li>
-        <li><a href="#">¿QUIÉNES SOMOS?</a>
+        <li><%= link_to "¿QUIÉNES SOMOS?", about_us_path %>
         <ul class="sub-menu">
           <li>
             <%= link_to "Nosotros", about_us_path %>
@@ -28,7 +26,7 @@
       </li>
     </ul>
     <ul id="sobre_derecha">
-      <li><span class='HS_email'><a href="mailto:mail@mail.com">contacto</a></span><span class='st_facebook'></span><span class='st_twitter'></span></li>
+      <li><span class='HS_email'><%= link_to "contacto", contact_path %></span><span class='st_facebook'></span><span class='st_twitter'></span></li>
       <% if current_user %>
       <li><%= link_to "SALIR", destroy_user_session_path, :method => :delete %>
         <li><%= link_to "#{current_user.first_name}", edit_user_registration_path %></li>

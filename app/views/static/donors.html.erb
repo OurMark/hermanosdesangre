@@ -1,42 +1,43 @@
-<!-- agregar link a accordion.js en assets-->
-<div class="h_container">
-  <h1>"<strong>Información útil</strong> para el Donante:"</h1>
-</div>
 <div class="col_der">
   <div class="col_div">
-    <div id="preguntas" tabindex="0">
-      <div><div></div><div></div></div> <!--no quitar, divs que hacen que todas las preguntas esten cerradas-->
-      <div>
-        <div class="pregunta">Pregunta 1</div>
-        <div class="respuesta">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum orci lacus, at aliquam turpis terdum nibh sed aliquet vestibulum. Integer lectus nunc, vehicula eget nisl sit amet, ullamcorper suscipit ipsum. Pellentesque nulla neque, pellentesque et commodo eget, luctus ne Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris eu eleifend felis. Pellentesque id orci semper, dignissim velit in, mollis dui.
-          <br /><br />
-          Lorem ipsum dolor sit amet, consectetursis ante, id tempor nisi ultricies fermentum. Maecenas dapictus nec velit. Donec gravida Curae; Mauris eu eleifend felis. Pellentesque id orci semper, dignissim velit in, mollis dui.</p>
-        </div>
-      </div>
-      <div>
-        <div class="pregunta">Pregunta 2</div>
-        <div class="respuesta"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum orci lacus, at aliquam turpis condimentum nec. Aliquam dignissim velit in, mollis dui.</p>
-        </div>
-      </div>
-      <div>
-        <div class="pregunta">Pregunta 3</div>
-        <div class="respuesta"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum orci lacus, at aliquam turpis condimentum nec. Aliquam augue quam, porttitor eu quam ut, consectetur venenatifinibus venenatis. Donec at auctor leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris eu eleifend felis. Pellentesque id orci semper, dignissim velit in, mollis dui.
-          <br /><br />facilisis mi auctor tempus. Curabitur interdum nibh sed aliquet vestibulum. Integer lectus nunc, vehicula eget nisl sit amet, ullamcorper suscipit ipsum. Pellentesque nulla ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris eu eleifend felis. Pellentesque id orci semper, dignissim velit in, mollis dui.</p>
-        </div>
-      </div>
-      <div>
-        <div class="pregunta">Pregunta 4</div>
-        <div class="respuesta"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum orci lacus, at aliquam turpis condimentum nec. semper, dignissim velit in, mollis dui.
-          <br /><br />
-          facilisis mi auctor tempus. Curabitur interdum nibh sed aliquet vestibulum. Integer lectus nunc, vehicula eget nisl sit amet, ullamcorper suscipit ipsum. Pellentesque nulla neque, pellentesque et commodo eget, luctus nec velit. Donec gravida finibus venenatis. Donec at auctor leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris eu eleifend felis. Pellentesque id orci semper, dignissim velit in, mollis dui.
-          </p>
-        </div>
-      </div>
+    <div class="Opciones">
+        <div>YO, DONANTE<span>Conocé los beneficios de convertirte en donante VOLUNTARIO Y HABITUAL</span></div>
+        <div>REQUISITOS<span>Ténes dudas de si podes donar? Lee las condiciones que tiene que tener un DONANTE</span></div>
+        <div>CONSEJOS<span>Hace que tu donación se convierta en un acto SEGURO, CONFORTABLE Y GRATIFICANTE</span></div>
+        <div>PROCESOS<span>Enterate los alcances y ayudas que realiza tu sangre una vez que ha sido donada.</span></div>
     </div>
-    <script language="JavaScript" type="text/javascript">var preguntas = new Spry.Widget.Accordion("preguntas");</script>
-  </div>
+    <div class="Secciones">
+        <%= render partial: 'static/donors/meDonors' %>
+        <%= render partial: 'static/donors/requirements' %>
+        <%= render partial: 'static/donors/advises' %>
+        <%= render partial: 'static/donors/procedures' %>
+    </div>
+    <script type="text/javascript">
+function Sel(n){
+  /*damos la clase a la nueva seleccion*/
+  $(".Opciones>div:nth-child("+n+")").toggleClass("seleccionada");
+  $(".Secciones>div:nth-child("+n+"), .Opciones").toggleClass("seleccionada");
+}; 
+/*definimos los botones*/
+  $(".Opciones>div:nth-child(1)").click(function(){Sel(1);});
+  $(".Opciones>div:nth-child(2)").click(function(){Sel(2);});
+  $(".Opciones>div:nth-child(3)").click(function(){Sel(3);});
+  $(".Opciones>div:nth-child(4)").click(function(){Sel(4);});
+
+/* por si viene de un link*/
+var $_GET = {};
+document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function () {
+    function decode(s) {
+        return decodeURIComponent(s.split("+").join(" "));
+    }
+    $_GET[decode(arguments[1])] = decode(arguments[2]);
+});
+if ($_GET['s'] === "yo-donante"){Sel(1);};if ($_GET['s'] === "requisitos"){Sel(2);};
+if ($_GET['s'] === "consejos"){Sel(3);};if ($_GET['s'] === "procesos"){Sel(4);};
+      </script>  
+    </div>
 </div>
+
 <div class="columna col_izq">
   <%= render partial: 'shared/gota_donar' %>
 </div>

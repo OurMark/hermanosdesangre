@@ -85,7 +85,7 @@ ul#sobre_derecha>li:last-child a{
     display: inline-block;
     margin: 0;
     padding: 12px;
-    text-transform: uppercase;
+    text-transform: uppercase;    
 }
 .HS_email:hover {width: auto;}
 .HS_email a{padding: 0;}
@@ -95,7 +95,7 @@ ul#sobre_derecha>li:last-child a{
 /*-----botón abrir menú-------*/
 .abrir-menu {
     cursor: pointer;
-    height: 36px;
+    height: 36px; 
     width: 36px;
     position: absolute;
     right: 10px; bottom: 25px;
@@ -167,9 +167,8 @@ ul#sobre_derecha>li:last-child a{
 }
 
 /*----cuerpo de la página-----*/
-.content_container {
+.content_container {    
     border-top: none;
-    background: white;
 }
 .h_container {
     position: relative;
@@ -180,7 +179,7 @@ ul#sobre_derecha>li:last-child a{
     padding: 25px 5px;
 }
 .h_container h1 {
-    background-color: white;
+    color: black;
 }
 .h_container~.col_der {
     padding-top: 5px;
@@ -218,16 +217,16 @@ margin: 5px 0;
     width: 60%;
     margin: 0 20% 12px 20%;
 }
-.col_div h2 {
+.col_div h1, .col_div h2,.col_div h3 {
     margin-left: 0;
     margin-right: 0;
 }
 .col_div form INPUT[type="password"], .col_div form INPUT[type="text"], .col_div form INPUT[type="email"]{
-    width:100%;
+    width:100%;  
 }
 .slogan {
     margin: 25px auto;
-}
+}   
 .pregunta {
     margin: 8px 0px;
 }
@@ -238,9 +237,11 @@ margin: 5px 0;
     height: auto;
     text-align: center;
 }
+.slogan p{    
+    display: inline-block;
+}
 .slogan p, .slogan h2, .slogan h3 {
     position: relative;
-    display: inline-block;
     left: auto !important;
     right: auto !important;
     top: auto !important;

@@ -28,7 +28,6 @@ html,body { overflow-x: hidden;}
 body {
     line-height: 1;
     background-color:#D35555;
-
 }
 blockquote, q {
     quotes: none;
@@ -97,7 +96,7 @@ li:hover ul.sub-menu {
 }
 
 ul.sub-menu li{
-    background: #fff;
+    background: white;
     width: 130px;
     padding: 5px;
 }
@@ -140,11 +139,11 @@ ul#sobre_derecha li a:hover{
   width: 16px;
   height: 16px;
   overflow: hidden;
-  right: 9px;
+  right: 9px; 
   position: absolute;
   z-index: 10;
   transition: width 500ms ease;
-}
+} 
 #sobre_derecha .HS_email:hover {width: 75px;}
 .HS_email a {
   padding: 0 21px;
@@ -156,6 +155,7 @@ ul#sobre_derecha li a:hover{
     position: relative;
     width: 100%;
     border-top: solid 70px white;
+    background: white;
 }
 .h_container{
     position: absolute;
@@ -168,19 +168,23 @@ ul#sobre_derecha li a:hover{
     z-index: 1;
     text-align: center;
 }
+h1{
+    font-size: 30px;
+    margin-bottom: 35px;
+}
 .h_container h1{
     font-family: 'Oswald', sans-serif;
-    font-size: 30px;
-    color: #000;
     text-align: center;
-    margin-bottom: 35px;
-    background-color: whitesmoke;
-    display: inline-block;
+    color: white;
+    padding: 5px;
+}
+.h_container strong{
+    color: black;
 }
 .h_container~.col_der {padding-top: 120px;}
 
 .col_der{
-  background: #FFF;
+  background: white;
   min-height: 500px;
   padding-left: 50%;
 }
@@ -212,16 +216,16 @@ ul#sobre_derecha li a:hover{
 .col_div p, .col_div iframe, .col_div form, .col_div img {
   margin: 0 35px 35px 35px;
 }
-.col_div h2 {
-  margin: 5px 35px;
+.col_div h1, .col_div h2, .col_div h3 {
+  margin: 5px 35px;  
 }
-/* formularios en una columna*/
-.col_div form INPUT{
+/* formularios en en el container*/
+.content_container  form INPUT{
     margin-bottom: 10px;
 }
-.col_div form INPUT[type="password"],
-.col_div form INPUT[type="text"],
-.col_div form INPUT[type="email"]{
+.content_container form INPUT[type="password"],
+.content_container form INPUT[type="text"],
+.content_container form INPUT[type="email"]{
     width: 315px;
     height: 30px;
     border: none;
@@ -232,21 +236,21 @@ ul#sobre_derecha li a:hover{
     padding-left: 15px;
     transition: background 500ms ease;
 }
-.col_div form INPUT[type="password"]:focus,
-.col_div form INPUT[type="text"]:focus,
-.col_div form INPUT[type="email"]:focus{
+.content_container  form INPUT[type="password"]:focus,
+.content_container form INPUT[type="text"]:focus,
+.content_container form INPUT[type="email"]:focus{
     background-color: #D35555;
     color: white;
     outline: none;
 }
-.col_div form INPUT[type="submit"]{
+.content_container form INPUT[type="submit"]{
     cursor: pointer;
     float: right;
 }
-input:focus::-webkit-input-placeholder{ color: #fff; }
-input:focus::-moz-placeholder{ color: #fff; }
-input:focus:-ms-input-placeholder{ color: #fff; }
-input:focus:-moz-placeholder{ color: #fff; }
+input:focus::-webkit-input-placeholder{ color: white; }
+input:focus::-moz-placeholder{ color: white; }
+input:focus:-ms-input-placeholder{ color: white; }
+input:focus:-moz-placeholder{ color: white; }
 
 /* exclusivos de la home*/
 .col_div.home {
@@ -257,45 +261,71 @@ input:focus:-moz-placeholder{ color: #fff; }
 .col_div.ingresar {
   padding-top: 65px;
 }
-/* especificos de Info útil: */
-#preguntas>div {
-  margin: 0px;
-  padding: 0px;
+/* especificos de DONANTES: */
+.Opciones {
+    margin-left: 15px;
 }
-.pregunta{
-  margin: 8px 35px;
-  cursor: pointer;
-  -moz-user-select: none;
-  -khtml-user-select: none;
+.Opciones>div{
+    width: 100px;
+    height: 92px;
+    background-color: #F16B6B;
+    color: white;
+    font-weight: 300;
+    font-size: 24px;
+    text-align: center;
+    padding: 30px 25px 0 25px;
+    margin: 18px 18px 72px 18px;
+	cursor: pointer;
+    border-bottom: solid 3px #D35555;
+    border-radius: 0 0 3px 3px;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+    -webkit-box-shadow: black 0px 0px 25px -5px;
+    box-shadow: black 0px 0px 25px -5px;
+    float:left;
+    position: relative;
 }
-.respuesta {
-  overflow: auto;
-  padding: 0px; /* NO CAMBIaR EL PAddiNG! */
+.Opciones>div span{
+    font-size: 13px;
+    line-height: 18px;
+    color: #D35555;
+    position: absolute;
+    top: 130px; left: 0;
 }
 
-.enlaMira { outline: none;}
-.enlaMira .pregunta { color: whitesmoke; }
-.enlaMira .pestaniaAbierta .pregunta {color: black;}
-
-.preguntaSeleccionada,
-.enlaMira .preguntaSeleccionada {
-  color: #F16B6B;
+.Secciones{
+    clear:both;
 }
-.pestaniaAbierta .preguntaSeleccionada,
-.enlaMira .pestaniaAbierta .preguntaSeleccionada {
-  color: #D35555;
+.Secciones>div {
+  height: 0px;
+  overflow:hidden;
+  transition: all 500ms ease-in;
+}
+
+.Secciones>.seleccionada {
+  height: 250px;
+}
+.Opciones.seleccionada>div, .Opciones.seleccionada span{
+  display:none;
+  /*importante ocultar las opciones para asegurarse de elegir
+  solo una a la vez*/
+}
+.Opciones.seleccionada>.seleccionada {
+  display:block;
 }
 /*estos son los específicos de la barra--------------------*/
 .campania{
     width: 69%;
     font-weight: 300;
     font-size: 14px;
-    color: #FFF;
+    color: white;
     margin-left: 1%;
     margin-bottom: 6px;
     display: inline-block;
 }
 .campania:before{ content: "Donantes en: "; font-weight:400;}
+.banco .campania{color: black;}
+.banco .campania:before{content: "";}
 
 .faltandias{
     position: relative;
@@ -307,7 +337,7 @@ input:focus:-moz-placeholder{ color: #fff; }
     margin-bottom: 6px;
     display: inline-block;
 }
-.faltandias:before{content: "faltan ";}
+.faltandias:before{content: "faltan ";} 
 .faltandias:after{content: " días";}
 
 .bar-main-container {
@@ -326,8 +356,8 @@ input:focus:-moz-placeholder{ color: #fff; }
     background: #F16B6B;
     width: 100%;
     overflow: hidden;
-    border: solid 1px #fff;
-    color: #fff;
+    border: solid 1px white;
+    color: white;
 }
 
 .bar, .registrados, .objetivo{ font-size: 20px; line-height: 2;}
@@ -378,6 +408,10 @@ input:focus:-moz-placeholder{ color: #fff; }
 .registrados:after {content:" REGISTRADOS";}
 .objetivo:before {content:"OBJETIVO: ";}
 
+/*animación de barra*/
+@-webkit-keyframes ensanchar{from {width:30%;} to {width:100%}}
+@keyframes ensanchar{from {width:1%;} to {width:100%}}
+
 /*----Slogan-------*/
 .slogan {width: 330px; height: 80px; position: relative; margin: 90px 35px;}
 .slogan p, .slogan h2, .slogan h3 {margin:0px; position: absolute; font-weight:bold; color:#D35555;}
@@ -403,4 +437,38 @@ input:focus:-moz-placeholder{ color: #fff; }
     margin-top: 270px;
     background-image: url("http://nicolasfigliozzi.com.ar/blodbrother/quierodonar_btn.png");
     background-repeat:no-repeat;
+}
+
+/*-----pagina con menu y sin columnas----------*/
+.container_menu {
+    border-bottom: 1px solid #D35555 ;
+    background-color: #f16b6b;
+    background-color: rgba(241, 107, 107, 0.9);
+    position: fixed; z-index:1;
+    width: 100%; height: 55px;
+    overflow: hidden;
+}
+.container_menu~.col_none {margin-top:  55px;}
+.container_menu .faldon_top{
+    margin-top: 12px;
+}
+.container_menu INPUT{
+    float: right;
+}
+.col_none{
+    max-width: 800px;
+    margin-left: auto; margin-right: auto;
+}
+.banco {
+    border: solid 1px whitesmoke;
+    margin: 42px 4px;
+    padding: 22px 8px;
+    -webkit-box-shadow: 0 35px 35px -35px #699;
+    box-shadow: 0 30px 35px -35px #699;
+}
+
+.ficha_banco {
+    float: right;
+    width: 65%;
+    padding-left: 8px;
 }
