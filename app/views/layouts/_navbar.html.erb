@@ -28,7 +28,7 @@
     <ul id="sobre_derecha">
       <li><span class='HS_email'><%= link_to "contacto", contact_path %></span><span class='st_facebook'></span><span class='st_twitter'></span></li>
       <% if current_user %>
-      <li><%= link_to "SALIR", destroy_user_session_path, :method => :delete %>
+        <li><%= link_to "SALIR", destroy_user_session_path, :method => :delete %></li>
         <li><%= link_to "#{current_user.first_name}", edit_user_registration_path %></li>
         <% else %>
         <li><%= link_to "REGISTRARSE", new_user_registration_path %></li>

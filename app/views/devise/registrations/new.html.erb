@@ -1,13 +1,28 @@
 <div class="columna col_der">
-  <div class="titulo_ingresar" style="margin-top: 25px;">REGISTRARSE</div>
-  <div class="inputs_container">
+  <div class="col_div registrarse">
+    <h1><strong>REGISTRARSE</strong></h1>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
     <%= f.text_field :first_name, placeholder: "NOMBRE" %>
     <%= f.text_field :birth, placeholder: "NACIMIENTO: dd/mm/aaaa" %>
     <%= f.text_field :dni, placeholder: "DNI" %>
-    <%= f.text_field :bloodtype, placeholder: "GRUPO SANGUINEO" %>
-    <%= f.text_field :gender, placeholder: "SEXO" %>
+    <!--<%= f.text_field :bloodtype, placeholder: "GRUPO SANGUINEO" %>-->
+    <select id="user_bloodtype" name="user[bloodtype]" placeholder="GRUPO SANGUINEO" type="text">
+        <option value="Apositivo">A+</option>
+        <option value="Anegativo">A-</option>
+        <option value="Bpositivo">B+</option>
+        <option value="Bnegativo">B-</option>
+        <option value="ABpositivo">AB+</option>
+        <option value="ABnegativo">AB-</option>
+        <option value="0positivo">0+</option>
+        <option value="0negativo">0-</option>
+    </select>
+    <!--<%= f.text_field :gender, placeholder: "SEXO" %>-->
+    <%= radio_button_tag(:gender, "Hombre") %>
+      <%= label_tag(:gender, "Hombre") %>
+    <%= radio_button_tag(:gender, "Mujer") %>
+      <%= label_tag(:gender, "Mujer") %>
+    <!--*-->
     <%= f.text_field :city, placeholder: "CIUDAD" %>
     <%= f.email_field :email, autofocus: true, placeholder: "E-MAIL" %>
     <%= f.password_field :password, autocomplete: "off", placeholder: "PASSWORD" %>

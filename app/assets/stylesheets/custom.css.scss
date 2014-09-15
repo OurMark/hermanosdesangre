@@ -218,7 +218,7 @@ h1{
     width: 160px;
     height: auto;
 }
-.col_div p, .col_div iframe, .col_div form, .col_div img {
+.col_div>p, .col_div div>p, .col_div iframe, .col_div form, .col_div img {
   margin: 0 35px 32px 35px;
 }
 .col_div h1, .col_div h2, .col_div h3 {
@@ -351,6 +351,14 @@ input:focus:-moz-placeholder{ color: white; }
     border-bottom: solid 2px #D35555;
     opacity: 1;
 }
+.Secciones p:last-child:after{
+    content: "";
+    background-image: url("gotas.png");
+    background-position: 0 -5px;
+    height: 18px;
+    width: 16px;
+    display: inline-block;
+}
 .Secciones ul, .Secciones h2{
     position: absolute;
 }
@@ -428,9 +436,9 @@ border-radius: 50%;
     font-size: 13px;
     font-style: italic;
 }
-/* exclusivos de la pag. ENTRAR */
-.col_div.ingresar {
-  padding-top: 65px;
+/* exclusivos de la pag. REGISTRARSE y ENTRAR */
+.col_div.ingresar, .col_div.registrarse {
+  padding-top: 85px;
 }
 /*estos son los específicos de la barra--------------------*/
 .campania{
@@ -498,7 +506,7 @@ border-radius: 50%;
 }
 .bar div:after{
   content: " ";
-  background: url('gotas.png') -23px 1px no-repeat;
+  background: url('gotas.png') 0px 1px no-repeat;
   display: inline-block;
   width: 20px; height: 27px;
   position:relative; top:2px;
