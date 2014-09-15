@@ -162,7 +162,7 @@ ul#sobre_derecha>li:last-child a{
   transform: translateY(-4px)rotate(45deg);
 }
 .menus.mAbierto{
-    height: 215px;
+    height: 280px;
     border-bottom-width: 2px;
 }
 
@@ -180,6 +180,7 @@ ul#sobre_derecha>li:last-child a{
 }
 .h_container h1 {
     color: black;
+    margin-bottom: 5px;
 }
 .h_container~.col_der {
     padding-top: 5px;
@@ -190,7 +191,8 @@ ul#sobre_derecha>li:last-child a{
 }
 .col_div {
     margin: 0 auto;
-}.col_div.home {
+}
+.col_div.home, .col_div.us {
     padding-top: inherit;
     padding-bottom: inherit;
 }
@@ -205,7 +207,7 @@ margin: 5px 0;
     width: auto; height: auto;
     padding:  55px 10px;
 }
-.boton_donar, .boton_donar:visited {
+.boton_donar {
     margin: 0 auto;
     float: none;
 }
@@ -225,10 +227,13 @@ margin: 5px 0;
     width:100%;  
 }
 .slogan {
-    margin: 25px auto;
+    margin: 45px auto;
 }   
 .pregunta {
     margin: 8px 0px;
+}
+.bar-main-container {
+    margin-top: 40px;
 }
 }
 @media (max-width: 365px) {
@@ -246,5 +251,8 @@ margin: 5px 0;
     right: auto !important;
     top: auto !important;
     bottom: auto !important;
+}
+.menus.mAbierto{
+    height: 325px;
 }
 }

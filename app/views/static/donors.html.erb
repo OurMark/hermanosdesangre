@@ -1,41 +1,46 @@
 <div class="col_der">
   <div class="col_div">
     <div class="Opciones">
-        <div>YO, DONANTE<span>Conocé los beneficios de convertirte en donante VOLUNTARIO Y HABITUAL</span></div>
+        <div>YO? DONANTE?<span>Conocé los beneficios de convertirte en donante VOLUNTARIO Y HABITUAL</span></div>
         <div>REQUISITOS<span>Ténes dudas de si podes donar? Lee las condiciones que tiene que tener un DONANTE</span></div>
         <div>CONSEJOS<span>Hace que tu donación se convierta en un acto SEGURO, CONFORTABLE Y GRATIFICANTE</span></div>
         <div>PROCESOS<span>Enterate los alcances y ayudas que realiza tu sangre una vez que ha sido donada.</span></div>
     </div>
+      
     <div class="Secciones">
         <%= render partial: 'static/donors/meDonors' %>
         <%= render partial: 'static/donors/requirements' %>
         <%= render partial: 'static/donors/advises' %>
         <%= render partial: 'static/donors/procedures' %>
-    </div>
-    <script type="text/javascript">
+        <script type="text/javascript">
 function Sel(n){
-  /*damos la clase a la nueva seleccion*/
-  $(".Opciones>div:nth-child("+n+")").toggleClass("seleccionada");
-  $(".Secciones>div:nth-child("+n+"), .Opciones").toggleClass("seleccionada");
-}; 
-/*definimos los botones*/
+  /*funcion Sel(eccionar) damos la clase a la nueva seleccion*/
+    $(".Opciones>div:nth-child("+n+")").toggleClass("seleccionada");
+    $(".Secciones>div:nth-child("+n+"), .Opciones").toggleClass("seleccionada");
+};
+  /*definimos los botones*/
   $(".Opciones>div:nth-child(1)").click(function(){Sel(1);});
   $(".Opciones>div:nth-child(2)").click(function(){Sel(2);});
   $(".Opciones>div:nth-child(3)").click(function(){Sel(3);});
   $(".Opciones>div:nth-child(4)").click(function(){Sel(4);});
 
-/* por si viene de un link*/
-var $_GET = {};
-document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function () {
+  /*definimos sub-boton*/
+  $(".Secciones>div:nth-child(3) h2, .bolsa").click(function(){$(".Secciones .seleccionada ul, .Secciones .seleccionada h2").toggleClass("seleccionada"); $(".bolsa").toggleClass("llena");});
+
+  /* por si viene de un link*/
+  var $_GET = {};
+  document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function () {
     function decode(s) {
         return decodeURIComponent(s.split("+").join(" "));
     }
     $_GET[decode(arguments[1])] = decode(arguments[2]);
-});
-if ($_GET['s'] === "yo-donante"){Sel(1);};if ($_GET['s'] === "requisitos"){Sel(2);};
-if ($_GET['s'] === "consejos"){Sel(3);};if ($_GET['s'] === "procesos"){Sel(4);};
-      </script>  
+  });
+  if ($_GET['s'] === "yo-donante"){Sel(1);};if ($_GET['s'] === "requisitos"){Sel(2);};
+  if ($_GET['s'] === "consejos"){Sel(3);};if ($_GET['s'] === "procesos"){Sel(4);};
+        </script> 
     </div>
+ 
+  </div>
 </div>
 
 <div class="columna col_izq">

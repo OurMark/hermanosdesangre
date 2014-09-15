@@ -11,7 +11,6 @@
 // about supported directives.
 //
 // Loads all Bootstrap javascripts
-//= require turbolinks
 //= require jquery
 //= require jquery_ujs
 //= require_tree .

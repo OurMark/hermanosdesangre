@@ -1,7 +1,7 @@
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
+del, dfn, img, ins, kbd, q, s, samp,
 small, strike, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, li,
@@ -90,15 +90,16 @@ li ul.sub-menu {
     display:none;
     position: absolute;
     left: 0;
+    padding-top: 10px;
 }
 li:hover ul.sub-menu {
     display:block;
 }
 
 ul.sub-menu li{
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     width: 130px;
-    padding: 5px;
+    padding: 10px 5px;
 }
 /*Links*/
 ul#menu>li>a, ul#sobre_derecha>li>a{
@@ -111,6 +112,10 @@ ul#menu>li>a, ul#sobre_derecha>li>a{
 ul.sub-menu li>a {
     color: #D35555;
     padding: 5px;
+    display: block;
+}
+ul.sub-menu li:hover {
+    background-color: white;
 }
 ul.sub-menu li>a:hover {
     font-weight: 700;
@@ -142,6 +147,7 @@ ul#sobre_derecha li a:hover{
   right: 9px; 
   position: absolute;
   z-index: 10;
+  -webkit-transition: width 500ms ease-in;
   transition: width 500ms ease;
 } 
 #sobre_derecha .HS_email:hover {width: 75px;}
@@ -181,11 +187,10 @@ h1{
 .h_container strong{
     color: black;
 }
-.h_container~.col_der {padding-top: 120px;}
 
 .col_der{
   background: white;
-  min-height: 500px;
+  min-height: 630px;
   padding-left: 50%;
 }
 .col_izq{
@@ -199,12 +204,12 @@ h1{
 .col_div{
   max-width: 400px;
   overflow: hidden;
-  font-family: Oswald, sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 .col_div p{
   font-size: 13px;
   font-weight: 300;
-  line-height: 1.3;
+  line-height: 24px;
   text-align: justify;
 }
 .col_div .imagen{
@@ -214,7 +219,7 @@ h1{
     height: auto;
 }
 .col_div p, .col_div iframe, .col_div form, .col_div img {
-  margin: 0 35px 35px 35px;
+  margin: 0 35px 32px 35px;
 }
 .col_div h1, .col_div h2, .col_div h3 {
   margin: 5px 35px;  
@@ -234,6 +239,7 @@ h1{
     font-size: 17px;
     margin-bottom: 20px;
     padding-left: 15px;
+    -webkit-transition: background 500ms ease;
     transition: background 500ms ease;
 }
 .content_container  form INPUT[type="password"]:focus,
@@ -252,18 +258,21 @@ input:focus::-moz-placeholder{ color: white; }
 input:focus:-ms-input-placeholder{ color: white; }
 input:focus:-moz-placeholder{ color: white; }
 
-/* exclusivos de la home*/
+/* especificos de la home*/
 .col_div.home {
-  padding-top: 150px;
-  padding-bottom: 35px;
+  padding-top: 250px;
 }
-/* exclusivos de la pag. ENTRAR */
-.col_div.ingresar {
-  padding-top: 65px;
+/* especificos de NOSOTROS*/
+.col_div.us {
+  padding-top: 140px;
 }
 /* especificos de DONANTES: */
 .Opciones {
-    margin-left: 15px;
+    margin-left: 15px; margin-top: 50px;
+    height: 440px;
+    -webkit-transition: height 400ms ease;
+    transition: height 400ms ease;
+    overflow: hidden;
 }
 .Opciones>div{
     width: 100px;
@@ -297,13 +306,17 @@ input:focus:-moz-placeholder{ color: white; }
     clear:both;
 }
 .Secciones>div {
-  height: 0px;
-  overflow:hidden;
-  transition: all 500ms ease-in;
+    position: relative;
+    opacity: 0;
+    width: 400px;
+    -webkit-transition: opacity 700ms ease-in;
+    transition: opacity 700ms ease-in;
+    height: 0;
+    overflow: hidden;
 }
 
-.Secciones>.seleccionada {
-  height: 250px;
+.Opciones.seleccionada{
+    height: 170px;
 }
 .Opciones.seleccionada>div, .Opciones.seleccionada span{
   display:none;
@@ -312,6 +325,112 @@ input:focus:-moz-placeholder{ color: white; }
 }
 .Opciones.seleccionada>.seleccionada {
   display:block;
+}
+.Secciones>.seleccionada {
+  opacity: 1;
+  height: auto;
+  min-height: 406px;
+  -webkit-animation: noscroll 400ms;
+  animation: noscroll 400ms;/*para evitar que aparezca el scroll*/
+}
+
+.Secciones h2{
+    left: 16px;
+    top: 20px;
+    cursor: pointer;
+    opacity: 0.3;
+    -webkit-transition: opacity 500ms ease;
+    transition: opacity 500ms ease;
+}
+.Secciones h2:hover{opacity: 0.8;}
+.Secciones h2:last-of-type{
+    right: 0;
+    left: inherit;
+}
+.Secciones h2.seleccionada{
+    border-bottom: solid 2px #D35555;
+    opacity: 1;
+}
+.Secciones ul, .Secciones h2{
+    position: absolute;
+}
+.Secciones ul, .Secciones ol {
+    padding-left: 35px;
+}
+.Secciones ul{
+    opacity: 0;
+    -webkit-transition: opacity 0.7s ease;
+    transition: opacity 0.7s ease;
+    top: 56px;
+}
+.Secciones ul.seleccionada{
+    opacity: 1;
+}
+.Secciones li {
+    display: block;
+    float: left;
+    width: 154px;
+    margin-right: 20px;
+    margin-bottom: 26px;
+    text-align: center;
+    color: #D35555;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+}
+.Secciones li:nth-child(2n+1) {
+    clear:both;
+}
+.Secciones li strong{
+display: block;
+}
+.bolsa{background-color: #f16b6b;
+background-image:url("bolsa.png");
+background-size: 46px 25px;
+background-repeat: no-repeat;
+background-position: 18px 32px;
+position: absolute;
+height: 62px;
+width: 64px;
+left: 168px;
+border-radius: 50%;
+}
+.bolsa:before{
+    content: "---";
+    display: block;
+    position: absolute;
+    border: solid 2px white;
+    margin: auto;
+    top: 9px;
+    bottom: 25px;
+    left: 18px;
+    right: 22px;
+    border-radius: 6px;
+    border-bottom-width: 0;
+    -webkit-transition: border-bottom-width 500ms ease;
+    transition: border-bottom-width 500ms ease;
+    text-align: center;
+    font-size: 21px;
+    color: #F16B6B;
+}
+.bolsa:hover:before{
+    border-bottom-width: 7px;
+}
+.bolsa.llena:before{
+    border-bottom-width: 26px;
+}
+.bolsa.llena:hover:before{
+    border-bottom-width: 19px;
+}
+
+.col_div .cota{
+    line-height: 17px;
+    font-size: 13px;
+    font-style: italic;
+}
+/* exclusivos de la pag. ENTRAR */
+.col_div.ingresar {
+  padding-top: 65px;
 }
 /*estos son los específicos de la barra--------------------*/
 .campania{
@@ -379,7 +498,7 @@ input:focus:-moz-placeholder{ color: white; }
 }
 .bar div:after{
   content: " ";
-  background: url('http://nicolasfigliozzi.com.ar/blodbrother/gotas.png') -23px 1px no-repeat;
+  background: url('gotas.png') -23px 1px no-repeat;
   display: inline-block;
   width: 20px; height: 27px;
   position:relative; top:2px;
@@ -408,37 +527,43 @@ input:focus:-moz-placeholder{ color: white; }
 .registrados:after {content:" REGISTRADOS";}
 .objetivo:before {content:"OBJETIVO: ";}
 
-/*animación de barra*/
-@-webkit-keyframes ensanchar{from {width:30%;} to {width:100%}}
-@keyframes ensanchar{from {width:1%;} to {width:100%}}
-
 /*----Slogan-------*/
-.slogan {width: 330px; height: 80px; position: relative; margin: 90px 35px;}
+.slogan {width: 330px; height: 80px; position: relative;margin: 80px 35px 60px 35px;}
 .slogan p, .slogan h2, .slogan h3 {margin:0px; position: absolute; font-weight:bold; color:#D35555;}
 .slogan p {top:48px; left: 0; font-size: 20px;}
 .slogan p:first-child {top: 0; left: 0; font-size: 16px;}
-.slogan p:nth-child(2) {top: 18px; left: 50px; font-size: 28px;}
+.slogan p:nth-child(2) {top: 24px; left: 50px; font-size: 28px;}
 .slogan h2 {top: 0; right:1px; font-size: 28px;}
 .slogan h3 {top:36px; right:0; font-size: 36px;}
 .slogan h3:hover, .slogan h2:hover {font-size: 39px; background:white;}
 /*----especificos de la gota-------*/
-.boton_donar, .boton_donar:visited{
+.boton_donar{
     position: relative;
-    font-family: Oswald;
+    font-family: 'Oswald', sans-serif;
+    text-align:center;
+    display: block;
+    margin-right: 120px; float:right;
+    margin-top: 270px;
+    width: 160px;
+}
+.boton_donar a, .boton_donar a:visited{
     font-size: 28px;
     font-weight: 700;
-    text-align:center;
     color: #D35555;
     width: 85px;
     height: 65px;
     padding: 112px 37px 50px 37px;
     display: block;
-    margin-right: 120px; float:right;
-    margin-top: 270px;
-    background-image: url("http://nicolasfigliozzi.com.ar/blodbrother/quierodonar_btn.png");
+    background-image: url("quierodonar_btn.png");
     background-repeat:no-repeat;
 }
-
+.boton_donar p{
+    margin-top: 16px;
+    font-size: 14px;
+    color: white;
+    font-weight: 300;
+    line-height: 20px;
+}
 /*-----pagina con menu y sin columnas----------*/
 .container_menu {
     border-bottom: 1px solid #D35555 ;
@@ -472,3 +597,13 @@ input:focus:-moz-placeholder{ color: white; }
     width: 65%;
     padding-left: 8px;
 }
+
+/*animaciones*/
+@-webkit-keyframes ensanchar{from {width:30%;} to {width:100%;}}
+@keyframes ensanchar{from {width:1%;} to {width:100%;}}
+@-webkit-keyframes noscroll {
+    from {height:1px; min-height: inherit;}
+    to {height:140px; min-height: inherit;}}
+@keyframes noscroll{
+    from {height: 1px; min-height: inherit;}
+    to {height: 140px; min-height: inherit;}}
