@@ -353,7 +353,7 @@ input:focus:-moz-placeholder{ color: white; }
 }
 .Secciones p:last-child:after{
     content: "";
-    background-image: url("gotas.png");
+    background-image: url(asset-path("gotas.png"));
     background-position: 0 -5px;
     height: 18px;
     width: 16px;
@@ -393,7 +393,7 @@ input:focus:-moz-placeholder{ color: white; }
 display: block;
 }
 .bolsa{background-color: #f16b6b;
-background-image:url("bolsa.png");
+background-image:url(asset-path("bolsa.png"));
 background-size: 46px 25px;
 background-repeat: no-repeat;
 background-position: 18px 32px;
@@ -506,7 +506,7 @@ border-radius: 50%;
 }
 .bar div:after{
   content: " ";
-  background: url('gotas.png') 0px 1px no-repeat;
+  background: url(asset-path('gotas.png')) 0px 1px no-repeat;
   display: inline-block;
   width: 20px; height: 27px;
   position:relative; top:2px;
@@ -562,7 +562,7 @@ border-radius: 50%;
     height: 65px;
     padding: 112px 37px 50px 37px;
     display: block;
-    background-image: url("quierodonar_btn.png");
+    background-image: url(asset-path("quierodonar_btn.png"));
     background-repeat:no-repeat;
 }
 .boton_donar p{

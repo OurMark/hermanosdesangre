@@ -1,8 +1,4 @@
 <div class="boton_donar">
-    <% if current_user %>
-        <%= link_to "QUIERO DONAR", ongs_path%>
-    <% else %>
-        <%= link_to "QUIERO DONAR", user_session_path%>
-    <% end %>
+    <%= link_to "QUIERO DONAR", current_user ? ongs_path : user_session_path %>
     <p>Si puedes hacerlo,<br />debes hacerlo</p>
 </div>
