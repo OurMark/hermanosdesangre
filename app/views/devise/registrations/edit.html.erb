@@ -1,23 +1,77 @@
 <div class="columna col_der">
-  <div class="col_div">
-    <h1>Cambiar Datos de Perfil.</h1>
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
-    <%= f.text_field :first_name, placeholder: "NOMBRE" %>
-    <%= f.text_field :birth, placeholder: "NACIMIENTO: dd/mm/aaaa" %>
-    <%= f.text_field :dni, placeholder: "DNI" %>
-    <%= f.text_field :bloodtype, placeholder: "GRUPO SANGUINEO" %>
-    <%= f.text_field :gender, placeholder: "SEXO" %>
-    <%= f.text_field :city, placeholder: "CIUDAD" %>
-    <%= f.email_field :email, autofocus: true, placeholder: "E-MAIL" %>
-    <%= f.password_field :current_password, autocomplete: "off", placeholder: "PASSWORD" %>
-    <p>Si quieres cambiar tu password completa tambien estos datos</p>
-    <%= f.password_field :password, autocomplete: "off", placeholder: "PASSWORD" %>
-    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "REPITE PASSWORD" %>
-    <%= f.submit "ACTUALIZAR INFORMACION" %>
-    <% end %>
+  <div class="col_div perfil">
+      <div class="Secciones">
+          <div class="seleccionada"> <!-- Perfil -->
+              <h1><strong>Pedro Nicolás Figliozzi</strong></h1>
+              <h3>31.659.443</h3>
+              <h2>A positivo</h2>
+              <h4>Fecha de Nacimiento:</h4>
+              <p>23/05/1985</p>
+              <h4>Sexo:</h4>
+              <p>Hombre</p>
+              <h4>Ciudad:</h4>
+              <p>Mar del Plata, Buenos Aires</p>
+              <h4>E-mail:</h4>
+              <p>hola@nicolasfigliozzi.com.ar</p>
+              <h4>Contraseña:</h4>
+              <p>********</p>
+              <div class="cambiar" style="right: 30px;">CAMBIAR DATOS</div>
+          </div>
+          
+          <div> <!-- formulario Cambiar Perfil -->
+              <h1><strong>CAMBIAR DATOS</strong></h1>
+              <%= render 'form' %>
+          </div>
+          <script type="text/javascript">
+            /*definimos los botones cambiar para cambiar entre el perfil y el formulario*/
+              $(".cambiar").click(function(){$(".Secciones>div").toggleClass("seleccionada");});
+          </script> 
+      </div>
+      
+      <div class="badgets">
+          <h4>Recompensas:</h4>
+          <div class="sin badget">
+              <div class="medalla">
+              </div><div class="descripcion">
+              <p>He <br /> donado!</p>
+              <p><span>02 de octubre</span></p>
+              </div>
+
+          </div><div class="sin badget bronce">
+              <div class="medalla">
+              </div><div class="descripcion">
+              <p>Primera<br />donación</p>
+              <p><span>02 de octubre</span></p>
+              </div>
+
+          </div><div class="sin badget plata">
+              <div class="medalla">
+              </div><div class="descripcion">
+              <p>Donante<br />habitual</p>
+              <p><span>2014</span></p>
+              </div>
+          </div>
+          <br />
+          <div class="sin badget oro">
+              <div class="medalla">
+              </div><div class="descripcion">
+              <p>Donante<br />perfecto</p>
+              <p><span>consiguelo</span></p>
+              </div>
+
+          </div><div class="sin badget azul none">
+              <div class="medalla">
+              </div><div class="descripcion">
+              <p>Embajador</p>
+              <p><span>consiguelo</span></p>
+              </div>
+          </div>
+      </div>
+      
+      <h4><a href="@">Próximo turno: <strong>Fecha hora, lugar</strong> - Ver todos.</a></h4>      
   </div>
 </div>
 <div class="columna col_izq">
   <%= render partial: 'shared/gota_donar' %>
+  <%= link_to "Registrar mi Banco de Sangre u ONG de donación", new_ong_path,{ :class =>"botonONG"}%>
 </div>

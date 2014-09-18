@@ -1,9 +1,10 @@
-<div class="col-lg-6">
+<div class="columna col_der">
+     <div class="col_div">
+         <h1>Nueva ONG</h1>
+         <%= render 'form' %>
+         <%= link_to 'Cancelar', edit_user_registration_path %>
+      </div>
 </div>
-<div class="col-lg-6">
-  <h1>Nueva ONG</h1>
-
-  <%= render 'form' %>
-
-  <%= link_to 'Back', ongs_path %>
+<div class="columna col_izq">
+  <%= render partial: 'shared/gota_sin_donar' %>
 </div>

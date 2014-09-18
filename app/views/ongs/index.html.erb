@@ -1,11 +1,10 @@
         <div class="container_menu">
             <div class="faldon_top">
-                <form><input type="text" value placeholder="Mar del Plata" title="Ciudad" style="
-    font-family: 'Oswald', sans-serif;"></form>
+                <form><input type="text" value placeholder="Mar del Plata" title="Ciudad"></form>
             </div>
         </div>
-        <div class="col_none">.
-
+        <div class="col_none">
+            
             <% @ongs.each do |ong| %>
             <div class="banco">
                 <div class="ficha_banco">
@@ -17,9 +16,9 @@
                             <div class="registrados">210</div>
                         </div>
                     </div>
-                    <p class="mailtel"><%= ong.phone %> - <%= ong.email %></p>
-                    <p class="webface"><%= ong.website %> - <%= ong.facebook %></p>
-                    <div class="reservar"><%= link_to "Add booking", new_ong_booking_path(ong) %></div>
+                    <p><%= ong.phone %> - <%= ong.email %></p>
+                    <p><%= ong.website %> - <%= ong.facebook %></p>
+                    <div class="reservar"><%= link_to "Donar aquí", new_ong_booking_path(ong) %></div>
                 </div>
                 <h3><%= ong.name %></h3>
                 <h2><%= ong.street1 %>,<br/><%= ong.street2 %></h2>
@@ -27,61 +26,4 @@
                 <div style="clear:both;"></div>
             </div>
             <% end %>
-            </div>
-
-        .</div>
-<!--
-<h1>Listing ongs</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Street1</th>
-      <th>Street2</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Country</th>
-      <th>Zip</th>
-      <th>Country</th>
-      <th>Phone</th>
-      <th>Email</th>
-      <th>Website</th>
-      <th>Facebook</th>
-      <th>National network</th>
-      <th>International network</th>
-      <th>Comments</th>
-      <th colspan="5"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @ongs.each do |ong| %>
-      <tr>
-        <td><%= ong.name %></td>
-        <td><%= ong.street1 %></td>
-        <td><%= ong.street2 %></td>
-        <td><%= ong.city %></td>
-        <td><%= ong.state %></td>
-        <td><%= ong.country %></td>
-        <td><%= ong.zip %></td>
-        <td><%= ong.phone %></td>
-        <td><%= ong.email %></td>
-        <td><%= ong.website %></td>
-        <td><%= ong.facebook %></td>
-        <td><%= ong.national_network %></td>
-        <td><%= ong.international_network %></td>
-        <td><%= ong.comments %></td>
-        <td><%= link_to "Show all bookings", ong_bookings_path(ong) %></td>
-        <td><%= link_to "Add booking", new_ong_booking_path(ong) %></td>
-        <td><%= link_to 'Show', ong %></td>
-        <td><%= link_to 'Edit', edit_ong_path(ong) %></td>
-        <td><%= link_to 'Destroy', ong, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Ong', new_ong_path %>-->
+        -</div>

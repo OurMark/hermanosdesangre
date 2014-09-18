@@ -1,3 +1,28 @@
+/* CSS HERMANOS DE SANGRE - Indice
+
+• 1 REGLAS GENERALES
+--- • 1 • a CABECERA
+--- • 1 • b CONTENIDO
+--- • 1 • c FORMULARIOS
+--- • 1 • d SECCIONES
+--- • 1 • e CONTENIDO SIN COLUMNAS
+
+• 2 REGLAS EXCLUSIVAS (por páginas)
+--- • 2 • a HOME
+--- • 2 • b DONANTES
+--- • 2 • c ¿QUIENES SOMOS?
+--- • 2 • d ENTRAR Y REGISTRAR
+--- • 2 • e PERFIL de USUARIO
+--- • 2 • f LISTA DE ONGS
+
+• 3 REGLAS DE PARCIALES
+--- • 3 • a BARRA DE PORCENTAJE
+--- • 3 • b GOTA
+--- • 3 • c BADGETS
+
+• 4 ANIMACIONES
+*/
+/* • 1 GENERALES ---------------------------------------------*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,7 +49,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
-html,body { overflow-x: hidden;}
+html { overflow-x: hidden;}
 body {
     line-height: 1;
     background-color:#D35555;
@@ -42,7 +67,7 @@ table {
     border-spacing: 0;
 }
 
-/*estos son los específicos de la cabecera------------------*/
+/*--- • 1 • a REGLAS de la CABECERA --------------------------*/
 .faldon_top_container{
     font-family: 'Oswald', sans-serif;
     font-size: 14px;
@@ -71,7 +96,6 @@ table {
     box-shadow: black 0px 0px 25px -5px;
     z-index: 9999;
 }
-
 /*MENU*/
 ul#menu, ul.sub-menu, ul#sobre_derecha {
     padding:0;
@@ -156,12 +180,13 @@ ul#sobre_derecha li a:hover{
   color: #F16B6B;
 }
 
-/*----general contenido de toda la app-------*/
+/*--- • 1 • b REGLAS del CONTENIDO ---------------------------*/
 .content_container{
     position: relative;
     width: 100%;
     border-top: solid 70px white;
     background: white;
+    font-family: "Oswald" sans-serif;
 }
 .h_container{
     position: absolute;
@@ -221,52 +246,122 @@ h1{
 .col_div>p, .col_div div>p, .col_div iframe, .col_div form, .col_div img {
   margin: 0 35px 32px 35px;
 }
-.col_div h1, .col_div h2, .col_div h3 {
+.col_div h1, .col_div h2, .col_div h3, .col_div h4 {
   margin: 5px 35px;  
 }
-/* formularios en en el container*/
-.content_container  form INPUT{
-    margin-bottom: 10px;
+
+/*--- • 1 • c REGLAS de FORMULARIOS --------------------------*/
+.col_div form {
+    margin-top: 30px;
 }
-.content_container form INPUT[type="password"],
-.content_container form INPUT[type="text"],
-.content_container form INPUT[type="email"]{
+.inputLargo{
     width: 315px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.inputCorto{
+    width: 155px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+label{
+    font-size: 14px;
+    color: #d35555;
+    padding-left: 10px;
+    display: block;
+    margin-bottom: 3px;
+}
+label:after{content: ":";}
+.similInput label{
+    display: inline-block;
+    margin-bottom: 0;
+    padding-left: 0;
+    color: black;
+    font-size: 17px;
+}
+.similInput label:after{content: none;}
+
+form INPUT[type="password"],
+form INPUT[type="text"],
+form INPUT[type="email"],
+.similInput{
+    width: 100%;
     height: 30px;
     border: none;
     border-bottom: 1px dashed #D35555;
     background-color: whitesmoke;
+    font-family: "Oswald" sans-serif;
     font-size: 17px;
-    margin-bottom: 20px;
-    padding-left: 15px;
+    padding-left: 10px;
     -webkit-transition: background 500ms ease;
     transition: background 500ms ease;
 }
-.content_container  form INPUT[type="password"]:focus,
-.content_container form INPUT[type="text"]:focus,
-.content_container form INPUT[type="email"]:focus{
+.similInput INPUT{
+    margin: 10px 0 0 0;
+}
+.similInput div{
+padding-top: 6px;
+}
+form INPUT[type="password"]:focus,
+form INPUT[type="text"]:focus,
+form INPUT[type="email"]:focus,
+select:focus{
     background-color: #D35555;
     color: white;
     outline: none;
-}
-.content_container form INPUT[type="submit"]{
-    cursor: pointer;
-    float: right;
 }
 input:focus::-webkit-input-placeholder{ color: white; }
 input:focus::-moz-placeholder{ color: white; }
 input:focus:-ms-input-placeholder{ color: white; }
 input:focus:-moz-placeholder{ color: white; }
 
-/* especificos de la home*/
-.col_div.home {
-  padding-top: 250px;
+.col_div .notificacion{
+    margin: 0;
+    text-align: right;
+    padding: 0 15px;
+    position: relative;
+    bottom: 10px;
 }
-/* especificos de NOSOTROS*/
-.col_div.us {
-  padding-top: 140px;
+.notificacion a, .notificacion a:hover, .notificacion a:visited{
+    color: #d35555;
 }
-/* especificos de DONANTES: */
+
+.submitArea label, .col_div .submitArea>p{
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 0; padding-left: 0;
+    color: black;
+}
+.submitArea label:after{
+    content: none;
+}
+form INPUT[type="submit"]{
+    cursor: pointer;
+    float: right;
+    border: none;
+    border-bottom: solid white 1px;
+    background: whitesmoke;
+    font-family: "Oswald" sans-serif;
+    color: #d35555;
+    text-align: center;
+    font-size: 13px;
+    width: 100px;
+    padding: 9px;
+    margin-right: 15px;
+    -webkit-box-shadow: #AAA 0px 2px 20px -5px;
+    box-shadow: #AAA 0px 2px 20px -5px;
+}
+form INPUT[type="submit"]:hover,
+form INPUT[type="submit"]:focus{
+    color: white;
+    background-color: #F16B6B;
+    border-bottom: solid #d35555 2px;
+    outline: none;
+}
+/*--- • 1 • d REGLAS de SECCIONES ----------------------------*/
+/*OPCIONES*/
 .Opciones {
     margin-left: 15px; margin-top: 50px;
     height: 440px;
@@ -301,7 +396,7 @@ input:focus:-moz-placeholder{ color: white; }
     position: absolute;
     top: 130px; left: 0;
 }
-
+/*SECCIONES*/
 .Secciones{
     clear:both;
 }
@@ -314,7 +409,7 @@ input:focus:-moz-placeholder{ color: white; }
     height: 0;
     overflow: hidden;
 }
-
+/*MODIFICACIÓN AL SELECCIONAR*/
 .Opciones.seleccionada{
     height: 170px;
 }
@@ -333,32 +428,7 @@ input:focus:-moz-placeholder{ color: white; }
   -webkit-animation: noscroll 400ms;
   animation: noscroll 400ms;/*para evitar que aparezca el scroll*/
 }
-
-.Secciones h2{
-    left: 16px;
-    top: 20px;
-    cursor: pointer;
-    opacity: 0.3;
-    -webkit-transition: opacity 500ms ease;
-    transition: opacity 500ms ease;
-}
-.Secciones h2:hover{opacity: 0.8;}
-.Secciones h2:last-of-type{
-    right: 0;
-    left: inherit;
-}
-.Secciones h2.seleccionada{
-    border-bottom: solid 2px #D35555;
-    opacity: 1;
-}
-.Secciones p:last-child:after{
-    content: "";
-    background-image: url(asset-path("gotas.png"));
-    background-position: 0 -5px;
-    height: 18px;
-    width: 16px;
-    display: inline-block;
-}
+/*CONTIDO DE SECCIONES*/
 .Secciones ul, .Secciones h2{
     position: absolute;
 }
@@ -392,16 +462,73 @@ input:focus:-moz-placeholder{ color: white; }
 .Secciones li strong{
 display: block;
 }
-.bolsa{background-color: #f16b6b;
-background-image:url(asset-path("bolsa.png"));
-background-size: 46px 25px;
-background-repeat: no-repeat;
-background-position: 18px 32px;
-position: absolute;
-height: 62px;
-width: 64px;
-left: 168px;
-border-radius: 50%;
+.Secciones h2{
+    left: 16px;
+    top: 20px;
+    cursor: pointer;
+    opacity: 0.3;
+    -webkit-transition: opacity 500ms ease;
+    transition: opacity 500ms ease;
+}
+.Secciones h2:hover{opacity: 0.8;}
+.Secciones h2:last-of-type{
+    right: 0;
+    left: inherit;
+}
+.Secciones h2.seleccionada{
+    border-bottom: solid 2px #D35555;
+    opacity: 1;
+}
+.Secciones p:last-child:after{
+    content: "";
+    background-image: url(asset-path("gotas.png"));
+    background-position: 0 -5px;
+    height: 18px;
+    width: 16px;
+    display: inline-block;
+}
+
+/*--- • 1 • e REGLAS EXCLUSIVAS del CONTENIDO SIN COLUMNAS ---*/
+.container_menu {
+    border-bottom: 1px solid #D35555 ;
+    background-color: #f16b6b;
+    background-color: rgba(241, 107, 107, 0.9);
+    position: fixed; z-index:1;
+    width: 100%; height: 55px;
+    overflow: hidden;
+}
+.container_menu~.col_none {margin-top:  55px;}
+.container_menu .faldon_top{
+    margin-top: 12px;
+}
+.container_menu form INPUT{
+    float: right;
+    width: 250px;
+    background: #D35555;
+    color: white;
+}
+.col_none{
+    max-width: 800px;
+    margin-left: auto; margin-right: auto;
+}
+
+/*--- • 2 • a REGLAS EXCLUSIVAS de la HOME -------------------*/
+.col_div.home {
+  padding-top: 250px;
+}
+
+/*--- • 2 • b REGLAS EXCLUSIVAS de DONANTES ------------------*/
+.bolsa{
+    background-color: #f16b6b;
+    background-image:url(asset-path("bolsa.png"));
+    background-size: 46px 25px;
+    background-repeat: no-repeat;
+    background-position: 18px 32px;
+    position: absolute;
+    height: 62px;
+    width: 64px;
+    left: 168px;
+    border-radius: 50%;
 }
 .bolsa:before{
     content: "---";
@@ -430,17 +557,164 @@ border-radius: 50%;
 .bolsa.llena:hover:before{
     border-bottom-width: 19px;
 }
-
 .col_div .cota{
     line-height: 17px;
     font-size: 13px;
     font-style: italic;
 }
-/* exclusivos de la pag. REGISTRARSE y ENTRAR */
+
+/*--- • 2 • c REGLAS EXCLUSIVAS de ¿QUIENES SOMOS? -----------*/
+.col_div.us {
+  padding-top: 140px;
+}
+
+.slogan {width: 330px; height: 80px; position: relative;margin: 80px 35px 60px 35px;}
+.col_div .slogan>p, .slogan h2, .slogan h3 {margin:0px; position: absolute; font-weight:bold; color:#D35555;}
+.slogan p {top:48px; left: 0; font-size: 20px;}
+.slogan p:first-child {top: 0; left: 0; font-size: 16px;}
+.slogan p:nth-child(2) {top: 24px; left: 50px; font-size: 28px;}
+.slogan h2 {top: 0; right:1px; font-size: 28px;}
+.slogan h3 {top:36px; right:0; font-size: 36px;}
+.slogan h3:hover, .slogan h2:hover {font-size: 39px; background:white;}
+
+/*--- • 2 • d REGLAS EXCLUSIVAS de ENTRAR Y REGISTRARSE ------*/
 .col_div.ingresar, .col_div.registrarse {
   padding-top: 85px;
 }
-/*estos son los específicos de la barra--------------------*/
+/*--- • 2 • e REGLAS EXCLUSIVAS de PERFIL de USUARIO ---------*/
+.perfil{
+    padding-top: 85px;
+}
+.perfil .Secciones > .seleccionada {
+    -webkit-animation: initial;
+    animation: initial;
+}
+.perfil .secciones p:last-of-type:after{
+    content: none;
+}
+.perfil .Secciones h2:last-of-type,
+.perfil .Secciones h2{
+    opacity: 1;
+    cursor: auto;
+    background: url(asset-path("gota.png")) no-repeat;
+    height: 38px;
+    width: 52px;
+    padding: 38px 8px 22px 8px;
+    text-align: center;
+    color: white;
+}
+.perfil h3{
+    margin-bottom: 25px;
+}
+.perfil h3:before{
+    content: "DNI. ";
+    color:  #f16b6b;
+}
+.perfil h4{
+    color: #f16b6b;
+    font-size: 14px;
+}
+.perfil h4 a, .perfil h4 a:visited{
+    color: #f16b6b;
+}
+.perfil h4 a strong, .perfil h4 a:visited strong{
+    color: black;
+    font-weight: 400;
+}
+.perfil h4:last-child{
+    padding-bottom: 35px;
+}
+.perfil .Secciones>div:first-child>p{
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 23px;
+}
+.perfil .badgets h4 {
+margin: 0;
+padding-top: 12px;
+text-align: left;
+}
+.cambiar{
+    cursor: pointer;
+    border: none;
+    border-bottom: solid white 1px;
+    background: whitesmoke;
+    color: #d35555;
+    text-align: center;
+    font-size: 13px;
+    width: 100px;
+    padding: 9px;
+    -webkit-box-shadow: #AAA 0px 2px 20px -5px;
+    box-shadow: #AAA 0px 2px 20px -5px;
+    position: absolute;
+    bottom: 34px;
+}
+.perfil .submitArea {
+    height: 42px;
+    margin-top: 14px;
+}
+.botonONG{
+    display: block;
+    position: absolute;
+    bottom: 36px;
+    font-family: "Oswald" sans-serif;
+    font-size: 14px;
+    right: 75px;
+    color: white;
+    font-weight: 300;
+    background-color: #D35555;
+    padding: 4px;
+}
+
+/*--- • 2 • f REGLAS EXCLUSIVAS de LISTA DE ONGS -------------*/
+.banco {
+    border: solid 1px whitesmoke;
+    margin: 62px 4px;
+    padding: 22px 8px;
+    -webkit-box-shadow: 0 35px 35px -35px #699;
+    box-shadow: 0 30px 35px -35px #699;
+    position: relative;
+}
+.banco:first-child {
+    margin-top: 95px;
+}
+.banco h2{
+    font-size: 24px;
+    margin: 15px 0;
+}
+.banco h3{
+    font-size: 18px;
+    color: #F16B6B;
+}
+.banco h4, .ficha_banco p{
+    font-size: 14px;
+    font-weight: 300;
+    margin: 11px 0;
+}
+.ficha_banco p{
+    padding-left: 5px;
+}
+.ficha_banco {
+    float: right;
+    width: 65%;
+    padding-left: 8px;
+}
+.reservar a{
+    height: 48px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    text-align: center;
+    padding-top: 12px;
+    transition: background-color 500ms ease;
+}
+.reservar a, .reservar a:visited{color: #d35555;}
+.reservar a:hover{color: white; background-color: #d35555;}
+
+/*--- • 3 • a REGLAS de la BARRA DE PORCENTAJES --------------*/
 .campania{
     width: 69%;
     font-weight: 300;
@@ -535,16 +809,7 @@ border-radius: 50%;
 .registrados:after {content:" REGISTRADOS";}
 .objetivo:before {content:"OBJETIVO: ";}
 
-/*----Slogan-------*/
-.slogan {width: 330px; height: 80px; position: relative;margin: 80px 35px 60px 35px;}
-.slogan p, .slogan h2, .slogan h3 {margin:0px; position: absolute; font-weight:bold; color:#D35555;}
-.slogan p {top:48px; left: 0; font-size: 20px;}
-.slogan p:first-child {top: 0; left: 0; font-size: 16px;}
-.slogan p:nth-child(2) {top: 24px; left: 50px; font-size: 28px;}
-.slogan h2 {top: 0; right:1px; font-size: 28px;}
-.slogan h3 {top:36px; right:0; font-size: 36px;}
-.slogan h3:hover, .slogan h2:hover {font-size: 39px; background:white;}
-/*----especificos de la gota-------*/
+/*--- • 3 • b REGLAS de la GOTA ------------------------------*/
 .boton_donar{
     position: relative;
     font-family: 'Oswald', sans-serif;
@@ -572,41 +837,68 @@ border-radius: 50%;
     font-weight: 300;
     line-height: 20px;
 }
-/*-----pagina con menu y sin columnas----------*/
-.container_menu {
-    border-bottom: 1px solid #D35555 ;
-    background-color: #f16b6b;
-    background-color: rgba(241, 107, 107, 0.9);
-    position: fixed; z-index:1;
-    width: 100%; height: 55px;
+
+/*--- • 3 • c REGLAS de los BADGETS --------------------------*/
+.badgets {
+    margin: 0 35px 14px 35px;
+    text-align: center;
+    border-top: dashed #AAA 1px;
+    border-bottom: dashed #AAA 1px; 
+}
+.badget {
+    width:54px; height:54px;
+    border-radius: 27px;
+    background: #d35555;
+    margin: 10px;
     overflow: hidden;
+    transition: width 0.5s ease, border-radius 0.3s ease;
+    display:inline-block;
+    text-align: left;
 }
-.container_menu~.col_none {margin-top:  55px;}
-.container_menu .faldon_top{
-    margin-top: 12px;
+.badget:hover {
+    width:155px;
+    border-radius: 0;
 }
-.container_menu INPUT{
-    float: right;
+.medalla {
+  display: inline-block;
+  width: 45px; height: 54px;
+  background: url(https://lh6.googleusercontent.com/-bIbraxlvFZk/U_juf3QT3sI/AAAAAAAAQTo/e0BskWTQtfM/w46-h277-no/badgets.png) no-repeat 50% 6px;
+  margin-left: 7px;
 }
-.col_none{
-    max-width: 800px;
-    margin-left: auto; margin-right: auto;
+.descripcion{
+    display: inline-block;
+    position: relative;
+    bottom: 3px;
 }
-.banco {
-    border: solid 1px whitesmoke;
-    margin: 42px 4px;
-    padding: 22px 8px;
-    -webkit-box-shadow: 0 35px 35px -35px #699;
-    box-shadow: 0 30px 35px -35px #699;
+.col_div .descripcion>p{
+    font: 12px arial;
+    font-weight: bold;
+    margin: 0 0 0 9px;
+}
+.descripcion p span{
+  font: 11px arial;
+  font-weight: normal;
+  font-style: italic;
+  color: whitesmoke;
 }
 
-.ficha_banco {
-    float: right;
-    width: 65%;
-    padding-left: 8px;
+/*colores por tema */
+.bronce {background-color:#C9712A;}
+.plata {background-color:#B3B4BD;}
+.oro {background-color:#CCA14A;}
+.azul {background-color:#5476BA;}
+
+/*medallas por tema */
+.bronce .medalla{ background-position: 50% -51px;}
+.oro .medalla{ background-position: 50% -169px;}
+.plata .medalla{ background-position: 50% -112px;}
+.azul .medalla{ background-position: 50% -229px;}
+
+.sin{
+  background-color: whitesmoke !important; 
 }
 
-/*animaciones*/
+/* • 4 ANIMACIONES -------------------------------------------*/
 @-webkit-keyframes ensanchar{from {width:30%;} to {width:100%;}}
 @keyframes ensanchar{from {width:1%;} to {width:100%;}}
 @-webkit-keyframes noscroll {
