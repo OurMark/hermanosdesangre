@@ -36,12 +36,19 @@
         </select>
       </div>
       <div class="inputCorto">
-        <label>Provincia</label>
+        <label>País*</label>
+        <select id="user_state" name="user[country]" class="similInput">
+            <option value="none"> </option>
+            <option value="Argentina">Argentina</option>
+        </select>
+      </div><div class="inputCorto">
+        <label>Provincia*</label>
         <select id="user_state" name="user[state]" class="similInput">
             <option value="none"> </option>
             <option value="Buenos Aires">Buenos Aires</option>
         </select>
-      </div><div class="inputCorto">
+      </div>
+      <div class="inputLargo">
         <label>Ciudad*</label>
         <!-- <%= f.text_field :city %> -->
         <select id="user_city" name="user[city]" class="similInput">
