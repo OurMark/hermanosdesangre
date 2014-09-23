@@ -1,7 +1,7 @@
 <%= form_for([@ong, @booking]) do |f| %>
-  <p>
-    <%= f.label 'start_time', 'Start time' %>
-    <%= f.datetime_select :start_time, { minute_step: 30 } %>
-  </p>
-  <%= f.submit 'Submit' %>
+    <p>
+      <%= f.label 'start_time', 'Solicite su turno' %>
+      <%= f.datetime_select :start_time, { minute_step: 30 } %>
+    </p>
+    <p><%= f.submit 'Reservar' %></p>
 <% end %> 

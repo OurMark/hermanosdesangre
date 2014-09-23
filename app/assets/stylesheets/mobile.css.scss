@@ -1,7 +1,17 @@
-@media (max-width: 798px) {
-html, body{overflow: visible;}
+/* CSS HERMANOS DE SANGRE - para MOBILES Y TABLES - Indice
 
-/*----------menú--------------*/
+• 1 REGLAS PANTALLAS MENORES A 798px, IPAD y SMARTPHONE
+--- • 1 • a MENÚ MOBILE
+--- • 1 • b CONTENIDOS VARIOS
+
+• 2 REGLAS MOBILES Y PANTALLAS MENORES A 365px
+*/
+
+/* • 1 REGLAS PANTALLAS MENORES A 798px, IPAD y SMARTPHONE ---*/
+@media (max-width: 798px){ /*@media only screen and (max-device-width: 798px)*/
+html{overflow: visible;}
+
+/*--- • 1 • a MENÚ MOBILE -----------------------------------*/
 .faldon_top_container {
     position: relative;
     width: 100%;
@@ -166,7 +176,7 @@ ul#sobre_derecha>li:last-child a{
     border-bottom-width: 2px;
 }
 
-/*----cuerpo de la página-----*/
+/*--- • 1 • b CONTENIDO VARIOS-------------------------------*/
 .content_container {    
     border-top: none;
 }
@@ -235,7 +245,12 @@ margin: 5px 0;
 .bar-main-container {
     margin-top: 40px;
 }
+.container_menu{
+    position: relative;
 }
+}
+
+/* • 2 REGLAS MOBILES Y PANTALLAS MENORES A 365px ------------*/
 @media (max-width: 365px) {
 .slogan{
     width: auto;

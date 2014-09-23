@@ -490,14 +490,13 @@ display: block;
 
 /*--- • 1 • e REGLAS EXCLUSIVAS del CONTENIDO SIN COLUMNAS ---*/
 .container_menu {
-    border-bottom: 1px solid #D35555 ;
     background-color: #f16b6b;
     background-color: rgba(241, 107, 107, 0.9);
     position: fixed; z-index:1;
     width: 100%; height: 55px;
     overflow: hidden;
 }
-.container_menu~.col_none {margin-top:  55px;}
+/*.container_menu~.col_none {margin-top:  55px;}*/
 .container_menu .faldon_top{
     margin-top: 12px;
 }
@@ -510,8 +509,12 @@ display: block;
 .col_none{
     max-width: 800px;
     margin-left: auto; margin-right: auto;
+    margin-top:  55px;
 }
-
+.col_none td {
+    padding: 6px;
+    font-size: 14px;
+}
 /*--- • 2 • a REGLAS EXCLUSIVAS de la HOME -------------------*/
 .col_div.home {
   padding-top: 250px;
@@ -592,6 +595,10 @@ display: block;
 .perfil .secciones p:last-of-type:after{
     content: none;
 }
+.perfil h1{
+    z-index: 2;
+    position: relative;
+}
 .perfil .Secciones h2:last-of-type,
 .perfil .Secciones h2{
     opacity: 1;
@@ -602,6 +609,7 @@ display: block;
     padding: 38px 8px 22px 8px;
     text-align: center;
     color: white;
+    z-index: 0;
 }
 .perfil h3{
     margin-bottom: 25px;

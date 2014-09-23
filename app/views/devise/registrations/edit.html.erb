@@ -2,17 +2,17 @@
   <div class="col_div perfil">
       <div class="Secciones">
           <div class="seleccionada"> <!-- Perfil -->
-              <h1><strong>Pedro Nicolás Fernandez Gonzales de Paz Figliozzi</strong></h1>
-              <h3>31.659.443</h3>
-              <h2>A positivo</h2>
+              <h1><strong><%= resource[:first_name] %> <%= resource[:last_name] %></strong></h1>
+              <h3><%= resource[:dni] %></h3>
+              <h2><%= resource[:bloodtype] %></h2>
               <h4>Fecha de Nacimiento:</h4>
-              <p>23/05/1985</p>
+              <p><%= resource[:birth] %></p>
               <h4>Sexo:</h4>
-              <p>Hombre</p>
+              <p><%= resource[:gender] %></p>
               <h4>Ubicación:</h4>
-              <p>Mar del Plata, Buenos Aires</p>
+              <p><%= resource[:city] %>, <%= resource[:state] %>, <%= resource[:country] %></p>
               <h4>E-mail:</h4>
-              <p>hola@nicolasfigliozzi.com.ar</p>
+              <p><%= resource[:email] %></p>
               <h4>Contraseña:</h4>
               <p>********</p>
               <div class="cambiar" style="right: 30px;">CAMBIAR DATOS</div>

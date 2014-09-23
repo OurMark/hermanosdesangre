@@ -20,7 +20,6 @@
       </div>
       <div class="inputCorto">
         <label>Sexo</label>
-        <!--<%= f.text_field :gender, placeholder: "SEXO" %>-->
         <div class="similInput">
             <%= radio_button_tag(:gender, "Hombre") %>
             <%= label_tag(:gender, "Hombre") %>
@@ -29,17 +28,16 @@
         </div>
       </div><div class="inputCorto">
         <label>Grupo Sanguineo</label>
-        <!--<%= f.text_field :bloodtype, placeholder: "GRUPO SANGUINEO" %>-->
         <select id="user_bloodtype" name="user[bloodtype]" class="similInput">
             <option value="none"> </option>
-            <option value="Apositivo">A positivo</option>
-            <option value="Anegativo">A negativo</option>
-            <option value="Bpositivo">B positivo</option>
-            <option value="Bnegativo">B negativo</option>
-            <option value="ABpositivo">AB positivo</option>
-            <option value="ABnegativo">AB negativo</option>
-            <option value="0positivo">0 positivo</option>
-            <option value="0negativo">0 negativo</option>
+            <option value="A positivo">A positivo</option>
+            <option value="A negativo">A negativo</option>
+            <option value="B positivo">B positivo</option>
+            <option value="B negativo">B negativo</option>
+            <option value="AB positivo">AB positivo</option>
+            <option value="AB negativo">AB negativo</option>
+            <option value="0 positivo">0 positivo</option>
+            <option value="0 negativo">0 negativo</option>
         </select>
       </div>
       <div class="inputCorto">
@@ -57,7 +55,6 @@
       </div>
       <div class="inputLargo">
         <label>Ciudad*</label>
-        <!-- <%= f.text_field :city %> -->
         <select id="user_city" name="user[city]" class="similInput">
             <option value="none"> </option>
             <option value="Mar del Plata">Mar del Plata</option>
