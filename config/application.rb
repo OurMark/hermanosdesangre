@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 module Bloodbrothers
   class Application < Rails::Application
      config.assets.precompile += [
-                                    'custom.css'
+                                    'custom.css.scss'
                                 ]
   end
 end
