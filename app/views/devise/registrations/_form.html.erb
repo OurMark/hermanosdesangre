@@ -1,81 +1,71 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <p class="notificacion"><%= devise_error_messages! %></p>
-      <div class="inputCorto">
-        <label>Nombre</label>
-        <%= f.text_field :first_name, autofocus: true %>
-      </div><div class="inputCorto">
-        <label>Apellido</label>
-        <%= f.text_field :last_name %>
-      </div>
-      <div class="inputCorto">
-        <label>DNI</label>
-        <%= f.text_field :dni %>
-      </div><div class="inputCorto">
-        <label>Fecha de Nacimiento</label>
-        <%= f.text_field :birth, placeholder: "dd/mm/aaaa" %>
-      </div>
-      <div class="inputCorto">
-        <label>Sexo</label>
-        <div class="similInput">
-            <%= radio_button_tag(:gender, "Hombre") %>
-            <%= label_tag(:gender, "Hombre") %>
-            <%= radio_button_tag(:gender, "Mujer") %>
-            <%= label_tag(:gender, "Mujer") %>
-        </div>
-      </div><div class="inputCorto">
-        <label>Grupo Sanguineo</label>
-        <select id="user_bloodtype" name="user[bloodtype]" class="similInput">
-            <option value="none"> </option>
-            <option value="A positivo">A positivo</option>
-            <option value="A negativo">A negativo</option>
-            <option value="B positivo">B positivo</option>
-            <option value="B negativo">B negativo</option>
-            <option value="AB positivo">AB positivo</option>
-            <option value="AB negativo">AB negativo</option>
-            <option value="0 positivo">0 positivo</option>
-            <option value="0 negativo">0 negativo</option>
-        </select>
-      </div>
-      <div class="inputCorto">
-        <label>País</label>
-        <select id="user_state" name="user[country]" class="similInput">
-            <option value="none"> </option>
-            <option value="Argentina">Argentina</option>
-        </select>
-      </div><div class="inputCorto">
-        <label>Provincia</label>
-        <select id="user_state" name="user[state]" class="similInput">
-            <option value="none"> </option>
-            <option value="Buenos Aires">Buenos Aires</option>
-        </select>
-      </div>
-      <div class="inputLargo">
-        <label>Ciudad</label>
-        <select id="user_city" name="user[city]" class="similInput">
-            <option value="none"> </option>
-            <option value="Mar del Plata">Mar del Plata</option>
-        </select>
-      </div>
-              <div class="inputLargo">
-                  <label>E-mail</label>
-                  <%= f.email_field :email, autofocus: true, placeholder: "E-MAIL" %>
-              </div>
-              <div class="inputLargo">
-                  <label>Contraseña actual</label>
-                  <%= f.password_field :current_password, autocomplete: "off" %>  
-              </div>
-              <p class="notificacion">Campo obligatorio.</p>
-              <div class="inputCorto">
-                  <label>Nuevo Password</label>
-                  <%= f.password_field :password, autocomplete: "off" %>
-              </div>
-              <div class="inputCorto">
-                  <label>Repite el nuevo Password</label>
-                  <%= f.password_field :password_confirmation, autocomplete: "off" %>
-              </div>
-              <p class="notificacion">Completa solo si deseas cambiar tu password.</p>
-              <div class="submitArea">
-                  <div class="cambiar">CANCELAR</div>
-                  <%= f.submit "ACTUALIZAR" %>
-              </div>
-              <% end %>
+  <p class="notificacion"><%= devise_error_messages! %></p>
+  <div class="inputCorto">
+    <label>Nombre</label>
+    <%= f.text_field :first_name, autofocus: true %>
+  </div>
+  <div class="inputCorto">
+    <label>Apellido</label>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="inputCorto">
+    <label>DNI</label>
+    <%= f.text_field :dni %>
+  </div><div class="inputCorto">
+    <label>Fecha de Nacimiento</label>
+    <%= f.date_select :birth, placeholder: "dd/mm/aaaa"  %>
+  </div>
+  <div class="inputCorto">
+    <label>Sexo</label>
+    <div class="similInput">
+      <%= f.radio_button(:gender, "Hombre") %>
+      <%= f.label(:gender, "Hombre") %>
+      <%= f.radio_button(:gender, "Mujer") %>
+      <%= f.label(:gender, "Mujer") %>
+    </div>
+  </div><div class="inputCorto">
+  <label>Grupo Sanguineo</label>
+  <%= f.select :bloodtype, [["A positivo", "A+"],
+                ["A negativo", "A-"],
+                ["B positivo", "B+"],
+                ["B negativo", "B-"],
+                ["AB positivo", "AB+"],
+                ["AB negativo", "AB-"],
+                ["0 positivo", "0+"],
+                ["0 negativo", "0-"]], {}, {class: "similInput", id: "user_bloodtype"} %>
+  </div>
+  <div class="inputCorto">
+    <label>País</label>
+    <%= f.select :country, [["Argentina", "Argentina"]], {}, {class: "similInput"} %>
+  </div>
+  <div class="inputCorto">
+    <label>Provincia</label>
+    <%= f.select :state, [["Buenos Aires", "Buenos Aires"]], {}, {class: "similInput"} %>
+  </div>
+  <div class="inputLargo">
+    <label>Ciudad</label>
+    <%= f.select :city, [["Mar del Plata", "Mar del Plata"]], {}, {class: "similInput"} %>
+  </div>
+  <div class="inputLargo">
+    <label>E-mail</label>
+    <%= f.email_field :email, autofocus: true, placeholder: "E-MAIL" %>
+  </div>
+  <div class="inputLargo">
+    <label>Contraseña actual</label>
+    <%= f.password_field :current_password, autocomplete: "off" %>
+  </div>
+  <p class="notificacion">Campo obligatorio.</p>
+  <div class="inputCorto">
+    <label>Nuevo Password</label>
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+  <div class="inputCorto">
+    <label>Repite el nuevo Password</label>
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+  <p class="notificacion">Completa solo si deseas cambiar tu password.</p>
+  <div class="submitArea">
+    <div class="cambiar">CANCELAR</div>
+    <%= f.submit "ACTUALIZAR" %>
+  </div>
+<% end %>

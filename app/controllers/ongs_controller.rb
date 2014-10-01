@@ -1,6 +1,6 @@
 class OngsController < ApplicationController
   before_filter :authenticate_user!, :except => [:show, :index]
-  before_action :set_ong, only: [:show]
+  before_action :set_ong, only: [:show, :bookings]
 
   # GET /ongs
   # GET /ongs.json

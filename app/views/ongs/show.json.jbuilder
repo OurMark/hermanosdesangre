@@ -1,1 +1,0 @@
-json.extract! @ong, :id, :name, :street1, :street2, :city, :state, :country, :zip, :country, :phone, :email, :website, :facebook, :national_network, :international_network, :comments, :created_at, :updated_at
