@@ -15,24 +15,27 @@
           </ul>
         </li>
         <li><%= link_to "¿QUIÉNES SOMOS?", about_us_path %>
-        <ul class="sub-menu">
-          <li>
-            <%= link_to "Nosotros", about_us_path %>
-          </li>
-          <li>
-            <%= link_to "Campaña", campaign_path %>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <ul id="sobre_derecha">
-      <li><span class='HS_email'><%= link_to "contacto", contact_path %></span><span class='st_facebook'></span><span class='st_twitter'></span></li>
-      <% if current_user %>
-        <li><%= link_to "SALIR", destroy_user_session_path, :method => :delete %></li>
-        <li><%= link_to "#{current_user.first_name}",user_path(current_user) %></li>
+          <ul class="sub-menu">
+            <li>
+              <%= link_to "Nosotros", about_us_path %>
+            </li>
+            <li>
+              <%= link_to "Campaña", campaign_path %>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul id="sobre_derecha">
+        <li><span class='HS_email'><%= link_to "contacto", contact_path %></span><span class='st_facebook'></span><span class='st_twitter'></span></li>
+        <% if current_user %>
+          <li><%= link_to "Mi cuenta",user_path(current_user) %></li>
+          <% if current_user.ongs.any? %>
+            <li><%= link_to "Mis ong",user_ongs_path(current_user) %></li>
+          <% end %>
+          <li><%= link_to "SALIR", destroy_user_session_path, :method => :delete %></li>
         <% else %>
-        <li><%= link_to "REGÍSTRATE", new_user_registration_path %></li>
-        <li><%= link_to "INGRESA", user_session_path %></li>
+          <li><%= link_to "REGÍSTRATE", new_user_registration_path %></li>
+          <li><%= link_to "INGRESA", user_session_path %></li>
         <% end %>
       </ul>
     </div>

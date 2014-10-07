@@ -1,29 +1,28 @@
-        <div class="container_menu">
-            <div class="faldon_top">
-                <form><input type="text" value placeholder="Mar del Plata" title="Ciudad"></form>
-            </div>
+<div class="container_menu">
+    <div class="faldon_top">
+        <form><input type="text" value placeholder="Mar del Plata" title="Ciudad"></form>
+    </div>
+</div>
+<div class="col_none">
+  <% @ongs.each do |ong| %>
+    <div class="banco">
+      <div class="ficha_banco">
+        <div class="bar-main-container">
+          <div class="campania">Septiembre 2014</div><div class="faltandias">20</div>
+          <div class="bar-container">
+            <div class="objetivo">300</div>
+            <div class="bar" style="width: 70%;"><div>70%</div></div>
+            <div class="registrados">210</div>
+          </div>
         </div>
-        <div class="col_none">
-            
-            <% @ongs.each do |ong| %>
-            <div class="banco">
-                <div class="ficha_banco">
-                    <div class="bar-main-container">
-                        <div class="campania">Septiembre 2014</div><div class="faltandias">20</div>
-                        <div class="bar-container">
-                            <div class="objetivo">300</div>
-                            <div class="bar" style="width: 70%;"><div>70%</div></div>
-                            <div class="registrados">210</div>
-                        </div>
-                    </div>
-                    <p><%= ong.phone %> - <%= ong.email %></p>
-                    <p><%= ong.website %> - <%= ong.facebook %></p>
-                    <div class="reservar"><%= link_to "Donar aquí", new_ong_booking_path(ong) %></div>
-                </div>
-                <h3><%= ong.name %></h3>
-                <h2><%= ong.street1 %>,<br/><%= ong.street2 %></h2>
-                <h4>c.p. <%= ong.zip %>. <%= ong.city %>, <%= ong.state %>, <%= ong.country %>.</h4>
-                <div style="clear:both;"></div>
-            </div>
-            <% end %>
-        -</div>
+        <p><%= ong.phone %> - <%= ong.email %></p>
+        <p><%= ong.website %> - <%= ong.facebook %></p>
+        <div class="reservar"><%= link_to "Donar aquí", new_ong_booking_path(ong) %></div>
+      </div>
+      <h3><%= ong.name %></h3>
+      <h2><%= ong.street1 %>,<br/><%= ong.street2 %></h2>
+      <h4>c.p. <%= ong.zip %>. <%= ong.city %>, <%= ong.state %>, <%= ong.country %>.</h4>
+      <div style="clear:both;"></div>
+    </div>
+  <% end %>
+</div>

@@ -1,79 +1,83 @@
-<p id="notice"><%= notice %></p>
+<div class="columna col_der">
+  <div class="col_div ong">
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @ong.name %>
-</p>
+    <p>
+      <strong>Name:</strong>
+      <%= @ong.name %>
+    </p>
 
-<p>
-  <strong>Street1:</strong>
-  <%= @ong.street1 %>
-</p>
+    <p>
+      <strong>Street1:</strong>
+      <%= @ong.street1 %>
+    </p>
 
-<p>
-  <strong>Street2:</strong>
-  <%= @ong.street2 %>
-</p>
+    <p>
+      <strong>Street2:</strong>
+      <%= @ong.street2 %>
+    </p>
 
-<p>
-  <strong>City:</strong>
-  <%= @ong.city %>
-</p>
+    <p>
+      <strong>City:</strong>
+      <%= @ong.city %>
+    </p>
 
-<p>
-  <strong>State:</strong>
-  <%= @ong.state %>
-</p>
+    <p>
+      <strong>State:</strong>
+      <%= @ong.state %>
+    </p>
 
-<p>
-  <strong>Country:</strong>
-  <%= @ong.country %>
-</p>
+    <p>
+      <strong>Country:</strong>
+      <%= @ong.country %>
+    </p>
 
-<p>
-  <strong>Zip:</strong>
-  <%= @ong.zip %>
-</p>
+    <p>
+      <strong>Zip:</strong>
+      <%= @ong.zip %>
+    </p>
 
-<p>
-  <strong>Country:</strong>
-  <%= @ong.country %>
-</p>
+    <p>
+      <strong>Country:</strong>
+      <%= @ong.country %>
+    </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @ong.phone %>
-</p>
+    <p>
+      <strong>Phone:</strong>
+      <%= @ong.phone %>
+    </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @ong.email %>
-</p>
+    <p>
+      <strong>Email:</strong>
+      <%= @ong.email %>
+    </p>
 
-<p>
-  <strong>Website:</strong>
-  <%= @ong.website %>
-</p>
+    <p>
+      <strong>Website:</strong>
+      <%= @ong.website %>
+    </p>
 
-<p>
-  <strong>Facebook:</strong>
-  <%= @ong.facebook %>
-</p>
+    <p>
+      <strong>Facebook:</strong>
+      <%= @ong.facebook %>
+    </p>
 
-<p>
-  <strong>National network:</strong>
-  <%= @ong.national_network %>
-</p>
+    <p>
+      <strong>National network:</strong>
+      <%= @ong.national_network %>
+    </p>
 
-<p>
-  <strong>International network:</strong>
-  <%= @ong.international_network %>
-</p>
+    <p>
+      <strong>International network:</strong>
+      <%= @ong.international_network %>
+    </p>
 
-<p>
-  <strong>Comments:</strong>
-  <%= @ong.comments %>
-</p>
-
-<%= link_to 'Edit', edit_ong_path(@ong) %> |
-<%= link_to 'Back', ongs_path %>
+    <p>
+      <strong>Comments:</strong>
+      <%= @ong.comments %>
+    </p>
+  </div>
+</div>
+<div class="columna col_izq">
+  <%= render partial: 'shared/gota_donar' %>
+</div>

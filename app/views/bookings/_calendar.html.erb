@@ -1,0 +1,28 @@
+  <table id='calendar'>
+    <tr>
+      <th>Domingo</th>
+      <th>Lunes</th>
+      <th>Martes</th>
+      <th>Miercoles</th>
+      <th>Jueves</th>
+      <th>Viernes</th>
+      <th>Sabado</th>
+    </tr>
+    <tr>
+      <% @beginning_of_month = Date.civil(year, month, 1) %>
+      <% @end_of_month = Date.civil(year, month, -1) %>
+      <% (@beginning_of_month..@end_of_month).each do |d| %>
+      <% if d == @beginning_of_month %>
+        <% d.wday.times do %>
+          <td class='offset'></td> <% end %>
+        <% end %>
+        <% if d.wday == 0 %>
+          </tr>
+          <tr>
+        <% end %>
+        <td>
+          <%= d.day %>
+        </td>
+      <% end %>
+    </tr>
+  </table>

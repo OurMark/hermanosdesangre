@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20140823173323) do
     t.datetime "start_time"
     t.datetime "end_time"
     t.integer  "length"
+    t.boolean  "success"
     t.integer  "ong_id"
   end
 
