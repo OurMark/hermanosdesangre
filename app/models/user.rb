@@ -8,4 +8,13 @@ class User < ActiveRecord::Base
   has_many :challenges, through: :ongs
   has_and_belongs_to_many :bookings
   has_and_belongs_to_many :badges
+
+  validates :bloodtype, presence: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :gender, presence: true
+  validates :birth, presence: true
+  validates :city, presence: true
+  validates :state, presence: true
+  validates :country, presence: true
 end

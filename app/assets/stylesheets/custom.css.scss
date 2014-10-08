@@ -168,12 +168,12 @@ ul#sobre_derecha li a:hover{
   width: 16px;
   height: 16px;
   overflow: hidden;
-  right: 9px; 
+  right: 9px;
   position: absolute;
   z-index: 10;
   -webkit-transition: width 500ms ease-in;
   transition: width 500ms ease;
-} 
+}
 #sobre_derecha .HS_email:hover {width: 75px;}
 .HS_email a {
   padding: 0 21px;
@@ -247,7 +247,7 @@ h1{
   margin: 0 35px 32px 35px;
 }
 .col_div h1, .col_div h2, .col_div h3, .col_div h4 {
-  margin: 5px 35px;  
+  margin: 5px 35px;
 }
 
 /*--- • 1 • c REGLAS de FORMULARIOS --------------------------*/
@@ -746,7 +746,7 @@ text-align: left;
     margin-bottom: 6px;
     display: inline-block;
 }
-.faltandias:before{content: "faltan ";} 
+.faltandias:before{content: "faltan ";}
 .faltandias:after{content: " días";}
 
 .bar-main-container {
@@ -851,7 +851,7 @@ text-align: left;
     margin: 0 35px 14px 35px;
     text-align: center;
     border-top: dashed #AAA 1px;
-    border-bottom: dashed #AAA 1px; 
+    border-bottom: dashed #AAA 1px;
 }
 .badget {
     width:54px; height:54px;
@@ -903,7 +903,7 @@ text-align: left;
 .azul .medalla{ background-position: 50% -229px;}
 
 .sin{
-  background-color: whitesmoke !important; 
+  background-color: whitesmoke !important;
 }
 
 /* • 4 ANIMACIONES -------------------------------------------*/

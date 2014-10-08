@@ -1,78 +1,70 @@
 <%= form_for(@ong) do |f| %>
   <% if @ong.errors.any? %>
-            <p class="notificacion">
-            <%= pluralize(@ong.errors.count, "error") %> prohibited this ong from being saved:</p>
-            <ul>
-                <% @ong.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-                <% end %>
-            </ul>
-   <% end %>
-    <div class="inputLargo">
-        <label>Nombre*</label>
-        <%= f.text_field :name %>
-    </div>
-    <div class="inputCorto">
+    <p class="notificacion">
+    <%= pluralize(@ong.errors.count, "error") %> prohibited this ong from being saved:</p>
+    <ul>
+      <% @ong.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+    </ul>
+  <% end %>
+  <div class="inputLargo">
+    <label>Nombre*</label>
+    <%= f.text_field :name %>
+  </div>
+  <div class="inputCorto">
     <label>Dirección*</label>
     <%= f.text_field :street1 %>
-    </div><div class="inputCorto">
+  </div>
+  <div class="inputCorto">
     <label>Referencias de dirección</label>
     <%= f.text_field :street2 %>
   </div>
-      <div class="inputCorto">
-        <label>País*</label>
-        <select id="user_state" name="user[country]" class="similInput">
-            <option value="none"> </option>
-            <option value="Argentina">Argentina</option>
-        </select>
-      </div><div class="inputCorto">
-        <label>Provincia*</label>
-        <select id="user_state" name="user[state]" class="similInput">
-            <option value="none"> </option>
-            <option value="Buenos Aires">Buenos Aires</option>
-        </select>
-      </div>
-      <div class="inputLargo">
-        <label>Ciudad*</label>
-        <!-- <%= f.text_field :city %> -->
-        <select id="user_city" name="user[city]" class="similInput">
-            <option value="none"> </option>
-            <option value="Mar del Plata">Mar del Plata</option>
-        </select>
-      </div>
-    <div class="inputCorto">
+<div class="inputCorto">
+    <label>País</label>
+    <%= f.select :country, [["Argentina", "Argentina"]], {}, {class: "similInput"} %>
+  </div>
+  <div class="inputCorto">
+    <label>Provincia</label>
+    <%= f.select :state, [["Buenos Aires", "Buenos Aires"]], {}, {class: "similInput"} %>
+  </div>
+  <div class="inputLargo">
+    <label>Ciudad</label>
+    <%= f.select :city, [["Mar del Plata", "Mar del Plata"]], {}, {class: "similInput"} %>
+  </div>
+  <div class="inputCorto">
     <label>Código Postal*</label>
     <%= f.text_field :zip %>
   </div>
-    <div class="inputLargo">
+  <div class="inputLargo">
     <label>Teléfono*</label>
     <%= f.text_field :phone %>
   </div>
-    <div class="inputLargo">
+  <div class="inputLargo">
     <label>E-mail*</label>
     <%= f.text_field :email %>
   </div>
-    <div class="inputLargo">
+  <div class="inputLargo">
     <label>Sitio web</label>
     <%= f.text_field :website %>
   </div>
-    <div class="inputLargo">
+  <div class="inputLargo">
     <label>Facebook</label>
     <%= f.text_field :facebook %>
   </div>
-    <div class="inputCorto">
+  <div class="inputCorto">
     <label>Red Nacional</label>
     <%= f.text_field :national_network %>
   </div><div class="inputCorto">
     <label>Red Internacional</label>
     <%= f.text_field :international_network %>
   </div>
-    <p class="notificacion">solo si pertenece a una red</p>
-    <div class="inputLargo">
+  <p class="notificacion">solo si pertenece a una red</p>
+  <div class="inputLargo">
     <label>Comentarios</label>
     <%= f.text_field :comments %>
   </div>
   <div class="submitArea">
-    <%= f.submit "REGISTRAR" %>
+    <%= f.submit "ENVIAR" %>
   </div>
 <% end %>

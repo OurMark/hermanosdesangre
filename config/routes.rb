@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   root to: 'static#home'
   devise_for :users
-  resources :users
+  resources :users do
+    resources :ongs
+  end
   resources :ongs do
     resources :turnos, controller: :bookings, as: 'bookings'
     resources :objetivos, controller: :challenges, as: 'challenges'
