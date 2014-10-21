@@ -1,30 +1,6 @@
 <div class="columna col_izq">
   <%= render partial: 'calendar', locals: { year: 2014, month: 10 } %>
 </div>
-<div class="columna col_der">
-<div class="col_div">
-  <h3>Reservas para <%= @ong.name %></h3>
-  <table class="bookings_table">
-    <tr>
-      <th>Comienza</th>
-      <th>Termina</th>
-    </tr>
-      <% @bookings.each do |booking| %>
-    <tr>
-      <td>
-        <%= booking.start_time.strftime('%e %b %Y %H:%M%p') %>
-      </td>
-      <td>
-        <%= (booking.calculate_end_time + 60).strftime('%e %b %Y %H:%M%p') %>
-      </td>
-    <td><%= link_to "Borrar", ong_booking_path(@ong, booking), data: { confirm: 'Estás seguro?' }, method: :delete %>
-    </td>
-    <td><%= link_to "Editar", edit_ong_booking_path(@ong, booking) %>
-    </td>
-    </tr>
-    <% end %>
-  </table>
-  <div>
-    <%= link_to "Nuevo Turno", new_ong_booking_path(@ong) %>
-  </div>
+<div id="bookings" class="columna col_der">
+  <%= render partial: 'turnos_dia', locals: { turnos: @bookings } %>
 </div>

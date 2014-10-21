@@ -23,10 +23,9 @@
   </div>
 </div>
 <div class="columna col_izq">
-  <% if current_user.ongs %>
-    <%= render partial: 'ong_list' %>
-  <% else %>
-    <%= render partial: 'shared/gota_donar' %>
-    <%= link_to "Registrar mi Banco de Sangre u ONG de donación", new_user_ong_path(current_user),{ :class =>"botonONG"}%>
+  <% current_user.ongs.each do |ong| %>
+    <%= render partial: 'ong_list', locals: {ong: ong} %>
   <% end %>
+  <%= render partial: 'shared/gota_donar' %>
+  <%= link_to "Registrar mi Banco de Sangre u ONG de donación", new_user_ong_path(current_user),{ :class =>"botonONG"}%>
 </div>

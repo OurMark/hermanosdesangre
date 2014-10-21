@@ -25,7 +25,7 @@ class OngsController < ApplicationController
   # POST /ongs
   # POST /ongs.json
   def create
-    @ong = current_user.ongs.new(ong_params)
+    @ong = current_user.ongs.build(ong_params)
 
     respond_to do |format|
       if @ong.save

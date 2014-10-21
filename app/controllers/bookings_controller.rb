@@ -25,6 +25,13 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
+  def day_bookings
+    @bookings = Booking.where("start_time LIKE ?", "%#{params[:date]}%")
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def destroy
     @booking = Booking.find(params[:id]).destroy
     if @booking.destroy
