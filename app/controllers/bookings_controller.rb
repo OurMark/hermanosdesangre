@@ -26,7 +26,7 @@ class BookingsController < ApplicationController
   end
 
   def day_bookings
-    @bookings = Booking.where("date_trunc('day', start_time) = '" + params[:date]} = "'")
+    @bookings = Booking.where("date_trunc('day', start_time) = '" + params[:date] + "'")
     respond_to do |format|
       format.js
     end
