@@ -2,5 +2,9 @@
   <%= render partial: 'calendar', locals: { year: 2014, month: 10 } %>
 </div>
 <div id="bookings" class="columna col_der">
-  <%= render partial: 'turnos_dia', locals: { turnos: @bookings } %>
+  <% if params[:date] %>
+    <%= render partial: 'turnos_dia', locals: { turnos: @bookings } %>
+  <% else %>
+    <h3>Seleccione el dia del calendario para ver los turnos disponibles<h3>
+  <% end %>
 </div>

@@ -102,8 +102,16 @@ ul#menu, ul.sub-menu, ul#sobre_derecha {
     margin: 0;
     position: absolute;
 }
-ul#menu {left: 195px; top: 34px;} ul#sobre_derecha{right: 4px;top: 30px;}
-
+ul#menu {
+  left: 195px;
+  top: 34px;
+}
+ul#sobre_derecha {
+  right: 4px;
+}
+.top30 {
+  top: 30px;
+}
 ul#menu li, ul.sub-menu li, ul#sobre_derecha li {
     list-style-type: none;
     display: inline-block;
@@ -915,3 +923,23 @@ text-align: left;
 @keyframes noscroll{
     from {height: 1px; min-height: inherit;}
     to {height: 140px; min-height: inherit;}}
+
+
+/* Calendario */
+.calendario {
+  float:right;
+  margin: 50px 25px 0 0;
+}
+.calendario tr {
+
+}
+.calendario tr th {
+  padding: 5px 10px 5px 10px;
+}
+.calendario tr td{
+  padding-top: 15px;
+  text-align: center;
+}
+.calendario tr td a{
+  font-size: 25px;
+}
