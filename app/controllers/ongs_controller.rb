@@ -5,7 +5,11 @@ class OngsController < ApplicationController
   # GET /ongs
   # GET /ongs.json
   def index
-    @ongs = current_user.ongs.any? ? current_user.ongs : Ong.all
+    @ongs = Ong.all
+  end
+
+  def user_ongs
+    @ongs = current_user.ongs
   end
 
   # GET /ongs/1
@@ -15,7 +19,7 @@ class OngsController < ApplicationController
 
   # GET /ongs/new
   def new
-    @ong = current_user.ongs.new
+    @ong = current_user.ongs.build
   end
 
   # GET /ongs/1/edit
