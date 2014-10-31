@@ -79,6 +79,6 @@ class OngsController < ApplicationController
       params.require(:ong).permit(:name, :street1, :street2, :city, :state,
                                   :country, :zip, :country, :phone, :email,
                                   :website, :facebook, :national_network,
-                                  :international_network, :comments)
+                                  :international_network, :comments, :timelapse, :beds)
     end
 end

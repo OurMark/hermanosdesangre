@@ -23,7 +23,7 @@
           <tr>
         <% end %>
         <td>
-          <%= link_to d.day, ong_day_bookings_path(:date => "#{year}-#{month}-#{d.day}"), :remote => true %>
+          <%= link_to d.day, ong_day_bookings_path(year: year, month: month, day: d.day), :remote => true %>
         </td>
       <% end %>
     </tr>

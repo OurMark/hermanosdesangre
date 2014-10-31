@@ -8,11 +8,11 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @booking = Booking.new(ong_id: @ong.id)
+    @booking = Booking.new(ong_id: @ong.id, start_time: params[:hour])
   end
 
   def create
-    @booking =  Booking.new(params[:booking].permit(:ong_id, :start_time, :length))
+    @booking =  Booking.new(params[:booking].permit(:ong_id, :start_time, :length, :dni))
     @booking.ong = @ong
     if @booking.save
       redirect_to ong_bookings_path(@ong, method: :get)
@@ -26,7 +26,7 @@ class BookingsController < ApplicationController
   end
 
   def day_bookings
-    @bookings = Booking.where("date_trunc('day', start_time) = '" + params[:date] + "'")
+    @bookings = Booking.all #Booking.where("date_trunc('day', start_time) = '" + "#{params[:year]}-#{params[:month]}-#{params[:day]}" + "'")
     respond_to do |format|
       format.js
     end
@@ -50,7 +50,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     # @booking.ong = @ong
 
-    if @booking.update(params[:booking].permit(:ong_id, :start_time, :length))
+    if @booking.update(params[:booking].permit(:ong_id, :start_time, :length, :dni))
       flash[:notice] = 'Your booking was updated succesfully'
 
       if request.xhr?

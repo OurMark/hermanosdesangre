@@ -6,9 +6,7 @@ module Bookable
 
     validates :start_time, presence: true
     validate :start_date_cannot_be_in_the_past
-    validate :overlaps
 
-    before_validation { |s| s.length = 1 }
     before_validation :calculate_end_time
 
     scope :end_during, ->(new_start_time, new_end_time) do

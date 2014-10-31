@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20140823173323) do
     t.datetime "end_time"
     t.integer  "length"
     t.boolean  "success"
+    t.integer  "dni"
     t.integer  "ong_id"
   end
 
@@ -75,8 +76,15 @@ ActiveRecord::Schema.define(version: 20140823173323) do
     t.float    "longitude"
     t.integer  "ourmark_id"
     t.integer  "user_id"
+    t.integer  "timelapse"
+    t.integer  "beds"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "ongs_users", id: false, force: true do |t|
+    t.integer "user_id"
+    t.integer "ong_id"
   end
 
   create_table "users", force: true do |t|
