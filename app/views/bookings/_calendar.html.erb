@@ -9,8 +9,8 @@
       <th>SAB</th>
     </tr>
     <tr>
-      <% @beginning_of_month = Date.civil(year, month, 1) %>
-      <% @end_of_month = Date.civil(year, month, -1) %>
+      <% @beginning_of_month = Date.civil(@year.to_i, @month.to_i, 1) %>
+      <% @end_of_month = Date.civil(@year.to_i, @month.to_i, -1) %>
       <% (@beginning_of_month..@end_of_month).each do |d| %>
         <% if d == @beginning_of_month %>
           <% d.wday.times do %>

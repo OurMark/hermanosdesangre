@@ -3,8 +3,8 @@ class BookingsController < ApplicationController
   before_action :find_ong
 
   def index
-    @bookings = Booking.where("ong_id = ? AND end_time >= ?", @ong.id, Time.now).order(:start_time)
-    respond_with @bookings
+    @month = params[:month] || Time.now.month
+    @year = params[:year] || Time.now.year
   end
 
   def new

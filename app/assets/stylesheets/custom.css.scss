@@ -928,7 +928,7 @@ text-align: left;
 /* Calendario */
 .calendario {
   float:right;
-  margin: 50px 25px 0 0;
+  margin: 10px 25px 0 0;
 }
 .calendario tr {
 
@@ -942,4 +942,18 @@ text-align: left;
 }
 .calendario tr td a{
   font-size: 25px;
+}
+
+.listado_meses {
+  float: right;
+  margin: 50px 25px 0 0;
+}
+
+.listado_meses ul {
+
+}
+
+.listado_meses ul li {
+  display: inline;
+  background-color: whitesmoke;
 }

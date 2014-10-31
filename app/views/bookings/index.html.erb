@@ -1,5 +1,15 @@
 <div class="columna col_izq">
-  <%= render partial: 'calendar', locals: { year: 2014, month: 11 } %>
+  <div class="listado_meses">
+    <h2>Seleccione mes y año:<h3>
+    <ul id="lista_meses">
+      <% Range.new(Time.now.to_i, 5.months.from_now.to_i).step(1.month) do |month| %>
+       <li><%= link_to "#{Time.at(month).month}/#{Time.at(month).year.to_s[-2,2]}", ong_bookings_path(year: Time.at(month).year, month: Time.at(month).month) %></li>
+      <% end %>
+    </ul>
+  <div style="clear:both"></div>
+  <h2>Seleccione dia:<h3>
+  <%= render partial: 'calendar', locals: { year: @year, month: @month } %>
+  </div>
 </div>
 <div id="bookings" class="columna col_der">
   <% if params[:date] %>
