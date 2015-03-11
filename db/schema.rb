@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20140823173323) do
     t.datetime "end_time"
     t.integer  "length"
     t.boolean  "success"
+    t.integer  "dni"
     t.integer  "ong_id"
   end
 
@@ -74,6 +75,9 @@ ActiveRecord::Schema.define(version: 20140823173323) do
     t.float    "latitude"
     t.float    "longitude"
     t.integer  "ourmark_id"
+    t.integer  "user_id"
+    t.integer  "timelapse"
+    t.integer  "beds"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

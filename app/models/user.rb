@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_and_belongs_to_many :ongs
+  has_many :ongs
   has_many :challenges, through: :ongs
   has_and_belongs_to_many :bookings
   has_and_belongs_to_many :badges

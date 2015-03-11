@@ -3,16 +3,16 @@ class BookingsController < ApplicationController
   before_action :find_ong
 
   def index
-    @bookings = Booking.where("ong_id = ? AND end_time >= ?", @ong.id, Time.now).order(:start_time)
-    respond_with @bookings
+    @month = params[:month] || Time.now.month
+    @year = params[:year] || Time.now.year
   end
 
   def new
-    @booking = Booking.new(ong_id: @ong.id)
+    @booking = Booking.new(ong_id: @ong.id, start_time: params[:hour])
   end
 
   def create
-    @booking =  Booking.new(params[:booking].permit(:ong_id, :start_time, :length))
+    @booking =  Booking.new(params[:booking].permit(:ong_id, :start_time, :length, :dni))
     @booking.ong = @ong
     if @booking.save
       redirect_to ong_bookings_path(@ong, method: :get)
@@ -23,6 +23,13 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+  end
+
+  def day_bookings
+    @bookings = Booking.all #Booking.where("date_trunc('day', start_time) = '" + "#{params[:year]}-#{params[:month]}-#{params[:day]}" + "'")
+    respond_to do |format|
+      format.js
+    end
   end
 
   def destroy
@@ -43,7 +50,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     # @booking.ong = @ong
 
-    if @booking.update(params[:booking].permit(:ong_id, :start_time, :length))
+    if @booking.update(params[:booking].permit(:ong_id, :start_time, :length, :dni))
       flash[:notice] = 'Your booking was updated succesfully'
 
       if request.xhr?

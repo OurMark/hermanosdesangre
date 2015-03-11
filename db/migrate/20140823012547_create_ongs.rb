@@ -20,6 +20,9 @@ class CreateOngs < ActiveRecord::Migration
       t.float :latitude
       t.float :longitude
       t.integer :ourmark_id
+      t.integer :user_id
+      t.integer :timelapse
+      t.integer :beds
 
       t.timestamps
     end

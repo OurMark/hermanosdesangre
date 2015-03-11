@@ -4,7 +4,8 @@ class ChallengesController < ApplicationController
   # GET /challenges
   # GET /challenges.json
   def index
-    @challenges = Challenge.all
+    @ong = Ong.find(params[:ong_id])
+    @challenges = @ong.challenges
   end
 
   # GET /challenges/1
@@ -14,6 +15,7 @@ class ChallengesController < ApplicationController
 
   # GET /challenges/new
   def new
+    @ong = Ong.find(params[:ong_id])
     @challenge = Challenge.new
   end
 
@@ -24,6 +26,7 @@ class ChallengesController < ApplicationController
   # POST /challenges
   # POST /challenges.json
   def create
+    @ong = Ong.find(params[:ong_id])
     @challenge = Challenge.new(challenge_params)
 
     respond_to do |format|
@@ -64,7 +67,8 @@ class ChallengesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_challenge
-      @challenge = Challenge.find(params[:id])
+      @ong = Ong.find(params[:ong_id])
+      @challenge = ong.challenges.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

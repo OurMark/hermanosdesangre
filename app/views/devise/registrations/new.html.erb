@@ -21,10 +21,10 @@
       <div class="inputCorto">
         <label>Sexo</label>
         <div class="similInput">
-            <%= radio_button_tag(:gender, "Hombre") %>
-            <%= label_tag(:gender, "Hombre") %>
-            <%= radio_button_tag(:gender, "Mujer") %>
-            <%= label_tag(:gender, "Mujer") %>
+          <%= f.radio_button(:gender, "Hombre") %>
+          <%= f.label(:gender, "Hombre") %>
+          <%= f.radio_button(:gender, "Mujer") %>
+          <%= f.label(:gender, "Mujer") %>
         </div>
       </div><div class="inputCorto">
         <label>Grupo Sanguineo</label>
