@@ -21,6 +21,5 @@ Rails.application.routes.draw do
   get '/donantes?s=impacto', to: 'static#donors', as: 'impact'
   get '/donantes?s=requisitos', to: 'static#donors', as: 'requirements'
   get '/donantes?s=consejos', to: 'static#donors', as: 'advises'
-  get '/donantes?s=informacion', to: 'static#donors', as: 'more_info'
 
 end
