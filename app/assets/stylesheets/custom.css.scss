@@ -53,6 +53,7 @@ html { overflow-x: hidden;}
 body {
     line-height: 1;
     background-color:#D35555;
+    color: #313131;
 }
 blockquote, q {
     quotes: none;
@@ -239,7 +240,8 @@ h1{
   overflow: hidden;
   font-family: 'Oswald', sans-serif;
 }
-.col_div p{
+.col_div p, 
+.col_div span {
   font-size: 13px;
   font-weight: 300;
   line-height: 24px;
@@ -256,6 +258,10 @@ h1{
 }
 .col_div h1, .col_div h2, .col_div h3, .col_div h4 {
   margin: 5px 35px;
+}
+
+.col_div span {
+  margin: 0 35px;
 }
 
 /*--- • 1 • c REGLAS de FORMULARIOS --------------------------*/
@@ -495,6 +501,18 @@ display: block;
     height: 18px;
     width: 16px;
     display: inline-block;
+}
+
+.Secciones a {
+    color: #D35555;
+    text-decoration: none;
+}
+
+.Secciones a:active,
+.Secciones a:hover,
+.Secciones a:focus {
+    opacity: 0.8;
+    outline: 0;
 }
 
 /*--- • 1 • e REGLAS EXCLUSIVAS del CONTENIDO SIN COLUMNAS ---*/
