@@ -17,3 +17,6 @@
 
 # Ignore rbenv file
 .ruby-version
+
+# Ignore MAC DC Store
+**/.DS_Store

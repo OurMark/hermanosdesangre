@@ -254,7 +254,7 @@ h1{
     height: auto;
 }
 .col_div>p, .col_div div>p, .col_div iframe, .col_div form, .col_div img {
-  margin: 0 35px 32px 35px;
+  margin: 0 35px 32px;
 }
 .col_div h1, .col_div h2, .col_div h3, .col_div h4 {
   margin: 5px 35px;
@@ -262,6 +262,14 @@ h1{
 
 .col_div span {
   margin: 0 35px;
+}
+
+.Logos {
+    text-align: center;
+}
+
+.Logos img {
+    margin: 0 30px 32px;
 }
 
 /*--- • 1 • c REGLAS de FORMULARIOS --------------------------*/
