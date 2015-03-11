@@ -13,6 +13,14 @@
     <%= f.text_field :name %>
   </div>
   <div class="inputCorto">
+    <label>Camas disponibles</label>
+    <%= f.number_field :beds %>
+  </div>
+  <div class="inputCorto" %>
+    <label>Franja horaria</label>
+    <%= f.select :timelapse, [["10 min", 10], ["20 min", 20], ["30 min", 30]], {}, { class: "similInput" } %>
+  </div>
+  <div class="inputCorto">
     <label>Dirección*</label>
     <%= f.text_field :street1 %>
   </div>
@@ -20,17 +28,17 @@
     <label>Referencias de dirección</label>
     <%= f.text_field :street2 %>
   </div>
-<div class="inputCorto">
+  <div class="inputCorto">
     <label>País</label>
-    <%= f.select :country, [["Argentina", "Argentina"]], {}, {class: "similInput"} %>
+    <%= f.select :country, [["Argentina", "Argentina"]], {}, { class: "similInput" } %>
   </div>
   <div class="inputCorto">
     <label>Provincia</label>
-    <%= f.select :state, [["Buenos Aires", "Buenos Aires"]], {}, {class: "similInput"} %>
+    <%= f.select :state, [["Buenos Aires", "Buenos Aires"]], {}, { class: "similInput" } %>
   </div>
   <div class="inputLargo">
     <label>Ciudad</label>
-    <%= f.select :city, [["Mar del Plata", "Mar del Plata"]], {}, {class: "similInput"} %>
+    <%= f.select :city, [["Mar del Plata", "Mar del Plata"]], {}, { class: "similInput" } %>
   </div>
   <div class="inputCorto">
     <label>Código Postal*</label>
@@ -55,7 +63,8 @@
   <div class="inputCorto">
     <label>Red Nacional</label>
     <%= f.text_field :national_network %>
-  </div><div class="inputCorto">
+  </div>
+  <div class="inputCorto">
     <label>Red Internacional</label>
     <%= f.text_field :international_network %>
   </div>

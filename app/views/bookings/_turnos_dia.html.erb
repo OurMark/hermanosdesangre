@@ -1,0 +1,17 @@
+<h3>Reservas para <%= @ong.name %> <%= params[:date] %></h3>
+<table class="bookings_table">
+  <% start_time = set_time(8, 0) %>
+  <% end_time = set_time(20, 0) %>
+  <% while start_time < end_time %>
+    <tr>
+      <td><%= start_time.strftime("%H:%M") %></td>
+      <% available_turns(turnos, start_time).each do |turno| %>
+        <td><%= link_to "#{turno.dni}", ong_booking_path(@ong, turno) %></td>
+      <% end %>
+      <td>
+        <%= link_to "Nuevo Turno", new_ong_booking_path(@ong, date: params[:date], hour: start_time) if available_turns(turnos, start_time).count < @ong.beds%></td>
+      </td>
+    </tr>
+    <% start_time += @ong.timelapse.minutes %>
+  <% end %>
+</table>

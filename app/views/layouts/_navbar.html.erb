@@ -25,13 +25,10 @@
           </ul>
         </li>
       </ul>
-      <ul id="sobre_derecha">
+      <ul id="sobre_derecha" class="top30">
         <li><span class='HS_email'><%= link_to "contacto", contact_path %></span><span class='st_facebook'></span><span class='st_twitter'></span></li>
         <% if current_user %>
           <li><%= link_to "Mi cuenta",user_path(current_user) %></li>
-          <% if current_user.ongs.any? %>
-            <li><%= link_to "Mis ong",user_ongs_path(current_user) %></li>
-          <% end %>
           <li><%= link_to "SALIR", destroy_user_session_path, :method => :delete %></li>
         <% else %>
           <li><%= link_to "REGÍSTRATE", new_user_registration_path %></li>

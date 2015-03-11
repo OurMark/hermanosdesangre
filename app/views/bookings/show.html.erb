@@ -1,8 +1,7 @@
 <div class="col_none">
-     <div class="col_div"><h3>Booking Confirmation</h3>
-<p>Your booking is confirmed for
-  <%= @ong.name %>:
-  <%= @ong.start_time.strftime('%e %b %Y %H:%M%p') %>
-  until
-    <%= (@ong.calculate_end_time + 60).strftime('%e %b %Y %H:%M%p') %></p>
-    </div></div>
+  <div class="col_div"><h3>Booking Confirmation</h3>
+    <p>Your booking is confirmed for
+      <%= @ong.name %>:
+      <%= @booking.start_time.strftime('%e %b %Y %H:%M%p') %>
+  </div>
+</div>

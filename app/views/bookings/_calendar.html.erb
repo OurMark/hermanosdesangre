@@ -1,27 +1,29 @@
-  <table id='calendar'>
+  <table id='calendar' class="calendario">
     <tr>
-      <th>Domingo</th>
-      <th>Lunes</th>
-      <th>Martes</th>
-      <th>Miercoles</th>
-      <th>Jueves</th>
-      <th>Viernes</th>
-      <th>Sabado</th>
+      <th>DOM</th>
+      <th>LUN</th>
+      <th>MAR</th>
+      <th>MIE</th>
+      <th>JUE</th>
+      <th>VIE</th>
+      <th>SAB</th>
     </tr>
     <tr>
-      <% @beginning_of_month = Date.civil(year, month, 1) %>
-      <% @end_of_month = Date.civil(year, month, -1) %>
+      <% @beginning_of_month = Date.civil(@year.to_i, @month.to_i, 1) %>
+      <% @end_of_month = Date.civil(@year.to_i, @month.to_i, -1) %>
       <% (@beginning_of_month..@end_of_month).each do |d| %>
-      <% if d == @beginning_of_month %>
-        <% d.wday.times do %>
-          <td class='offset'></td> <% end %>
+        <% if d == @beginning_of_month %>
+          <% d.wday.times do %>
+            <td>
+            </td>
+          <% end %>
         <% end %>
         <% if d.wday == 0 %>
           </tr>
           <tr>
         <% end %>
         <td>
-          <%= d.day %>
+          <%= link_to d.day, ong_day_bookings_path(year: year, month: month, day: d.day), :remote => true %>
         </td>
       <% end %>
     </tr>

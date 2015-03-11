@@ -5,7 +5,11 @@ class OngsController < ApplicationController
   # GET /ongs
   # GET /ongs.json
   def index
-    @ongs = current_user.ongs.any? ? current_user.ongs : Ong.all
+    @ongs = Ong.all
+  end
+
+  def user_ongs
+    @ongs = current_user.ongs
   end
 
   # GET /ongs/1
@@ -15,7 +19,7 @@ class OngsController < ApplicationController
 
   # GET /ongs/new
   def new
-    @ong = current_user.ongs.new
+    @ong = current_user.ongs.build
   end
 
   # GET /ongs/1/edit
@@ -25,7 +29,7 @@ class OngsController < ApplicationController
   # POST /ongs
   # POST /ongs.json
   def create
-    @ong = current_user.ongs.new(ong_params)
+    @ong = current_user.ongs.build(ong_params)
 
     respond_to do |format|
       if @ong.save
@@ -75,6 +79,6 @@ class OngsController < ApplicationController
       params.require(:ong).permit(:name, :street1, :street2, :city, :state,
                                   :country, :zip, :country, :phone, :email,
                                   :website, :facebook, :national_network,
-                                  :international_network, :comments)
+                                  :international_network, :comments, :timelapse, :beds)
     end
 end
