@@ -379,14 +379,14 @@ form INPUT[type="submit"]:focus{
 }
 .Opciones>div{
     width: 100px;
-    height: 92px;
+    height: 60px;
     background-color: #F16B6B;
     color: white;
     font-weight: 300;
     font-size: 24px;
     text-align: center;
     padding: 30px 25px 0 25px;
-    margin: 18px 18px 72px 18px;
+    margin: 18px 18px 50px 18px;
 	cursor: pointer;
     border-bottom: solid 3px #D35555;
     border-radius: 0 0 3px 3px;
@@ -419,7 +419,7 @@ form INPUT[type="submit"]:focus{
 }
 /*MODIFICACIÓN AL SELECCIONAR*/
 .Opciones.seleccionada{
-    height: 170px;
+    height: auto;
 }
 .Opciones.seleccionada>div, .Opciones.seleccionada span{
   display:none;
@@ -441,6 +441,7 @@ form INPUT[type="submit"]:focus{
     position: absolute;
 }
 .Secciones ul, .Secciones ol {
+    display: inline-block;
     padding-left: 35px;
 }
 .Secciones ul{
