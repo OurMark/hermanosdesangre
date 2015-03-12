@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 0) do
   add_index "OMUser_roles", ["OMUser_user_id"], name: "FK12B041C7B1CCEB0", using: :btree
 
   create_table "OngApprovalHistory", primary_key: "history_id", force: true do |t|
-    t.text    "additionalHistoryInformation", limit: 2147483647
+    t.text    "additionalHistoryInformation"#, limit: 2147483647
     t.string  "endState"
     t.string  "fromState"
     t.date    "historyDate"
@@ -249,7 +249,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.string  "contactEmail"
     t.string  "contactPerson"
     t.string  "contactPersonEmail"
-    t.text    "description",              limit: 2147483647
+    t.text    "description"#,              limit: 2147483647
     t.string  "facebookPage"
     t.binary  "hasImage",                 limit: 1,          null: false
     t.string  "integrationBaseURL"
