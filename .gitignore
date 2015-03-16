@@ -14,3 +14,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore rbenv file
+.ruby-version
+
+# Ignore MAC DC Store
+**/.DS_Store

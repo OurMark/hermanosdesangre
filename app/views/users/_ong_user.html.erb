@@ -1,0 +1,16 @@
+<div class="banco-small">
+  <h3><%= ong.name %></h3>
+  <div class="bar-main-container">
+    <div class="campania">Septiembre 2014</div><div class="faltandias">20</div>
+    <div class="bar-container">
+      <div class="objetivo">300</div>
+      <div class="bar" style="width: 70%;"><div>70%</div></div>
+      <div class="registrados">210</div>
+    </div>
+  </div>
+  <br />
+  <ul id="sobre_derecha" class="no_top">
+    <li><%= link_to "Editar información", edit_user_ong_path(current_user, ong) %></li>
+    <li><%= link_to "Gestionar turnos", ong_bookings_path(ong) %></li>
+  </ul>
+</div>
