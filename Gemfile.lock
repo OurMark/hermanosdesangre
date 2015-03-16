@@ -66,15 +66,9 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
-<<<<<<< HEAD
     minitest (5.5.1)
     multi_json (1.11.0)
     mysql2 (0.3.18)
-=======
-    minitest (5.4.0)
-    multi_json (1.10.1)
-    mysql2 (0.3.17)
->>>>>>> development
     orm_adapter (0.5.0)
     polyglot (0.3.5)
     rack (1.5.2)
@@ -125,12 +119,8 @@ GEM
     sprockets-rails (2.2.4)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
-<<<<<<< HEAD
       sprockets (>= 2.8, < 4.0)
-=======
-      sprockets (~> 2.8)
     sqlite3 (1.3.10)
->>>>>>> development
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (1.4.1)
@@ -158,14 +148,11 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   mysql2
-<<<<<<< HEAD
-=======
-  pg
->>>>>>> development
   rails (= 4.1.4)
   rails_12factor
   sass-rails
   sdoc (~> 0.4.0)
   spring
+  sqlite3
   turbolinks
   uglifier (>= 1.3.0)
