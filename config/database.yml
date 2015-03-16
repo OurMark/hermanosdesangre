@@ -24,5 +24,8 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: mysql2
+  database: ourmarkqa
+  username: ourmark
+  password: Ourmark1982
+  host: 54.236.235.85
