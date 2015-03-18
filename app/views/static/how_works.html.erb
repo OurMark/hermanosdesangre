@@ -1,21 +1,64 @@
 <div class="col_der">
-	<div class="col_div Secciones us">
+	<div class="col_div Secciones list-info us">
 		<h1>Cómo funciona</h1>
 		<p>Hermanos de Sangre utiliza el concepto del "crowd-funding" para la donación de sangre: invita a las personas a sumar su compromiso individual para alcanzar una meta colectiva.</p>
 		<h3>Ofrece en forma gratuita:</h3>
 		<span><strong>A LAS PERSONAS:</strong></span>
-		<ol>
-			<li>Una forma de localizar el o los bancos de sangre donde puede donar.</li>
-			<li>Información sobre las necesidades: ¿cuánta sangre hace falta en tu comunidad?</li>
-			<li>La posibilidad de reservar un turno con el banco de sangre más próximo, contribuyendo a cubrir esa necesidad.</li>
-			<li>Un registro de los turnos reservados y las donaciones realizadas.</li>
-			<li>Una forma de compartir este compromiso en las redes sociales para inspirar a más personas a sumarse.</li>
-		</ol>
+		<ul>
+			<li>
+				<div class="ico-content">
+					<i></i>
+				</div>
+				<div class="text-content">
+					Una forma de localizar el o los bancos de sangre donde puede donar.
+				</div>
+			</li>
+			<li><div class="ico-content">
+					<i></i>
+				</div>
+				<div class="text-content">
+					Información sobre las necesidades: ¿cuánta sangre hace falta en tu comunidad?
+				</div>
+			</li>
+			<li><div class="ico-content">
+					<i></i>
+				</div>
+				<div class="text-content">
+					La posibilidad de reservar un turno con el banco de sangre más próximo, contribuyendo a cubrir esa necesidad.
+				</div>
+			</li>
+			<li><div class="ico-content">
+					<i></i>
+				</div>
+				<div class="text-content">
+					Un registro de los turnos reservados y las donaciones realizadas.
+				</div>
+			</li>
+			<li><div class="ico-content">
+					<i></i>
+				</div>
+				<div class="text-content">
+					Una forma de compartir este compromiso en las redes sociales para inspirar a más personas a sumarse.
+				</div>
+			</li>
+		</ul>
 		<span><strong>A LOS BANCOS DE SANGRE:</strong></span>
-		<ol>
-			<li>Una herramienta de promoción de la donación voluntaria de sangre.</li>
-			<li>Un sistema de turnos online para agilizar la atención a los donantes.</li>
-		</ol>
+		<ul>
+			<li><div class="ico-content">
+					<i></i>
+				</div>
+				<div class="text-content">
+					Una herramienta de promoción de la donación voluntaria de sangre.
+				</div>
+			</li>
+			<li><div class="ico-content">
+					<i></i>
+				</div>
+				<div class="text-content">
+					Un sistema de turnos online para agilizar la atención a los donantes.
+				</div>
+			</li>
+		</ul>
 		<p><%= link_to "¿Quieres registrar un banco de sangre?", current_user ? ongs_path : user_session_path %>.</p>
 	</div>
 </div>
