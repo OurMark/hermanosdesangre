@@ -313,7 +313,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.string "topicImage"
   end
 
-  add_index "topic", ["name"], name: "name", unique: true, using: :btree
+  add_index "topic", ["name"], name: "topic_name", unique: true, using: :btree
 
   create_table "topic_converter", primary_key: "topic_converter_id", force: true do |t|
     t.float   "marksPerUnit", limit: 53
