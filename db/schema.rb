@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150324205157) do
 
   create_table "Classfield_daysOfEvent", id: false, force: true do |t|
     t.integer "Classfield_classfield_id", limit: 8, null: false
@@ -63,6 +63,18 @@ ActiveRecord::Schema.define(version: 0) do
     t.integer "destinationEntityId", limit: 8
     t.integer "userToNotifyId",      limit: 8, null: false
   end
+
+  create_table "badges", force: true do |t|
+    t.string "name"
+  end
+
+  create_table "badges_user", force: true do |t|
+    t.integer "user_id"
+    t.integer "badge_id"
+  end
+
+  add_index "badges_user", ["badge_id"], name: "index_badges_user_on_badge_id", using: :btree
+  add_index "badges_user", ["user_id"], name: "index_badges_user_on_user_id", using: :btree
 
   create_table "certificate", primary_key: "certificate_id", force: true do |t|
     t.string  "name"
@@ -326,26 +338,34 @@ ActiveRecord::Schema.define(version: 0) do
   create_table "user", primary_key: "user_id", force: true do |t|
     t.string   "activationToken"
     t.datetime "birthDate"
-    t.binary   "blocked",            limit: 1
+    t.binary   "blocked",             limit: 1
     t.string   "facebookToken"
     t.string   "gender"
     t.date     "lastLogin"
     t.string   "name"
     t.string   "password"
-    t.integer  "points",             limit: 8
+    t.integer  "points",              limit: 8
     t.string   "sessionToken"
     t.string   "surname"
     t.string   "twitterToken"
     t.string   "twitterTokenSecret"
     t.string   "username"
-    t.integer  "version",            limit: 8
-    t.integer  "image_id",           limit: 8
-    t.integer  "location_id",        limit: 8
+    t.integer  "version",             limit: 8
+    t.integer  "image_id",            limit: 8
+    t.integer  "location_id",         limit: 8
+    t.string   "encrypted_password"
+    t.datetime "remember_created_at"
   end
 
   add_index "user", ["image_id"], name: "FK36EBCB6D5C60E9", using: :btree
   add_index "user", ["location_id"], name: "FK36EBCB3BA1E7A8", using: :btree
   add_index "user", ["username"], name: "username", unique: true, using: :btree
+
+  create_table "user_details", force: true do |t|
+    t.integer "user_id"
+    t.string  "dni"
+    t.string  "bloodtype"
+  end
 
   create_table "user_email", id: false, force: true do |t|
     t.integer "user_user_id",    limit: 8, null: false
@@ -367,6 +387,8 @@ ActiveRecord::Schema.define(version: 0) do
     t.string  "country"
     t.string  "lang"
     t.integer "user_id", limit: 8
+    t.string  "city"
+    t.string  "state"
   end
 
   add_index "user_locale", ["user_id"], name: "FKEACF554E33390646", using: :btree
