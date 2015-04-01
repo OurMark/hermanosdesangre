@@ -98,13 +98,13 @@ ActiveRecord::Schema.define(version: 20150324205157) do
     t.string  "city"
     t.string  "description",    limit: 5000
     t.date    "end_date"
-    t.binary  "featured",       limit: 1
+    t.boolean "featured"
     t.date    "from_date"
     t.string  "subTitle"
     t.string  "title",                       null: false
     t.string  "type"
     t.string  "videoUrl"
-    t.binary  "virtual",        limit: 1
+    t.boolean "virtual"
     t.string  "zip"
     t.integer "country_id",     limit: 8
     t.integer "image_id",       limit: 8
@@ -338,12 +338,12 @@ ActiveRecord::Schema.define(version: 20150324205157) do
   create_table "user", primary_key: "user_id", force: true do |t|
     t.string   "activationToken"
     t.datetime "birthDate"
-    t.binary   "blocked",             limit: 1
+    t.boolean  "blocked"
     t.string   "facebookToken"
     t.string   "gender"
     t.date     "lastLogin"
     t.string   "name"
-    t.string   "password"
+    t.string   "encrypted_password"
     t.integer  "points",              limit: 8
     t.string   "sessionToken"
     t.string   "surname"
@@ -353,7 +353,6 @@ ActiveRecord::Schema.define(version: 20150324205157) do
     t.integer  "version",             limit: 8
     t.integer  "image_id",            limit: 8
     t.integer  "location_id",         limit: 8
-    t.string   "encrypted_password"
     t.datetime "remember_created_at"
   end
 
