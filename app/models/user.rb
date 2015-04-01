@@ -6,27 +6,22 @@ class User < ActiveRecord::Base
   has_one :role, foreign_key: :OMUser_user_id
   has_one :user_config
   has_many :exchanged_codes
+  has_one :user_detail
+  has_one :user_locale
+  has_many :user_badges
+  has_many :badges, through: :user_badges
+  accepts_nested_attributes_for :user_locale
+  accepts_nested_attributes_for :user_detail
 
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+  # :confirmable, :lockable, :timeoutable and :omniauthable, :trackable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :validatable
 
   has_many :ongs
   has_many :challenges, through: :ongs
   has_and_belongs_to_many :bookings
   has_and_belongs_to_many :badges
 
-  validates :bloodtype, presence: true
-  validates :first_name, presence: true
-  validates :last_name, presence: true
-  validates :gender, presence: true
-  validates :birth, presence: true
-  validates :city, presence: true
-  validates :state, presence: true
-  validates :country, presence: true
-
-  def email
-    self.username
-  end
+  alias_attribute :email, :username
 end

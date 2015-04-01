@@ -2,15 +2,15 @@
   <div class="col_div perfil">
       <div class="Secciones">
           <div class="seleccionada"> <!-- Perfil -->
-              <h1><strong><%= current_user.first_name %> <%= current_user.last_name %></strong></h1>
-              <h3><%= current_user.dni %></h3>
-              <h2><%= current_user.bloodtype %></h2>
+              <h1><strong><%= current_user.name %> <%= current_user.surname %></strong></h1>
+              <h3><%= current_user.user_detail.dni %></h3>
+              <h2><%= current_user.user_detail.bloodtype %></h2>
               <h4>Fecha de Nacimiento:</h4>
-              <p><%= current_user.birth.strftime("%d/%m/%y") %></p>
+              <p><%= current_user.birthDate.strftime("%d/%m/%y") %></p>
               <h4>Sexo:</h4>
               <p><%= current_user.gender %></p>
               <h4>Ubicación:</h4>
-              <p><%= current_user.city %>, <%= current_user.state %>, <%= current_user.country %></p>
+              <p><%= current_user.user_locale.city %>, <%= current_user.user_locale.state %>, <%= current_user.user_locale.country %></p>
               <h4>E-mail:</h4>
               <p><%= current_user.email %></p>
               <h4>Contraseña:</h4>
@@ -23,7 +23,7 @@
   </div>
 </div>
 <div class="columna col_izq">
-  <% if current_user.ongs %>
+  <% if false %>
     <% current_user.ongs.each do |ong| %>
       <%= render partial: 'ong_list', locals: {ong: ong} %>
     <% end %>
