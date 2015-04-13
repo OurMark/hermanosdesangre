@@ -2,7 +2,6 @@ module Bookable
   extend ActiveSupport::Concern
 
   included do
-    belongs_to :ong
 
     validates :start_time, presence: true
     validate :start_date_cannot_be_in_the_past
