@@ -29,9 +29,6 @@ GEM
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.10)
-    bookable (0.0.52)
-      jbuilder (~> 1.2)
-      rails_12factor
     builder (3.2.2)
     byebug (4.0.1)
       columnize (= 0.9.0)
@@ -51,6 +48,8 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    devise-encryptable (0.2.0)
+      devise (>= 2.1.0)
     erubis (2.7.0)
     execjs (2.4.0)
     hike (1.2.3)
@@ -141,10 +140,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bookable
   byebug
   coffee-rails (~> 4.0.0)
   devise
+  devise-encryptable
   jbuilder
   jquery-rails
   mysql2
