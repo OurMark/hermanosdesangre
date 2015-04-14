@@ -13,15 +13,13 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :user_locale
   accepts_nested_attributes_for :user_detail
 
+  has_many :ong_admins, foreign_key: :admins_user_id
+  has_many :ongs, through: :ong_admins, foreign_key: :ong_ong_id
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable, :trackable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-
-  has_many :ongs
-  has_many :challenges, through: :ongs
-  has_and_belongs_to_many :bookings
-  has_and_belongs_to_many :badges
 
   alias_attribute :email, :username
 end

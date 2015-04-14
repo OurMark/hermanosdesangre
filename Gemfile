@@ -49,4 +49,3 @@ group :production do
 end
 
 gem 'byebug', group: [:development, :test]
-gem 'bookable'
