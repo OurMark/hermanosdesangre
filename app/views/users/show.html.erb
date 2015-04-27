@@ -3,10 +3,10 @@
       <div class="Secciones">
           <div class="seleccionada"> <!-- Perfil -->
               <h1><strong><%= current_user.name %> <%= current_user.surname %></strong></h1>
-              <h3><%= current_user.user_detail.dni %></h3>
-              <h2><%= current_user.user_detail.bloodtype %></h2>
+              <h3><%= current_user.dni %></h3>
+              <h2><%= current_user.bloodtype %></h2>
               <h4>Fecha de Nacimiento:</h4>
-              <p><%= current_user.birthDate.strftime("%d/%m/%y") %></p>
+              <p><%= current_user.birthDate %></p>
               <h4>Sexo:</h4>
               <p><%= current_user.gender %></p>
               <h4>Ubicación:</h4>

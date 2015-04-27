@@ -16,6 +16,9 @@ class User < ActiveRecord::Base
   has_many :ong_admins, foreign_key: :admins_user_id
   has_many :ongs, through: :ong_admins, foreign_key: :ong_ong_id
 
+  validates_associated :user_detail
+  validates_presence_of :user_detail
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable, :trackable
   devise :database_authenticatable, :registerable,
