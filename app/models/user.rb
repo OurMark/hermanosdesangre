@@ -19,7 +19,19 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable, :trackable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable, :encryptable
 
   alias_attribute :email, :username
+
+  def valid_password?(password)
+    return false if encrypted_password.blank?
+    Devise.secure_compare(Devise::Encryptable::Encryptors::Md5.digest(password), self.encrypted_password)
+  end
+
+  def password_salt
+    'no salt'
+  end
+
+  def password_salt=(new_salt)
+  end
 end
