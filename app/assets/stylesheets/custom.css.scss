@@ -444,6 +444,7 @@ form INPUT[type="submit"]:focus{
 }
 .Opciones.seleccionada>div, .Opciones.seleccionada span{
   display:none;
+  margin: 18px 18px 50px 108px;
   /*importante ocultar las opciones para asegurarse de elegir
   solo una a la vez*/
 }
