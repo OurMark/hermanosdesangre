@@ -39,4 +39,12 @@ class User < ActiveRecord::Base
 
   def password_salt=(new_salt)
   end
+
+  def dni
+    self.user_detail.dni
+  end
+
+  def bloodtype
+    self.user_detail.bloodtype
+  end
 end
