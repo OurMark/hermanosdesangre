@@ -24,11 +24,13 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :encryptable
 
+  devise :encryptable, :encryptor => :md5
+
   alias_attribute :email, :username
 
   def valid_password?(password)
     return false if encrypted_password.blank?
-    Devise.secure_compare(Devise::Encryptable::Encryptors::Md5.digest(password), self.encrypted_password)
+    Devise.secure_compare(Devise::Encryptable::Encryptors::Md5.digest(password, nil, nil, nil), self.encrypted_password)
   end
 
   def password_salt
