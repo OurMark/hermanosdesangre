@@ -21,3 +21,11 @@
 # Ignore MAC DC Store
 **/.DS_Store
 /config/database.yml
+
+# ignore sass cache:
+/.sass-cache/
+
+# ignore everything in the "stylesheets" directory, except:
+# "style.css" file
+/app/assets/stylesheets*
+!/app/assets/stylesheets/style.css

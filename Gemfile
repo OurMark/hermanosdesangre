@@ -22,4 +22,10 @@ group :production do
   gem 'rails_12factor'
 end
 
+group :assets do
+	gem 'compass'
+	gem 'compass-rails'
+	gem 'susy'
+end
+
 gem 'byebug', group: [:development, :test]
