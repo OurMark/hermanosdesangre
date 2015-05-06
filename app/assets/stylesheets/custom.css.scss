@@ -6,6 +6,7 @@
 --- • 1 • c FORMULARIOS
 --- • 1 • d SECCIONES
 --- • 1 • e CONTENIDO SIN COLUMNAS
+--- • 1 • f CONTENIDO LISTADO
 
 • 2 REGLAS EXCLUSIVAS (por páginas)
 --- • 2 • a HOME
@@ -392,9 +393,15 @@ form INPUT[type="submit"]:focus{
 /*--- • 1 • d REGLAS de SECCIONES ----------------------------*/
 /*OPCIONES*/
 .Opciones {
+<<<<<<< HEAD
     margin-left: 15px; 
     margin-top: 50px;
     height: 450px;
+=======
+    margin-left: 15px;
+    margin-top: 30px;
+    height: 440px;
+>>>>>>> f53d2db24cc02b06ea1245acb5b226a1271739d7
     -webkit-transition: height 400ms ease;
     transition: height 400ms ease;
     overflow: hidden;
@@ -407,8 +414,13 @@ form INPUT[type="submit"]:focus{
     font-weight: 300;
     font-size: 18px;
     text-align: center;
+<<<<<<< HEAD
     padding: 19px 26px 0 23px;
     margin: 18px 18px 116px 18px;
+=======
+    padding: 30px 25px 0 25px;
+    margin: 18px 18px 30px 18px;
+>>>>>>> f53d2db24cc02b06ea1245acb5b226a1271739d7
 	cursor: pointer;
     border-bottom: solid 3px #D35555;
     border-radius: 0 0 3px 3px;
@@ -541,6 +553,43 @@ display: block;
     width: 100%; height: 55px;
     overflow: hidden;
 }
+/*--- • 1 • f REGLAS EXCLUSIVAS del CONTENIDO LISTADO ---*/
+.list-info ul {
+    list-style: none;
+    position: relative;
+    opacity: 1;
+    top: 0;
+}
+.list-info li {
+    color: #313131;
+    display: inline-block;
+    float: none;
+    margin-bottom: 15px;
+    margin-right: 0;
+    text-align: left;
+    width: 100%;
+}
+.list-info .ico-content {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    width: 20px;
+}
+.list-info .ico-content i{
+      background-image: url("/assets/gotas.png");
+      background-position: 0 -5px;
+      content: "";
+      display: block;
+      height: 18px;
+      width: 16px;
+}
+.list-info .text-content {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    width: 90%;
+}
+
 /*.container_menu~.col_none {margin-top:  55px;}*/
 .container_menu .faldon_top{
     margin-top: 12px;
@@ -613,7 +662,7 @@ display: block;
 
 /*--- • 2 • c REGLAS EXCLUSIVAS de ¿QUIENES SOMOS? -----------*/
 .col_div.us {
-  padding-top: 140px;
+  padding-top: 50px;
 }
 
 .slogan {width: 330px; height: 80px; position: relative;margin: 80px 35px 60px 35px;}
