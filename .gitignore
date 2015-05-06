@@ -27,5 +27,5 @@
 
 # ignore everything in the "stylesheets" directory, except:
 # "style.css" file
-/app/assets/stylesheets*
+/app/assets/stylesheets/*
 !/app/assets/stylesheets/style.css
