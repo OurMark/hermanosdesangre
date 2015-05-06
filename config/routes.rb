@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root to: 'static#home'
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "registrations"}
   resources :users do
     resources :ongs
   end
