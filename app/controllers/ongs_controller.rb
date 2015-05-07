@@ -30,11 +30,12 @@ class OngsController < ApplicationController
   # POST /ongs
   # POST /ongs.json
   def create
-    @ong = current_user.ongs.build(ong_params)
-    @ong.hasImage = "true"
+    @ong = Ong.new(ong_params)
+    @ong.hasImage = 1
 
     respond_to do |format|
       if @ong.save
+        current_user.ongs << @ong
         @ong.create_ong_detail(beds: params[:ong][:beds], timelapse: params[:ong][:timelapse])
         format.html { redirect_to @ong, notice: 'Ong was successfully created.' }
         format.json { render :show, status: :created, location: @ong }
@@ -51,7 +52,7 @@ class OngsController < ApplicationController
     @ong = current_user.ongs.find(params[:id])
     respond_to do |format|
       if @ong.update(ong_params)
-        @ong.create_ong_detail(beds: params[:ong][:beds], timelapse: params[:ong][:timelapse])
+        @ong.ong_detail.update(beds: params[:ong][:beds], timelapse: params[:ong][:timelapse])
         format.html { redirect_to @ong, notice: 'Ong was successfully updated.' }
         format.json { render :show, status: :ok, location: @ong }
       else

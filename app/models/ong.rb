@@ -1,7 +1,8 @@
 class Ong < ActiveRecord::Base
   self.table_name = 'ong'
   has_many :ong_admins
-  belongs_to :user
+  has_many :ong_admins, foreign_key: :ong_ong_id
+  has_many :users, through: :ong_admins, foreign_key: :admins_user_id
   has_one :ong_detail
 
   def user_is_admin?(user)
