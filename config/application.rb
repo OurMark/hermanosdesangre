@@ -8,7 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Bloodbrothers
   class Application < Rails::Application
-    config.assets.precompile += ['custom.css', 'application.css', 'mobile.css']
+    config.assets.precompile += ['style.css']
     config.action_view.field_error_proc = Proc.new { |html_tag, instance| html_tag }
   end
 end
