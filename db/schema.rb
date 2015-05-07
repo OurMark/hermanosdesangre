@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20150324205157) do
     t.integer "daysOfEvent"
   end
 
-  add_index "Classfield_daysOfEvent", ["Classfield_classfield_id"], name: "FKE372E48FC992F60B", using: :btree
+  add_index "Classfield_daysOfEvent", ["Classfield_classfield_id"], name: "FKE372E48FC992F60B"
 
   create_table "Layout", primary_key: "layout_id", force: true do |t|
     t.string "description"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20150324205157) do
     t.string  "roles"
   end
 
-  add_index "OMUser_roles", ["OMUser_user_id"], name: "FK12B041C7B1CCEB0", using: :btree
+  add_index "OMUser_roles", ["OMUser_user_id"], name: "FK12B041C7B1CCEB0"
 
   create_table "OngApprovalHistory", primary_key: "history_id", force: true do |t|
     t.text    "additionalHistoryInformation", limit: 2147483647
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20150324205157) do
     t.integer "ong_id",                       limit: 8
   end
 
-  add_index "OngApprovalHistory", ["processing_admin_id"], name: "FK40483D693AEDD7EE", using: :btree
+  add_index "OngApprovalHistory", ["processing_admin_id"], name: "FK40483D693AEDD7EE"
 
   create_table "Template", primary_key: "template_id", force: true do |t|
     t.string  "state"
@@ -53,9 +53,9 @@ ActiveRecord::Schema.define(version: 20150324205157) do
     t.integer "topic_id",  limit: 8
   end
 
-  add_index "Template", ["layout_id"], name: "FKB515309AE61D6308", using: :btree
-  add_index "Template", ["ong_id"], name: "FKB515309A35AA59EC", using: :btree
-  add_index "Template", ["topic_id"], name: "FKB515309AC0F48C0C", using: :btree
+  add_index "Template", ["layout_id"], name: "FKB515309AE61D6308"
+  add_index "Template", ["ong_id"], name: "FKB515309A35AA59EC"
+  add_index "Template", ["topic_id"], name: "FKB515309AC0F48C0C"
 
   create_table "alert", primary_key: "config_id", force: true do |t|
     t.integer "alert"
@@ -68,20 +68,12 @@ ActiveRecord::Schema.define(version: 20150324205157) do
     t.string "name"
   end
 
-  create_table "badges_user", force: true do |t|
-    t.integer "user_id"
-    t.integer "badge_id"
-  end
-
-  add_index "badges_user", ["badge_id"], name: "index_badges_user_on_badge_id", using: :btree
-  add_index "badges_user", ["user_id"], name: "index_badges_user_on_user_id", using: :btree
-
   create_table "certificate", primary_key: "certificate_id", force: true do |t|
     t.string  "name"
     t.integer "template_id", limit: 8
   end
 
-  add_index "certificate", ["template_id"], name: "FK745F4197C41BF588", using: :btree
+  add_index "certificate", ["template_id"], name: "FK745F4197C41BF588"
 
   create_table "certificate_image_port", primary_key: "certificate_image_id", force: true do |t|
     t.binary  "content",        limit: 2147483647
@@ -89,7 +81,7 @@ ActiveRecord::Schema.define(version: 20150324205157) do
     t.integer "certificate_id", limit: 8
   end
 
-  add_index "certificate_image_port", ["certificate_id"], name: "FKF9E4488D22DF858C", using: :btree
+  add_index "certificate_image_port", ["certificate_id"], name: "FKF9E4488D22DF858C"
 
   create_table "classfield", primary_key: "classfield_id", force: true do |t|
     t.string  "adLocationType"
@@ -114,20 +106,20 @@ ActiveRecord::Schema.define(version: 20150324205157) do
     t.string  "externalUrl"
   end
 
-  add_index "classfield", ["country_id"], name: "FKEF102282C81ABA2C", using: :btree
-  add_index "classfield", ["image_id"], name: "FKEF1022826D5C60E9", using: :btree
-  add_index "classfield", ["location_id"], name: "FKEF1022823BA1E7A8", using: :btree
-  add_index "classfield", ["ong_id"], name: "FKEF10228235AA59EC", using: :btree
-  add_index "classfield", ["title"], name: "title", unique: true, using: :btree
-  add_index "classfield", ["topic_id"], name: "FKEF102282C0F48C0C", using: :btree
+  add_index "classfield", ["country_id"], name: "FKEF102282C81ABA2C"
+  add_index "classfield", ["image_id"], name: "FKEF1022826D5C60E9"
+  add_index "classfield", ["location_id"], name: "FKEF1022823BA1E7A8"
+  add_index "classfield", ["ong_id"], name: "FKEF10228235AA59EC"
+  add_index "classfield", ["title"], name: "title", unique: true
+  add_index "classfield", ["topic_id"], name: "FKEF102282C0F48C0C"
 
   create_table "code_label_value", id: false, force: true do |t|
     t.integer "code_id",  limit: 8, null: false
     t.integer "value_id", limit: 8, null: false
   end
 
-  add_index "code_label_value", ["code_id"], name: "FK790EFD1464F9DA8", using: :btree
-  add_index "code_label_value", ["value_id"], name: "FK790EFD1433153C14", using: :btree
+  add_index "code_label_value", ["code_id"], name: "FK790EFD1464F9DA8"
+  add_index "code_label_value", ["value_id"], name: "FK790EFD1433153C14"
 
   create_table "config", primary_key: "config_id", force: true do |t|
     t.string  "certificatesPrivacy"
@@ -138,15 +130,15 @@ ActiveRecord::Schema.define(version: 20150324205157) do
     t.integer "user_id",             limit: 8, null: false
   end
 
-  add_index "config", ["nick"], name: "nick", unique: true, using: :btree
-  add_index "config", ["user_id"], name: "FKAF3F834233390646", using: :btree
+  add_index "config", ["nick"], name: "nick", unique: true
+  add_index "config", ["user_id"], name: "FKAF3F834233390646"
 
   create_table "country", primary_key: "country_id", force: true do |t|
     t.string "code"
     t.string "name"
   end
 
-  add_index "country", ["code"], name: "code", unique: true, using: :btree
+  add_index "country", ["code"], name: "code", unique: true
 
   create_table "deed_code", primary_key: "code_id", force: true do |t|
     t.date    "expiration_date"
@@ -161,24 +153,24 @@ ActiveRecord::Schema.define(version: 20150324205157) do
     t.integer "topic_id",        limit: 8, null: false
   end
 
-  add_index "deed_code", ["ong_id"], name: "FK757575EC35AA59EC", using: :btree
-  add_index "deed_code", ["token"], name: "token", unique: true, using: :btree
-  add_index "deed_code", ["topic_id"], name: "FK757575ECC0F48C0C", using: :btree
+  add_index "deed_code", ["ong_id"], name: "FK757575EC35AA59EC"
+  add_index "deed_code", ["token"], name: "token", unique: true
+  add_index "deed_code", ["topic_id"], name: "FK757575ECC0F48C0C"
 
   create_table "deed_label_value", id: false, force: true do |t|
     t.integer "good_deed_id", limit: 8, null: false
     t.integer "value_id",     limit: 8, null: false
   end
 
-  add_index "deed_label_value", ["good_deed_id"], name: "FKCB6977878EABBCA3", using: :btree
-  add_index "deed_label_value", ["value_id"], name: "FKCB69778733153C14", using: :btree
+  add_index "deed_label_value", ["good_deed_id"], name: "FKCB6977878EABBCA3"
+  add_index "deed_label_value", ["value_id"], name: "FKCB69778733153C14"
 
   create_table "email", primary_key: "email_id", force: true do |t|
     t.string "address"
     t.binary "confirmed", limit: 1
   end
 
-  add_index "email", ["address"], name: "address", unique: true, using: :btree
+  add_index "email", ["address"], name: "address", unique: true
 
   create_table "entity_image", primary_key: "entity_image_id", force: true do |t|
     t.binary "content", limit: 2147483647
@@ -191,8 +183,8 @@ ActiveRecord::Schema.define(version: 20150324205157) do
     t.integer "user_id",       limit: 8, null: false
   end
 
-  add_index "exchanged_code", ["code_id"], name: "FK3F2CCB64F9DA8", using: :btree
-  add_index "exchanged_code", ["user_id"], name: "FK3F2CCB33390646", using: :btree
+  add_index "exchanged_code", ["code_id"], name: "FK3F2CCB64F9DA8"
+  add_index "exchanged_code", ["user_id"], name: "FK3F2CCB33390646"
 
   create_table "external_tag", force: true do |t|
     t.string  "externalId"
@@ -201,7 +193,7 @@ ActiveRecord::Schema.define(version: 20150324205157) do
     t.integer "topic_id",   limit: 8, null: false
   end
 
-  add_index "external_tag", ["topic_id"], name: "FKAD697526C0F48C0C", using: :btree
+  add_index "external_tag", ["topic_id"], name: "FKAD697526C0F48C0C"
 
   create_table "file_content", primary_key: "content_id", force: true do |t|
     t.binary "content", limit: 2147483647
@@ -223,24 +215,24 @@ ActiveRecord::Schema.define(version: 20150324205157) do
     t.integer "topic_id",                   limit: 8,    null: false
   end
 
-  add_index "good_deed", ["certificate_certificate_id"], name: "FK520D2322F36C7134", using: :btree
-  add_index "good_deed", ["integrationId"], name: "integrationId", unique: true, using: :btree
-  add_index "good_deed", ["ong_id"], name: "FK520D232235AA59EC", using: :btree
-  add_index "good_deed", ["topic_id"], name: "FK520D2322C0F48C0C", using: :btree
+  add_index "good_deed", ["certificate_certificate_id"], name: "FK520D2322F36C7134"
+  add_index "good_deed", ["integrationId"], name: "integrationId", unique: true
+  add_index "good_deed", ["ong_id"], name: "FK520D232235AA59EC"
+  add_index "good_deed", ["topic_id"], name: "FK520D2322C0F48C0C"
 
   create_table "label", force: true do |t|
     t.string  "name"
     t.integer "ong_id", limit: 8, null: false
   end
 
-  add_index "label", ["ong_id"], name: "FK61F7EF435AA59EC", using: :btree
+  add_index "label", ["ong_id"], name: "FK61F7EF435AA59EC"
 
   create_table "label_value", force: true do |t|
     t.string  "value"
     t.integer "label_id", limit: 8, null: false
   end
 
-  add_index "label_value", ["label_id"], name: "FK18426C6684C479EC", using: :btree
+  add_index "label_value", ["label_id"], name: "FK18426C6684C479EC"
 
   create_table "location", primary_key: "location_id", force: true do |t|
     t.string  "formatted_address"
@@ -287,26 +279,26 @@ ActiveRecord::Schema.define(version: 20150324205157) do
     t.binary  "hasImage",                 limit: 1,          null: false
   end
 
-  add_index "ong", ["country_id"], name: "FK1AE68C81ABA2C", using: :btree
-  add_index "ong", ["image_id"], name: "FK1AE686D5C60E9", using: :btree
-  add_index "ong", ["location_id"], name: "FK1AE683BA1E7A8", using: :btree
-  add_index "ong", ["name"], name: "name", unique: true, using: :btree
+  add_index "ong", ["country_id"], name: "FK1AE68C81ABA2C"
+  add_index "ong", ["image_id"], name: "FK1AE686D5C60E9"
+  add_index "ong", ["location_id"], name: "FK1AE683BA1E7A8"
+  add_index "ong", ["name"], name: "name", unique: true
 
   create_table "ong_admins", id: false, force: true do |t|
     t.integer "ong_ong_id",     limit: 8, null: false
     t.integer "admins_user_id", limit: 8, null: false
   end
 
-  add_index "ong_admins", ["admins_user_id"], name: "FKB98330BB6ABDD00B", using: :btree
-  add_index "ong_admins", ["ong_ong_id"], name: "FKB98330BB43F323A3", using: :btree
+  add_index "ong_admins", ["admins_user_id"], name: "FKB98330BB6ABDD00B"
+  add_index "ong_admins", ["ong_ong_id"], name: "FKB98330BB43F323A3"
 
   create_table "ong_topic", id: false, force: true do |t|
     t.integer "ong_id",   limit: 8, null: false
     t.integer "topic_id", limit: 8, null: false
   end
 
-  add_index "ong_topic", ["ong_id"], name: "FKDDC2709835AA59EC", using: :btree
-  add_index "ong_topic", ["topic_id"], name: "FKDDC27098C0F48C0C", using: :btree
+  add_index "ong_topic", ["ong_id"], name: "FKDDC2709835AA59EC"
+  add_index "ong_topic", ["topic_id"], name: "FKDDC27098C0F48C0C"
 
   create_table "template_element", primary_key: "template_element_id", force: true do |t|
     t.string  "extension"
@@ -316,8 +308,8 @@ ActiveRecord::Schema.define(version: 20150324205157) do
     t.integer "template_content_id", limit: 8
   end
 
-  add_index "template_element", ["template_content_id"], name: "FK31BE7837F143CA0B", using: :btree
-  add_index "template_element", ["template_id"], name: "FK31BE7837C41BF588", using: :btree
+  add_index "template_element", ["template_content_id"], name: "FK31BE7837F143CA0B"
+  add_index "template_element", ["template_id"], name: "FK31BE7837C41BF588"
 
   create_table "topic", primary_key: "topic_id", force: true do |t|
     t.string "description"
@@ -325,15 +317,15 @@ ActiveRecord::Schema.define(version: 20150324205157) do
     t.string "topicImage"
   end
 
-  add_index "topic", ["name"], name: "name", unique: true, using: :btree
+  add_index "topic", ["name"], name: "topic_name", unique: true
 
   create_table "topic_converter", primary_key: "topic_converter_id", force: true do |t|
     t.float   "marksPerUnit", limit: 53
     t.integer "topic_id",     limit: 8,  null: false
   end
 
-  add_index "topic_converter", ["topic_id"], name: "FK4E9FE290C0F48C0C", using: :btree
-  add_index "topic_converter", ["topic_id"], name: "topic_id", unique: true, using: :btree
+  add_index "topic_converter", ["topic_id"], name: "FK4E9FE290C0F48C0C"
+  add_index "topic_converter", ["topic_id"], name: "topic_id", unique: true
 
   create_table "user", primary_key: "user_id", force: true do |t|
     t.string   "activationToken"
@@ -356,9 +348,17 @@ ActiveRecord::Schema.define(version: 20150324205157) do
     t.datetime "remember_created_at"
   end
 
-  add_index "user", ["image_id"], name: "FK36EBCB6D5C60E9", using: :btree
-  add_index "user", ["location_id"], name: "FK36EBCB3BA1E7A8", using: :btree
-  add_index "user", ["username"], name: "username", unique: true, using: :btree
+  add_index "user", ["image_id"], name: "FK36EBCB6D5C60E9"
+  add_index "user", ["location_id"], name: "FK36EBCB3BA1E7A8"
+  add_index "user", ["username"], name: "username", unique: true
+
+  create_table "user_badges", force: true do |t|
+    t.integer "user_id"
+    t.integer "badge_id"
+  end
+
+  add_index "user_badges", ["badge_id"], name: "index_user_badges_on_badge_id"
+  add_index "user_badges", ["user_id"], name: "index_user_badges_on_user_id"
 
   create_table "user_details", force: true do |t|
     t.integer "user_id"
@@ -371,16 +371,16 @@ ActiveRecord::Schema.define(version: 20150324205157) do
     t.integer "emails_email_id", limit: 8, null: false
   end
 
-  add_index "user_email", ["emails_email_id"], name: "FK728A5628DFEDD3D4", using: :btree
-  add_index "user_email", ["emails_email_id"], name: "emails_email_id", unique: true, using: :btree
-  add_index "user_email", ["user_user_id"], name: "FK728A56288E289DD2", using: :btree
+  add_index "user_email", ["emails_email_id"], name: "FK728A5628DFEDD3D4"
+  add_index "user_email", ["emails_email_id"], name: "emails_email_id", unique: true
+  add_index "user_email", ["user_user_id"], name: "FK728A56288E289DD2"
 
   create_table "user_good_deed", primary_key: "good_deed_id", force: true do |t|
     t.integer "claimer_user_id", limit: 8, null: false
   end
 
-  add_index "user_good_deed", ["claimer_user_id"], name: "FKAF7507AE1D8949F0", using: :btree
-  add_index "user_good_deed", ["good_deed_id"], name: "FKAF7507AE8EABBCA3", using: :btree
+  add_index "user_good_deed", ["claimer_user_id"], name: "FKAF7507AE1D8949F0"
+  add_index "user_good_deed", ["good_deed_id"], name: "FKAF7507AE8EABBCA3"
 
   create_table "user_locale", primary_key: "user_locale_id", force: true do |t|
     t.string  "country"
@@ -390,6 +390,6 @@ ActiveRecord::Schema.define(version: 20150324205157) do
     t.string  "state"
   end
 
-  add_index "user_locale", ["user_id"], name: "FKEACF554E33390646", using: :btree
+  add_index "user_locale", ["user_id"], name: "FKEACF554E33390646"
 
 end
