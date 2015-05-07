@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150324205157) do
+ActiveRecord::Schema.define(version: 20150507132507) do
 
   create_table "Classfield_daysOfEvent", id: false, force: true do |t|
     t.integer "Classfield_classfield_id", limit: 8, null: false
@@ -291,6 +291,12 @@ ActiveRecord::Schema.define(version: 20150324205157) do
 
   add_index "ong_admins", ["admins_user_id"], name: "FKB98330BB6ABDD00B"
   add_index "ong_admins", ["ong_ong_id"], name: "FKB98330BB43F323A3"
+
+  create_table "ong_details", force: true do |t|
+    t.integer "ong_id"
+    t.integer "beds"
+    t.integer "timelapse"
+  end
 
   create_table "ong_topic", id: false, force: true do |t|
     t.integer "ong_id",   limit: 8, null: false

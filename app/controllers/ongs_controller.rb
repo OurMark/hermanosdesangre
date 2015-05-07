@@ -20,6 +20,7 @@ class OngsController < ApplicationController
   # GET /ongs/new
   def new
     @ong = current_user.ongs.build
+    @ong.build_ong_detail
   end
 
   # GET /ongs/1/edit
@@ -30,9 +31,11 @@ class OngsController < ApplicationController
   # POST /ongs.json
   def create
     @ong = current_user.ongs.build(ong_params)
+    @ong.hasImage = "true"
 
     respond_to do |format|
       if @ong.save
+        @ong.create_ong_detail(beds: params[:ong][:beds], timelapse: params[:ong][:timelapse])
         format.html { redirect_to @ong, notice: 'Ong was successfully created.' }
         format.json { render :show, status: :created, location: @ong }
       else
@@ -48,6 +51,7 @@ class OngsController < ApplicationController
     @ong = current_user.ongs.find(params[:id])
     respond_to do |format|
       if @ong.update(ong_params)
+        @ong.create_ong_detail(beds: params[:ong][:beds], timelapse: params[:ong][:timelapse])
         format.html { redirect_to @ong, notice: 'Ong was successfully updated.' }
         format.json { render :show, status: :ok, location: @ong }
       else
@@ -79,6 +83,6 @@ class OngsController < ApplicationController
       params.require(:ong).permit(:name, :street1, :street2, :city, :state,
                                   :country, :zip, :country, :phone, :email,
                                   :website, :facebook, :national_network,
-                                  :international_network, :comments, :timelapse, :beds)
+                                  :international_network, :comments)
     end
 end
