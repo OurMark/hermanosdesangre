@@ -24,6 +24,7 @@
 • 4 ANIMACIONES
 */
 /* • 1 GENERALES ---------------------------------------------*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -53,8 +54,8 @@ footer, header, hgroup, menu, nav, section {
 html { overflow-x: hidden;}
 body {
     line-height: 1;
-    background-color:#D35555;
-    color: #313131;
+    background-color:$mainRed;
+    color: $mainGray;
 }
 blockquote, q {
     quotes: none;
@@ -71,14 +72,14 @@ table {
 
 /*--- • 1 • a REGLAS de la CABECERA --------------------------*/
 .faldon_top_container{
-    font-family: 'Oswald', sans-serif;
+    @extend .col-1;
+    font-family: $mainFont;
     font-size: 14px;
     position: fixed; z-index:2;
-    width: 100%;
     background: white;
     background:rgba(255, 255, 255, 0.9);
     height: 70px;
-    border-bottom: 1px solid #D35555;
+    border-bottom: 1px solid $mainRed;
     -webkit-box-shadow:inset 0 35px 35px -35px #699;
     box-shadow:inset 0 35px 35px -35px #699;
 }
@@ -92,8 +93,8 @@ table {
     position: absolute;
     top: 12px;
     left: 4px;
-    background: #D35555;
-    border-bottom: solid 2px #D35555;
+    background: $mainRed;
+    border-bottom: solid 2px $mainRed;
     -webkit-box-shadow: black 0px 0px 25px -5px;
     box-shadow: black 0px 0px 25px -5px;
     z-index: 9999;
@@ -137,14 +138,14 @@ ul.sub-menu li{
 }
 /*Links*/
 ul#menu>li>a, ul#sobre_derecha>li>a{
-    color: #F16B6B;
+    color: $softRed;
     text-decoration: none;
     padding: 6px 9px;
     display: inline-block;
-    border-right: 1px solid #D35555;
+    border-right: 1px solid $mainRed;
 }
 ul.sub-menu li>a {
-    color: #D35555;
+    color: $mainRed;
     padding: 5px;
     display: block;
 }
@@ -160,10 +161,10 @@ ul#sobre_derecha li a:hover{
 /*sobre derecha*/
 #sobre_derecha li>a{
     padding: 9px !important;
-    background-color: whitesmoke;
+    background-color: $whiteSmoke;
 }
 #sobre_derecha li:last-child>a{
-    background-color:#F16B6B;
+    background-color:$softRed;
     color: white;
 }
 #sobre_derecha li>span {
@@ -172,8 +173,8 @@ ul#sobre_derecha li a:hover{
     bottom: 1px;
 }
 #sobre_derecha .HS_email {
-  background-color: whitesmoke;
-  background-image:url("http://w.sharethis.com/images/email_16.png");
+  background-color: $whiteSmoke;
+  background-image:url($email);
   background-repeat:no-repeat;
   width: 16px;
   height: 16px;
@@ -187,16 +188,16 @@ ul#sobre_derecha li a:hover{
 #sobre_derecha .HS_email:hover {width: 75px;}
 .HS_email a {
   padding: 0 21px;
-  color: #F16B6B;
+  color: $softRed;
 }
 
 /*--- • 1 • b REGLAS del CONTENIDO ---------------------------*/
 .content_container{
+    @extend .col-1;
     position: relative;
-    width: 100%;
     border-top: solid 70px white;
     background: white;
-    font-family: "Oswald" sans-serif;
+    font-family: $mainFont;
 }
 .h_container{
     position: absolute;
@@ -214,7 +215,7 @@ h1{
     margin-bottom: 35px;
 }
 .h_container h1{
-    font-family: 'Oswald', sans-serif;
+    font-family: $mainFont;
     text-align: center;
     color: white;
     padding: 5px;
@@ -229,17 +230,17 @@ h1{
   padding-left: 50%;
 }
 .col_izq{
+    @extend .col-1-2;
     position: absolute;
-    width:50%; height:100%;
-    top: 0; left: 0;
-    background: #F16B6B;
+    height:100%; top: 0; 
+    left: 0; background: $softRed;
 }
 
 .col_izq .col_div {float: right;}
 .col_div{
   max-width: 400px;
   overflow: hidden;
-  font-family: 'Oswald', sans-serif;
+  font-family: $mainFont;
 }
 .col_div p, 
 .col_div span {
@@ -291,7 +292,7 @@ h1{
 }
 label{
     font-size: 14px;
-    color: #d35555;
+    color: $mainRed;
     padding-left: 10px;
     display: block;
     margin-bottom: 3px;
@@ -310,12 +311,12 @@ form INPUT[type="password"],
 form INPUT[type="text"],
 form INPUT[type="email"],
 .similInput{
-    width: 100%;
+    @extend .col-1;
     height: 30px;
     border: none;
-    border-bottom: 1px dashed #D35555;
-    background-color: whitesmoke;
-    font-family: "Oswald" sans-serif;
+    border-bottom: 1px dashed $mainRed;
+    background-color: $whiteSmoke;
+    font-family: $mainFont;
     font-size: 17px;
     padding-left: 10px;
     -webkit-transition: background 500ms ease;
@@ -331,7 +332,7 @@ form INPUT[type="password"]:focus,
 form INPUT[type="text"]:focus,
 form INPUT[type="email"]:focus,
 select:focus{
-    background-color: #D35555;
+    background-color: $mainRed;
     color: white;
     outline: none;
 }
@@ -348,7 +349,7 @@ input:focus:-moz-placeholder{ color: white; }
     bottom: 10px;
 }
 .notificacion a, .notificacion a:hover, .notificacion a:visited{
-    color: #d35555;
+    color: $mainRed;
 }
 
 .submitArea label, .col_div .submitArea>p{
@@ -365,12 +366,12 @@ form INPUT[type="submit"]{
     float: right;
     border: none;
     border-bottom: solid white 1px;
-    background: whitesmoke;
-    font-family: "Oswald" sans-serif;
-    color: #d35555;
+    background: $whiteSmoke;
+    font-family: $mainFont;
+    color: $mainRed;
     text-align: center;
     font-size: 13px;
-    width: 100px;
+    @extend .col-1;
     padding: 9px;
     margin-right: 15px;
     -webkit-box-shadow: #AAA 0px 2px 20px -5px;
@@ -379,8 +380,8 @@ form INPUT[type="submit"]{
 form INPUT[type="submit"]:hover,
 form INPUT[type="submit"]:focus{
     color: white;
-    background-color: #F16B6B;
-    border-bottom: solid #d35555 2px;
+    background-color: $softRed;
+    border-bottom: solid $mainRed 2px;
     outline: none;
 }
 /*--- • 1 • d REGLAS de SECCIONES ----------------------------*/
@@ -396,18 +397,18 @@ form INPUT[type="submit"]:focus{
 .Opciones>div{
     width: 100px;
     height: 60px;
-    background-color: #F16B6B;
+    background-color: $softRed;
     color: white;
     font-weight: 300;
     font-size: 24px;
     text-align: center;
     padding: 30px 25px 0 25px;
     margin: 18px 18px 30px 18px;
-	cursor: pointer;
-    border-bottom: solid 3px #D35555;
+    cursor: pointer;
+    border-bottom: solid 3px $mainRed;
     border-radius: 0 0 3px 3px;
-	-moz-user-select: none;
-	-khtml-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
     -webkit-box-shadow: black 0px 0px 25px -5px;
     box-shadow: black 0px 0px 25px -5px;
     float:left;
@@ -416,7 +417,7 @@ form INPUT[type="submit"]:focus{
 .Opciones>div span{
     font-size: 13px;
     line-height: 18px;
-    color: #D35555;
+    color: $mainRed;
     position: absolute;
     top: 130px; left: 0;
 }
@@ -476,7 +477,7 @@ form INPUT[type="submit"]:focus{
     margin-right: 20px;
     margin-bottom: 26px;
     text-align: center;
-    color: #D35555;
+    color: $mainRed;
     font-weight: 300;
     font-size: 14px;
     line-height: 24px;
@@ -501,12 +502,12 @@ display: block;
     left: inherit;
 }
 .Secciones h2.seleccionada{
-    border-bottom: solid 2px #D35555;
+    border-bottom: solid 2px $mainRed;
     opacity: 1;
 }
 .Secciones p:last-child:after{
     content: "";
-    background-image: url(asset-path("gotas.png"));
+    background-image: url($gotas2);
     background-position: 0 -5px;
     height: 18px;
     width: 16px;
@@ -514,7 +515,7 @@ display: block;
 }
 
 .Secciones a {
-    color: #D35555;
+    color: $mainRed;
     text-decoration: none;
 }
 
@@ -527,10 +528,10 @@ display: block;
 
 /*--- • 1 • e REGLAS EXCLUSIVAS del CONTENIDO SIN COLUMNAS ---*/
 .container_menu {
-    background-color: #f16b6b;
-    background-color: rgba(241, 107, 107, 0.9);
+    background-color: $softRed;
+    background-color: $lightRed;
     position: fixed; z-index:1;
-    width: 100%; height: 55px;
+    @extend .col-1; height: 55px;
     overflow: hidden;
 }
 /*--- • 1 • f REGLAS EXCLUSIVAS del CONTENIDO LISTADO ---*/
@@ -541,13 +542,13 @@ display: block;
     top: 0;
 }
 .list-info li {
-    color: #313131;
+    color: $mainGray;
     display: inline-block;
     float: none;
     margin-bottom: 15px;
     margin-right: 0;
     text-align: left;
-    width: 100%;
+    @extend .col-1;
 }
 .list-info .ico-content {
     display: inline-block;
@@ -556,7 +557,7 @@ display: block;
     width: 20px;
 }
 .list-info .ico-content i{
-      background-image: url("/assets/gotas.png");
+      background-image: url($gotas);
       background-position: 0 -5px;
       content: "";
       display: block;
@@ -567,7 +568,7 @@ display: block;
     display: inline-block;
     position: relative;
     vertical-align: middle;
-    width: 90%;
+    @extend .col-9-10;
 }
 
 /*.container_menu~.col_none {margin-top:  55px;}*/
@@ -577,7 +578,7 @@ display: block;
 .container_menu form INPUT{
     float: right;
     width: 250px;
-    background: #D35555;
+    background: $mainRed;
     color: white;
 }
 .col_none{
@@ -596,8 +597,8 @@ display: block;
 
 /*--- • 2 • b REGLAS EXCLUSIVAS de DONANTES ------------------*/
 .bolsa{
-    background-color: #f16b6b;
-    background-image:url(asset-path("bolsa.png"));
+    background-color: $softRed;
+    background-image:url($bolsa);
     background-size: 46px 25px;
     background-repeat: no-repeat;
     background-position: 18px 32px;
@@ -623,7 +624,7 @@ display: block;
     transition: border-bottom-width 500ms ease;
     text-align: center;
     font-size: 21px;
-    color: #F16B6B;
+    color: $softRed;
 }
 .bolsa:hover:before{
     border-bottom-width: 7px;
@@ -646,7 +647,7 @@ display: block;
 }
 
 .slogan {width: 330px; height: 80px; position: relative;margin: 80px 35px 60px 35px;}
-.col_div .slogan>p, .slogan h2, .slogan h3 {margin:0px; position: absolute; font-weight:bold; color:#D35555;}
+.col_div .slogan>p, .slogan h2, .slogan h3 {margin:0px; position: absolute; font-weight:bold; color:$mainRed;}
 .slogan p {top:48px; left: 0; font-size: 20px;}
 .slogan p:first-child {top: 0; left: 0; font-size: 16px;}
 .slogan p:nth-child(2) {top: 24px; left: 50px; font-size: 28px;}
@@ -690,14 +691,14 @@ display: block;
 }
 .perfil h3:before{
     content: "DNI. ";
-    color:  #f16b6b;
+    color:  $softRed;
 }
 .perfil h4{
-    color: #f16b6b;
+    color: $softRed;
     font-size: 14px;
 }
 .perfil h4 a, .perfil h4 a:visited{
-    color: #f16b6b;
+    color: $softRed;
 }
 .perfil h4 a strong, .perfil h4 a:visited strong{
     color: black;
@@ -720,8 +721,8 @@ text-align: left;
     cursor: pointer;
     border: none;
     border-bottom: solid white 1px;
-    background: whitesmoke;
-    color: #d35555;
+    background: $whiteSmoke;
+    color: $mainRed;
     text-align: center;
     font-size: 13px;
     width: 100px;
@@ -739,18 +740,18 @@ text-align: left;
     display: block;
     position: absolute;
     bottom: 36px;
-    font-family: "Oswald" sans-serif;
+    font-family: $mainFont;
     font-size: 14px;
     right: 75px;
     color: white;
     font-weight: 300;
-    background-color: #D35555;
+    background-color: $mainRed;
     padding: 4px;
 }
 
 /*--- • 2 • f REGLAS EXCLUSIVAS de LISTA DE ONGS -------------*/
 .banco {
-    border: solid 1px whitesmoke;
+    border: solid 1px $whiteSmoke;
     margin: 62px 4px;
     padding: 22px 8px;
     -webkit-box-shadow: 0 35px 35px -35px #699;
@@ -766,7 +767,7 @@ text-align: left;
 }
 .banco h3{
     font-size: 18px;
-    color: #F16B6B;
+    color: $softRed;
 }
 .banco h4, .ficha_banco p{
     font-size: 14px;
@@ -785,7 +786,7 @@ text-align: left;
     height: 48px;
     width: 60px;
     border-radius: 50%;
-    background-color: whitesmoke;
+    background-color: $whiteSmoke;
     position: absolute;
     right: 10px;
     bottom: 10px;
@@ -793,8 +794,8 @@ text-align: left;
     padding-top: 12px;
     transition: background-color 500ms ease;
 }
-.reservar a, .reservar a:visited{color: #d35555;}
-.reservar a:hover{color: white; background-color: #d35555;}
+.reservar a, .reservar a:visited{color: $mainRed;}
+.reservar a:hover{color: white; background-color: $mainRed;}
 
 /*--- • 3 • a REGLAS de la BARRA DE PORCENTAJES --------------*/
 .campania{
@@ -814,7 +815,7 @@ text-align: left;
     position: relative;
     width: 29%;
     font-size: 14px;
-    color: #F16B6B;
+    color: $softRed;
     text-align: right;
     margin-right: 1%;
     margin-bottom: 6px;
@@ -825,7 +826,7 @@ text-align: left;
 
 .bar-main-container {
     width: 99%;
-    font-family: 'Oswald', sans-serif;
+    font-family: $mainFont;
     text-align: left;
     margin: 0 auto;
 }
@@ -836,8 +837,8 @@ text-align: left;
     -moz-border-radius: 10px;
     border-radius: 10px;
     height: 37px;
-    background: #F16B6B;
-    width: 100%;
+    background: $softRed;
+    @extend .col-1;
     overflow: hidden;
     border: solid 1px white;
     color: white;
@@ -850,9 +851,9 @@ text-align: left;
     position:relative;
 }
 .bar div {
-    background: #D35555;
+    background: $mainRed;
     height: 100%;
-    width: 100%;
+    w@extend .col-1;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -885,7 +886,7 @@ text-align: left;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-  background-color: #D35555;
+  background-color: $mainRed;
   height: 36px;
 }
 .registrados:after {content:" REGISTRADOS";}
@@ -894,7 +895,7 @@ text-align: left;
 /*--- • 3 • b REGLAS de la GOTA ------------------------------*/
 .boton_donar{
     position: relative;
-    font-family: 'Oswald', sans-serif;
+    font-family: $mainFont;
     text-align:center;
     display: block;
     margin-right: 120px; float:right;
@@ -904,12 +905,12 @@ text-align: left;
 .boton_donar a, .boton_donar a:visited{
     font-size: 28px;
     font-weight: 700;
-    color: #D35555;
+    color: $mainRed;
     width: 85px;
     height: 65px;
     padding: 112px 37px 50px 37px;
     display: block;
-    background-image: url(asset-path("quierodonar_btn.png"));
+    background-image: url($quieroDonar);
     background-repeat:no-repeat;
 }
 .boton_donar p{
@@ -930,7 +931,7 @@ text-align: left;
 .badget {
     width:54px; height:54px;
     border-radius: 27px;
-    background: #d35555;
+    background: $mainRed;
     margin: 10px;
     overflow: hidden;
     transition: width 0.5s ease, border-radius 0.3s ease;
@@ -961,14 +962,14 @@ text-align: left;
   font: 11px arial;
   font-weight: normal;
   font-style: italic;
-  color: whitesmoke;
+  color: $whiteSmoke;
 }
 
 /*colores por tema */
-.bronce {background-color:#C9712A;}
-.plata {background-color:#B3B4BD;}
-.oro {background-color:#CCA14A;}
-.azul {background-color:#5476BA;}
+.bronce {background-color: $bronce;}
+.plata {background-color: $plata;}
+.oro {background-color: $oro;}
+.azul {background-color: $azul;}
 
 /*medallas por tema */
 .bronce .medalla{ background-position: 50% -51px;}
@@ -977,12 +978,12 @@ text-align: left;
 .azul .medalla{ background-position: 50% -229px;}
 
 .sin{
-  background-color: whitesmoke !important;
+  background-color: $whiteSmoke !important;
 }
 
 /* • 4 ANIMACIONES -------------------------------------------*/
-@-webkit-keyframes ensanchar{from {width:30%;} to {width:100%;}}
-@keyframes ensanchar{from {width:1%;} to {width:100%;}}
+@-webkit-keyframes ensanchar{from {@extend .col-3-10;} to {@extend .col-1;}}
+@keyframes ensanchar{from {width:1%;} to {@extend .col-1;}}
 @-webkit-keyframes noscroll {
     from {height:1px; min-height: inherit;}
     to {height:140px; min-height: inherit;}}
@@ -1021,5 +1022,5 @@ text-align: left;
 
 .listado_meses ul li {
   display: inline;
-  background-color: whitesmoke;
+  background-color: $whiteSmoke;
 }
