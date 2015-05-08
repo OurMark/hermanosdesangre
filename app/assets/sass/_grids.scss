@@ -6,4 +6,103 @@
 $susy: (
   columns: 12,
   gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
 );
+
+/*--- • 1 • b REGLAS del CONTENIDO ---------------------------*/
+/* line 194, ../sass/custom.scss */
+.content_container {
+	position: relative;
+	width: 100%;
+	border-top: solid 70px white;
+	background: white;
+	font-family: "Oswald" sans-serif;
+}
+
+/* line 201, ../sass/custom.scss */
+.h_container {
+	@include span(6);
+	position: absolute;
+	top: 65px;
+	left: 50%;
+	margin-left: -400px;
+	max-width: 800px;
+	width: 800px;
+	height: 35px;
+	z-index: 1;
+	text-align: center;
+	h1 {
+  		font-family: 'Oswald', sans-serif;
+  		text-align: center;
+  		color: white;
+  		padding: 5px;
+	}
+	strong {
+  		color: black;
+	}
+}
+
+h1 {
+	font-size: 30px;
+	margin-bottom: 35px;
+}
+
+/* line 226, ../sass/custom.scss */
+.col_der {
+	@include span(last 6);
+	background: white;
+	min-height: 630px;
+/*	padding-left: 50%;*/
+}
+
+/* line 231, ../sass/custom.scss */
+.col_izq {
+	@include span(6);
+	position: absolute;
+/*	width: 50%;*/
+	height: 100%;
+}
+
+/* line 238, ../sass/custom.scss */
+.col_izq .col_div {
+	float: right;
+}
+
+/* line 239, ../sass/custom.scss */
+.col_div {
+	max-width: 400px;
+	overflow: hidden;
+	font-family: 'Oswald', sans-serif;
+	.imagen {
+  		position: relative;
+  		float: right;
+  		width: 160px;
+  		height: auto;
+	}
+	& > p, div > p, iframe, form, img {
+		margin: 0 35px 32px;
+	}
+	h1, h2, h3, h4 {
+		margin: 5px 35px;
+	}
+	span {
+  		margin: 0 35px;
+	}
+	p, span {
+		font-size: 13px;
+		font-weight: 300;
+		line-height: 24px;
+		text-align: justify;
+	}
+
+}
+
+/* line 268, ../sass/custom.scss */
+.Logos {
+	text-align: center;
+	img {
+		margin: 0 30px 32px;
+	}
+}

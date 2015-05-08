@@ -1,4 +1,133 @@
 @charset "UTF-8";
+/*--- • 1 • b REGLAS del CONTENIDO ---------------------------*/
+/* line 194, ../sass/custom.scss */
+/* line 16, ../sass/_grids.scss */
+.content_container {
+  position: relative;
+  width: 100%;
+  border-top: solid 70px white;
+  background: white;
+  font-family: "Oswald" sans-serif;
+}
+
+/* line 201, ../sass/custom.scss */
+/* line 25, ../sass/_grids.scss */
+.h_container {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  position: absolute;
+  top: 65px;
+  left: 50%;
+  margin-left: -400px;
+  max-width: 800px;
+  width: 800px;
+  height: 35px;
+  z-index: 1;
+  text-align: center;
+}
+/* line 36, ../sass/_grids.scss */
+.h_container h1 {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  color: white;
+  padding: 5px;
+}
+/* line 42, ../sass/_grids.scss */
+.h_container strong {
+  color: black;
+}
+
+/* line 47, ../sass/_grids.scss */
+h1 {
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+/* line 226, ../sass/custom.scss */
+/* line 53, ../sass/_grids.scss */
+.col_der {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  float: right;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  background: white;
+  min-height: 630px;
+  /*	padding-left: 50%;*/
+}
+
+/* line 231, ../sass/custom.scss */
+/* line 61, ../sass/_grids.scss */
+.col_izq {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  position: absolute;
+  /*	width: 50%;*/
+  height: 100%;
+}
+
+/* line 238, ../sass/custom.scss */
+/* line 69, ../sass/_grids.scss */
+.col_izq .col_div {
+  float: right;
+}
+
+/* line 239, ../sass/custom.scss */
+/* line 74, ../sass/_grids.scss */
+.col_div {
+  max-width: 400px;
+  overflow: hidden;
+  font-family: 'Oswald', sans-serif;
+}
+/* line 78, ../sass/_grids.scss */
+.col_div .imagen {
+  position: relative;
+  float: right;
+  width: 160px;
+  height: auto;
+}
+/* line 84, ../sass/_grids.scss */
+.col_div > p, .col_div div > p, .col_div iframe, .col_div form, .col_div img {
+  margin: 0 35px 32px;
+}
+/* line 87, ../sass/_grids.scss */
+.col_div h1, .col_div h2, .col_div h3, .col_div h4 {
+  margin: 5px 35px;
+}
+/* line 90, ../sass/_grids.scss */
+.col_div span {
+  margin: 0 35px;
+}
+/* line 93, ../sass/_grids.scss */
+.col_div p, .col_div span {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: justify;
+}
+
+/* line 268, ../sass/custom.scss */
+/* line 103, ../sass/_grids.scss */
+.Logos {
+  text-align: center;
+}
+/* line 105, ../sass/_grids.scss */
+.Logos img {
+  margin: 0 30px 32px;
+}
+
 /* CSS HERMANOS DE SANGRE - Indice
 
 • 1 REGLAS GENERALES
