@@ -25,7 +25,5 @@
 # ignore sass cache:
 /.sass-cache/
 
-# ignore everything in the "stylesheets" directory, except:
-# "style.css" file
+# ignore everything in the "stylesheets" directory:
 /app/assets/stylesheets/*
-!/app/assets/stylesheets/style.css

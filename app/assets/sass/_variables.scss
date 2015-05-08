@@ -5,7 +5,7 @@
 $mainRed: #D35555;
 $softRed: #F16B6B;
 $lightRed: rgba(241, 107, 107, 0.9);
-$mainGraY: #313131;
+$mainGray: #313131;
 $whiteSmoke: #F5F5F5;
 $bronce: #C9712A;
 $oro: #CCA14A;
@@ -14,11 +14,11 @@ $azul: #5476BA;
 
 /* IMAGES */
 
-$gotas: ""/assets/gotas.png"";
-$gotas2: "asset-path("gotas.png")";
-$quieroDonar: "asset-path("quierodonar_btn.png")";
-$email: ""http://w.sharethis.com/images/email_16.png"";
-$bolsa: "asset-path("bolsa.png")";
+$gotas: "/assets/gotas.png";
+$gotas2: "asset-path('gotas.png')";
+$quieroDonar: "asset-path('quierodonar_btn.png')";
+$email: "http://w.sharethis.com/images/email_16.png";
+$bolsa: "asset-path('bolsa.png')";
 
 
 /* FONTS */

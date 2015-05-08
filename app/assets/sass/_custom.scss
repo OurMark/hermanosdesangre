@@ -25,9 +25,6 @@
 */
 /* • 1 GENERALES ---------------------------------------------*/
 
-@import 'variables';
-
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -407,11 +404,11 @@ form INPUT[type="submit"]:focus{
     text-align: center;
     padding: 30px 25px 0 25px;
     margin: 18px 18px 30px 18px;
-	cursor: pointer;
+    cursor: pointer;
     border-bottom: solid 3px $mainRed;
     border-radius: 0 0 3px 3px;
-	-moz-user-select: none;
-	-khtml-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
     -webkit-box-shadow: black 0px 0px 25px -5px;
     box-shadow: black 0px 0px 25px -5px;
     float:left;
@@ -913,7 +910,7 @@ text-align: left;
     height: 65px;
     padding: 112px 37px 50px 37px;
     display: block;
-    background-image: url($quieroDonar));
+    background-image: url($quieroDonar);
     background-repeat:no-repeat;
 }
 .boton_donar p{
