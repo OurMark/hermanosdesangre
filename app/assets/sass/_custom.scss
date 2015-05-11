@@ -982,7 +982,7 @@ text-align: left;
 }
 
 /* • 4 ANIMACIONES -------------------------------------------*/
-@-webkit-keyframes ensanchar{from {@width: 30%} to {width: 100%}}
+@-webkit-keyframes ensanchar{from {width: 30%} to {width: 100%}}
 @keyframes ensanchar{from {width:1%;} to {width: 100%}}
 @-webkit-keyframes noscroll {
     from {height:1px; min-height: inherit;}
