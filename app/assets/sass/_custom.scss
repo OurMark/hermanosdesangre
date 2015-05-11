@@ -389,21 +389,21 @@ form INPUT[type="submit"]:focus{
 .Opciones {
     margin-left: 15px;
     margin-top: 30px;
-    height: 440px;
+    height: 600px;
     -webkit-transition: height 400ms ease;
     transition: height 400ms ease;
     overflow: hidden;
 }
 .Opciones>div{
+    font-size: 115%;
     width: 100px;
     height: 60px;
     background-color: $softRed;
     color: white;
     font-weight: 300;
-    font-size: 24px;
     text-align: center;
-    padding: 30px 25px 0 25px;
-    margin: 18px 18px 30px 18px;
+    padding: 25px 20px 0 20px;
+    margin: 18px 18px 134px 18px;
     cursor: pointer;
     border-bottom: solid 3px $mainRed;
     border-radius: 0 0 3px 3px;
@@ -415,11 +415,12 @@ form INPUT[type="submit"]:focus{
     position: relative;
 }
 .Opciones>div span{
+    width: 85%;
     font-size: 13px;
     line-height: 18px;
     color: $mainRed;
     position: absolute;
-    top: 130px; left: 0;
+    top: 110px; left: -22px;
 }
 /*SECCIONES*/
 .Secciones{
@@ -436,6 +437,7 @@ form INPUT[type="submit"]:focus{
 }
 /*MODIFICACIÓN AL SELECCIONAR*/
 .Opciones.seleccionada{
+    margin-top: -17px;
     height: auto;
 }
 .Opciones.seleccionada>div, .Opciones.seleccionada span{
@@ -445,6 +447,7 @@ form INPUT[type="submit"]:focus{
 }
 .Opciones.seleccionada>.seleccionada {
   display:block;
+  margin: 87px 0px 87px 105px;
 }
 .Secciones>.seleccionada {
   opacity: 1;
