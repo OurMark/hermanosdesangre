@@ -853,7 +853,7 @@ text-align: left;
 .bar div {
     background: $mainRed;
     height: 100%;
-    w@extend .col-1;
+    @extend .col-1;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -982,8 +982,8 @@ text-align: left;
 }
 
 /* • 4 ANIMACIONES -------------------------------------------*/
-@-webkit-keyframes ensanchar{from {@extend .col-3-10;} to {@extend .col-1;}}
-@keyframes ensanchar{from {width:1%;} to {@extend .col-1;}}
+@-webkit-keyframes ensanchar{from {@width: 30%} to {width: 100%}}
+@keyframes ensanchar{from {width:1%;} to {width: 100%}}
 @-webkit-keyframes noscroll {
     from {height:1px; min-height: inherit;}
     to {height:140px; min-height: inherit;}}
