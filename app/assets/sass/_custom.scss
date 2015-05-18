@@ -72,10 +72,10 @@ table {
 
 /*--- • 1 • a REGLAS de la CABECERA --------------------------*/
 .faldon_top_container{
+    @extend .col-1;
     font-family: $mainFont;
     font-size: 14px;
     position: fixed; z-index:2;
-    width: 100%;
     background: white;
     background:rgba(255, 255, 255, 0.9);
     height: 70px;
@@ -193,8 +193,8 @@ ul#sobre_derecha li a:hover{
 
 /*--- • 1 • b REGLAS del CONTENIDO ---------------------------*/
 .content_container{
+    @extend .col-1;
     position: relative;
-    width: 100%;
     border-top: solid 70px white;
     background: white;
     font-family: $mainFont;
@@ -230,10 +230,10 @@ h1{
   padding-left: 50%;
 }
 .col_izq{
+    @extend .col-1-2;
     position: absolute;
-    width:50%; height:100%;
-    top: 0; left: 0;
-    background: $softRed;
+    height:100%; top: 0; 
+    left: 0; background: $softRed;
 }
 
 .col_izq .col_div {float: right;}
@@ -311,7 +311,7 @@ form INPUT[type="password"],
 form INPUT[type="text"],
 form INPUT[type="email"],
 .similInput{
-    width: 100%;
+    @extend .col-1;
     height: 30px;
     border: none;
     border-bottom: 1px dashed $mainRed;
@@ -371,7 +371,7 @@ form INPUT[type="submit"]{
     color: $mainRed;
     text-align: center;
     font-size: 13px;
-    width: 100px;
+    @extend .col-1;
     padding: 9px;
     margin-right: 15px;
     -webkit-box-shadow: #AAA 0px 2px 20px -5px;
@@ -389,21 +389,21 @@ form INPUT[type="submit"]:focus{
 .Opciones {
     margin-left: 15px;
     margin-top: 30px;
-    height: 440px;
+    height: 600px;
     -webkit-transition: height 400ms ease;
     transition: height 400ms ease;
     overflow: hidden;
 }
 .Opciones>div{
+    font-size: 115%;
     width: 100px;
     height: 60px;
     background-color: $softRed;
     color: white;
     font-weight: 300;
-    font-size: 24px;
     text-align: center;
-    padding: 30px 25px 0 25px;
-    margin: 18px 18px 30px 18px;
+    padding: 25px 20px 0 20px;
+    margin: 18px 18px 134px 18px;
     cursor: pointer;
     border-bottom: solid 3px $mainRed;
     border-radius: 0 0 3px 3px;
@@ -415,11 +415,12 @@ form INPUT[type="submit"]:focus{
     position: relative;
 }
 .Opciones>div span{
+    width: 85%;
     font-size: 13px;
     line-height: 18px;
     color: $mainRed;
     position: absolute;
-    top: 130px; left: 0;
+    top: 110px; left: -22px;
 }
 /*SECCIONES*/
 .Secciones{
@@ -436,6 +437,7 @@ form INPUT[type="submit"]:focus{
 }
 /*MODIFICACIÓN AL SELECCIONAR*/
 .Opciones.seleccionada{
+    margin-top: -17px;
     height: auto;
 }
 .Opciones.seleccionada>div, .Opciones.seleccionada span{
@@ -445,6 +447,7 @@ form INPUT[type="submit"]:focus{
 }
 .Opciones.seleccionada>.seleccionada {
   display:block;
+  margin: 87px 0px 87px 105px;
 }
 .Secciones>.seleccionada {
   opacity: 1;
@@ -531,7 +534,7 @@ display: block;
     background-color: $softRed;
     background-color: $lightRed;
     position: fixed; z-index:1;
-    width: 100%; height: 55px;
+    @extend .col-1; height: 55px;
     overflow: hidden;
 }
 /*--- • 1 • f REGLAS EXCLUSIVAS del CONTENIDO LISTADO ---*/
@@ -548,7 +551,7 @@ display: block;
     margin-bottom: 15px;
     margin-right: 0;
     text-align: left;
-    width: 100%;
+    @extend .col-1;
 }
 .list-info .ico-content {
     display: inline-block;
@@ -568,7 +571,7 @@ display: block;
     display: inline-block;
     position: relative;
     vertical-align: middle;
-    width: 90%;
+    @extend .col-9-10;
 }
 
 /*.container_menu~.col_none {margin-top:  55px;}*/
@@ -838,7 +841,7 @@ text-align: left;
     border-radius: 10px;
     height: 37px;
     background: $softRed;
-    width: 100%;
+    @extend .col-1;
     overflow: hidden;
     border: solid 1px white;
     color: white;
@@ -853,7 +856,7 @@ text-align: left;
 .bar div {
     background: $mainRed;
     height: 100%;
-    width: 100%;
+    @extend .col-1;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -982,8 +985,8 @@ text-align: left;
 }
 
 /* • 4 ANIMACIONES -------------------------------------------*/
-@-webkit-keyframes ensanchar{from {width:30%;} to {width:100%;}}
-@keyframes ensanchar{from {width:1%;} to {width:100%;}}
+@-webkit-keyframes ensanchar{from {width: 30%} to {width: 100%}}
+@keyframes ensanchar{from {width:1%;} to {width: 100%}}
 @-webkit-keyframes noscroll {
     from {height:1px; min-height: inherit;}
     to {height:140px; min-height: inherit;}}
