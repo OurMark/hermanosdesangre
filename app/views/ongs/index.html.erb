@@ -15,13 +15,13 @@
             <div class="registrados">210</div>
           </div>
         </div>
-        <p><%= ong.phone %> - <%= ong.email %></p>
-        <p><%= ong.website %> - <%= ong.facebook %></p>
+        <p><%= ong.phone %> - <%= ong.adminEmail %></p>
+        <p><%= ong.websiteUrl %> - <%= ong.facebookPage %></p>
         <div class="reservar"><%= link_to "Donar aquí", new_ong_booking_path(ong) %></div>
       </div>
       <h3><%= ong.name %></h3>
-      <h2><%= ong.street1 %>,<br/><%= ong.street2 %></h2>
-      <h4>c.p. <%= ong.zip %>. <%= ong.city %>, <%= ong.state %>, <%= ong.country %>.</h4>
+      <h2><%= ong.address %>,<br/><%= ong.address2 %></h2>
+      <h4>c.p. <%= ong.zip %>. <%= ong.city %>, <%= ong.state %>, <%= ong.country_id %>.</h4>
       <div style="clear:both;"></div>
     </div>
   <% end %>
