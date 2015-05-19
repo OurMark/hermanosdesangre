@@ -8,13 +8,16 @@ $susy: (
   gutter-position: inside,
 );
 
-
 .col-1 {
 	width: 100%;
 }
 
 .col-1-2 {
-	width: 50%;
+	@include span(1 of 2);
+
+	&.last {
+		@include span(1 of 2 last);
+	}
 }
 
 .col-1-3 {

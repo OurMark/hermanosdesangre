@@ -75,18 +75,13 @@ table {
     @extend .col-1;
     font-family: $mainFont;
     font-size: 14px;
-    position: fixed; z-index:2;
-    background: white;
-    background:rgba(255, 255, 255, 0.9);
-    height: 70px;
-    border-bottom: 1px solid $mainRed;
-    -webkit-box-shadow:inset 0 35px 35px -35px #699;
-    box-shadow:inset 0 35px 35px -35px #699;
+    position: fixed; 
+    z-index:2;
+    height: 220px;
 }
 .faldon_top{
     position: relative;
-    width: 800px;
-    height: 70px;
+    height: 220px;
     margin: 0 auto;
 }
 .logo_top_container{
@@ -100,108 +95,18 @@ table {
     z-index: 9999;
 }
 /*MENU*/
-ul#menu, ul.sub-menu, ul#sobre_derecha {
-    padding:0;
-    margin: 0;
-    position: absolute;
-}
-ul#menu {
-  left: 195px;
-  top: 34px;
-}
-ul#sobre_derecha {
-  right: 4px;
-}
-.top30 {
-  top: 30px;
-}
-ul#menu li, ul.sub-menu li, ul#sobre_derecha li {
-    list-style-type: none;
-    display: inline-block;
-    position: relative;
-}
-/*SUB MENU*/
-li ul.sub-menu {
-    display:none;
-    position: absolute;
-    left: 0;
-    padding-top: 10px;
-}
-li:hover ul.sub-menu {
-    display:block;
-}
 
-ul.sub-menu li{
-    background: rgba(255, 255, 255, 0.9);
-    width: 130px;
-    padding: 10px 5px;
-}
-/*Links*/
-ul#menu>li>a, ul#sobre_derecha>li>a{
-    color: $softRed;
-    text-decoration: none;
-    padding: 6px 9px;
-    display: inline-block;
-    border-right: 1px solid $mainRed;
-}
-ul.sub-menu li>a {
-    color: $mainRed;
-    padding: 5px;
-    display: block;
-}
-ul.sub-menu li:hover {
-    background-color: white;
-}
-ul.sub-menu li>a:hover {
-    font-weight: 700;
-}
-ul#sobre_derecha li a:hover{
-  font-style: italic;
-}
-/*sobre derecha*/
-#sobre_derecha li>a{
-    padding: 9px !important;
-    background-color: $whiteSmoke;
-}
-#sobre_derecha li:last-child>a{
-    background-color:$softRed;
-    color: white;
-}
-#sobre_derecha li>span {
-    position: relative;
-    right: 28px;
-    bottom: 1px;
-}
-#sobre_derecha .HS_email {
-  background-color: $whiteSmoke;
-  background-image:url($email);
-  background-repeat:no-repeat;
-  width: 16px;
-  height: 16px;
-  overflow: hidden;
-  right: 9px;
-  position: absolute;
-  z-index: 10;
-  -webkit-transition: width 500ms ease-in;
-  transition: width 500ms ease;
-}
-#sobre_derecha .HS_email:hover {width: 75px;}
-.HS_email a {
-  padding: 0 21px;
-  color: $softRed;
-}
 
 /*--- • 1 • b REGLAS del CONTENIDO ---------------------------*/
 .content_container{
     @extend .col-1;
     position: relative;
-    border-top: solid 70px white;
-    background: white;
+    background: $white;
     font-family: $mainFont;
 }
 .h_container{
     position: absolute;
-    top: 65px;
+    top: 245px;
     left: 50%;
     margin-left: -400px;
     max-width: 800px;
