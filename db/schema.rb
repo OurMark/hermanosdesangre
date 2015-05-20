@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 20150507132507) do
 
   create_table "badges", force: true do |t|
     t.string "name"
+    t.string "icon"
   end
 
   create_table "certificate", primary_key: "certificate_id", force: true do |t|
@@ -330,8 +331,8 @@ ActiveRecord::Schema.define(version: 20150507132507) do
     t.integer "topic_id",     limit: 8,  null: false
   end
 
-  add_index "topic_converter", ["topic_id"], name: "FK4E9FE290C0F48C0C"
-  add_index "topic_converter", ["topic_id"], name: "topic_id", unique: true
+  add_index "topic_converter", ["topic_id"], name: "FK4E9FE290C0F48C0C", using: :btree
+  add_index "topic_converter", ["topic_id"], name: "topic_id", unique: true, using: :btree
 
   create_table "user", primary_key: "user_id", force: true do |t|
     t.string   "activationToken"
