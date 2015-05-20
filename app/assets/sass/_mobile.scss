@@ -12,6 +12,7 @@
 html{overflow: visible;}
 
 /*--- • 1 • a MENÚ MOBILE -----------------------------------*/
+
 .faldon_top_container {
     position: relative;
     width: 100%;
@@ -27,15 +28,15 @@ html{overflow: visible;}
 .logo_top_container {
     position: relative;
     top: 0;left: 0;
-    background: #F16B6B;
+    background: $softRed;
     text-align: center;
 }
 
 .menus {
     height: 0px;
     overflow: hidden;
-    background-color: #f16b6b;
-    border-bottom: 0px solid #d35555;
+    background-color: $softRed;
+    border-bottom: 0px solid $mainRed;
     -webkit-box-shadow: black 0px 0px 25px -5px;
     box-shadow: black 0px 0px 25px -5px;
 }
@@ -69,7 +70,7 @@ ul#sobre_derecha>li a{
     background: none !important;
 }
 ul#sobre_derecha>li:last-child a{
-    color: #f16b6b;
+    color: $softRed;
 }
 
 .menus>ul>li:first-child{
@@ -77,7 +78,7 @@ ul#sobre_derecha>li:last-child a{
     padding-top: 4px;
 }
 .menus>ul>li:nth-child(2){
-    background: whitesmoke;
+    background: $whiteSmoke;
 }
 .menus #sobre_derecha>li:last-child a{
     color: white;
@@ -123,11 +124,11 @@ ul#sobre_derecha>li:last-child a{
     bottom: -16px;
 }
 .abrir-menu:hover, .abrir-menu.mAbierto {
-  background: whitesmoke;
+  background: $whiteSmoke;
 }
 
 .abrir-menu div {
-  background: #d35555;
+  background: $mainRed;
   height: 4px; width: 20px;
   margin-left: 8px;
   margin-top: 16px;
@@ -136,7 +137,7 @@ ul#sobre_derecha>li:last-child a{
   transform: translateY(0px) rotate(45deg);
 }
 .abrir-menu div::before, .abrir-menu div::after {
-  background: #D35555;
+  background: $mainRed;
   content: '';
   display: block;
   height: 4px;
@@ -222,7 +223,7 @@ margin: 5px 0;
     float: none;
 }
 .campania {
-    color: #d35555;
+    color: $mainRed;
 }
 .col_div .imagen{
     float: none;
