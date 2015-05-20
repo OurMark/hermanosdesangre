@@ -1,4 +1,278 @@
 @charset "UTF-8";
+/* List of stylesheet variables: +/
+
+/* COLORS: */
+/* IMAGES */
+/* FONTS */
+/* line 11, ../sass/_grids.scss */
+.col-1, .faldon_top_container, .content_container, form INPUT[type="password"],
+form INPUT[type="text"],
+form INPUT[type="email"],
+.similInput, form INPUT[type="submit"], .container_menu, .list-info li, .bar-container, .bar div {
+  width: 100%;
+}
+
+/* line 15, ../sass/_grids.scss */
+.col-1-2, .col_izq {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+/* line 18, ../sass/_grids.scss */
+.col-1-2.last, .last.col_izq {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  float: right;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* line 23, ../sass/_grids.scss */
+.col-1-3 {
+  width: 33.33%;
+}
+
+/* line 27, ../sass/_grids.scss */
+.col-1-4 {
+  width: 25%;
+}
+
+/* line 31, ../sass/_grids.scss */
+.col-1-5 {
+  width: 20%;
+}
+
+/* line 35, ../sass/_grids.scss */
+.col-1-6 {
+  width: 16.66%;
+}
+
+/* line 39, ../sass/_grids.scss */
+.col-1-8 {
+  width: 12.5%;
+}
+
+/* line 43, ../sass/_grids.scss */
+.col-1-9 {
+  width: 11.11%;
+}
+
+/* line 47, ../sass/_grids.scss */
+.col-1-10 {
+  width: 10%;
+}
+
+/* line 51, ../sass/_grids.scss */
+.col-2-3 {
+  width: 66.66%;
+}
+
+/* line 55, ../sass/_grids.scss */
+.col-3-4 {
+  width: 75%;
+}
+
+/* line 59, ../sass/_grids.scss */
+.col-7-8 {
+  width: 87.5%;
+}
+
+/* line 63, ../sass/_grids.scss */
+.col-3-10 {
+  width: 30%;
+}
+
+/* line 67, ../sass/_grids.scss */
+.col-9-10, .list-info .text-content {
+  width: 90%;
+}
+
+/* line 1, ../sass/_header.scss */
+.navbar-logo {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  padding-left: 5%;
+  padding-right: 5%;
+  background: #F16B6B;
+  height: 100%;
+  padding-right: 1%;
+}
+/* line 7, ../sass/_header.scss */
+.navbar-logo a {
+  font-family: "Oswald", sans-serif;
+  height: 100%;
+  float: right;
+  width: 70%;
+  position: relative;
+}
+
+/* line 16, ../sass/_header.scss */
+.logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: url(asset-path("big-logo.png")) no-repeat center;
+}
+
+/* line 25, ../sass/_header.scss */
+.text-logo {
+  bottom: 0;
+  color: #FFFFFF;
+  font-size: 45px;
+  line-height: 55px;
+  margin-left: 50%;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+}
+
+/* line 37, ../sass/_header.scss */
+.menus {
+  background: #FFFFFF;
+  height: 100%;
+}
+/* line 41, ../sass/_header.scss */
+.menus.last {
+  padding-left: 1%;
+}
+
+/* line 46, ../sass/_header.scss */
+ul#menu,
+ul.sub-menu,
+ul#sobre_derecha {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  list-style: none;
+}
+/* line 54, ../sass/_header.scss */
+ul#menu li,
+ul.sub-menu li,
+ul#sobre_derecha li {
+  display: inline-block;
+  position: relative;
+}
+
+/* line 60, ../sass/_header.scss */
+ul#menu {
+  top: 34px;
+}
+
+/* line 64, ../sass/_header.scss */
+ul#sobre_derecha {
+  right: 5%;
+}
+
+/* line 68, ../sass/_header.scss */
+.top30 {
+  top: 30px;
+}
+
+/* line 71, ../sass/_header.scss */
+ul.sub-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  padding-top: 10px;
+}
+/* line 77, ../sass/_header.scss */
+li:hover ul.sub-menu {
+  display: block;
+}
+/* line 81, ../sass/_header.scss */
+ul.sub-menu li {
+  background: rgba(255, 255, 255, 0.9);
+  width: 130px;
+  padding: 10px 5px;
+}
+/* line 86, ../sass/_header.scss */
+ul.sub-menu li:hover {
+  background-color: #FFFFFF;
+}
+/* line 91, ../sass/_header.scss */
+ul.sub-menu a {
+  color: #D35555;
+  padding: 5px;
+  display: block;
+}
+/* line 96, ../sass/_header.scss */
+ul.sub-menu a:hover {
+  font-weight: 700;
+}
+
+/* line 102, ../sass/_header.scss */
+ul#menu > li > a, ul#sobre_derecha > li > a {
+  color: #F16B6B;
+  text-decoration: none;
+  padding: 6px 9px;
+  display: inline-block;
+  border-right: 1px solid #D35555;
+  letter-spacing: 1px;
+}
+
+/* line 111, ../sass/_header.scss */
+ul#sobre_derecha li a:hover {
+  font-style: italic;
+}
+
+/*sobre derecha*/
+/* line 115, ../sass/_header.scss */
+#sobre_derecha li > a {
+  padding: 9px !important;
+  background-color: #F5F5F5;
+}
+
+/* line 119, ../sass/_header.scss */
+#sobre_derecha li:last-child > a {
+  background-color: #F16B6B;
+  color: white;
+}
+
+/* line 123, ../sass/_header.scss */
+#sobre_derecha li > span {
+  position: relative;
+  right: 28px;
+  bottom: 1px;
+}
+
+/* line 128, ../sass/_header.scss */
+#sobre_derecha .HS_email {
+  background-color: #F5F5F5;
+  background-image: url("http://w.sharethis.com/images/email_16.png");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  right: 9px;
+  position: absolute;
+  z-index: 10;
+  -webkit-transition: width 500ms ease-in;
+  transition: width 500ms ease;
+}
+
+/* line 141, ../sass/_header.scss */
+#sobre_derecha .HS_email:hover {
+  width: 75px;
+}
+
+/* line 142, ../sass/_header.scss */
+.HS_email a {
+  padding: 0 21px;
+  color: #F16B6B;
+}
+
 /* CSS HERMANOS DE SANGRE - Indice
 
 • 1 REGLAS GENERALES
@@ -25,7 +299,7 @@
 • 4 ANIMACIONES
 */
 /* • 1 GENERALES ---------------------------------------------*/
-/* line 27, ../sass/custom.scss */
+/* line 28, ../sass/_custom.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -49,67 +323,60 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 49, ../sass/custom.scss */
+/* line 50, ../sass/_custom.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 53, ../sass/custom.scss */
+/* line 54, ../sass/_custom.scss */
 html {
   overflow-x: hidden;
 }
 
-/* line 54, ../sass/custom.scss */
+/* line 55, ../sass/_custom.scss */
 body {
   line-height: 1;
   background-color: #D35555;
   color: #313131;
 }
 
-/* line 59, ../sass/custom.scss */
+/* line 60, ../sass/_custom.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 62, ../sass/custom.scss */
+/* line 63, ../sass/_custom.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 67, ../sass/custom.scss */
+/* line 68, ../sass/_custom.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
 /*--- • 1 • a REGLAS de la CABECERA --------------------------*/
-/* line 73, ../sass/custom.scss */
+/* line 74, ../sass/_custom.scss */
 .faldon_top_container {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 14px;
   position: fixed;
   z-index: 2;
-  width: 100%;
-  background: white;
-  background: rgba(255, 255, 255, 0.9);
-  height: 70px;
-  border-bottom: 1px solid #D35555;
-  -webkit-box-shadow: inset 0 35px 35px -35px #699;
-  box-shadow: inset 0 35px 35px -35px #699;
+  height: 220px;
 }
 
-/* line 85, ../sass/custom.scss */
+/* line 82, ../sass/_custom.scss */
 .faldon_top {
   position: relative;
-  width: 800px;
-  height: 70px;
+  height: 220px;
   margin: 0 auto;
 }
 
-/* line 91, ../sass/custom.scss */
+/* line 87, ../sass/_custom.scss */
 .logo_top_container {
   position: absolute;
   top: 12px;
@@ -122,149 +389,18 @@ table {
 }
 
 /*MENU*/
-/* line 102, ../sass/custom.scss */
-ul#menu, ul.sub-menu, ul#sobre_derecha {
-  padding: 0;
-  margin: 0;
-  position: absolute;
-}
-
-/* line 107, ../sass/custom.scss */
-ul#menu {
-  left: 195px;
-  top: 34px;
-}
-
-/* line 111, ../sass/custom.scss */
-ul#sobre_derecha {
-  right: 4px;
-}
-
-/* line 114, ../sass/custom.scss */
-.top30 {
-  top: 30px;
-}
-
-/* line 117, ../sass/custom.scss */
-ul#menu li, ul.sub-menu li, ul#sobre_derecha li {
-  list-style-type: none;
-  display: inline-block;
-  position: relative;
-}
-
-/*SUB MENU*/
-/* line 123, ../sass/custom.scss */
-li ul.sub-menu {
-  display: none;
-  position: absolute;
-  left: 0;
-  padding-top: 10px;
-}
-
-/* line 129, ../sass/custom.scss */
-li:hover ul.sub-menu {
-  display: block;
-}
-
-/* line 133, ../sass/custom.scss */
-ul.sub-menu li {
-  background: rgba(255, 255, 255, 0.9);
-  width: 130px;
-  padding: 10px 5px;
-}
-
-/*Links*/
-/* line 139, ../sass/custom.scss */
-ul#menu > li > a, ul#sobre_derecha > li > a {
-  color: #F16B6B;
-  text-decoration: none;
-  padding: 6px 9px;
-  display: inline-block;
-  border-right: 1px solid #D35555;
-}
-
-/* line 146, ../sass/custom.scss */
-ul.sub-menu li > a {
-  color: #D35555;
-  padding: 5px;
-  display: block;
-}
-
-/* line 151, ../sass/custom.scss */
-ul.sub-menu li:hover {
-  background-color: white;
-}
-
-/* line 154, ../sass/custom.scss */
-ul.sub-menu li > a:hover {
-  font-weight: 700;
-}
-
-/* line 157, ../sass/custom.scss */
-ul#sobre_derecha li a:hover {
-  font-style: italic;
-}
-
-/*sobre derecha*/
-/* line 161, ../sass/custom.scss */
-#sobre_derecha li > a {
-  padding: 9px !important;
-  background-color: whitesmoke;
-}
-
-/* line 165, ../sass/custom.scss */
-#sobre_derecha li:last-child > a {
-  background-color: #F16B6B;
-  color: white;
-}
-
-/* line 169, ../sass/custom.scss */
-#sobre_derecha li > span {
-  position: relative;
-  right: 28px;
-  bottom: 1px;
-}
-
-/* line 174, ../sass/custom.scss */
-#sobre_derecha .HS_email {
-  background-color: whitesmoke;
-  background-image: url("http://w.sharethis.com/images/email_16.png");
-  background-repeat: no-repeat;
-  width: 16px;
-  height: 16px;
-  overflow: hidden;
-  right: 9px;
-  position: absolute;
-  z-index: 10;
-  -webkit-transition: width 500ms ease-in;
-  transition: width 500ms ease;
-}
-
-/* line 187, ../sass/custom.scss */
-#sobre_derecha .HS_email:hover {
-  width: 75px;
-}
-
-/* line 188, ../sass/custom.scss */
-.HS_email a {
-  padding: 0 21px;
-  color: #F16B6B;
-}
-
 /*--- • 1 • b REGLAS del CONTENIDO ---------------------------*/
-/* line 194, ../sass/custom.scss */
+/* line 101, ../sass/_custom.scss */
 .content_container {
   position: relative;
-  width: 100%;
-  border-top: solid 70px white;
-  background: white;
-  font-family: "Oswald" sans-serif;
+  background: #FFFFFF;
+  font-family: "Oswald", sans-serif;
 }
 
-/* line 201, ../sass/custom.scss */
+/* line 107, ../sass/_custom.scss */
 .h_container {
   position: absolute;
-  top: 65px;
+  top: 245px;
   left: 50%;
   margin-left: -400px;
   max-width: 800px;
@@ -274,55 +410,54 @@ ul#sobre_derecha li a:hover {
   text-align: center;
 }
 
-/* line 212, ../sass/custom.scss */
+/* line 118, ../sass/_custom.scss */
 h1 {
   font-size: 30px;
   margin-bottom: 35px;
 }
 
-/* line 216, ../sass/custom.scss */
+/* line 122, ../sass/_custom.scss */
 .h_container h1 {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-align: center;
   color: white;
   padding: 5px;
 }
 
-/* line 222, ../sass/custom.scss */
+/* line 128, ../sass/_custom.scss */
 .h_container strong {
   color: black;
 }
 
-/* line 226, ../sass/custom.scss */
+/* line 132, ../sass/_custom.scss */
 .col_der {
   background: white;
   min-height: 630px;
   padding-left: 50%;
 }
 
-/* line 231, ../sass/custom.scss */
+/* line 137, ../sass/_custom.scss */
 .col_izq {
   position: absolute;
-  width: 50%;
   height: 100%;
   top: 0;
   left: 0;
   background: #F16B6B;
 }
 
-/* line 238, ../sass/custom.scss */
+/* line 144, ../sass/_custom.scss */
 .col_izq .col_div {
   float: right;
 }
 
-/* line 239, ../sass/custom.scss */
+/* line 145, ../sass/_custom.scss */
 .col_div {
   max-width: 400px;
   overflow: hidden;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
-/* line 244, ../sass/custom.scss */
+/* line 150, ../sass/_custom.scss */
 .col_div p,
 .col_div span {
   font-size: 13px;
@@ -331,7 +466,7 @@ h1 {
   text-align: justify;
 }
 
-/* line 251, ../sass/custom.scss */
+/* line 157, ../sass/_custom.scss */
 .col_div .imagen {
   position: relative;
   float: right;
@@ -339,45 +474,45 @@ h1 {
   height: auto;
 }
 
-/* line 257, ../sass/custom.scss */
+/* line 163, ../sass/_custom.scss */
 .col_div > p, .col_div div > p, .col_div iframe, .col_div form, .col_div img {
   margin: 0 35px 32px;
 }
 
-/* line 260, ../sass/custom.scss */
+/* line 166, ../sass/_custom.scss */
 .col_div h1, .col_div h2, .col_div h3, .col_div h4 {
   margin: 5px 35px;
 }
 
-/* line 264, ../sass/custom.scss */
+/* line 170, ../sass/_custom.scss */
 .col_div span {
   margin: 0 35px;
 }
 
-/* line 268, ../sass/custom.scss */
+/* line 174, ../sass/_custom.scss */
 .Logos {
   text-align: center;
 }
 
-/* line 272, ../sass/custom.scss */
+/* line 178, ../sass/_custom.scss */
 .Logos img {
   margin: 0 30px 32px;
 }
 
 /*--- • 1 • c REGLAS de FORMULARIOS --------------------------*/
-/* line 277, ../sass/custom.scss */
+/* line 183, ../sass/_custom.scss */
 .col_div form {
   margin-top: 30px;
 }
 
-/* line 280, ../sass/custom.scss */
+/* line 186, ../sass/_custom.scss */
 .inputLargo {
   width: 315px;
   margin-bottom: 10px;
   overflow: hidden;
 }
 
-/* line 285, ../sass/custom.scss */
+/* line 191, ../sass/_custom.scss */
 .inputCorto {
   width: 155px;
   display: inline-block;
@@ -386,21 +521,21 @@ h1 {
   overflow: hidden;
 }
 
-/* line 292, ../sass/custom.scss */
+/* line 198, ../sass/_custom.scss */
 label {
   font-size: 14px;
-  color: #d35555;
+  color: #D35555;
   padding-left: 10px;
   display: block;
   margin-bottom: 3px;
 }
 
-/* line 299, ../sass/custom.scss */
+/* line 205, ../sass/_custom.scss */
 label:after {
   content: ":";
 }
 
-/* line 300, ../sass/custom.scss */
+/* line 206, ../sass/_custom.scss */
 .similInput label {
   display: inline-block;
   margin-bottom: 0;
@@ -409,39 +544,38 @@ label:after {
   font-size: 17px;
 }
 
-/* line 307, ../sass/custom.scss */
+/* line 213, ../sass/_custom.scss */
 .similInput label:after {
   content: none;
 }
 
-/* line 309, ../sass/custom.scss */
+/* line 215, ../sass/_custom.scss */
 form INPUT[type="password"],
 form INPUT[type="text"],
 form INPUT[type="email"],
 .similInput {
-  width: 100%;
   height: 30px;
   border: none;
   border-bottom: 1px dashed #D35555;
-  background-color: whitesmoke;
-  font-family: "Oswald" sans-serif;
+  background-color: #F5F5F5;
+  font-family: "Oswald", sans-serif;
   font-size: 17px;
   padding-left: 10px;
   -webkit-transition: background 500ms ease;
   transition: background 500ms ease;
 }
 
-/* line 324, ../sass/custom.scss */
+/* line 230, ../sass/_custom.scss */
 .similInput INPUT {
   margin: 10px 0 0 0;
 }
 
-/* line 327, ../sass/custom.scss */
+/* line 233, ../sass/_custom.scss */
 .similInput div {
   padding-top: 6px;
 }
 
-/* line 330, ../sass/custom.scss */
+/* line 236, ../sass/_custom.scss */
 form INPUT[type="password"]:focus,
 form INPUT[type="text"]:focus,
 form INPUT[type="email"]:focus,
@@ -451,27 +585,27 @@ select:focus {
   outline: none;
 }
 
-/* line 338, ../sass/custom.scss */
+/* line 244, ../sass/_custom.scss */
 input:focus::-webkit-input-placeholder {
   color: white;
 }
 
-/* line 339, ../sass/custom.scss */
+/* line 245, ../sass/_custom.scss */
 input:focus::-moz-placeholder {
   color: white;
 }
 
-/* line 340, ../sass/custom.scss */
+/* line 246, ../sass/_custom.scss */
 input:focus:-ms-input-placeholder {
   color: white;
 }
 
-/* line 341, ../sass/custom.scss */
+/* line 247, ../sass/_custom.scss */
 input:focus:-moz-placeholder {
   color: white;
 }
 
-/* line 343, ../sass/custom.scss */
+/* line 249, ../sass/_custom.scss */
 .col_div .notificacion {
   margin: 0;
   text-align: right;
@@ -480,12 +614,12 @@ input:focus:-moz-placeholder {
   bottom: 10px;
 }
 
-/* line 350, ../sass/custom.scss */
+/* line 256, ../sass/_custom.scss */
 .notificacion a, .notificacion a:hover, .notificacion a:visited {
-  color: #d35555;
+  color: #D35555;
 }
 
-/* line 354, ../sass/custom.scss */
+/* line 260, ../sass/_custom.scss */
 .submitArea label, .col_div .submitArea > p {
   display: inline-block;
   margin-bottom: 0;
@@ -494,61 +628,60 @@ input:focus:-moz-placeholder {
   color: black;
 }
 
-/* line 360, ../sass/custom.scss */
+/* line 266, ../sass/_custom.scss */
 .submitArea label:after {
   content: none;
 }
 
-/* line 363, ../sass/custom.scss */
+/* line 269, ../sass/_custom.scss */
 form INPUT[type="submit"] {
   cursor: pointer;
   float: right;
   border: none;
   border-bottom: solid white 1px;
-  background: whitesmoke;
-  font-family: "Oswald" sans-serif;
-  color: #d35555;
+  background: #F5F5F5;
+  font-family: "Oswald", sans-serif;
+  color: #D35555;
   text-align: center;
   font-size: 13px;
-  width: 100px;
   padding: 9px;
   margin-right: 15px;
   -webkit-box-shadow: #AAA 0px 2px 20px -5px;
   box-shadow: #AAA 0px 2px 20px -5px;
 }
 
-/* line 379, ../sass/custom.scss */
+/* line 285, ../sass/_custom.scss */
 form INPUT[type="submit"]:hover,
 form INPUT[type="submit"]:focus {
   color: white;
   background-color: #F16B6B;
-  border-bottom: solid #d35555 2px;
+  border-bottom: solid #D35555 2px;
   outline: none;
 }
 
 /*--- • 1 • d REGLAS de SECCIONES ----------------------------*/
 /*OPCIONES*/
-/* line 388, ../sass/custom.scss */
+/* line 294, ../sass/_custom.scss */
 .Opciones {
   margin-left: 15px;
   margin-top: 30px;
-  height: 440px;
+  height: 600px;
   -webkit-transition: height 400ms ease;
   transition: height 400ms ease;
   overflow: hidden;
 }
 
-/* line 396, ../sass/custom.scss */
+/* line 302, ../sass/_custom.scss */
 .Opciones > div {
+  font-size: 115%;
   width: 100px;
   height: 60px;
   background-color: #F16B6B;
   color: white;
   font-weight: 300;
-  font-size: 24px;
   text-align: center;
-  padding: 30px 25px 0 25px;
-  margin: 18px 18px 30px 18px;
+  padding: 25px 20px 0 20px;
+  margin: 18px 18px 134px 18px;
   cursor: pointer;
   border-bottom: solid 3px #D35555;
   border-radius: 0 0 3px 3px;
@@ -560,23 +693,24 @@ form INPUT[type="submit"]:focus {
   position: relative;
 }
 
-/* line 416, ../sass/custom.scss */
+/* line 322, ../sass/_custom.scss */
 .Opciones > div span {
+  width: 85%;
   font-size: 13px;
   line-height: 18px;
   color: #D35555;
   position: absolute;
-  top: 130px;
-  left: 0;
+  top: 110px;
+  left: -22px;
 }
 
 /*SECCIONES*/
-/* line 424, ../sass/custom.scss */
+/* line 331, ../sass/_custom.scss */
 .Secciones {
   clear: both;
 }
 
-/* line 427, ../sass/custom.scss */
+/* line 334, ../sass/_custom.scss */
 .Secciones > div {
   position: relative;
   opacity: 0;
@@ -588,24 +722,26 @@ form INPUT[type="submit"]:focus {
 }
 
 /*MODIFICACIÓN AL SELECCIONAR*/
-/* line 437, ../sass/custom.scss */
+/* line 344, ../sass/_custom.scss */
 .Opciones.seleccionada {
+  margin-top: -17px;
   height: auto;
 }
 
-/* line 440, ../sass/custom.scss */
+/* line 348, ../sass/_custom.scss */
 .Opciones.seleccionada > div, .Opciones.seleccionada span {
   display: none;
   /*importante ocultar las opciones para asegurarse de elegir
   solo una a la vez*/
 }
 
-/* line 445, ../sass/custom.scss */
+/* line 353, ../sass/_custom.scss */
 .Opciones.seleccionada > .seleccionada {
   display: block;
+  margin: 87px 0px 87px 105px;
 }
 
-/* line 448, ../sass/custom.scss */
+/* line 357, ../sass/_custom.scss */
 .Secciones > .seleccionada {
   opacity: 1;
   height: auto;
@@ -616,18 +752,18 @@ form INPUT[type="submit"]:focus {
 }
 
 /*CONTIDO DE SECCIONES*/
-/* line 456, ../sass/custom.scss */
+/* line 365, ../sass/_custom.scss */
 .Secciones ul, .Secciones h2 {
   position: absolute;
 }
 
-/* line 459, ../sass/custom.scss */
+/* line 368, ../sass/_custom.scss */
 .Secciones ul, .Secciones ol {
   display: inline-block;
   padding-left: 35px;
 }
 
-/* line 463, ../sass/custom.scss */
+/* line 372, ../sass/_custom.scss */
 .Secciones ul {
   opacity: 0;
   -webkit-transition: opacity 0.7s ease;
@@ -635,12 +771,12 @@ form INPUT[type="submit"]:focus {
   top: 56px;
 }
 
-/* line 469, ../sass/custom.scss */
+/* line 378, ../sass/_custom.scss */
 .Secciones ul.seleccionada {
   opacity: 1;
 }
 
-/* line 472, ../sass/custom.scss */
+/* line 381, ../sass/_custom.scss */
 .Secciones li {
   display: block;
   float: left;
@@ -654,17 +790,17 @@ form INPUT[type="submit"]:focus {
   line-height: 24px;
 }
 
-/* line 484, ../sass/custom.scss */
+/* line 393, ../sass/_custom.scss */
 .Secciones li:nth-child(2n+1) {
   clear: both;
 }
 
-/* line 487, ../sass/custom.scss */
+/* line 396, ../sass/_custom.scss */
 .Secciones li strong {
   display: block;
 }
 
-/* line 490, ../sass/custom.scss */
+/* line 399, ../sass/_custom.scss */
 .Secciones h2 {
   left: 16px;
   top: 20px;
@@ -674,24 +810,24 @@ form INPUT[type="submit"]:focus {
   transition: opacity 500ms ease;
 }
 
-/* line 498, ../sass/custom.scss */
+/* line 407, ../sass/_custom.scss */
 .Secciones h2:hover {
   opacity: 0.8;
 }
 
-/* line 499, ../sass/custom.scss */
+/* line 408, ../sass/_custom.scss */
 .Secciones h2:last-of-type {
   right: 0;
   left: inherit;
 }
 
-/* line 503, ../sass/custom.scss */
+/* line 412, ../sass/_custom.scss */
 .Secciones h2.seleccionada {
   border-bottom: solid 2px #D35555;
   opacity: 1;
 }
 
-/* line 507, ../sass/custom.scss */
+/* line 416, ../sass/_custom.scss */
 .Secciones p:last-child:after {
   content: "";
   background-image: url(asset-path("gotas.png"));
@@ -701,13 +837,13 @@ form INPUT[type="submit"]:focus {
   display: inline-block;
 }
 
-/* line 516, ../sass/custom.scss */
+/* line 425, ../sass/_custom.scss */
 .Secciones a {
   color: #D35555;
   text-decoration: none;
 }
 
-/* line 521, ../sass/custom.scss */
+/* line 430, ../sass/_custom.scss */
 .Secciones a:active,
 .Secciones a:hover,
 .Secciones a:focus {
@@ -716,19 +852,18 @@ form INPUT[type="submit"]:focus {
 }
 
 /*--- • 1 • e REGLAS EXCLUSIVAS del CONTENIDO SIN COLUMNAS ---*/
-/* line 529, ../sass/custom.scss */
+/* line 438, ../sass/_custom.scss */
 .container_menu {
-  background-color: #f16b6b;
+  background-color: #F16B6B;
   background-color: rgba(241, 107, 107, 0.9);
   position: fixed;
   z-index: 1;
-  width: 100%;
   height: 55px;
   overflow: hidden;
 }
 
 /*--- • 1 • f REGLAS EXCLUSIVAS del CONTENIDO LISTADO ---*/
-/* line 537, ../sass/custom.scss */
+/* line 446, ../sass/_custom.scss */
 .list-info ul {
   list-style: none;
   position: relative;
@@ -736,7 +871,7 @@ form INPUT[type="submit"]:focus {
   top: 0;
 }
 
-/* line 543, ../sass/custom.scss */
+/* line 452, ../sass/_custom.scss */
 .list-info li {
   color: #313131;
   display: inline-block;
@@ -744,10 +879,9 @@ form INPUT[type="submit"]:focus {
   margin-bottom: 15px;
   margin-right: 0;
   text-align: left;
-  width: 100%;
 }
 
-/* line 552, ../sass/custom.scss */
+/* line 461, ../sass/_custom.scss */
 .list-info .ico-content {
   display: inline-block;
   position: relative;
@@ -755,7 +889,7 @@ form INPUT[type="submit"]:focus {
   width: 20px;
 }
 
-/* line 558, ../sass/custom.scss */
+/* line 467, ../sass/_custom.scss */
 .list-info .ico-content i {
   background-image: url("/assets/gotas.png");
   background-position: 0 -5px;
@@ -765,21 +899,20 @@ form INPUT[type="submit"]:focus {
   width: 16px;
 }
 
-/* line 566, ../sass/custom.scss */
+/* line 475, ../sass/_custom.scss */
 .list-info .text-content {
   display: inline-block;
   position: relative;
   vertical-align: middle;
-  width: 90%;
 }
 
 /*.container_menu~.col_none {margin-top:  55px;}*/
-/* line 574, ../sass/custom.scss */
+/* line 483, ../sass/_custom.scss */
 .container_menu .faldon_top {
   margin-top: 12px;
 }
 
-/* line 577, ../sass/custom.scss */
+/* line 486, ../sass/_custom.scss */
 .container_menu form INPUT {
   float: right;
   width: 250px;
@@ -787,7 +920,7 @@ form INPUT[type="submit"]:focus {
   color: white;
 }
 
-/* line 583, ../sass/custom.scss */
+/* line 492, ../sass/_custom.scss */
 .col_none {
   max-width: 800px;
   margin-left: auto;
@@ -795,22 +928,22 @@ form INPUT[type="submit"]:focus {
   margin-top: 55px;
 }
 
-/* line 588, ../sass/custom.scss */
+/* line 497, ../sass/_custom.scss */
 .col_none td {
   padding: 6px;
   font-size: 14px;
 }
 
 /*--- • 2 • a REGLAS EXCLUSIVAS de la HOME -------------------*/
-/* line 593, ../sass/custom.scss */
+/* line 502, ../sass/_custom.scss */
 .col_div.home {
   padding-top: 250px;
 }
 
 /*--- • 2 • b REGLAS EXCLUSIVAS de DONANTES ------------------*/
-/* line 598, ../sass/custom.scss */
+/* line 507, ../sass/_custom.scss */
 .bolsa {
-  background-color: #f16b6b;
+  background-color: #F16B6B;
   background-image: url(asset-path("bolsa.png"));
   background-size: 46px 25px;
   background-repeat: no-repeat;
@@ -822,7 +955,7 @@ form INPUT[type="submit"]:focus {
   border-radius: 50%;
 }
 
-/* line 610, ../sass/custom.scss */
+/* line 519, ../sass/_custom.scss */
 .bolsa:before {
   content: "---";
   display: block;
@@ -842,22 +975,22 @@ form INPUT[type="submit"]:focus {
   color: #F16B6B;
 }
 
-/* line 628, ../sass/custom.scss */
+/* line 537, ../sass/_custom.scss */
 .bolsa:hover:before {
   border-bottom-width: 7px;
 }
 
-/* line 631, ../sass/custom.scss */
+/* line 540, ../sass/_custom.scss */
 .bolsa.llena:before {
   border-bottom-width: 26px;
 }
 
-/* line 634, ../sass/custom.scss */
+/* line 543, ../sass/_custom.scss */
 .bolsa.llena:hover:before {
   border-bottom-width: 19px;
 }
 
-/* line 637, ../sass/custom.scss */
+/* line 546, ../sass/_custom.scss */
 .col_div .cota {
   line-height: 17px;
   font-size: 13px;
@@ -865,12 +998,12 @@ form INPUT[type="submit"]:focus {
 }
 
 /*--- • 2 • c REGLAS EXCLUSIVAS de ¿QUIENES SOMOS? -----------*/
-/* line 644, ../sass/custom.scss */
+/* line 553, ../sass/_custom.scss */
 .col_div.us {
   padding-top: 50px;
 }
 
-/* line 648, ../sass/custom.scss */
+/* line 557, ../sass/_custom.scss */
 .slogan {
   width: 330px;
   height: 80px;
@@ -878,7 +1011,7 @@ form INPUT[type="submit"]:focus {
   margin: 80px 35px 60px 35px;
 }
 
-/* line 649, ../sass/custom.scss */
+/* line 558, ../sass/_custom.scss */
 .col_div .slogan > p, .slogan h2, .slogan h3 {
   margin: 0px;
   position: absolute;
@@ -886,77 +1019,77 @@ form INPUT[type="submit"]:focus {
   color: #D35555;
 }
 
-/* line 650, ../sass/custom.scss */
+/* line 559, ../sass/_custom.scss */
 .slogan p {
   top: 48px;
   left: 0;
   font-size: 20px;
 }
 
-/* line 651, ../sass/custom.scss */
+/* line 560, ../sass/_custom.scss */
 .slogan p:first-child {
   top: 0;
   left: 0;
   font-size: 16px;
 }
 
-/* line 652, ../sass/custom.scss */
+/* line 561, ../sass/_custom.scss */
 .slogan p:nth-child(2) {
   top: 24px;
   left: 50px;
   font-size: 28px;
 }
 
-/* line 653, ../sass/custom.scss */
+/* line 562, ../sass/_custom.scss */
 .slogan h2 {
   top: 0;
   right: 1px;
   font-size: 28px;
 }
 
-/* line 654, ../sass/custom.scss */
+/* line 563, ../sass/_custom.scss */
 .slogan h3 {
   top: 36px;
   right: 0;
   font-size: 36px;
 }
 
-/* line 655, ../sass/custom.scss */
+/* line 564, ../sass/_custom.scss */
 .slogan h3:hover, .slogan h2:hover {
   font-size: 39px;
   background: white;
 }
 
 /*--- • 2 • d REGLAS EXCLUSIVAS de ENTRAR Y REGISTRARSE ------*/
-/* line 658, ../sass/custom.scss */
+/* line 567, ../sass/_custom.scss */
 .col_div.ingresar, .col_div.registrarse {
   padding-top: 85px;
 }
 
 /*--- • 2 • e REGLAS EXCLUSIVAS de PERFIL de USUARIO ---------*/
-/* line 662, ../sass/custom.scss */
+/* line 571, ../sass/_custom.scss */
 .perfil {
   padding-top: 85px;
 }
 
-/* line 665, ../sass/custom.scss */
+/* line 574, ../sass/_custom.scss */
 .perfil .Secciones > .seleccionada {
   -webkit-animation: initial;
   animation: initial;
 }
 
-/* line 669, ../sass/custom.scss */
+/* line 578, ../sass/_custom.scss */
 .perfil .secciones p:last-of-type:after {
   content: none;
 }
 
-/* line 672, ../sass/custom.scss */
+/* line 581, ../sass/_custom.scss */
 .perfil h1 {
   z-index: 2;
   position: relative;
 }
 
-/* line 676, ../sass/custom.scss */
+/* line 585, ../sass/_custom.scss */
 .perfil .Secciones h2:last-of-type,
 .perfil .Secciones h2 {
   opacity: 1;
@@ -970,60 +1103,60 @@ form INPUT[type="submit"]:focus {
   z-index: 0;
 }
 
-/* line 688, ../sass/custom.scss */
+/* line 597, ../sass/_custom.scss */
 .perfil h3 {
   margin-bottom: 25px;
 }
 
-/* line 691, ../sass/custom.scss */
+/* line 600, ../sass/_custom.scss */
 .perfil h3:before {
   content: "DNI. ";
-  color: #f16b6b;
+  color: #F16B6B;
 }
 
-/* line 695, ../sass/custom.scss */
+/* line 604, ../sass/_custom.scss */
 .perfil h4 {
-  color: #f16b6b;
+  color: #F16B6B;
   font-size: 14px;
 }
 
-/* line 699, ../sass/custom.scss */
+/* line 608, ../sass/_custom.scss */
 .perfil h4 a, .perfil h4 a:visited {
-  color: #f16b6b;
+  color: #F16B6B;
 }
 
-/* line 702, ../sass/custom.scss */
+/* line 611, ../sass/_custom.scss */
 .perfil h4 a strong, .perfil h4 a:visited strong {
   color: black;
   font-weight: 400;
 }
 
-/* line 706, ../sass/custom.scss */
+/* line 615, ../sass/_custom.scss */
 .perfil h4:last-child {
   padding-bottom: 35px;
 }
 
-/* line 709, ../sass/custom.scss */
+/* line 618, ../sass/_custom.scss */
 .perfil .Secciones > div:first-child > p {
   font-size: 17px;
   font-weight: 400;
   margin-bottom: 23px;
 }
 
-/* line 714, ../sass/custom.scss */
+/* line 623, ../sass/_custom.scss */
 .perfil .badgets h4 {
   margin: 0;
   padding-top: 12px;
   text-align: left;
 }
 
-/* line 719, ../sass/custom.scss */
+/* line 628, ../sass/_custom.scss */
 .cambiar {
   cursor: pointer;
   border: none;
   border-bottom: solid white 1px;
-  background: whitesmoke;
-  color: #d35555;
+  background: #F5F5F5;
+  color: #D35555;
   text-align: center;
   font-size: 13px;
   width: 100px;
@@ -1034,18 +1167,18 @@ form INPUT[type="submit"]:focus {
   bottom: 34px;
 }
 
-/* line 734, ../sass/custom.scss */
+/* line 643, ../sass/_custom.scss */
 .perfil .submitArea {
   height: 42px;
   margin-top: 14px;
 }
 
-/* line 738, ../sass/custom.scss */
+/* line 647, ../sass/_custom.scss */
 .botonONG {
   display: block;
   position: absolute;
   bottom: 36px;
-  font-family: "Oswald" sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 14px;
   right: 75px;
   color: white;
@@ -1055,9 +1188,9 @@ form INPUT[type="submit"]:focus {
 }
 
 /*--- • 2 • f REGLAS EXCLUSIVAS de LISTA DE ONGS -------------*/
-/* line 752, ../sass/custom.scss */
+/* line 661, ../sass/_custom.scss */
 .banco {
-  border: solid 1px whitesmoke;
+  border: solid 1px #F5F5F5;
   margin: 62px 4px;
   padding: 22px 8px;
   -webkit-box-shadow: 0 35px 35px -35px #699;
@@ -1065,48 +1198,48 @@ form INPUT[type="submit"]:focus {
   position: relative;
 }
 
-/* line 760, ../sass/custom.scss */
+/* line 669, ../sass/_custom.scss */
 .banco:first-child {
   margin-top: 95px;
 }
 
-/* line 763, ../sass/custom.scss */
+/* line 672, ../sass/_custom.scss */
 .banco h2 {
   font-size: 24px;
   margin: 15px 0;
 }
 
-/* line 767, ../sass/custom.scss */
+/* line 676, ../sass/_custom.scss */
 .banco h3 {
   font-size: 18px;
   color: #F16B6B;
 }
 
-/* line 771, ../sass/custom.scss */
+/* line 680, ../sass/_custom.scss */
 .banco h4, .ficha_banco p {
   font-size: 14px;
   font-weight: 300;
   margin: 11px 0;
 }
 
-/* line 776, ../sass/custom.scss */
+/* line 685, ../sass/_custom.scss */
 .ficha_banco p {
   padding-left: 5px;
 }
 
-/* line 779, ../sass/custom.scss */
+/* line 688, ../sass/_custom.scss */
 .ficha_banco {
   float: right;
   width: 65%;
   padding-left: 8px;
 }
 
-/* line 784, ../sass/custom.scss */
+/* line 693, ../sass/_custom.scss */
 .reservar a {
   height: 48px;
   width: 60px;
   border-radius: 50%;
-  background-color: whitesmoke;
+  background-color: #F5F5F5;
   position: absolute;
   right: 10px;
   bottom: 10px;
@@ -1115,19 +1248,19 @@ form INPUT[type="submit"]:focus {
   transition: background-color 500ms ease;
 }
 
-/* line 796, ../sass/custom.scss */
+/* line 705, ../sass/_custom.scss */
 .reservar a, .reservar a:visited {
-  color: #d35555;
+  color: #D35555;
 }
 
-/* line 797, ../sass/custom.scss */
+/* line 706, ../sass/_custom.scss */
 .reservar a:hover {
   color: white;
-  background-color: #d35555;
+  background-color: #D35555;
 }
 
 /*--- • 3 • a REGLAS de la BARRA DE PORCENTAJES --------------*/
-/* line 800, ../sass/custom.scss */
+/* line 709, ../sass/_custom.scss */
 .campania {
   width: 69%;
   font-weight: 300;
@@ -1138,23 +1271,23 @@ form INPUT[type="submit"]:focus {
   display: inline-block;
 }
 
-/* line 809, ../sass/custom.scss */
+/* line 718, ../sass/_custom.scss */
 .campania:before {
   content: "Donantes en: ";
   font-weight: 400;
 }
 
-/* line 810, ../sass/custom.scss */
+/* line 719, ../sass/_custom.scss */
 .banco .campania {
   color: black;
 }
 
-/* line 811, ../sass/custom.scss */
+/* line 720, ../sass/_custom.scss */
 .banco .campania:before {
   content: "";
 }
 
-/* line 813, ../sass/custom.scss */
+/* line 722, ../sass/_custom.scss */
 .faltandias {
   position: relative;
   width: 29%;
@@ -1166,25 +1299,25 @@ form INPUT[type="submit"]:focus {
   display: inline-block;
 }
 
-/* line 823, ../sass/custom.scss */
+/* line 732, ../sass/_custom.scss */
 .faltandias:before {
   content: "faltan ";
 }
 
-/* line 824, ../sass/custom.scss */
+/* line 733, ../sass/_custom.scss */
 .faltandias:after {
   content: " días";
 }
 
-/* line 826, ../sass/custom.scss */
+/* line 735, ../sass/_custom.scss */
 .bar-main-container {
   width: 99%;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-align: left;
   margin: 0 auto;
 }
 
-/* line 833, ../sass/custom.scss */
+/* line 742, ../sass/_custom.scss */
 .bar-container {
   position: relative;
   -webkit-border-radius: 10px;
@@ -1192,30 +1325,28 @@ form INPUT[type="submit"]:focus {
   border-radius: 10px;
   height: 37px;
   background: #F16B6B;
-  width: 100%;
   overflow: hidden;
   border: solid 1px white;
   color: white;
 }
 
-/* line 846, ../sass/custom.scss */
+/* line 755, ../sass/_custom.scss */
 .bar, .registrados, .objetivo {
   font-size: 20px;
   line-height: 2;
 }
 
-/* line 847, ../sass/custom.scss */
+/* line 756, ../sass/_custom.scss */
 .bar {
   float: left;
   height: 100%;
   position: relative;
 }
 
-/* line 852, ../sass/custom.scss */
+/* line 761, ../sass/_custom.scss */
 .bar div {
   background: #D35555;
   height: 100%;
-  width: 100%;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -1224,7 +1355,7 @@ form INPUT[type="submit"]:focus {
   animation: ensanchar 3s;
 }
 
-/* line 863, ../sass/custom.scss */
+/* line 772, ../sass/_custom.scss */
 .bar div:after {
   content: " ";
   background: url(asset-path("gotas.png")) 0px 1px no-repeat;
@@ -1236,19 +1367,19 @@ form INPUT[type="submit"]:focus {
   margin: 0 10px;
 }
 
-/* line 872, ../sass/custom.scss */
+/* line 781, ../sass/_custom.scss */
 .objetivo:before, .registrados:after {
   font-size: 13px;
   font-weight: 300;
 }
 
-/* line 876, ../sass/custom.scss */
+/* line 785, ../sass/_custom.scss */
 .objetivo {
   position: absolute;
   right: 6px;
 }
 
-/* line 881, ../sass/custom.scss */
+/* line 790, ../sass/_custom.scss */
 .registrados {
   position: absolute;
   left: 1px;
@@ -1260,21 +1391,21 @@ form INPUT[type="submit"]:focus {
   height: 36px;
 }
 
-/* line 891, ../sass/custom.scss */
+/* line 800, ../sass/_custom.scss */
 .registrados:after {
   content: " REGISTRADOS";
 }
 
-/* line 892, ../sass/custom.scss */
+/* line 801, ../sass/_custom.scss */
 .objetivo:before {
   content: "OBJETIVO: ";
 }
 
 /*--- • 3 • b REGLAS de la GOTA ------------------------------*/
-/* line 895, ../sass/custom.scss */
+/* line 804, ../sass/_custom.scss */
 .boton_donar {
   position: relative;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-align: center;
   display: block;
   margin-right: 120px;
@@ -1283,7 +1414,7 @@ form INPUT[type="submit"]:focus {
   width: 160px;
 }
 
-/* line 904, ../sass/custom.scss */
+/* line 813, ../sass/_custom.scss */
 .boton_donar a, .boton_donar a:visited {
   font-size: 28px;
   font-weight: 700;
@@ -1296,7 +1427,7 @@ form INPUT[type="submit"]:focus {
   background-repeat: no-repeat;
 }
 
-/* line 915, ../sass/custom.scss */
+/* line 824, ../sass/_custom.scss */
 .boton_donar p {
   margin-top: 16px;
   font-size: 14px;
@@ -1306,7 +1437,7 @@ form INPUT[type="submit"]:focus {
 }
 
 /*--- • 3 • c REGLAS de los BADGETS --------------------------*/
-/* line 924, ../sass/custom.scss */
+/* line 833, ../sass/_custom.scss */
 .badgets {
   margin: 0 35px 14px 35px;
   text-align: center;
@@ -1314,12 +1445,12 @@ form INPUT[type="submit"]:focus {
   border-bottom: dashed #AAA 1px;
 }
 
-/* line 930, ../sass/custom.scss */
+/* line 839, ../sass/_custom.scss */
 .badget {
   width: 54px;
   height: 54px;
   border-radius: 27px;
-  background: #d35555;
+  background: #D35555;
   margin: 10px;
   overflow: hidden;
   transition: width 0.5s ease, border-radius 0.3s ease;
@@ -1327,13 +1458,13 @@ form INPUT[type="submit"]:focus {
   text-align: left;
 }
 
-/* line 940, ../sass/custom.scss */
+/* line 849, ../sass/_custom.scss */
 .badget:hover {
   width: 155px;
   border-radius: 0;
 }
 
-/* line 944, ../sass/custom.scss */
+/* line 853, ../sass/_custom.scss */
 .medalla {
   display: inline-block;
   width: 45px;
@@ -1342,73 +1473,73 @@ form INPUT[type="submit"]:focus {
   margin-left: 7px;
 }
 
-/* line 950, ../sass/custom.scss */
+/* line 859, ../sass/_custom.scss */
 .descripcion {
   display: inline-block;
   position: relative;
   bottom: 3px;
 }
 
-/* line 955, ../sass/custom.scss */
+/* line 864, ../sass/_custom.scss */
 .col_div .descripcion > p {
   font: 12px arial;
   font-weight: bold;
   margin: 0 0 0 9px;
 }
 
-/* line 960, ../sass/custom.scss */
+/* line 869, ../sass/_custom.scss */
 .descripcion p span {
   font: 11px arial;
   font-weight: normal;
   font-style: italic;
-  color: whitesmoke;
+  color: #F5F5F5;
 }
 
 /*colores por tema */
-/* line 968, ../sass/custom.scss */
+/* line 877, ../sass/_custom.scss */
 .bronce {
   background-color: #C9712A;
 }
 
-/* line 969, ../sass/custom.scss */
+/* line 878, ../sass/_custom.scss */
 .plata {
   background-color: #B3B4BD;
 }
 
-/* line 970, ../sass/custom.scss */
+/* line 879, ../sass/_custom.scss */
 .oro {
   background-color: #CCA14A;
 }
 
-/* line 971, ../sass/custom.scss */
+/* line 880, ../sass/_custom.scss */
 .azul {
   background-color: #5476BA;
 }
 
 /*medallas por tema */
-/* line 974, ../sass/custom.scss */
+/* line 883, ../sass/_custom.scss */
 .bronce .medalla {
   background-position: 50% -51px;
 }
 
-/* line 975, ../sass/custom.scss */
+/* line 884, ../sass/_custom.scss */
 .oro .medalla {
   background-position: 50% -169px;
 }
 
-/* line 976, ../sass/custom.scss */
+/* line 885, ../sass/_custom.scss */
 .plata .medalla {
   background-position: 50% -112px;
 }
 
-/* line 977, ../sass/custom.scss */
+/* line 886, ../sass/_custom.scss */
 .azul .medalla {
   background-position: 50% -229px;
 }
 
-/* line 979, ../sass/custom.scss */
+/* line 888, ../sass/_custom.scss */
 .sin {
-  background-color: whitesmoke !important;
+  background-color: #F5F5F5 !important;
 }
 
 /* • 4 ANIMACIONES -------------------------------------------*/
@@ -1449,38 +1580,38 @@ form INPUT[type="submit"]:focus {
   }
 }
 /* Calendario */
-/* line 995, ../sass/custom.scss */
+/* line 904, ../sass/_custom.scss */
 .calendario {
   float: right;
   margin: 10px 25px 0 0;
 }
 
-/* line 1002, ../sass/custom.scss */
+/* line 911, ../sass/_custom.scss */
 .calendario tr th {
   padding: 5px 10px 5px 10px;
 }
 
-/* line 1005, ../sass/custom.scss */
+/* line 914, ../sass/_custom.scss */
 .calendario tr td {
   padding-top: 15px;
   text-align: center;
 }
 
-/* line 1009, ../sass/custom.scss */
+/* line 918, ../sass/_custom.scss */
 .calendario tr td a {
   font-size: 25px;
 }
 
-/* line 1013, ../sass/custom.scss */
+/* line 922, ../sass/_custom.scss */
 .listado_meses {
   float: right;
   margin: 50px 25px 0 0;
 }
 
-/* line 1022, ../sass/custom.scss */
+/* line 931, ../sass/_custom.scss */
 .listado_meses ul li {
   display: inline;
-  background-color: whitesmoke;
+  background-color: #F5F5F5;
 }
 
 /* CSS HERMANOS DE SANGRE - para MOBILES Y TABLES - Indice
@@ -1494,13 +1625,13 @@ form INPUT[type="submit"]:focus {
 /* • 1 REGLAS PANTALLAS MENORES A 798px, IPAD y SMARTPHONE ---*/
 @media (max-width: 798px) {
   /*@media only screen and (max-device-width: 798px)*/
-  /* line 12, ../sass/mobile.scss */
+  /* line 12, ../sass/_mobile.scss */
   html {
     overflow: visible;
   }
 
   /*--- • 1 • a MENÚ MOBILE -----------------------------------*/
-  /* line 15, ../sass/mobile.scss */
+  /* line 16, ../sass/_mobile.scss */
   .faldon_top_container {
     position: relative;
     width: 100%;
@@ -1508,13 +1639,13 @@ form INPUT[type="submit"]:focus {
     height: auto;
   }
 
-  /* line 22, ../sass/mobile.scss */
+  /* line 23, ../sass/_mobile.scss */
   .faldon_top {
     width: 100%;
     height: auto;
   }
 
-  /* line 27, ../sass/mobile.scss */
+  /* line 28, ../sass/_mobile.scss */
   .logo_top_container {
     position: relative;
     top: 0;
@@ -1523,17 +1654,17 @@ form INPUT[type="submit"]:focus {
     text-align: center;
   }
 
-  /* line 34, ../sass/mobile.scss */
+  /* line 35, ../sass/_mobile.scss */
   .menus {
     height: 0px;
     overflow: hidden;
-    background-color: #f16b6b;
-    border-bottom: 0px solid #d35555;
+    background-color: #F16B6B;
+    border-bottom: 0px solid #D35555;
     -webkit-box-shadow: black 0px 0px 25px -5px;
     box-shadow: black 0px 0px 25px -5px;
   }
 
-  /* line 42, ../sass/mobile.scss */
+  /* line 43, ../sass/_mobile.scss */
   ul#menu, ul#sobre_derecha {
     position: relative;
     left: auto;
@@ -1541,7 +1672,7 @@ form INPUT[type="submit"]:focus {
     right: auto;
   }
 
-  /* line 46, ../sass/mobile.scss */
+  /* line 47, ../sass/_mobile.scss */
   ul#menu li,
   ul#sobre_derecha li {
     display: block;
@@ -1550,58 +1681,58 @@ form INPUT[type="submit"]:focus {
     text-align: center;
   }
 
-  /* line 53, ../sass/mobile.scss */
+  /* line 54, ../sass/_mobile.scss */
   ul#menu ul.sub-menu li {
     display: inline-block;
     background: none;
   }
 
-  /* line 57, ../sass/mobile.scss */
+  /* line 58, ../sass/_mobile.scss */
   ul#menu li ul.sub-menu {
     display: block;
     position: relative;
     text-align: center;
   }
 
-  /* line 63, ../sass/mobile.scss */
+  /* line 64, ../sass/_mobile.scss */
   ul#menu > li > a:after {
     content: " :";
   }
 
-  /* line 64, ../sass/mobile.scss */
+  /* line 65, ../sass/_mobile.scss */
   ul#sobre_derecha li > a:after {
     content: none;
   }
 
-  /* line 66, ../sass/mobile.scss */
+  /* line 67, ../sass/_mobile.scss */
   ul#menu > li a,
   ul#sobre_derecha > li a {
     border-right: none;
     background: none !important;
   }
 
-  /* line 71, ../sass/mobile.scss */
+  /* line 72, ../sass/_mobile.scss */
   ul#sobre_derecha > li:last-child a {
-    color: #f16b6b;
+    color: #F16B6B;
   }
 
-  /* line 75, ../sass/mobile.scss */
+  /* line 76, ../sass/_mobile.scss */
   .menus > ul > li:first-child {
     background: white;
     padding-top: 4px;
   }
 
-  /* line 79, ../sass/mobile.scss */
+  /* line 80, ../sass/_mobile.scss */
   .menus > ul > li:nth-child(2) {
-    background: whitesmoke;
+    background: #F5F5F5;
   }
 
-  /* line 82, ../sass/mobile.scss */
+  /* line 83, ../sass/_mobile.scss */
   .menus #sobre_derecha > li:last-child a {
     color: white;
   }
 
-  /* line 86, ../sass/mobile.scss */
+  /* line 87, ../sass/_mobile.scss */
   #sobre_derecha > span,
   #sobre_derecha .HS_email {
     width: auto;
@@ -1617,23 +1748,23 @@ form INPUT[type="submit"]:focus {
     text-transform: uppercase;
   }
 
-  /* line 100, ../sass/mobile.scss */
+  /* line 101, ../sass/_mobile.scss */
   .HS_email:hover {
     width: auto;
   }
 
-  /* line 101, ../sass/mobile.scss */
+  /* line 102, ../sass/_mobile.scss */
   .HS_email a {
     padding: 0;
   }
 
-  /* line 102, ../sass/mobile.scss */
+  /* line 103, ../sass/_mobile.scss */
   .st_facebook, .st_twitter {
     display: none;
   }
 
   /*-----botón abrir menú-------*/
-  /* line 106, ../sass/mobile.scss */
+  /* line 107, ../sass/_mobile.scss */
   .abrir-menu {
     cursor: pointer;
     height: 36px;
@@ -1652,19 +1783,19 @@ form INPUT[type="submit"]:focus {
     transform: translateY(0px) rotate(-45deg);
   }
 
-  /* line 122, ../sass/mobile.scss */
+  /* line 123, ../sass/_mobile.scss */
   .abrir-menu.mAbierto {
     bottom: -16px;
   }
 
-  /* line 125, ../sass/mobile.scss */
+  /* line 126, ../sass/_mobile.scss */
   .abrir-menu:hover, .abrir-menu.mAbierto {
-    background: whitesmoke;
+    background: #F5F5F5;
   }
 
-  /* line 129, ../sass/mobile.scss */
+  /* line 130, ../sass/_mobile.scss */
   .abrir-menu div {
-    background: #d35555;
+    background: #D35555;
     height: 4px;
     width: 20px;
     margin-left: 8px;
@@ -1674,7 +1805,7 @@ form INPUT[type="submit"]:focus {
     transform: translateY(0px) rotate(45deg);
   }
 
-  /* line 138, ../sass/mobile.scss */
+  /* line 139, ../sass/_mobile.scss */
   .abrir-menu div::before, .abrir-menu div::after {
     background: #D35555;
     content: '';
@@ -1683,14 +1814,14 @@ form INPUT[type="submit"]:focus {
     width: 20px;
   }
 
-  /* line 145, ../sass/mobile.scss */
+  /* line 146, ../sass/_mobile.scss */
   .abrir-menu div::before {
     -webkit-transform: translateY(-7px);
     -ms-transform: translateY(-7px);
     transform: translateY(-7px);
   }
 
-  /* line 150, ../sass/mobile.scss */
+  /* line 151, ../sass/_mobile.scss */
   .abrir-menu div::after {
     -webkit-transform: translateY(3px);
     -ms-transform: translateY(3px);
@@ -1698,44 +1829,44 @@ form INPUT[type="submit"]:focus {
   }
 
   /*----- animación menú -------*/
-  /* line 157, ../sass/mobile.scss */
+  /* line 158, ../sass/_mobile.scss */
   .abrir-menu, .abrir-menu:hover, .abrir-menu.mAbierto, .abrir-menu div, .abrir-menu div::before, .abrir-menu div::after, .menus, .menus.mAbierto {
     -webkit-transition: 600ms all;
     transition: 600ms all;
   }
 
-  /* line 161, ../sass/mobile.scss */
+  /* line 162, ../sass/_mobile.scss */
   .abrir-menu div.mAbierto {
     background: transparent;
   }
 
-  /* line 164, ../sass/mobile.scss */
+  /* line 165, ../sass/_mobile.scss */
   .abrir-menu div.mAbierto::before {
     -webkit-transform: translateY(0px) rotate(-45deg);
     -ms-transform: translateY(0rem) rotate(-45deg);
     transform: translateY(0px) rotate(-45deg);
   }
 
-  /* line 169, ../sass/mobile.scss */
+  /* line 170, ../sass/_mobile.scss */
   .abrir-menu div.mAbierto::after {
     -webkit-transform: translateY(-4px) rotate(45deg);
     -ms-transform: translateY(-4px) rotate(45deg);
     transform: translateY(-4px) rotate(45deg);
   }
 
-  /* line 174, ../sass/mobile.scss */
+  /* line 175, ../sass/_mobile.scss */
   .menus.mAbierto {
     height: 280px;
     border-bottom-width: 2px;
   }
 
   /*--- • 1 • b CONTENIDO VARIOS-------------------------------*/
-  /* line 180, ../sass/mobile.scss */
+  /* line 181, ../sass/_mobile.scss */
   .content_container {
     border-top: none;
   }
 
-  /* line 183, ../sass/mobile.scss */
+  /* line 184, ../sass/_mobile.scss */
   .h_container {
     position: relative;
     left: 0;
@@ -1747,45 +1878,45 @@ form INPUT[type="submit"]:focus {
     padding: 25px 5px;
   }
 
-  /* line 191, ../sass/mobile.scss */
+  /* line 192, ../sass/_mobile.scss */
   .h_container h1 {
     color: black;
     margin-bottom: 5px;
   }
 
-  /* line 195, ../sass/mobile.scss */
+  /* line 196, ../sass/_mobile.scss */
   .h_container ~ .col_der {
     padding-top: 5px;
   }
 
-  /* line 198, ../sass/mobile.scss */
+  /* line 199, ../sass/_mobile.scss */
   .col_der {
     padding: 5px 10px 25px 10px;
     min-height: inherit;
   }
 
-  /* line 202, ../sass/mobile.scss */
+  /* line 203, ../sass/_mobile.scss */
   .col_div {
     margin: 0 auto;
   }
 
-  /* line 205, ../sass/mobile.scss */
+  /* line 206, ../sass/_mobile.scss */
   .col_div.home, .col_div.us {
     padding-top: inherit;
     padding-bottom: inherit;
   }
 
-  /* line 209, ../sass/mobile.scss */
+  /* line 210, ../sass/_mobile.scss */
   .col_div p, .col_div iframe, .col_div form, .col_div img {
     margin: 5px 0;
   }
 
-  /* line 212, ../sass/mobile.scss */
+  /* line 213, ../sass/_mobile.scss */
   .col_div iframe {
     width: 100% !important;
   }
 
-  /* line 215, ../sass/mobile.scss */
+  /* line 216, ../sass/_mobile.scss */
   .col_izq {
     position: relative;
     width: auto;
@@ -1793,70 +1924,70 @@ form INPUT[type="submit"]:focus {
     padding: 55px 10px;
   }
 
-  /* line 220, ../sass/mobile.scss */
+  /* line 221, ../sass/_mobile.scss */
   .boton_donar {
     margin: 0 auto;
     float: none;
   }
 
-  /* line 224, ../sass/mobile.scss */
+  /* line 225, ../sass/_mobile.scss */
   .campania {
-    color: #d35555;
+    color: #D35555;
   }
 
-  /* line 227, ../sass/mobile.scss */
+  /* line 228, ../sass/_mobile.scss */
   .col_div .imagen {
     float: none;
     width: 60%;
     margin: 0 20% 12px 20%;
   }
 
-  /* line 232, ../sass/mobile.scss */
+  /* line 233, ../sass/_mobile.scss */
   .col_div h1, .col_div h2, .col_div h3 {
     margin-left: 0;
     margin-right: 0;
   }
 
-  /* line 236, ../sass/mobile.scss */
+  /* line 237, ../sass/_mobile.scss */
   .col_div form INPUT[type="password"], .col_div form INPUT[type="text"], .col_div form INPUT[type="email"] {
     width: 100%;
   }
 
-  /* line 239, ../sass/mobile.scss */
+  /* line 240, ../sass/_mobile.scss */
   .slogan {
     margin: 45px auto;
   }
 
-  /* line 242, ../sass/mobile.scss */
+  /* line 243, ../sass/_mobile.scss */
   .pregunta {
     margin: 8px 0px;
   }
 
-  /* line 245, ../sass/mobile.scss */
+  /* line 246, ../sass/_mobile.scss */
   .bar-main-container {
     margin-top: 40px;
   }
 
-  /* line 248, ../sass/mobile.scss */
+  /* line 249, ../sass/_mobile.scss */
   .container_menu {
     position: relative;
   }
 }
 /* • 2 REGLAS MOBILES Y PANTALLAS MENORES A 365px ------------*/
 @media (max-width: 365px) {
-  /* line 255, ../sass/mobile.scss */
+  /* line 256, ../sass/_mobile.scss */
   .slogan {
     width: auto;
     height: auto;
     text-align: center;
   }
 
-  /* line 260, ../sass/mobile.scss */
+  /* line 261, ../sass/_mobile.scss */
   .slogan p {
     display: inline-block;
   }
 
-  /* line 263, ../sass/mobile.scss */
+  /* line 264, ../sass/_mobile.scss */
   .slogan p, .slogan h2, .slogan h3 {
     position: relative;
     left: auto !important;
@@ -1865,7 +1996,7 @@ form INPUT[type="submit"]:focus {
     bottom: auto !important;
   }
 
-  /* line 270, ../sass/mobile.scss */
+  /* line 271, ../sass/_mobile.scss */
   .menus.mAbierto {
     height: 325px;
   }

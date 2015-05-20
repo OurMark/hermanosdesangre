@@ -24,7 +24,7 @@ end
 
 group :assets do
 	gem 'compass'
-	gem 'compass-rails'
+	gem "compass-rails", github: "Compass/compass-rails", branch: "master"
 	gem 'susy'
 end
 

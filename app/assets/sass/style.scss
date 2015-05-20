@@ -1,7 +1,15 @@
 // Screen
 // ======
 
+@import "compass";
+@import "susy";
+// variables
+@import "variables";
+
+// grids
 @import "grids";
+// project 
+@import "header";
 
 // from old project
 @import "custom";
