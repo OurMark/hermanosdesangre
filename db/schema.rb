@@ -36,9 +36,9 @@ ActiveRecord::Schema.define(version: 20150507132507) do
     t.string  "endState"
     t.string  "fromState"
     t.date    "historyDate"
-    t.integer "processing_admin_id",          limit: 8,          null: false
     t.string  "ong_name"
     t.integer "ong_id",                       limit: 8
+    t.integer "processing_admin_id",          limit: 8,          null: false
   end
 
   add_index "OngApprovalHistory", ["processing_admin_id"], name: "FK40483D693AEDD7EE", using: :btree
@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 20150507132507) do
 
   create_table "badges", force: true do |t|
     t.string "name"
+    t.string "icon"
   end
 
   create_table "certificate", primary_key: "certificate_id", force: true do |t|
@@ -88,8 +89,9 @@ ActiveRecord::Schema.define(version: 20150507132507) do
     t.string  "address"
     t.string  "addressState"
     t.string  "city"
-    t.string  "description",    limit: 5000
+    t.string  "description",    limit: 5000, null: false
     t.date    "end_date"
+    t.string  "externalUrl"
     t.boolean "featured"
     t.date    "from_date"
     t.string  "subTitle"
@@ -103,14 +105,12 @@ ActiveRecord::Schema.define(version: 20150507132507) do
     t.integer "location_id",    limit: 8
     t.integer "ong_id",         limit: 8,    null: false
     t.integer "topic_id",       limit: 8
-    t.string  "externalUrl"
   end
 
   add_index "classfield", ["country_id"], name: "FKEF102282C81ABA2C", using: :btree
   add_index "classfield", ["image_id"], name: "FKEF1022826D5C60E9", using: :btree
   add_index "classfield", ["location_id"], name: "FKEF1022823BA1E7A8", using: :btree
   add_index "classfield", ["ong_id"], name: "FKEF10228235AA59EC", using: :btree
-  add_index "classfield", ["title"], name: "title", unique: true, using: :btree
   add_index "classfield", ["topic_id"], name: "FKEF102282C0F48C0C", using: :btree
 
   create_table "code_label_value", id: false, force: true do |t|
@@ -248,6 +248,7 @@ ActiveRecord::Schema.define(version: 20150507132507) do
     t.string  "addressState"
     t.string  "adminEmail"
     t.string  "adminName"
+    t.string  "adminSurname"
     t.string  "apiKey"
     t.string  "city"
     t.string  "contactEmail"
@@ -255,8 +256,10 @@ ActiveRecord::Schema.define(version: 20150507132507) do
     t.string  "contactPersonEmail"
     t.text    "description",              limit: 2147483647
     t.string  "facebookPage"
+    t.binary  "hasImage",                 limit: 1,          null: false
     t.string  "integrationBaseURL"
     t.string  "internationalNetworkName"
+    t.string  "lang"
     t.float   "latitude",                 limit: 53
     t.string  "linkedin"
     t.float   "longitude",                limit: 53
@@ -274,9 +277,6 @@ ActiveRecord::Schema.define(version: 20150507132507) do
     t.integer "country_id",               limit: 8
     t.integer "image_id",                 limit: 8
     t.integer "location_id",              limit: 8
-    t.string  "adminSurname"
-    t.string  "lang"
-    t.binary  "hasImage",                 limit: 1,          null: false
   end
 
   add_index "ong", ["country_id"], name: "FK1AE68C81ABA2C", using: :btree
@@ -323,7 +323,7 @@ ActiveRecord::Schema.define(version: 20150507132507) do
     t.string "topicImage"
   end
 
-  add_index "topic", ["name"], name: "topic_name", unique: true, using: :btree
+  add_index "topic", ["name"], name: "topic_name", using: :btree
 
   create_table "topic_converter", primary_key: "topic_converter_id", force: true do |t|
     t.float   "marksPerUnit", limit: 53
