@@ -54,7 +54,7 @@ footer, header, hgroup, menu, nav, section {
 html { overflow-x: hidden;}
 body {
     line-height: 1;
-    background-color:$mainRed;
+    background-color:$softRed;
     color: $mainGray;
 }
 blockquote, q {
@@ -107,45 +107,80 @@ table {
 .h_container{
     position: absolute;
     top: 245px;
-    left: 50%;
-    margin-left: -400px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     max-width: 800px;
-    width: 800px;
+    width: auto;
     height: 35px;
     z-index: 1;
-    text-align: center;
+    // text-align: center;
 }
-h1{
+
+h1 {
     font-size: 30px;
     margin-bottom: 35px;
 }
-.h_container h1{
+.h_container h1 {
     font-family: $mainFont;
     text-align: center;
     color: white;
     padding: 5px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
 }
-.h_container strong{
-    color: black;
+
+.h_container span {
+  margin-left: 15px;
+}
+
+.blood-text {
+    color: $softRed;
+}
+
+
+.video-home {
+  padding: 65px 90px;
+  background: $white;
+  margin-top: 20px;
+  border-top: 4px solid $softRed;
+
+  p {
+    color: $softBlack;
+    letter-spacing: 1px;
+    font-weight: 200;
+    line-height: 25px;
+    margin-bottom: 20px;
+  }
 }
 
 .col_der{
   background: white;
-  min-height: 630px;
+  min-height: 966px;
   padding-left: 50%;
+
+  &.columna {
+    min-height: 805px;
+  }
 }
 .col_izq{
     @extend .col-1-2;
     position: absolute;
-    height:100%; top: 0; 
-    left: 0; background: $softRed;
+    height:100%; 
+    top: 0; 
+    left: 0; 
+    bottom: 0;
+    padding-right: 0;
+    padding-left: 2%;
+    background: $softRed;
 }
 
 .col_izq .col_div {float: right;}
 .col_div{
-  max-width: 400px;
   overflow: hidden;
   font-family: $mainFont;
+  position: relative;
+  top: 160px;
 }
 .col_div p, 
 .col_div span {
@@ -162,6 +197,10 @@ h1{
 }
 .col_div>p, .col_div div>p, .col_div iframe, .col_div form, .col_div img {
   margin: 0 35px 32px;
+}
+
+.col_div>p:last-child {
+  margin-bottom: 0;
 }
 .col_div h1, .col_div h2, .col_div h3, .col_div h4 {
   margin: 5px 35px;
@@ -294,7 +333,7 @@ form INPUT[type="submit"]:focus{
 .Opciones {
     margin-left: 15px;
     margin-top: 60px;
-    height: 600px;
+    height: auto;
     -webkit-transition: height 400ms ease;
     transition: height 400ms ease;
     overflow: hidden;
@@ -328,8 +367,10 @@ form INPUT[type="submit"]:focus{
     top: 110px; left: -22px;
 }
 /*SECCIONES*/
+.about,
 .Secciones{
-    clear:both;
+    clear: both;
+    background: $white;
 }
 .Secciones>div {
     position: relative;
@@ -456,7 +497,7 @@ display: block;
     margin-bottom: 15px;
     margin-right: 0;
     text-align: left;
-    @extend .col-1;
+    width: 80%;
 }
 .list-info .ico-content {
     display: inline-block;
@@ -551,7 +592,7 @@ display: block;
 
 /*--- • 2 • c REGLAS EXCLUSIVAS de ¿QUIENES SOMOS? -----------*/
 .col_div.us {
-  padding-top: 75px;
+  max-width: 400px;
 }
 
 .slogan {width: 330px; height: 80px; position: relative;margin: 80px 35px 60px 35px;}
@@ -563,14 +604,8 @@ display: block;
 .slogan h3 {top:36px; right:0; font-size: 36px;}
 .slogan h3:hover, .slogan h2:hover {font-size: 39px; background:white;}
 
-/*--- • 2 • d REGLAS EXCLUSIVAS de ENTRAR Y REGISTRARSE ------*/
-.col_div.ingresar, .col_div.registrarse {
-  padding-top: 85px;
-}
+
 /*--- • 2 • e REGLAS EXCLUSIVAS de PERFIL de USUARIO ---------*/
-.perfil{
-    padding-top: 85px;
-}
 .perfil .Secciones > .seleccionada {
     -webkit-animation: initial;
     animation: initial;
@@ -611,9 +646,6 @@ display: block;
 .perfil h4 a strong, .perfil h4 a:visited strong{
     color: black;
     font-weight: 400;
-}
-.perfil h4:last-child{
-    padding-bottom: 35px;
 }
 .perfil .Secciones>div:first-child>p{
     font-size: 17px;
@@ -707,6 +739,7 @@ text-align: left;
 
 /*--- • 3 • a REGLAS de la BARRA DE PORCENTAJES --------------*/
 .campania{
+    letter-spacing: 1px;
     width: 69%;
     font-weight: 300;
     font-size: 14px;
@@ -801,33 +834,70 @@ text-align: left;
 .objetivo:before {content:"OBJETIVO: ";}
 
 /*--- • 3 • b REGLAS de la GOTA ------------------------------*/
+.columna {
+  .boton_donar{
+    margin-top: 250px;
+  }
+}
+
 .boton_donar{
     position: relative;
     font-family: $mainFont;
-    text-align:center;
+    text-align: center;
     display: block;
-    margin-right: 120px; float:right;
-    margin-top: 270px;
-    width: 160px;
-}
-.boton_donar a, .boton_donar a:visited{
+    margin-top: 500px;
+    width: 256px;
+    height: 400px;
+
+  a {
     font-size: 28px;
     font-weight: 700;
-    color: $mainRed;
-    width: 85px;
-    height: 65px;
-    padding: 112px 37px 50px 37px;
-    display: block;
-    background-image: url($quieroDonar);
-    background-repeat:no-repeat;
+    color: $saddleBrown;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 256px;
+    height: 367px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 35px;
+
+    p {
+      position: absolute;
+      bottom: 15%;
+      left: 0;
+      right: 0;
+      margin: 0 20px;
+      line-height: 40px;
+
+      &:before {
+        top: -100px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        content: "";
+        position: absolute;
+        width: 56px;
+        height: 72px;
+        background-image: url($miniLogo);
+        background-repeat:no-repeat;
+      }
+    }
+    
+    &:before {
+      top: 0;
+      left: 0;
+      content: "";
+      position: absolute;
+      width: 256px;
+      height: 367px;
+      background-image: url($quieroDonar2);
+      background-repeat:no-repeat;
+    }
+  }
 }
-.boton_donar p{
-    margin-top: 16px;
-    font-size: 14px;
-    color: white;
-    font-weight: 300;
-    line-height: 20px;
-}
+
 
 /*--- • 3 • c REGLAS de los BADGETS --------------------------*/
 .badgets {
