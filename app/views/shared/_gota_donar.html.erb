@@ -1,4 +1,3 @@
 <div class="boton_donar">
-    <%= link_to "QUIERO DONAR", current_user ? ongs_path : user_session_path %>
-    <p>Si puedes hacerlo,<br />debes hacerlo</p>
+    <%= link_to content_tag(:p, "quiero donar"), current_user ? ongs_path : user_session_path %>
 </div>
