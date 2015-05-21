@@ -76,7 +76,7 @@ class BookingsController < ApplicationController
 
   def find_ong
     if params[:ong_id]
-      @ong = Ong.find_by_id(params[:ong_id])
+      @ong = Ong.find(params[:ong_id])
     end
   end
 

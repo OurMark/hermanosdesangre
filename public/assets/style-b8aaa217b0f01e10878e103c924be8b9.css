@@ -1,0 +1,2003 @@
+@charset "UTF-8";
+/* List of stylesheet variables: +/
+
+/* COLORS: */
+/* IMAGES */
+/* FONTS */
+/* line 11, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_grids.scss */
+.col-1, .faldon_top_container, .content_container, form INPUT[type="password"],
+form INPUT[type="text"],
+form INPUT[type="email"],
+.similInput, form INPUT[type="submit"], .container_menu, .list-info li, .bar-container, .bar div {
+  width: 100%;
+}
+
+/* line 15, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_grids.scss */
+.col-1-2, .col_izq {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+/* line 18, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_grids.scss */
+.col-1-2.last, .last.col_izq {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  float: right;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* line 23, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_grids.scss */
+.col-1-3 {
+  width: 33.33%;
+}
+
+/* line 27, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_grids.scss */
+.col-1-4 {
+  width: 25%;
+}
+
+/* line 31, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_grids.scss */
+.col-1-5 {
+  width: 20%;
+}
+
+/* line 35, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_grids.scss */
+.col-1-6 {
+  width: 16.66%;
+}
+
+/* line 39, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_grids.scss */
+.col-1-8 {
+  width: 12.5%;
+}
+
+/* line 43, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_grids.scss */
+.col-1-9 {
+  width: 11.11%;
+}
+
+/* line 47, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_grids.scss */
+.col-1-10 {
+  width: 10%;
+}
+
+/* line 51, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_grids.scss */
+.col-2-3 {
+  width: 66.66%;
+}
+
+/* line 55, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_grids.scss */
+.col-3-4 {
+  width: 75%;
+}
+
+/* line 59, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_grids.scss */
+.col-7-8 {
+  width: 87.5%;
+}
+
+/* line 63, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_grids.scss */
+.col-3-10 {
+  width: 30%;
+}
+
+/* line 67, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_grids.scss */
+.col-9-10, .list-info .text-content {
+  width: 90%;
+}
+
+/* line 1, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+.navbar-logo {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  padding-left: 5%;
+  padding-right: 5%;
+  background: #F16B6B;
+  height: 100%;
+  padding-right: 1%;
+}
+/* line 7, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+.navbar-logo a {
+  font-family: "Oswald", sans-serif;
+  height: 100%;
+  float: right;
+  width: 70%;
+  position: relative;
+}
+
+/* line 16, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+.logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: url("/assets/big-logo.png") no-repeat center;
+}
+
+/* line 25, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+.text-logo {
+  bottom: 0;
+  color: #FFFFFF;
+  font-size: 45px;
+  line-height: 55px;
+  margin-left: 50%;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+}
+
+/* line 37, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+.menus {
+  background: #FFFFFF;
+  height: 100%;
+}
+/* line 41, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+.menus.last {
+  padding-left: 1%;
+}
+
+/* line 46, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+ul#menu,
+ul.sub-menu,
+ul#sobre_derecha {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  list-style: none;
+}
+/* line 54, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+ul#menu li,
+ul.sub-menu li,
+ul#sobre_derecha li {
+  display: inline-block;
+  position: relative;
+}
+
+/* line 60, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+ul#menu {
+  top: 34px;
+}
+
+/* line 64, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+ul#sobre_derecha {
+  right: 5%;
+}
+
+/* line 68, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+.top30 {
+  top: 30px;
+}
+
+/* line 71, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+ul.sub-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  padding-top: 10px;
+}
+/* line 77, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+li:hover ul.sub-menu {
+  display: block;
+}
+/* line 81, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+ul.sub-menu li {
+  background: rgba(255, 255, 255, 0.9);
+  width: 130px;
+  padding: 10px 5px;
+}
+/* line 86, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+ul.sub-menu li:hover {
+  background-color: #FFFFFF;
+}
+/* line 91, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+ul.sub-menu a {
+  color: #D35555;
+  padding: 5px;
+  display: block;
+}
+/* line 96, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+ul.sub-menu a:hover {
+  font-weight: 700;
+}
+
+/* line 102, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+ul#menu > li > a, ul#sobre_derecha > li > a {
+  color: #F16B6B;
+  text-decoration: none;
+  padding: 6px 9px;
+  display: inline-block;
+  border-right: 1px solid #D35555;
+  letter-spacing: 1px;
+}
+
+/* line 111, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+ul#sobre_derecha li a:hover {
+  font-style: italic;
+}
+
+/*sobre derecha*/
+/* line 115, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+#sobre_derecha li > a {
+  padding: 9px !important;
+  background-color: #F5F5F5;
+}
+
+/* line 119, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+#sobre_derecha li:last-child > a {
+  background-color: #F16B6B;
+  color: white;
+}
+
+/* line 123, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+#sobre_derecha li > span {
+  position: relative;
+  right: 28px;
+  bottom: 1px;
+}
+
+/* line 128, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+#sobre_derecha .HS_email {
+  background-color: #F5F5F5;
+  background-image: url("http://w.sharethis.com/images/email_16.png");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  right: 9px;
+  position: absolute;
+  z-index: 10;
+  -webkit-transition: width 500ms ease-in;
+  transition: width 500ms ease;
+}
+
+/* line 141, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+#sobre_derecha .HS_email:hover {
+  width: 75px;
+}
+
+/* line 142, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_header.scss */
+.HS_email a {
+  padding: 0 21px;
+  color: #F16B6B;
+}
+
+/* CSS HERMANOS DE SANGRE - Indice
+
+• 1 REGLAS GENERALES
+--- • 1 • a CABECERA
+--- • 1 • b CONTENIDO
+--- • 1 • c FORMULARIOS
+--- • 1 • d SECCIONES
+--- • 1 • e CONTENIDO SIN COLUMNAS
+--- • 1 • f CONTENIDO LISTADO
+
+• 2 REGLAS EXCLUSIVAS (por páginas)
+--- • 2 • a HOME
+--- • 2 • b DONANTES
+--- • 2 • c ¿QUIENES SOMOS?
+--- • 2 • d ENTRAR Y REGISTRAR
+--- • 2 • e PERFIL de USUARIO
+--- • 2 • f LISTA DE ONGS
+
+• 3 REGLAS DE PARCIALES
+--- • 3 • a BARRA DE PORCENTAJE
+--- • 3 • b GOTA
+--- • 3 • c BADGETS
+
+• 4 ANIMACIONES
+*/
+/* • 1 GENERALES ---------------------------------------------*/
+/* line 28, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 50, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 54, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+html {
+  overflow-x: hidden;
+}
+
+/* line 55, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+body {
+  line-height: 1;
+  background-color: #D35555;
+  color: #313131;
+}
+
+/* line 60, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 63, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 68, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*--- • 1 • a REGLAS de la CABECERA --------------------------*/
+/* line 74, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.faldon_top_container {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  position: fixed;
+  z-index: 2;
+  height: 220px;
+}
+
+/* line 82, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.faldon_top {
+  position: relative;
+  height: 220px;
+  margin: 0 auto;
+}
+
+/* line 87, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.logo_top_container {
+  position: absolute;
+  top: 12px;
+  left: 4px;
+  background: #D35555;
+  border-bottom: solid 2px #D35555;
+  -webkit-box-shadow: black 0px 0px 25px -5px;
+  box-shadow: black 0px 0px 25px -5px;
+  z-index: 9999;
+}
+
+/*MENU*/
+/*--- • 1 • b REGLAS del CONTENIDO ---------------------------*/
+/* line 101, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.content_container {
+  position: relative;
+  background: #FFFFFF;
+  font-family: "Oswald", sans-serif;
+}
+
+/* line 107, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.h_container {
+  position: absolute;
+  top: 245px;
+  left: 50%;
+  margin-left: -400px;
+  max-width: 800px;
+  width: 800px;
+  height: 35px;
+  z-index: 1;
+  text-align: center;
+}
+
+/* line 118, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+h1 {
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+/* line 122, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.h_container h1 {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  color: white;
+  padding: 5px;
+}
+
+/* line 128, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.h_container strong {
+  color: black;
+}
+
+/* line 132, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.col_der {
+  background: white;
+  min-height: 630px;
+  padding-left: 50%;
+}
+
+/* line 137, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.col_izq {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #F16B6B;
+}
+
+/* line 144, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.col_izq .col_div {
+  float: right;
+}
+
+/* line 145, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.col_div {
+  max-width: 400px;
+  overflow: hidden;
+  font-family: "Oswald", sans-serif;
+}
+
+/* line 150, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.col_div p,
+.col_div span {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: justify;
+}
+
+/* line 157, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.col_div .imagen {
+  position: relative;
+  float: right;
+  width: 160px;
+  height: auto;
+}
+
+/* line 163, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.col_div > p, .col_div div > p, .col_div iframe, .col_div form, .col_div img {
+  margin: 0 35px 32px;
+}
+
+/* line 166, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.col_div h1, .col_div h2, .col_div h3, .col_div h4 {
+  margin: 5px 35px;
+}
+
+/* line 170, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.col_div span {
+  margin: 0 35px;
+}
+
+/* line 174, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Logos {
+  text-align: center;
+}
+
+/* line 178, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Logos img {
+  margin: 0 30px 32px;
+}
+
+/*--- • 1 • c REGLAS de FORMULARIOS --------------------------*/
+/* line 183, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.col_div form {
+  margin-top: 30px;
+}
+
+/* line 186, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.inputLargo {
+  width: 315px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+/* line 191, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.inputCorto {
+  width: 155px;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+/* line 198, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+label {
+  font-size: 14px;
+  color: #D35555;
+  padding-left: 10px;
+  display: block;
+  margin-bottom: 3px;
+}
+
+/* line 205, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+label:after {
+  content: ":";
+}
+
+/* line 206, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.similInput label {
+  display: inline-block;
+  margin-bottom: 0;
+  padding-left: 0;
+  color: black;
+  font-size: 17px;
+}
+
+/* line 213, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.similInput label:after {
+  content: none;
+}
+
+/* line 215, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+form INPUT[type="password"],
+form INPUT[type="text"],
+form INPUT[type="email"],
+.similInput {
+  height: 30px;
+  border: none;
+  border-bottom: 1px dashed #D35555;
+  background-color: #F5F5F5;
+  font-family: "Oswald", sans-serif;
+  font-size: 17px;
+  padding-left: 10px;
+  -webkit-transition: background 500ms ease;
+  transition: background 500ms ease;
+}
+
+/* line 230, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.similInput INPUT {
+  margin: 10px 0 0 0;
+}
+
+/* line 233, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.similInput div {
+  padding-top: 6px;
+}
+
+/* line 236, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+form INPUT[type="password"]:focus,
+form INPUT[type="text"]:focus,
+form INPUT[type="email"]:focus,
+select:focus {
+  background-color: #D35555;
+  color: white;
+  outline: none;
+}
+
+/* line 244, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+input:focus::-webkit-input-placeholder {
+  color: white;
+}
+
+/* line 245, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+input:focus::-moz-placeholder {
+  color: white;
+}
+
+/* line 246, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+input:focus:-ms-input-placeholder {
+  color: white;
+}
+
+/* line 247, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+input:focus:-moz-placeholder {
+  color: white;
+}
+
+/* line 249, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.col_div .notificacion {
+  margin: 0;
+  text-align: right;
+  padding: 0 15px;
+  position: relative;
+  bottom: 10px;
+}
+
+/* line 256, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.notificacion a, .notificacion a:hover, .notificacion a:visited {
+  color: #D35555;
+}
+
+/* line 260, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.submitArea label, .col_div .submitArea > p {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-left: 0;
+  color: black;
+}
+
+/* line 266, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.submitArea label:after {
+  content: none;
+}
+
+/* line 269, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+form INPUT[type="submit"] {
+  cursor: pointer;
+  float: right;
+  border: none;
+  border-bottom: solid white 1px;
+  background: #F5F5F5;
+  font-family: "Oswald", sans-serif;
+  color: #D35555;
+  text-align: center;
+  font-size: 13px;
+  padding: 9px;
+  margin-right: 15px;
+  -webkit-box-shadow: #AAA 0px 2px 20px -5px;
+  box-shadow: #AAA 0px 2px 20px -5px;
+}
+
+/* line 285, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+form INPUT[type="submit"]:hover,
+form INPUT[type="submit"]:focus {
+  color: white;
+  background-color: #F16B6B;
+  border-bottom: solid #D35555 2px;
+  outline: none;
+}
+
+/*--- • 1 • d REGLAS de SECCIONES ----------------------------*/
+/*OPCIONES*/
+/* line 294, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Opciones {
+  margin-left: 15px;
+  margin-top: 30px;
+  height: 600px;
+  -webkit-transition: height 400ms ease;
+  transition: height 400ms ease;
+  overflow: hidden;
+}
+
+/* line 302, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Opciones > div {
+  font-size: 115%;
+  width: 100px;
+  height: 60px;
+  background-color: #F16B6B;
+  color: white;
+  font-weight: 300;
+  text-align: center;
+  padding: 25px 20px 0 20px;
+  margin: 18px 18px 134px 18px;
+  cursor: pointer;
+  border-bottom: solid 3px #D35555;
+  border-radius: 0 0 3px 3px;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-box-shadow: black 0px 0px 25px -5px;
+  box-shadow: black 0px 0px 25px -5px;
+  float: left;
+  position: relative;
+}
+
+/* line 322, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Opciones > div span {
+  width: 85%;
+  font-size: 13px;
+  line-height: 18px;
+  color: #D35555;
+  position: absolute;
+  top: 110px;
+  left: -22px;
+}
+
+/*SECCIONES*/
+/* line 331, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Secciones {
+  clear: both;
+}
+
+/* line 334, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Secciones > div {
+  position: relative;
+  opacity: 0;
+  width: 400px;
+  -webkit-transition: opacity 700ms ease-in;
+  transition: opacity 700ms ease-in;
+  height: 0;
+  overflow: hidden;
+}
+
+/*MODIFICACIÓN AL SELECCIONAR*/
+/* line 344, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Opciones.seleccionada {
+  margin-top: -17px;
+  height: auto;
+}
+
+/* line 348, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Opciones.seleccionada > div, .Opciones.seleccionada span {
+  display: none;
+  /*importante ocultar las opciones para asegurarse de elegir
+  solo una a la vez*/
+}
+
+/* line 353, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Opciones.seleccionada > .seleccionada {
+  display: block;
+  margin: 87px 0px 87px 105px;
+}
+
+/* line 357, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Secciones > .seleccionada {
+  opacity: 1;
+  height: auto;
+  min-height: 406px;
+  -webkit-animation: noscroll 400ms;
+  animation: noscroll 400ms;
+  /*para evitar que aparezca el scroll*/
+}
+
+/*CONTIDO DE SECCIONES*/
+/* line 365, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Secciones ul, .Secciones h2 {
+  position: absolute;
+}
+
+/* line 368, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Secciones ul, .Secciones ol {
+  display: inline-block;
+  padding-left: 35px;
+}
+
+/* line 372, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Secciones ul {
+  opacity: 0;
+  -webkit-transition: opacity 0.7s ease;
+  transition: opacity 0.7s ease;
+  top: 56px;
+}
+
+/* line 378, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Secciones ul.seleccionada {
+  opacity: 1;
+}
+
+/* line 381, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Secciones li {
+  display: block;
+  float: left;
+  width: 154px;
+  margin-right: 20px;
+  margin-bottom: 26px;
+  text-align: center;
+  color: #D35555;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* line 393, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Secciones li:nth-child(2n+1) {
+  clear: both;
+}
+
+/* line 396, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Secciones li strong {
+  display: block;
+}
+
+/* line 399, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Secciones h2 {
+  left: 16px;
+  top: 20px;
+  cursor: pointer;
+  opacity: 0.3;
+  -webkit-transition: opacity 500ms ease;
+  transition: opacity 500ms ease;
+}
+
+/* line 407, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Secciones h2:hover {
+  opacity: 0.8;
+}
+
+/* line 408, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Secciones h2:last-of-type {
+  right: 0;
+  left: inherit;
+}
+
+/* line 412, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Secciones h2.seleccionada {
+  border-bottom: solid 2px #D35555;
+  opacity: 1;
+}
+
+/* line 416, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Secciones p:last-child:after {
+  content: "";
+  background-image: url("/assets/gotas.png");
+  background-position: 0 -5px;
+  height: 18px;
+  width: 16px;
+  display: inline-block;
+}
+
+/* line 425, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Secciones a {
+  color: #D35555;
+  text-decoration: none;
+}
+
+/* line 430, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.Secciones a:active,
+.Secciones a:hover,
+.Secciones a:focus {
+  opacity: 0.8;
+  outline: 0;
+}
+
+/*--- • 1 • e REGLAS EXCLUSIVAS del CONTENIDO SIN COLUMNAS ---*/
+/* line 438, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.container_menu {
+  background-color: #F16B6B;
+  background-color: rgba(241, 107, 107, 0.9);
+  position: fixed;
+  z-index: 1;
+  height: 55px;
+  overflow: hidden;
+}
+
+/*--- • 1 • f REGLAS EXCLUSIVAS del CONTENIDO LISTADO ---*/
+/* line 446, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.list-info ul {
+  list-style: none;
+  position: relative;
+  opacity: 1;
+  top: 0;
+}
+
+/* line 452, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.list-info li {
+  color: #313131;
+  display: inline-block;
+  float: none;
+  margin-bottom: 15px;
+  margin-right: 0;
+  text-align: left;
+}
+
+/* line 461, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.list-info .ico-content {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  width: 20px;
+}
+
+/* line 467, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.list-info .ico-content i {
+  background-image: url("/assets/gotas.png");
+  background-position: 0 -5px;
+  content: "";
+  display: block;
+  height: 18px;
+  width: 16px;
+}
+
+/* line 475, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.list-info .text-content {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+/*.container_menu~.col_none {margin-top:  55px;}*/
+/* line 483, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.container_menu .faldon_top {
+  margin-top: 12px;
+}
+
+/* line 486, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.container_menu form INPUT {
+  float: right;
+  width: 250px;
+  background: #D35555;
+  color: white;
+}
+
+/* line 492, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.col_none {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 55px;
+}
+
+/* line 497, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.col_none td {
+  padding: 6px;
+  font-size: 14px;
+}
+
+/*--- • 2 • a REGLAS EXCLUSIVAS de la HOME -------------------*/
+/* line 502, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.col_div.home {
+  padding-top: 250px;
+}
+
+/*--- • 2 • b REGLAS EXCLUSIVAS de DONANTES ------------------*/
+/* line 507, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.bolsa {
+  background-color: #F16B6B;
+  background-image: url("/assets/bolsa.png");
+  background-size: 46px 25px;
+  background-repeat: no-repeat;
+  background-position: 18px 32px;
+  position: absolute;
+  height: 62px;
+  width: 64px;
+  left: 168px;
+  border-radius: 50%;
+}
+
+/* line 519, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.bolsa:before {
+  content: "---";
+  display: block;
+  position: absolute;
+  border: solid 2px white;
+  margin: auto;
+  top: 9px;
+  bottom: 25px;
+  left: 18px;
+  right: 22px;
+  border-radius: 6px;
+  border-bottom-width: 0;
+  -webkit-transition: border-bottom-width 500ms ease;
+  transition: border-bottom-width 500ms ease;
+  text-align: center;
+  font-size: 21px;
+  color: #F16B6B;
+}
+
+/* line 537, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.bolsa:hover:before {
+  border-bottom-width: 7px;
+}
+
+/* line 540, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.bolsa.llena:before {
+  border-bottom-width: 26px;
+}
+
+/* line 543, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.bolsa.llena:hover:before {
+  border-bottom-width: 19px;
+}
+
+/* line 546, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.col_div .cota {
+  line-height: 17px;
+  font-size: 13px;
+  font-style: italic;
+}
+
+/*--- • 2 • c REGLAS EXCLUSIVAS de ¿QUIENES SOMOS? -----------*/
+/* line 553, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.col_div.us {
+  padding-top: 50px;
+}
+
+/* line 557, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.slogan {
+  width: 330px;
+  height: 80px;
+  position: relative;
+  margin: 80px 35px 60px 35px;
+}
+
+/* line 558, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.col_div .slogan > p, .slogan h2, .slogan h3 {
+  margin: 0px;
+  position: absolute;
+  font-weight: bold;
+  color: #D35555;
+}
+
+/* line 559, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.slogan p {
+  top: 48px;
+  left: 0;
+  font-size: 20px;
+}
+
+/* line 560, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.slogan p:first-child {
+  top: 0;
+  left: 0;
+  font-size: 16px;
+}
+
+/* line 561, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.slogan p:nth-child(2) {
+  top: 24px;
+  left: 50px;
+  font-size: 28px;
+}
+
+/* line 562, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.slogan h2 {
+  top: 0;
+  right: 1px;
+  font-size: 28px;
+}
+
+/* line 563, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.slogan h3 {
+  top: 36px;
+  right: 0;
+  font-size: 36px;
+}
+
+/* line 564, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.slogan h3:hover, .slogan h2:hover {
+  font-size: 39px;
+  background: white;
+}
+
+/*--- • 2 • d REGLAS EXCLUSIVAS de ENTRAR Y REGISTRARSE ------*/
+/* line 567, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.col_div.ingresar, .col_div.registrarse {
+  padding-top: 85px;
+}
+
+/*--- • 2 • e REGLAS EXCLUSIVAS de PERFIL de USUARIO ---------*/
+/* line 571, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.perfil {
+  padding-top: 85px;
+}
+
+/* line 574, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.perfil .Secciones > .seleccionada {
+  -webkit-animation: initial;
+  animation: initial;
+}
+
+/* line 578, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.perfil .secciones p:last-of-type:after {
+  content: none;
+}
+
+/* line 581, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.perfil h1 {
+  z-index: 2;
+  position: relative;
+}
+
+/* line 585, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.perfil .Secciones h2:last-of-type,
+.perfil .Secciones h2 {
+  opacity: 1;
+  cursor: auto;
+  background: url("/assets/gota.png") no-repeat;
+  height: 38px;
+  width: 52px;
+  padding: 38px 8px 22px 8px;
+  text-align: center;
+  color: white;
+  z-index: 0;
+}
+
+/* line 597, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.perfil h3 {
+  margin-bottom: 25px;
+}
+
+/* line 600, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.perfil h3:before {
+  content: "DNI. ";
+  color: #F16B6B;
+}
+
+/* line 604, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.perfil h4 {
+  color: #F16B6B;
+  font-size: 14px;
+}
+
+/* line 608, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.perfil h4 a, .perfil h4 a:visited {
+  color: #F16B6B;
+}
+
+/* line 611, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.perfil h4 a strong, .perfil h4 a:visited strong {
+  color: black;
+  font-weight: 400;
+}
+
+/* line 615, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.perfil h4:last-child {
+  padding-bottom: 35px;
+}
+
+/* line 618, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.perfil .Secciones > div:first-child > p {
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 23px;
+}
+
+/* line 623, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.perfil .badgets h4 {
+  margin: 0;
+  padding-top: 12px;
+  text-align: left;
+}
+
+/* line 628, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.cambiar {
+  cursor: pointer;
+  border: none;
+  border-bottom: solid white 1px;
+  background: #F5F5F5;
+  color: #D35555;
+  text-align: center;
+  font-size: 13px;
+  width: 100px;
+  padding: 9px;
+  -webkit-box-shadow: #AAA 0px 2px 20px -5px;
+  box-shadow: #AAA 0px 2px 20px -5px;
+  position: absolute;
+  bottom: 34px;
+}
+
+/* line 643, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.perfil .submitArea {
+  height: 42px;
+  margin-top: 14px;
+}
+
+/* line 647, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.botonONG {
+  display: block;
+  position: absolute;
+  bottom: 36px;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  right: 75px;
+  color: white;
+  font-weight: 300;
+  background-color: #D35555;
+  padding: 4px;
+}
+
+/*--- • 2 • f REGLAS EXCLUSIVAS de LISTA DE ONGS -------------*/
+/* line 661, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.banco {
+  border: solid 1px #F5F5F5;
+  margin: 62px 4px;
+  padding: 22px 8px;
+  -webkit-box-shadow: 0 35px 35px -35px #699;
+  box-shadow: 0 30px 35px -35px #699;
+  position: relative;
+}
+
+/* line 669, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.banco:first-child {
+  margin-top: 95px;
+}
+
+/* line 672, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.banco h2 {
+  font-size: 24px;
+  margin: 15px 0;
+}
+
+/* line 676, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.banco h3 {
+  font-size: 18px;
+  color: #F16B6B;
+}
+
+/* line 680, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.banco h4, .ficha_banco p {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 11px 0;
+}
+
+/* line 685, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.ficha_banco p {
+  padding-left: 5px;
+}
+
+/* line 688, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.ficha_banco {
+  float: right;
+  width: 65%;
+  padding-left: 8px;
+}
+
+/* line 693, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.reservar a {
+  height: 48px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #F5F5F5;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  text-align: center;
+  padding-top: 12px;
+  transition: background-color 500ms ease;
+}
+
+/* line 705, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.reservar a, .reservar a:visited {
+  color: #D35555;
+}
+
+/* line 706, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.reservar a:hover {
+  color: white;
+  background-color: #D35555;
+}
+
+/*--- • 3 • a REGLAS de la BARRA DE PORCENTAJES --------------*/
+/* line 709, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.campania {
+  width: 69%;
+  font-weight: 300;
+  font-size: 14px;
+  color: white;
+  margin-left: 1%;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+/* line 718, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.campania:before {
+  content: "Donantes en: ";
+  font-weight: 400;
+}
+
+/* line 719, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.banco .campania {
+  color: black;
+}
+
+/* line 720, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.banco .campania:before {
+  content: "";
+}
+
+/* line 722, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.faltandias {
+  position: relative;
+  width: 29%;
+  font-size: 14px;
+  color: #F16B6B;
+  text-align: right;
+  margin-right: 1%;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+/* line 732, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.faltandias:before {
+  content: "faltan ";
+}
+
+/* line 733, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.faltandias:after {
+  content: " días";
+}
+
+/* line 735, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.bar-main-container {
+  width: 99%;
+  font-family: "Oswald", sans-serif;
+  text-align: left;
+  margin: 0 auto;
+}
+
+/* line 742, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.bar-container {
+  position: relative;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  height: 37px;
+  background: #F16B6B;
+  overflow: hidden;
+  border: solid 1px white;
+  color: white;
+}
+
+/* line 755, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.bar, .registrados, .objetivo {
+  font-size: 20px;
+  line-height: 2;
+}
+
+/* line 756, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.bar {
+  float: left;
+  height: 100%;
+  position: relative;
+}
+
+/* line 761, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.bar div {
+  background: #D35555;
+  height: 100%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  text-align: right;
+  -webkit-animation: ensanchar 3s;
+  animation: ensanchar 3s;
+}
+
+/* line 772, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.bar div:after {
+  content: " ";
+  background: url("/assets/gotas.png") 0px 1px no-repeat;
+  display: inline-block;
+  width: 20px;
+  height: 27px;
+  position: relative;
+  top: 2px;
+  margin: 0 10px;
+}
+
+/* line 781, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.objetivo:before, .registrados:after {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+/* line 785, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.objetivo {
+  position: absolute;
+  right: 6px;
+}
+
+/* line 790, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.registrados {
+  position: absolute;
+  left: 1px;
+  padding: 0 9px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #D35555;
+  height: 36px;
+}
+
+/* line 800, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.registrados:after {
+  content: " REGISTRADOS";
+}
+
+/* line 801, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.objetivo:before {
+  content: "OBJETIVO: ";
+}
+
+/*--- • 3 • b REGLAS de la GOTA ------------------------------*/
+/* line 804, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.boton_donar {
+  position: relative;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  display: block;
+  margin-right: 120px;
+  float: right;
+  margin-top: 270px;
+  width: 160px;
+}
+
+/* line 813, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.boton_donar a, .boton_donar a:visited {
+  font-size: 28px;
+  font-weight: 700;
+  color: #D35555;
+  width: 85px;
+  height: 65px;
+  padding: 112px 37px 50px 37px;
+  display: block;
+  background-image: url("/assets/quierodonar_btn.png");
+  background-repeat: no-repeat;
+}
+
+/* line 824, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.boton_donar p {
+  margin-top: 16px;
+  font-size: 14px;
+  color: white;
+  font-weight: 300;
+  line-height: 20px;
+}
+
+/*--- • 3 • c REGLAS de los BADGETS --------------------------*/
+/* line 833, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.badgets {
+  margin: 0 35px 14px 35px;
+  text-align: center;
+  border-top: dashed #AAA 1px;
+  border-bottom: dashed #AAA 1px;
+}
+
+/* line 839, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.badget {
+  width: 54px;
+  height: 54px;
+  border-radius: 27px;
+  background: #D35555;
+  margin: 10px;
+  overflow: hidden;
+  transition: width 0.5s ease, border-radius 0.3s ease;
+  display: inline-block;
+  text-align: left;
+}
+
+/* line 849, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.badget:hover {
+  width: 155px;
+  border-radius: 0;
+}
+
+/* line 853, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.medalla {
+  display: inline-block;
+  width: 45px;
+  height: 54px;
+  background: url(https://lh6.googleusercontent.com/-bIbraxlvFZk/U_juf3QT3sI/AAAAAAAAQTo/e0BskWTQtfM/w46-h277-no/badgets.png) no-repeat 50% 6px;
+  margin-left: 7px;
+}
+
+/* line 859, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.descripcion {
+  display: inline-block;
+  position: relative;
+  bottom: 3px;
+}
+
+/* line 864, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.col_div .descripcion > p {
+  font: 12px arial;
+  font-weight: bold;
+  margin: 0 0 0 9px;
+}
+
+/* line 869, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.descripcion p span {
+  font: 11px arial;
+  font-weight: normal;
+  font-style: italic;
+  color: #F5F5F5;
+}
+
+/*colores por tema */
+/* line 877, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.bronce {
+  background-color: #C9712A;
+}
+
+/* line 878, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.plata {
+  background-color: #B3B4BD;
+}
+
+/* line 879, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.oro {
+  background-color: #CCA14A;
+}
+
+/* line 880, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.azul {
+  background-color: #5476BA;
+}
+
+/*medallas por tema */
+/* line 883, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.bronce .medalla {
+  background-position: 50% -51px;
+}
+
+/* line 884, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.oro .medalla {
+  background-position: 50% -169px;
+}
+
+/* line 885, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.plata .medalla {
+  background-position: 50% -112px;
+}
+
+/* line 886, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.azul .medalla {
+  background-position: 50% -229px;
+}
+
+/* line 888, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.sin {
+  background-color: #F5F5F5 !important;
+}
+
+/* • 4 ANIMACIONES -------------------------------------------*/
+@-webkit-keyframes ensanchar {
+  from {
+    width: 30%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes ensanchar {
+  from {
+    width: 1%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@-webkit-keyframes noscroll {
+  from {
+    height: 1px;
+    min-height: inherit;
+  }
+  to {
+    height: 140px;
+    min-height: inherit;
+  }
+}
+@keyframes noscroll {
+  from {
+    height: 1px;
+    min-height: inherit;
+  }
+  to {
+    height: 140px;
+    min-height: inherit;
+  }
+}
+/* Calendario */
+/* line 904, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.calendario {
+  float: right;
+  margin: 10px 25px 0 0;
+}
+
+/* line 911, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.calendario tr th {
+  padding: 5px 10px 5px 10px;
+}
+
+/* line 914, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.calendario tr td {
+  padding-top: 15px;
+  text-align: center;
+}
+
+/* line 918, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.calendario tr td a {
+  font-size: 25px;
+}
+
+/* line 922, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.listado_meses {
+  float: right;
+  margin: 50px 25px 0 0;
+}
+
+/* line 931, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_custom.scss */
+.listado_meses ul li {
+  display: inline;
+  background-color: #F5F5F5;
+}
+
+/* CSS HERMANOS DE SANGRE - para MOBILES Y TABLES - Indice
+
+• 1 REGLAS PANTALLAS MENORES A 798px, IPAD y SMARTPHONE
+--- • 1 • a MENÚ MOBILE
+--- • 1 • b CONTENIDOS VARIOS
+
+• 2 REGLAS MOBILES Y PANTALLAS MENORES A 365px
+*/
+/* • 1 REGLAS PANTALLAS MENORES A 798px, IPAD y SMARTPHONE ---*/
+@media (max-width: 798px) {
+  /*@media only screen and (max-device-width: 798px)*/
+  /* line 12, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  html {
+    overflow: visible;
+  }
+
+  /*--- • 1 • a MENÚ MOBILE -----------------------------------*/
+  /* line 16, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .faldon_top_container {
+    position: relative;
+    width: 100%;
+    background: white;
+    height: auto;
+  }
+
+  /* line 23, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .faldon_top {
+    width: 100%;
+    height: auto;
+  }
+
+  /* line 28, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .logo_top_container {
+    position: relative;
+    top: 0;
+    left: 0;
+    background: #F16B6B;
+    text-align: center;
+  }
+
+  /* line 35, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .menus {
+    height: 0px;
+    overflow: hidden;
+    background-color: #F16B6B;
+    border-bottom: 0px solid #D35555;
+    -webkit-box-shadow: black 0px 0px 25px -5px;
+    box-shadow: black 0px 0px 25px -5px;
+  }
+
+  /* line 43, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  ul#menu, ul#sobre_derecha {
+    position: relative;
+    left: auto;
+    top: auto;
+    right: auto;
+  }
+
+  /* line 47, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  ul#menu li,
+  ul#sobre_derecha li {
+    display: block;
+    width: auto;
+    position: relative;
+    text-align: center;
+  }
+
+  /* line 54, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  ul#menu ul.sub-menu li {
+    display: inline-block;
+    background: none;
+  }
+
+  /* line 58, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  ul#menu li ul.sub-menu {
+    display: block;
+    position: relative;
+    text-align: center;
+  }
+
+  /* line 64, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  ul#menu > li > a:after {
+    content: " :";
+  }
+
+  /* line 65, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  ul#sobre_derecha li > a:after {
+    content: none;
+  }
+
+  /* line 67, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  ul#menu > li a,
+  ul#sobre_derecha > li a {
+    border-right: none;
+    background: none !important;
+  }
+
+  /* line 72, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  ul#sobre_derecha > li:last-child a {
+    color: #F16B6B;
+  }
+
+  /* line 76, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .menus > ul > li:first-child {
+    background: white;
+    padding-top: 4px;
+  }
+
+  /* line 80, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .menus > ul > li:nth-child(2) {
+    background: #F5F5F5;
+  }
+
+  /* line 83, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .menus #sobre_derecha > li:last-child a {
+    color: white;
+  }
+
+  /* line 87, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  #sobre_derecha > span,
+  #sobre_derecha .HS_email {
+    width: auto;
+    height: auto;
+    overflow: initial;
+    top: 0;
+    right: 0;
+    position: relative;
+    background: none;
+    display: inline-block;
+    margin: 0;
+    padding: 12px;
+    text-transform: uppercase;
+  }
+
+  /* line 101, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .HS_email:hover {
+    width: auto;
+  }
+
+  /* line 102, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .HS_email a {
+    padding: 0;
+  }
+
+  /* line 103, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .st_facebook, .st_twitter {
+    display: none;
+  }
+
+  /*-----botón abrir menú-------*/
+  /* line 107, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .abrir-menu {
+    cursor: pointer;
+    height: 36px;
+    width: 36px;
+    position: absolute;
+    right: 10px;
+    bottom: 25px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 9999;
+    border-radius: 50% 0% 50% 50%;
+    -webkit-transform: translateY(0px) rotate(-45deg);
+    -ms-transform: translateY(0px) rotate(-45deg);
+    transform: translateY(0px) rotate(-45deg);
+  }
+
+  /* line 123, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .abrir-menu.mAbierto {
+    bottom: -16px;
+  }
+
+  /* line 126, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .abrir-menu:hover, .abrir-menu.mAbierto {
+    background: #F5F5F5;
+  }
+
+  /* line 130, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .abrir-menu div {
+    background: #D35555;
+    height: 4px;
+    width: 20px;
+    margin-left: 8px;
+    margin-top: 16px;
+    -webkit-transform: translateY(0px) rotate(45deg);
+    -ms-transform: translateY(0px) rotate(45deg);
+    transform: translateY(0px) rotate(45deg);
+  }
+
+  /* line 139, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .abrir-menu div::before, .abrir-menu div::after {
+    background: #D35555;
+    content: '';
+    display: block;
+    height: 4px;
+    width: 20px;
+  }
+
+  /* line 146, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .abrir-menu div::before {
+    -webkit-transform: translateY(-7px);
+    -ms-transform: translateY(-7px);
+    transform: translateY(-7px);
+  }
+
+  /* line 151, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .abrir-menu div::after {
+    -webkit-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    transform: translateY(3px);
+  }
+
+  /*----- animación menú -------*/
+  /* line 158, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .abrir-menu, .abrir-menu:hover, .abrir-menu.mAbierto, .abrir-menu div, .abrir-menu div::before, .abrir-menu div::after, .menus, .menus.mAbierto {
+    -webkit-transition: 600ms all;
+    transition: 600ms all;
+  }
+
+  /* line 162, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .abrir-menu div.mAbierto {
+    background: transparent;
+  }
+
+  /* line 165, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .abrir-menu div.mAbierto::before {
+    -webkit-transform: translateY(0px) rotate(-45deg);
+    -ms-transform: translateY(0rem) rotate(-45deg);
+    transform: translateY(0px) rotate(-45deg);
+  }
+
+  /* line 170, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .abrir-menu div.mAbierto::after {
+    -webkit-transform: translateY(-4px) rotate(45deg);
+    -ms-transform: translateY(-4px) rotate(45deg);
+    transform: translateY(-4px) rotate(45deg);
+  }
+
+  /* line 175, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .menus.mAbierto {
+    height: 280px;
+    border-bottom-width: 2px;
+  }
+
+  /*--- • 1 • b CONTENIDO VARIOS-------------------------------*/
+  /* line 181, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .content_container {
+    border-top: none;
+  }
+
+  /* line 184, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .h_container {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-left: 0;
+    width: auto;
+    height: auto;
+    text-align: center;
+    padding: 25px 5px;
+  }
+
+  /* line 192, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .h_container h1 {
+    color: black;
+    margin-bottom: 5px;
+  }
+
+  /* line 196, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .h_container ~ .col_der {
+    padding-top: 5px;
+  }
+
+  /* line 199, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .col_der {
+    padding: 5px 10px 25px 10px;
+    min-height: inherit;
+  }
+
+  /* line 203, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .col_div {
+    margin: 0 auto;
+  }
+
+  /* line 206, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .col_div.home, .col_div.us {
+    padding-top: inherit;
+    padding-bottom: inherit;
+  }
+
+  /* line 210, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .col_div p, .col_div iframe, .col_div form, .col_div img {
+    margin: 5px 0;
+  }
+
+  /* line 213, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .col_div iframe {
+    width: 100% !important;
+  }
+
+  /* line 216, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .col_izq {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 55px 10px;
+  }
+
+  /* line 221, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .boton_donar {
+    margin: 0 auto;
+    float: none;
+  }
+
+  /* line 225, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .campania {
+    color: #D35555;
+  }
+
+  /* line 228, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .col_div .imagen {
+    float: none;
+    width: 60%;
+    margin: 0 20% 12px 20%;
+  }
+
+  /* line 233, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .col_div h1, .col_div h2, .col_div h3 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 237, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .col_div form INPUT[type="password"], .col_div form INPUT[type="text"], .col_div form INPUT[type="email"] {
+    width: 100%;
+  }
+
+  /* line 240, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .slogan {
+    margin: 45px auto;
+  }
+
+  /* line 243, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .pregunta {
+    margin: 8px 0px;
+  }
+
+  /* line 246, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .bar-main-container {
+    margin-top: 40px;
+  }
+
+  /* line 249, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .container_menu {
+    position: relative;
+  }
+}
+/* • 2 REGLAS MOBILES Y PANTALLAS MENORES A 365px ------------*/
+@media (max-width: 365px) {
+  /* line 256, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .slogan {
+    width: auto;
+    height: auto;
+    text-align: center;
+  }
+
+  /* line 261, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .slogan p {
+    display: inline-block;
+  }
+
+  /* line 264, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .slogan p, .slogan h2, .slogan h3 {
+    position: relative;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+  }
+
+  /* line 271, /home/jdelossantos/workspace/hermanosdesangre/app/assets/sass/_mobile.scss */
+  .menus.mAbierto {
+    height: 325px;
+  }
+}
