@@ -697,6 +697,11 @@ form INPUT[type="submit"]:focus {
 /*--- • 1 • d REGLAS de SECCIONES ----------------------------*/
 /*OPCIONES*/
 /* line 333, ../sass/_custom.scss */
+.donors {
+  max-width: 400px;
+}
+
+/* line 336, ../sass/_custom.scss */
 .Opciones {
   margin-left: 15px;
   margin-top: 60px;
@@ -706,7 +711,7 @@ form INPUT[type="submit"]:focus {
   overflow: hidden;
 }
 
-/* line 341, ../sass/_custom.scss */
+/* line 344, ../sass/_custom.scss */
 .Opciones > div {
   font-size: 115%;
   width: 100px;
@@ -728,7 +733,7 @@ form INPUT[type="submit"]:focus {
   position: relative;
 }
 
-/* line 361, ../sass/_custom.scss */
+/* line 364, ../sass/_custom.scss */
 .Opciones > div span {
   width: 85%;
   font-size: 13px;
@@ -740,14 +745,14 @@ form INPUT[type="submit"]:focus {
 }
 
 /*SECCIONES*/
-/* line 370, ../sass/_custom.scss */
+/* line 373, ../sass/_custom.scss */
 .about,
 .Secciones {
   clear: both;
   background: #FFFFFF;
 }
 
-/* line 375, ../sass/_custom.scss */
+/* line 378, ../sass/_custom.scss */
 .Secciones > div {
   position: relative;
   opacity: 0;
@@ -759,26 +764,26 @@ form INPUT[type="submit"]:focus {
 }
 
 /*MODIFICACIÓN AL SELECCIONAR*/
-/* line 385, ../sass/_custom.scss */
+/* line 388, ../sass/_custom.scss */
 .Opciones.seleccionada {
   margin-top: -17px;
   height: auto;
 }
 
-/* line 389, ../sass/_custom.scss */
+/* line 392, ../sass/_custom.scss */
 .Opciones.seleccionada > div, .Opciones.seleccionada span {
   display: none;
   /*importante ocultar las opciones para asegurarse de elegir
   solo una a la vez*/
 }
 
-/* line 394, ../sass/_custom.scss */
+/* line 397, ../sass/_custom.scss */
 .Opciones.seleccionada > .seleccionada {
   display: block;
   margin: 87px 0px 87px 105px;
 }
 
-/* line 398, ../sass/_custom.scss */
+/* line 401, ../sass/_custom.scss */
 .Secciones > .seleccionada {
   opacity: 1;
   height: auto;
@@ -789,18 +794,18 @@ form INPUT[type="submit"]:focus {
 }
 
 /*CONTIDO DE SECCIONES*/
-/* line 406, ../sass/_custom.scss */
+/* line 409, ../sass/_custom.scss */
 .Secciones ul, .Secciones h2 {
   position: absolute;
 }
 
-/* line 409, ../sass/_custom.scss */
+/* line 412, ../sass/_custom.scss */
 .Secciones ul, .Secciones ol {
   display: inline-block;
   padding-left: 35px;
 }
 
-/* line 413, ../sass/_custom.scss */
+/* line 416, ../sass/_custom.scss */
 .Secciones ul {
   opacity: 0;
   -webkit-transition: opacity 0.7s ease;
@@ -808,12 +813,12 @@ form INPUT[type="submit"]:focus {
   top: 56px;
 }
 
-/* line 419, ../sass/_custom.scss */
+/* line 422, ../sass/_custom.scss */
 .Secciones ul.seleccionada {
   opacity: 1;
 }
 
-/* line 422, ../sass/_custom.scss */
+/* line 425, ../sass/_custom.scss */
 .Secciones li {
   display: block;
   float: left;
@@ -827,17 +832,17 @@ form INPUT[type="submit"]:focus {
   line-height: 24px;
 }
 
-/* line 434, ../sass/_custom.scss */
+/* line 437, ../sass/_custom.scss */
 .Secciones li:nth-child(2n+1) {
   clear: both;
 }
 
-/* line 437, ../sass/_custom.scss */
+/* line 440, ../sass/_custom.scss */
 .Secciones li strong {
   display: block;
 }
 
-/* line 440, ../sass/_custom.scss */
+/* line 443, ../sass/_custom.scss */
 .Secciones h2 {
   left: 16px;
   top: 20px;
@@ -847,24 +852,24 @@ form INPUT[type="submit"]:focus {
   transition: opacity 500ms ease;
 }
 
-/* line 448, ../sass/_custom.scss */
+/* line 451, ../sass/_custom.scss */
 .Secciones h2:hover {
   opacity: 0.8;
 }
 
-/* line 449, ../sass/_custom.scss */
+/* line 452, ../sass/_custom.scss */
 .Secciones h2:last-of-type {
   right: 0;
   left: inherit;
 }
 
-/* line 453, ../sass/_custom.scss */
+/* line 456, ../sass/_custom.scss */
 .Secciones h2.seleccionada {
   border-bottom: solid 2px #D35555;
   opacity: 1;
 }
 
-/* line 457, ../sass/_custom.scss */
+/* line 460, ../sass/_custom.scss */
 .Secciones p:last-child:after {
   content: "";
   background-image: url(asset-path("gotas.png"));
@@ -874,13 +879,13 @@ form INPUT[type="submit"]:focus {
   display: inline-block;
 }
 
-/* line 466, ../sass/_custom.scss */
+/* line 469, ../sass/_custom.scss */
 .Secciones a {
   color: #D35555;
   text-decoration: none;
 }
 
-/* line 471, ../sass/_custom.scss */
+/* line 474, ../sass/_custom.scss */
 .Secciones a:active,
 .Secciones a:hover,
 .Secciones a:focus {
@@ -889,7 +894,7 @@ form INPUT[type="submit"]:focus {
 }
 
 /*--- • 1 • e REGLAS EXCLUSIVAS del CONTENIDO SIN COLUMNAS ---*/
-/* line 479, ../sass/_custom.scss */
+/* line 482, ../sass/_custom.scss */
 .container_menu {
   background-color: #F16B6B;
   background-color: rgba(241, 107, 107, 0.9);
@@ -900,7 +905,7 @@ form INPUT[type="submit"]:focus {
 }
 
 /*--- • 1 • f REGLAS EXCLUSIVAS del CONTENIDO LISTADO ---*/
-/* line 487, ../sass/_custom.scss */
+/* line 490, ../sass/_custom.scss */
 .list-info ul {
   list-style: none;
   position: relative;
@@ -908,7 +913,7 @@ form INPUT[type="submit"]:focus {
   top: 0;
 }
 
-/* line 493, ../sass/_custom.scss */
+/* line 496, ../sass/_custom.scss */
 .list-info li {
   color: #313131;
   display: inline-block;
@@ -919,7 +924,7 @@ form INPUT[type="submit"]:focus {
   width: 80%;
 }
 
-/* line 502, ../sass/_custom.scss */
+/* line 505, ../sass/_custom.scss */
 .list-info .ico-content {
   display: inline-block;
   position: relative;
@@ -927,7 +932,7 @@ form INPUT[type="submit"]:focus {
   width: 20px;
 }
 
-/* line 508, ../sass/_custom.scss */
+/* line 511, ../sass/_custom.scss */
 .list-info .ico-content i {
   background-image: url("/assets/gotas.png");
   background-position: 0 -5px;
@@ -937,7 +942,7 @@ form INPUT[type="submit"]:focus {
   width: 16px;
 }
 
-/* line 516, ../sass/_custom.scss */
+/* line 519, ../sass/_custom.scss */
 .list-info .text-content {
   display: inline-block;
   position: relative;
@@ -945,12 +950,12 @@ form INPUT[type="submit"]:focus {
 }
 
 /*.container_menu~.col_none {margin-top:  55px;}*/
-/* line 524, ../sass/_custom.scss */
+/* line 527, ../sass/_custom.scss */
 .container_menu .faldon_top {
   margin-top: 12px;
 }
 
-/* line 527, ../sass/_custom.scss */
+/* line 530, ../sass/_custom.scss */
 .container_menu form INPUT {
   float: right;
   width: 250px;
@@ -958,7 +963,7 @@ form INPUT[type="submit"]:focus {
   color: white;
 }
 
-/* line 533, ../sass/_custom.scss */
+/* line 536, ../sass/_custom.scss */
 .col_none {
   max-width: 800px;
   margin-left: auto;
@@ -966,20 +971,20 @@ form INPUT[type="submit"]:focus {
   margin-top: 55px;
 }
 
-/* line 538, ../sass/_custom.scss */
+/* line 541, ../sass/_custom.scss */
 .col_none td {
   padding: 6px;
   font-size: 14px;
 }
 
 /*--- • 2 • a REGLAS EXCLUSIVAS de la HOME -------------------*/
-/* line 543, ../sass/_custom.scss */
+/* line 546, ../sass/_custom.scss */
 .col_div.home {
   padding-top: 250px;
 }
 
 /*--- • 2 • b REGLAS EXCLUSIVAS de DONANTES ------------------*/
-/* line 548, ../sass/_custom.scss */
+/* line 551, ../sass/_custom.scss */
 .bolsa {
   background-color: #F16B6B;
   background-image: url(asset-path("bolsa.png"));
@@ -993,7 +998,7 @@ form INPUT[type="submit"]:focus {
   border-radius: 50%;
 }
 
-/* line 560, ../sass/_custom.scss */
+/* line 563, ../sass/_custom.scss */
 .bolsa:before {
   content: "---";
   display: block;
@@ -1013,22 +1018,22 @@ form INPUT[type="submit"]:focus {
   color: #F16B6B;
 }
 
-/* line 578, ../sass/_custom.scss */
+/* line 581, ../sass/_custom.scss */
 .bolsa:hover:before {
   border-bottom-width: 7px;
 }
 
-/* line 581, ../sass/_custom.scss */
+/* line 584, ../sass/_custom.scss */
 .bolsa.llena:before {
   border-bottom-width: 26px;
 }
 
-/* line 584, ../sass/_custom.scss */
+/* line 587, ../sass/_custom.scss */
 .bolsa.llena:hover:before {
   border-bottom-width: 19px;
 }
 
-/* line 587, ../sass/_custom.scss */
+/* line 590, ../sass/_custom.scss */
 .col_div .cota {
   line-height: 17px;
   font-size: 13px;
@@ -1036,12 +1041,12 @@ form INPUT[type="submit"]:focus {
 }
 
 /*--- • 2 • c REGLAS EXCLUSIVAS de ¿QUIENES SOMOS? -----------*/
-/* line 594, ../sass/_custom.scss */
+/* line 597, ../sass/_custom.scss */
 .col_div.us {
   max-width: 400px;
 }
 
-/* line 598, ../sass/_custom.scss */
+/* line 601, ../sass/_custom.scss */
 .slogan {
   width: 330px;
   height: 80px;
@@ -1049,7 +1054,7 @@ form INPUT[type="submit"]:focus {
   margin: 80px 35px 60px 35px;
 }
 
-/* line 599, ../sass/_custom.scss */
+/* line 602, ../sass/_custom.scss */
 .col_div .slogan > p, .slogan h2, .slogan h3 {
   margin: 0px;
   position: absolute;
@@ -1057,66 +1062,66 @@ form INPUT[type="submit"]:focus {
   color: #D35555;
 }
 
-/* line 600, ../sass/_custom.scss */
+/* line 603, ../sass/_custom.scss */
 .slogan p {
   top: 48px;
   left: 0;
   font-size: 20px;
 }
 
-/* line 601, ../sass/_custom.scss */
+/* line 604, ../sass/_custom.scss */
 .slogan p:first-child {
   top: 0;
   left: 0;
   font-size: 16px;
 }
 
-/* line 602, ../sass/_custom.scss */
+/* line 605, ../sass/_custom.scss */
 .slogan p:nth-child(2) {
   top: 24px;
   left: 50px;
   font-size: 28px;
 }
 
-/* line 603, ../sass/_custom.scss */
+/* line 606, ../sass/_custom.scss */
 .slogan h2 {
   top: 0;
   right: 1px;
   font-size: 28px;
 }
 
-/* line 604, ../sass/_custom.scss */
+/* line 607, ../sass/_custom.scss */
 .slogan h3 {
   top: 36px;
   right: 0;
   font-size: 36px;
 }
 
-/* line 605, ../sass/_custom.scss */
+/* line 608, ../sass/_custom.scss */
 .slogan h3:hover, .slogan h2:hover {
   font-size: 39px;
   background: white;
 }
 
 /*--- • 2 • e REGLAS EXCLUSIVAS de PERFIL de USUARIO ---------*/
-/* line 609, ../sass/_custom.scss */
+/* line 612, ../sass/_custom.scss */
 .perfil .Secciones > .seleccionada {
   -webkit-animation: initial;
   animation: initial;
 }
 
-/* line 613, ../sass/_custom.scss */
+/* line 616, ../sass/_custom.scss */
 .perfil .secciones p:last-of-type:after {
   content: none;
 }
 
-/* line 616, ../sass/_custom.scss */
+/* line 619, ../sass/_custom.scss */
 .perfil h1 {
   z-index: 2;
   position: relative;
 }
 
-/* line 620, ../sass/_custom.scss */
+/* line 623, ../sass/_custom.scss */
 .perfil .Secciones h2:last-of-type,
 .perfil .Secciones h2 {
   opacity: 1;
@@ -1130,49 +1135,49 @@ form INPUT[type="submit"]:focus {
   z-index: 0;
 }
 
-/* line 632, ../sass/_custom.scss */
+/* line 635, ../sass/_custom.scss */
 .perfil h3 {
   margin-bottom: 25px;
 }
 
-/* line 635, ../sass/_custom.scss */
+/* line 638, ../sass/_custom.scss */
 .perfil h3:before {
   content: "DNI. ";
   color: #F16B6B;
 }
 
-/* line 639, ../sass/_custom.scss */
+/* line 642, ../sass/_custom.scss */
 .perfil h4 {
   color: #F16B6B;
   font-size: 14px;
 }
 
-/* line 643, ../sass/_custom.scss */
+/* line 646, ../sass/_custom.scss */
 .perfil h4 a, .perfil h4 a:visited {
   color: #F16B6B;
 }
 
-/* line 646, ../sass/_custom.scss */
+/* line 649, ../sass/_custom.scss */
 .perfil h4 a strong, .perfil h4 a:visited strong {
   color: black;
   font-weight: 400;
 }
 
-/* line 650, ../sass/_custom.scss */
+/* line 653, ../sass/_custom.scss */
 .perfil .Secciones > div:first-child > p {
   font-size: 17px;
   font-weight: 400;
   margin-bottom: 23px;
 }
 
-/* line 655, ../sass/_custom.scss */
+/* line 658, ../sass/_custom.scss */
 .perfil .badgets h4 {
   margin: 0;
   padding-top: 12px;
   text-align: left;
 }
 
-/* line 660, ../sass/_custom.scss */
+/* line 663, ../sass/_custom.scss */
 .cambiar {
   cursor: pointer;
   border: none;
@@ -1189,13 +1194,13 @@ form INPUT[type="submit"]:focus {
   bottom: 34px;
 }
 
-/* line 675, ../sass/_custom.scss */
+/* line 678, ../sass/_custom.scss */
 .perfil .submitArea {
   height: 42px;
   margin-top: 14px;
 }
 
-/* line 679, ../sass/_custom.scss */
+/* line 682, ../sass/_custom.scss */
 .botonONG {
   display: block;
   position: absolute;
@@ -1210,7 +1215,7 @@ form INPUT[type="submit"]:focus {
 }
 
 /*--- • 2 • f REGLAS EXCLUSIVAS de LISTA DE ONGS -------------*/
-/* line 693, ../sass/_custom.scss */
+/* line 696, ../sass/_custom.scss */
 .banco {
   border: solid 1px #F5F5F5;
   margin: 62px 4px;
@@ -1220,43 +1225,43 @@ form INPUT[type="submit"]:focus {
   position: relative;
 }
 
-/* line 701, ../sass/_custom.scss */
+/* line 704, ../sass/_custom.scss */
 .banco:first-child {
   margin-top: 95px;
 }
 
-/* line 704, ../sass/_custom.scss */
+/* line 707, ../sass/_custom.scss */
 .banco h2 {
   font-size: 24px;
   margin: 15px 0;
 }
 
-/* line 708, ../sass/_custom.scss */
+/* line 711, ../sass/_custom.scss */
 .banco h3 {
   font-size: 18px;
   color: #F16B6B;
 }
 
-/* line 712, ../sass/_custom.scss */
+/* line 715, ../sass/_custom.scss */
 .banco h4, .ficha_banco p {
   font-size: 14px;
   font-weight: 300;
   margin: 11px 0;
 }
 
-/* line 717, ../sass/_custom.scss */
+/* line 720, ../sass/_custom.scss */
 .ficha_banco p {
   padding-left: 5px;
 }
 
-/* line 720, ../sass/_custom.scss */
+/* line 723, ../sass/_custom.scss */
 .ficha_banco {
   float: right;
   width: 65%;
   padding-left: 8px;
 }
 
-/* line 725, ../sass/_custom.scss */
+/* line 728, ../sass/_custom.scss */
 .reservar a {
   height: 48px;
   width: 60px;
@@ -1270,19 +1275,19 @@ form INPUT[type="submit"]:focus {
   transition: background-color 500ms ease;
 }
 
-/* line 737, ../sass/_custom.scss */
+/* line 740, ../sass/_custom.scss */
 .reservar a, .reservar a:visited {
   color: #D35555;
 }
 
-/* line 738, ../sass/_custom.scss */
+/* line 741, ../sass/_custom.scss */
 .reservar a:hover {
   color: white;
   background-color: #D35555;
 }
 
 /*--- • 3 • a REGLAS de la BARRA DE PORCENTAJES --------------*/
-/* line 741, ../sass/_custom.scss */
+/* line 744, ../sass/_custom.scss */
 .campania {
   letter-spacing: 1px;
   width: 69%;
@@ -1294,23 +1299,23 @@ form INPUT[type="submit"]:focus {
   display: inline-block;
 }
 
-/* line 751, ../sass/_custom.scss */
+/* line 754, ../sass/_custom.scss */
 .campania:before {
   content: "Donantes en: ";
   font-weight: 400;
 }
 
-/* line 752, ../sass/_custom.scss */
+/* line 755, ../sass/_custom.scss */
 .banco .campania {
   color: black;
 }
 
-/* line 753, ../sass/_custom.scss */
+/* line 756, ../sass/_custom.scss */
 .banco .campania:before {
   content: "";
 }
 
-/* line 755, ../sass/_custom.scss */
+/* line 758, ../sass/_custom.scss */
 .faltandias {
   position: relative;
   width: 29%;
@@ -1322,17 +1327,17 @@ form INPUT[type="submit"]:focus {
   display: inline-block;
 }
 
-/* line 765, ../sass/_custom.scss */
+/* line 768, ../sass/_custom.scss */
 .faltandias:before {
   content: "faltan ";
 }
 
-/* line 766, ../sass/_custom.scss */
+/* line 769, ../sass/_custom.scss */
 .faltandias:after {
   content: " días";
 }
 
-/* line 768, ../sass/_custom.scss */
+/* line 771, ../sass/_custom.scss */
 .bar-main-container {
   width: 99%;
   font-family: "Oswald", sans-serif;
@@ -1340,7 +1345,7 @@ form INPUT[type="submit"]:focus {
   margin: 0 auto;
 }
 
-/* line 775, ../sass/_custom.scss */
+/* line 778, ../sass/_custom.scss */
 .bar-container {
   position: relative;
   -webkit-border-radius: 10px;
@@ -1353,20 +1358,20 @@ form INPUT[type="submit"]:focus {
   color: white;
 }
 
-/* line 788, ../sass/_custom.scss */
+/* line 791, ../sass/_custom.scss */
 .bar, .registrados, .objetivo {
   font-size: 20px;
   line-height: 2;
 }
 
-/* line 789, ../sass/_custom.scss */
+/* line 792, ../sass/_custom.scss */
 .bar {
   float: left;
   height: 100%;
   position: relative;
 }
 
-/* line 794, ../sass/_custom.scss */
+/* line 797, ../sass/_custom.scss */
 .bar div {
   background: #D35555;
   height: 100%;
@@ -1378,7 +1383,7 @@ form INPUT[type="submit"]:focus {
   animation: ensanchar 3s;
 }
 
-/* line 805, ../sass/_custom.scss */
+/* line 808, ../sass/_custom.scss */
 .bar div:after {
   content: " ";
   background: url(asset-path("gotas.png")) 0px 1px no-repeat;
@@ -1390,19 +1395,19 @@ form INPUT[type="submit"]:focus {
   margin: 0 10px;
 }
 
-/* line 814, ../sass/_custom.scss */
+/* line 817, ../sass/_custom.scss */
 .objetivo:before, .registrados:after {
   font-size: 13px;
   font-weight: 300;
 }
 
-/* line 818, ../sass/_custom.scss */
+/* line 821, ../sass/_custom.scss */
 .objetivo {
   position: absolute;
   right: 6px;
 }
 
-/* line 823, ../sass/_custom.scss */
+/* line 826, ../sass/_custom.scss */
 .registrados {
   position: absolute;
   left: 1px;
@@ -1414,23 +1419,23 @@ form INPUT[type="submit"]:focus {
   height: 36px;
 }
 
-/* line 833, ../sass/_custom.scss */
+/* line 836, ../sass/_custom.scss */
 .registrados:after {
   content: " REGISTRADOS";
 }
 
-/* line 834, ../sass/_custom.scss */
+/* line 837, ../sass/_custom.scss */
 .objetivo:before {
   content: "OBJETIVO: ";
 }
 
 /*--- • 3 • b REGLAS de la GOTA ------------------------------*/
-/* line 838, ../sass/_custom.scss */
+/* line 841, ../sass/_custom.scss */
 .columna .boton_donar {
   margin-top: 250px;
 }
 
-/* line 843, ../sass/_custom.scss */
+/* line 846, ../sass/_custom.scss */
 .boton_donar {
   position: relative;
   font-family: "Oswald", sans-serif;
@@ -1440,7 +1445,7 @@ form INPUT[type="submit"]:focus {
   width: 256px;
   height: 400px;
 }
-/* line 852, ../sass/_custom.scss */
+/* line 855, ../sass/_custom.scss */
 .boton_donar a {
   font-size: 28px;
   font-weight: 700;
@@ -1455,7 +1460,7 @@ form INPUT[type="submit"]:focus {
   letter-spacing: 1px;
   font-size: 35px;
 }
-/* line 866, ../sass/_custom.scss */
+/* line 869, ../sass/_custom.scss */
 .boton_donar a p {
   position: absolute;
   bottom: 15%;
@@ -1464,7 +1469,7 @@ form INPUT[type="submit"]:focus {
   margin: 0 20px;
   line-height: 40px;
 }
-/* line 874, ../sass/_custom.scss */
+/* line 877, ../sass/_custom.scss */
 .boton_donar a p:before {
   top: -100px;
   left: 0;
@@ -1477,7 +1482,7 @@ form INPUT[type="submit"]:focus {
   background-image: url(asset-path("mini-logo.png"));
   background-repeat: no-repeat;
 }
-/* line 888, ../sass/_custom.scss */
+/* line 891, ../sass/_custom.scss */
 .boton_donar a:before {
   top: 0;
   left: 0;
@@ -1490,7 +1495,7 @@ form INPUT[type="submit"]:focus {
 }
 
 /*--- • 3 • c REGLAS de los BADGETS --------------------------*/
-/* line 903, ../sass/_custom.scss */
+/* line 906, ../sass/_custom.scss */
 .badgets {
   margin: 0 35px 14px 35px;
   text-align: center;
@@ -1498,7 +1503,7 @@ form INPUT[type="submit"]:focus {
   border-bottom: dashed #AAA 1px;
 }
 
-/* line 909, ../sass/_custom.scss */
+/* line 912, ../sass/_custom.scss */
 .badget {
   width: 54px;
   height: 54px;
@@ -1511,13 +1516,13 @@ form INPUT[type="submit"]:focus {
   text-align: left;
 }
 
-/* line 919, ../sass/_custom.scss */
+/* line 922, ../sass/_custom.scss */
 .badget:hover {
   width: 155px;
   border-radius: 0;
 }
 
-/* line 923, ../sass/_custom.scss */
+/* line 926, ../sass/_custom.scss */
 .medalla {
   display: inline-block;
   width: 45px;
@@ -1526,21 +1531,21 @@ form INPUT[type="submit"]:focus {
   margin-left: 7px;
 }
 
-/* line 929, ../sass/_custom.scss */
+/* line 932, ../sass/_custom.scss */
 .descripcion {
   display: inline-block;
   position: relative;
   bottom: 3px;
 }
 
-/* line 934, ../sass/_custom.scss */
+/* line 937, ../sass/_custom.scss */
 .col_div .descripcion > p {
   font: 12px arial;
   font-weight: bold;
   margin: 0 0 0 9px;
 }
 
-/* line 939, ../sass/_custom.scss */
+/* line 942, ../sass/_custom.scss */
 .descripcion p span {
   font: 11px arial;
   font-weight: normal;
@@ -1549,48 +1554,48 @@ form INPUT[type="submit"]:focus {
 }
 
 /*colores por tema */
-/* line 947, ../sass/_custom.scss */
+/* line 950, ../sass/_custom.scss */
 .bronce {
   background-color: #C9712A;
 }
 
-/* line 948, ../sass/_custom.scss */
+/* line 951, ../sass/_custom.scss */
 .plata {
   background-color: #B3B4BD;
 }
 
-/* line 949, ../sass/_custom.scss */
+/* line 952, ../sass/_custom.scss */
 .oro {
   background-color: #CCA14A;
 }
 
-/* line 950, ../sass/_custom.scss */
+/* line 953, ../sass/_custom.scss */
 .azul {
   background-color: #5476BA;
 }
 
 /*medallas por tema */
-/* line 953, ../sass/_custom.scss */
+/* line 956, ../sass/_custom.scss */
 .bronce .medalla {
   background-position: 50% -51px;
 }
 
-/* line 954, ../sass/_custom.scss */
+/* line 957, ../sass/_custom.scss */
 .oro .medalla {
   background-position: 50% -169px;
 }
 
-/* line 955, ../sass/_custom.scss */
+/* line 958, ../sass/_custom.scss */
 .plata .medalla {
   background-position: 50% -112px;
 }
 
-/* line 956, ../sass/_custom.scss */
+/* line 959, ../sass/_custom.scss */
 .azul .medalla {
   background-position: 50% -229px;
 }
 
-/* line 958, ../sass/_custom.scss */
+/* line 961, ../sass/_custom.scss */
 .sin {
   background-color: #F5F5F5 !important;
 }
@@ -1633,35 +1638,35 @@ form INPUT[type="submit"]:focus {
   }
 }
 /* Calendario */
-/* line 974, ../sass/_custom.scss */
+/* line 977, ../sass/_custom.scss */
 .calendario {
   float: right;
   margin: 10px 25px 0 0;
 }
 
-/* line 981, ../sass/_custom.scss */
+/* line 984, ../sass/_custom.scss */
 .calendario tr th {
   padding: 5px 10px 5px 10px;
 }
 
-/* line 984, ../sass/_custom.scss */
+/* line 987, ../sass/_custom.scss */
 .calendario tr td {
   padding-top: 15px;
   text-align: center;
 }
 
-/* line 988, ../sass/_custom.scss */
+/* line 991, ../sass/_custom.scss */
 .calendario tr td a {
   font-size: 25px;
 }
 
-/* line 992, ../sass/_custom.scss */
+/* line 995, ../sass/_custom.scss */
 .listado_meses {
   float: right;
   margin: 50px 25px 0 0;
 }
 
-/* line 1001, ../sass/_custom.scss */
+/* line 1004, ../sass/_custom.scss */
 .listado_meses ul li {
   display: inline;
   background-color: #F5F5F5;
