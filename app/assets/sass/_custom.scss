@@ -75,7 +75,7 @@ table {
     @extend .col-1;
     font-family: $mainFont;
     font-size: 14px;
-    position: fixed; 
+    position: fixed;
     z-index:2;
     height: 220px;
 }
@@ -137,7 +137,8 @@ h1{
 .col_izq{
     @extend .col-1-2;
     position: absolute;
-    height:100%; top: 0; 
+    padding-top: 40px;
+    height:100%; top: 0;
     left: 0; background: $softRed;
 }
 
@@ -147,7 +148,7 @@ h1{
   overflow: hidden;
   font-family: $mainFont;
 }
-.col_div p, 
+.col_div p,
 .col_div span {
   font-size: 13px;
   font-weight: 300;
