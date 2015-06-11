@@ -181,6 +181,7 @@ DEPENDENCIES
   sass-rails
   sdoc (~> 0.4.0)
   spring
+  sprockets (~> 2.0)
   sqlite3
   susy
   turbolinks
