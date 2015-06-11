@@ -17,13 +17,13 @@ gem 'spring',        group: :development
 
 gem 'devise'
 gem 'devise-encryptable'
+gem 'compass'
 
 group :production do
   gem 'rails_12factor'
 end
 
 group :assets do
-	gem 'compass'
 	gem "compass-rails", github: "Compass/compass-rails", branch: "master"
 	gem 'susy'
 end
