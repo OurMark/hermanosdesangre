@@ -1,0 +1,66 @@
+.h_container {
+  position: absolute;
+  top: 245px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  width: auto;
+  height: 35px;
+  z-index: 1;
+
+  h1 {
+    font-family: $mainFont;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+  span {
+    margin-left: 30px;
+  }
+  .blood-text {
+    color: $softRed;
+  }
+  .video-home {
+    padding: 65px 90px;
+    background: $white;
+    margin-top: 20px;
+    border-top: 4px solid $softRed;
+
+    p {
+      color: $softBlack;
+      letter-spacing: 1px;
+      font-weight: 200;
+      line-height: 25px;
+      margin-bottom: 20px;
+    }
+  }
+}
+.col_der {
+  background: white;
+  min-height: 966px;
+  padding-left: 50%;
+
+  &.columna {
+    min-height: 805px;
+  }
+}
+.col_izq {
+  @extend .col-1-2;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding-right: 0;
+  padding-left: 2%;
+  background: $softRed;
+}
+@media (min-width:768px) {
+}
+@media (min-width:992px) {
+}
+@media (min-width:1200px) {
+}

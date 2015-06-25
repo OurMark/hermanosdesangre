@@ -23,52 +23,6 @@
 
 • 4 ANIMACIONES
 */
-/* • 1 GENERALES ---------------------------------------------*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, img, ins, kbd, q, s, samp,
-small, strike, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    text-decoration: none;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-html { overflow-x: hidden;}
-body {
-    line-height: 1;
-    background-color:$softRed;
-    color: $mainGray;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
 
 /*--- • 1 • a REGLAS de la CABECERA --------------------------*/
 .faldon_top_container{
@@ -78,6 +32,16 @@ table {
     position: fixed;
     z-index:2;
     height: 220px;
+
+    .sub-menu {
+      ul {
+        li {
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
 }
 .faldon_top{
     position: relative;
@@ -104,75 +68,10 @@ table {
     background: $white;
     font-family: $mainFont;
 }
-.h_container{
-    position: absolute;
-    top: 245px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    max-width: 800px;
-    width: auto;
-    height: 35px;
-    z-index: 1;
-    // text-align: center;
-}
 
 h1 {
     font-size: 30px;
     margin-bottom: 35px;
-}
-.h_container h1 {
-    font-family: $mainFont;
-    text-align: center;
-    color: white;
-    padding: 5px;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
-
-.h_container span {
-  margin-left: 15px;
-}
-
-.blood-text {
-    color: $softRed;
-}
-
-
-.video-home {
-  padding: 65px 90px;
-  background: $white;
-  margin-top: 20px;
-  border-top: 4px solid $softRed;
-
-  p {
-    color: $softBlack;
-    letter-spacing: 1px;
-    font-weight: 200;
-    line-height: 25px;
-    margin-bottom: 20px;
-  }
-}
-
-.col_der{
-  background: white;
-  min-height: 966px;
-  padding-left: 50%;
-
-  &.columna {
-    min-height: 805px;
-  }
-}
-.col_izq{
-    @extend .col-1-2;
-    position: absolute;
-    height:100%; 
-    top: 0; 
-    left: 0; 
-    bottom: 0;
-    padding-right: 0;
-    padding-left: 2%;
-    background: $softRed;
 }
 
 .col_izq .col_div {float: right;}
@@ -887,7 +786,7 @@ text-align: left;
         background-repeat:no-repeat;
       }
     }
-    
+
     &:before {
       top: 0;
       left: 0;

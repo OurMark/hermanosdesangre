@@ -3,6 +3,10 @@
 
 @import "compass";
 @import "susy";
+
+//normalize
+@import "normalize";
+
 // variables
 @import "variables";
 
@@ -14,3 +18,7 @@
 // from old project
 @import "custom";
 @import "mobile";
+
+//views
+
+@import "static/home"

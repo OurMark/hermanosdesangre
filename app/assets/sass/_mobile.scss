@@ -8,8 +8,7 @@
 */
 
 /* • 1 REGLAS PANTALLAS MENORES A 798px, IPAD y SMARTPHONE ---*/
-@media (max-width: 798px){ /*@media only screen and (max-device-width: 798px)*/
-html{overflow: visible;}
+@media (max-width: 768px){ /*@media only screen and (max-device-width: 798px)*/
 
 /*--- • 1 • a MENÚ MOBILE -----------------------------------*/
 
@@ -96,7 +95,7 @@ ul#sobre_derecha>li:last-child a{
     display: inline-block;
     margin: 0;
     padding: 12px;
-    text-transform: uppercase;    
+    text-transform: uppercase;
 }
 .HS_email:hover {width: auto;}
 .HS_email a{padding: 0;}
@@ -106,7 +105,7 @@ ul#sobre_derecha>li:last-child a{
 /*-----botón abrir menú-------*/
 .abrir-menu {
     cursor: pointer;
-    height: 36px; 
+    height: 36px;
     width: 36px;
     position: absolute;
     right: 10px; bottom: 25px;
@@ -178,7 +177,7 @@ ul#sobre_derecha>li:last-child a{
 }
 
 /*--- • 1 • b CONTENIDO VARIOS-------------------------------*/
-.content_container {    
+.content_container {
     border-top: none;
 }
 .h_container {
@@ -235,11 +234,11 @@ margin: 5px 0;
     margin-right: 0;
 }
 .col_div form INPUT[type="password"], .col_div form INPUT[type="text"], .col_div form INPUT[type="email"]{
-    width:100%;  
+    width:100%;
 }
 .slogan {
     margin: 45px auto;
-}   
+}
 .pregunta {
     margin: 8px 0px;
 }
@@ -258,7 +257,7 @@ margin: 5px 0;
     height: auto;
     text-align: center;
 }
-.slogan p{    
+.slogan p{
     display: inline-block;
 }
 .slogan p, .slogan h2, .slogan h3 {
