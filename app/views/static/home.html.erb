@@ -1,16 +1,18 @@
-<div class="h_container">
-	<h1><span>Meta: 100% donantes</span><span class="blood-text"> habituales y voluntarios</span></h1>
-	<%= render partial: 'shared/barra_progreso' %>
-	<div class="video-home">
-		<p>Encuentra el banco de sangre más próximo, reserva tu turno, y haz de donar sangre un nuevo hábito solidario. Únete a Hermanos de Sangre.</p>
-		<iframe width="638" height="385" src="//www.youtube-nocookie.com/embed/1VUsLthgj24?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
-	</div>
+<div class="row h_container">
+  <div class="col-xs-12 col-sm-12 h_container-col">
+    <h1><span>Meta: 100% donantes</span><span class="blood-text"> habituales y voluntarios</span></h1>
+    <%= render partial: 'shared/barra_progreso' %>
+    <div class="video-home">
+      <p>Encuentra el banco de sangre más próximo, reserva tu turno, y haz de donar sangre un nuevo hábito solidario. Únete a Hermanos de Sangre.</p>
+      <iframe class="video-home-iframe" src="//www.youtube-nocookie.com/embed/1VUsLthgj24?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+    </div>
+  </div>
 </div>
-<div class="col_der">
-	<div class="col_div home">
-		
-	</div>
-</div>
-<div class="col_izq">
-	<%= render partial: 'shared/gota_donar' %>
+<div class="row quiero-donar">
+  <div class="hidden-xs hidden-sm col_der">
+    <div class="col_div home"></div>
+  </div>
+  <div class="col-xs-12 col-sm-12 col_izq">
+    <%= render partial: 'shared/gota_donar' %>
+  </div>
 </div>

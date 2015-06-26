@@ -1,62 +1,114 @@
+/*========================================
+=            Home view styles            =
+========================================*/
+
 .h_container {
-  position: absolute;
-  top: 245px;
-  left: 0;
-  right: 0;
   margin: 0 auto;
-  max-width: 800px;
-  width: auto;
-  height: 35px;
   z-index: 1;
 
+  .h_container-col {
+    padding:0;
+  }
+
   h1 {
-    font-family: $mainFont;
     text-align: center;
-    color: white;
+    color: $white;
     padding: 5px;
     letter-spacing: 1px;
     margin-bottom: 10px;
   }
+
   span {
-    margin-left: 30px;
+    color: $black;
+    display: block;
   }
+
   .blood-text {
     color: $softRed;
   }
+
   .video-home {
-    padding: 65px 90px;
     background: $white;
     margin-top: 20px;
     border-top: 4px solid $softRed;
 
+    .video-home-iframe {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 20px;
+    }
+
     p {
       color: $softBlack;
       letter-spacing: 1px;
-      font-weight: 200;
+      font-weight: lighter;
       line-height: 25px;
       margin-bottom: 20px;
+      text-align: center;
     }
   }
 }
 .col_der {
-  background: white;
+  background: $white;
   min-height: 966px;
   padding-left: 50%;
+  padding: 5px 10px 25px 10px;
 
   &.columna {
     min-height: 805px;
   }
 }
 .col_izq {
-  @extend .col-1-2;
-  position: absolute;
-  height: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  padding-right: 0;
-  padding-left: 2%;
+  height: auto;
   background: $softRed;
+  display: inline-block;
+  vertical-align: top;
+
+  .boton_donar {
+    background-image: url($quieroDonar2);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    width: 256px;
+    height: 400px;
+
+    a {
+      bottom: 0;
+      color: $saddleBrown;
+      font-size: 2.5em;
+      font-weight: bold;
+      height: 367px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      width: 256px;
+
+      p {
+        line-height: 40px;
+        margin: 0 20px;
+        position: absolute;
+        bottom: 100px;
+        left: 0;
+        right: 0;
+
+        &:before {
+          background-image: url($miniLogo);
+          background-repeat: no-repeat;
+          content: "";
+          height: 72px;
+          left: 0;
+          margin: 0 auto;
+          position: absolute;
+          right: 0;
+          top: -100px;
+          width: 56px;
+        }
+      }
+    }
+  }
+}
+.quiero-donar {
 }
 @media (min-width:768px) {
 }

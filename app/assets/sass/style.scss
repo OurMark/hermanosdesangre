@@ -4,8 +4,9 @@
 @import "compass";
 @import "susy";
 
-//normalize
-@import "normalize";
+//bootstrap
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 // variables
 @import "variables";

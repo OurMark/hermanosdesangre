@@ -23,58 +23,15 @@
 
 • 4 ANIMACIONES
 */
-
-/*--- • 1 • a REGLAS de la CABECERA --------------------------*/
-.faldon_top_container{
-    @extend .col-1;
-    font-family: $mainFont;
-    font-size: 14px;
-    position: fixed;
-    z-index:2;
-    height: 220px;
-
-    .sub-menu {
-      ul {
-        li {
-          a {
-            text-decoration: none;
-          }
-        }
-      }
-    }
+body {
+  background: $white;
+  font-family: $mainFont;
+  font-weight: normal;
+  font-size: 14px;
 }
-.faldon_top{
-    position: relative;
-    height: 220px;
-    margin: 0 auto;
-}
-.logo_top_container{
-    position: absolute;
-    top: 12px;
-    left: 4px;
-    background: $mainRed;
-    border-bottom: solid 2px $mainRed;
-    -webkit-box-shadow: black 0px 0px 25px -5px;
-    box-shadow: black 0px 0px 25px -5px;
-    z-index: 9999;
-}
-/*MENU*/
-
 
 /*--- • 1 • b REGLAS del CONTENIDO ---------------------------*/
-.content_container{
-    @extend .col-1;
-    position: relative;
-    background: $white;
-    font-family: $mainFont;
-}
 
-h1 {
-    font-size: 30px;
-    margin-bottom: 35px;
-}
-
-.col_izq .col_div {float: right;}
 .col_div{
   overflow: hidden;
   font-family: $mainFont;
@@ -742,63 +699,6 @@ text-align: left;
   }
 }
 
-.boton_donar{
-    position: relative;
-    font-family: $mainFont;
-    text-align: center;
-    display: block;
-    margin-top: 500px;
-    width: 256px;
-    height: 400px;
-
-  a {
-    font-size: 28px;
-    font-weight: 700;
-    color: $saddleBrown;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 256px;
-    height: 367px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 35px;
-
-    p {
-      position: absolute;
-      bottom: 15%;
-      left: 0;
-      right: 0;
-      margin: 0 20px;
-      line-height: 40px;
-
-      &:before {
-        top: -100px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        content: "";
-        position: absolute;
-        width: 56px;
-        height: 72px;
-        background-image: url($miniLogo);
-        background-repeat:no-repeat;
-      }
-    }
-
-    &:before {
-      top: 0;
-      left: 0;
-      content: "";
-      position: absolute;
-      width: 256px;
-      height: 367px;
-      background-image: url($quieroDonar2);
-      background-repeat:no-repeat;
-    }
-  }
-}
 
 
 /*--- • 3 • c REGLAS de los BADGETS --------------------------*/

@@ -180,25 +180,6 @@ ul#sobre_derecha>li:last-child a{
 .content_container {
     border-top: none;
 }
-.h_container {
-    position: relative;
-    left: 0; top: 0;
-    margin-left: 0;
-    width: auto; height: auto;
-    text-align: center;
-    padding: 25px 5px;
-}
-.h_container h1 {
-    color: black;
-    margin-bottom: 5px;
-}
-.h_container~.col_der {
-    padding-top: 5px;
-}
-.col_der {
-    padding: 5px 10px 25px 10px;
-    min-height: inherit;
-}
 .col_div {
     margin: 0 auto;
 }
@@ -212,15 +193,8 @@ margin: 5px 0;
 .col_div iframe{
     width: 100% !important;
 }
-.col_izq {
-    position: relative;
-    width: auto; height: auto;
-    padding:  55px 10px;
-}
-.boton_donar {
-    margin: 0 auto;
-    float: none;
-}
+
+
 .campania {
     color: $mainRed;
 }

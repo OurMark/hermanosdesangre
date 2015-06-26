@@ -1,3 +1,89 @@
+.navbar-brand {
+  color: $white;
+
+  &:focus, &:active, &:visited {
+    color: $white;
+  }
+  .navbar-logo-hermanos {
+    position: relative;
+    bottom: 5px;
+    right: 11px;
+    width: 32px;
+  }
+}
+.dropdown-toggle {
+  color: $white;
+}
+.container-fluid > .navbar-collapse {
+  width: 100%;
+}
+.nav > li {
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.navbar-nav > li > a {
+  color: $white;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: $softRed;
+  color: $white;
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background-color: $mainRed;
+  border-color: $softRed;
+  color: $white;
+}
+.navbar-nav .open .dropdown-menu > li > a {
+  color: $white;
+
+  &:hover {
+    background-color: $mainRed;
+  }
+}
+.navbar-content {
+  background: $softRed;
+  border-bottom: 4px solid $mainRed;
+  border-radius: 0 0 2px 2px;
+}
+.navbar-toggle {
+  margin-right: 0;
+}
+.icon-bar {
+  background-color: $white;
+}
+.faldon_top_container {
+  @extend .col-1;
+  font-family: $mainFont;
+  font-size: 14px;
+  position: fixed;
+  z-index: 2;
+  height: 220px;
+
+  .sub-menu {
+    ul {
+      li {
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+.faldon_top {
+  position: relative;
+  height: 220px;
+  margin: 0 auto;
+}
+.logo_top_container {
+  position: absolute;
+  top: 12px;
+  left: 4px;
+  background: $mainRed;
+  border-bottom: solid 2px $mainRed;
+  -webkit-box-shadow: black 0px 0px 25px -5px;
+  box-shadow: black 0px 0px 25px -5px;
+  z-index: 9999;
+}
 .navbar-logo {
   @include span(1 of 2);
   background: $softRed;
