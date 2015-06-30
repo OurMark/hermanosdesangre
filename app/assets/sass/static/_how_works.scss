@@ -1,0 +1,104 @@
+/*====================================
+=            how it works            =
+====================================*/
+
+.how-works {
+  clear: both;
+  background: $white;
+  padding: 10px;
+
+
+  p {
+    font-weight: lighter;
+  }
+
+  span {
+    margin: 5px 0;
+  }
+
+  .quieres-donar {
+    text-align: center;
+    a {
+      color: $mainRed;
+      text-align: center;
+      &:after {
+        background-image: url($gotas);
+        background-position: 0 -5px;
+        content: "";
+        display: inline-block;
+        height: 18px;
+        width: 16px;
+      }
+    }
+  }
+
+  .list-info {
+    list-style: none;
+    position: relative;
+    opacity: 1;
+    top: 0;
+
+    li {
+      color: $mainGray;
+      display: inline-block;
+      float: none;
+      margin-bottom: 15px;
+      margin-right: 0;
+      text-align: left;
+      width: 80%;
+
+      .ico-content {
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        width: 20px;
+
+        i {
+          background-image: url($gotas);
+          background-position: 0 -5px;
+          content: "";
+          display: block;
+          height: 18px;
+          width: 16px;
+        }
+      }
+
+      .text-content {
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        font-weight: lighter;
+        @extend .col-9-10;
+      }
+    }
+  }
+}
+
+.col_izq {
+  height: auto;
+  background: $softRed;
+  display: inline-block;
+  vertical-align: top;
+
+  .how-works-boton-donar {
+    @include gota_donar;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .how-works {
+    margin-top: 100px;
+    padding: 20px;
+
+  }
+
+  .col_izq .how-works-boton-donar{
+    position: absolute;
+    left: 31%;
+    top: 280px;
+  }
+}

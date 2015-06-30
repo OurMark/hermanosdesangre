@@ -11,6 +11,9 @@
 // variables
 @import "variables";
 
+//mixins
+@import "mixin";
+
 // grids
 @import "grids";
 // project
@@ -22,4 +25,5 @@
 
 //views
 
-@import "static/home"
+@import "static/home";
+@import "static/how_works";

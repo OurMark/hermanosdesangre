@@ -20,7 +20,6 @@
 .nav > li {
   border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
-
 .navbar-nav > li > a {
   color: $white;
 }
@@ -52,12 +51,13 @@
   background-color: $white;
 }
 .faldon_top_container {
-  @extend .col-1;
-  font-family: $mainFont;
-  font-size: 14px;
+  display: none;
+  font-size: 1em;
   position: fixed;
+  top:0;
   z-index: 2;
   height: 220px;
+  width: 100%;
 
   .sub-menu {
     ul {
@@ -216,7 +216,46 @@ ul#sobre_derecha li a:hover {
 #sobre_derecha .HS_email:hover {
   width: 75px;
 }
+
+.HS_email,
+.st_facebook,
+.st_twitter {
+  display: none;
+}
+
 .HS_email a {
   padding: 0 21px;
   color: $softRed;
+}
+
+@media (max-width: 767px) {
+   .mobile-navbar {
+    display: none;
+  }
+}
+
+@media (min-width:768px) {
+
+
+  .faldon_top_container {
+    display: block;
+  }
+
+  .navbar-logo a {
+    width: 110%;
+  }
+
+  ul#sobre_derecha {
+    right: 2%;
+  }
+}
+@media (min-width:992px) {
+  .navbar-logo a {
+    width: 100%;
+  }
+  .HS_email,
+  .st_facebook,
+  .st_twitter {
+    display: inline-block;
+  }
 }

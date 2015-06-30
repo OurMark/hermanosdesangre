@@ -6,6 +6,9 @@
   margin: 0 auto;
   z-index: 1;
 
+  .head-content {
+  }
+
   .h_container-col {
     padding:0;
   }
@@ -26,31 +29,43 @@
   .blood-text {
     color: $softRed;
   }
+  .video-contener {
 
-  .video-home {
-    background: $white;
-    margin-top: 20px;
-    border-top: 4px solid $softRed;
+    .video-home {
+      background: $white;
+      margin-top: 20px;
+      border-top: 4px solid $softRed;
 
-    .video-home-iframe {
-      width: 100%;
-      height: 300px;
-      margin-bottom: 20px;
+
+      .video-home-iframe {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: $softBlack;
+        letter-spacing: 1px;
+        font-weight: lighter;
+        line-height: 25px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
     }
+  }
+  .foot-legend {
+    padding: 20px 0 0 30px;
 
     p {
-      color: $softBlack;
-      letter-spacing: 1px;
-      font-weight: lighter;
-      line-height: 25px;
-      margin-bottom: 20px;
-      text-align: center;
+      color: $saddleBrown;
+      font-size: 2em;
+      font-weight: bold;
+      width: 200px;
     }
   }
 }
 .col_der {
   background: $white;
-  min-height: 966px;
   padding-left: 50%;
   padding: 5px 10px 25px 10px;
 
@@ -58,6 +73,7 @@
     min-height: 805px;
   }
 }
+
 .col_izq {
   height: auto;
   background: $softRed;
@@ -65,54 +81,105 @@
   vertical-align: top;
 
   .boton_donar {
-    background-image: url($quieroDonar2);
-    background-repeat: no-repeat;
-    background-position: 50%;
-    margin: 0 auto;
-    text-align: center;
+    @include gota_donar;
+    position: relative;
+    left: 0;
+    bottom: 0;
     display: block;
-    width: 256px;
-    height: 400px;
+  }
+}
 
-    a {
-      bottom: 0;
-      color: $saddleBrown;
-      font-size: 2.5em;
-      font-weight: bold;
-      height: 367px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      width: 256px;
+@media (min-width:768px) {
 
-      p {
-        line-height: 40px;
-        margin: 0 20px;
-        position: absolute;
-        bottom: 100px;
-        left: 0;
-        right: 0;
+  .col_izq {
+    background: $softRed;
+    bottom: 0;
+    min-height: 1024px;
+    padding-right: 0;
+    padding-left: 2%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
 
-        &:before {
-          background-image: url($miniLogo);
-          background-repeat: no-repeat;
-          content: "";
-          height: 72px;
-          left: 0;
-          margin: 0 auto;
-          position: absolute;
-          right: 0;
-          top: -100px;
-          width: 56px;
+    .boton_donar {
+      @include gota_donar;
+      position: none;
+    }
+  }
+
+  .h_container {
+    position: absolute;
+    right: 2%;
+    top: 27%;
+    width: 95%;
+
+    span {
+      display: inline-block;
+      margin-left: 19px;
+      font-size: 0.8em;
+      &:first-child {
+        color: $white;
+      }
+    }
+
+    .video-contener {
+      .video-home {
+        padding: 40px 10px 60px 60px;
+        border-bottom: 4px solid $softRed;
+
+        p {
+          text-align: left;
+        }
+
+        .video-home-iframe {
+          margin-bottom: 0;
         }
       }
     }
   }
+
+  .h_container .video-contener .video-home p {
+    letter-spacing: 0;
+  }
 }
-.quiero-donar {
-}
-@media (min-width:768px) {
-}
+
 @media (min-width:992px) {
+  .h_container {
+    right: 3%;
+
+    span {
+      margin-left: 39px;
+      font-size: 0.9em;
+    }
+
+    .blood-text {
+      background: $white;
+    }
+  }
 }
+
 @media (min-width:1200px) {
+  .h_container {
+    width: 67%;
+    span {
+      margin-left: 25px;
+    }
+  }
+
+  .video-home {
+    width: 75%;
+  }
+
+  .info-donantes {
+    position: relative;
+    left:-24%;
+    top:0;
+  }
+
+  .col_izq .boton_donar {
+    display: block;
+    left: 25%;
+    top: 40%;
+  }
 }

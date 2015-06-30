@@ -30,6 +30,9 @@ body {
   font-size: 14px;
 }
 
+.content_container {
+}
+
 /*--- • 1 • b REGLAS del CONTENIDO ---------------------------*/
 
 .col_div{
@@ -185,6 +188,91 @@ form INPUT[type="submit"]:focus{
     outline: none;
 }
 /*--- • 1 • d REGLAS de SECCIONES ----------------------------*/
+
+.Secciones h2 {
+  position: absolute;
+}
+.Secciones ul,
+.Secciones ol {
+  display: inline-block;
+  padding-left: 35px;
+}
+.Secciones ul {
+  opacity: 0;
+  -webkit-transition: opacity 0.7s ease;
+  transition: opacity 0.7s ease;
+  top: 56px;
+}
+.Secciones ul.seleccionada {
+  opacity: 1;
+}
+.Secciones li {
+  display: block;
+  float: left;
+  width: 154px;
+  margin-right: 20px;
+  margin-bottom: 26px;
+  text-align: center;
+  color: $mainRed;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+}
+.Secciones li:nth-child(2n+1) {
+  clear: both;
+}
+.Secciones li strong {
+  display: block;
+}
+.Secciones h2 {
+  left: 16px;
+  top: 20px;
+  cursor: pointer;
+  opacity: 0.3;
+  -webkit-transition: opacity 500ms ease;
+  transition: opacity 500ms ease;
+}
+.Secciones h2:hover {
+  opacity: 0.8;
+}
+.Secciones h2:last-of-type {
+  right: 0;
+  left: inherit;
+}
+.Secciones h2.seleccionada {
+  border-bottom: solid 2px $mainRed;
+  opacity: 1;
+}
+.Secciones p:last-child:after {
+  content: "";
+  background-image: url($gotas2);
+  background-position: 0 -5px;
+  height: 18px;
+  width: 16px;
+  display: inline-block;
+}
+.Secciones a {
+  color: $mainRed;
+  text-decoration: none;
+}
+
+.Secciones a:active,
+.Secciones a:hover,
+.Secciones a:focus {
+  opacity: 0.8;
+  outline: 0;
+}
+
+.Secciones > div {
+  position: relative;
+  opacity: 0;
+  width: 400px;
+  -webkit-transition: opacity 700ms ease-in;
+  transition: opacity 700ms ease-in;
+  height: 0;
+  overflow: hidden;
+}
+
 /*OPCIONES*/
 .donors {
   max-width: 400px;
@@ -225,21 +313,7 @@ form INPUT[type="submit"]:focus{
     position: absolute;
     top: 110px; left: -22px;
 }
-/*SECCIONES*/
-.about,
-.Secciones{
-    clear: both;
-    background: $white;
-}
-.Secciones>div {
-    position: relative;
-    opacity: 0;
-    width: 400px;
-    -webkit-transition: opacity 700ms ease-in;
-    transition: opacity 700ms ease-in;
-    height: 0;
-    overflow: hidden;
-}
+
 /*MODIFICACIÓN AL SELECCIONAR*/
 .Opciones.seleccionada{
     margin-top: -17px;
@@ -262,77 +336,7 @@ form INPUT[type="submit"]:focus{
   animation: noscroll 400ms;/*para evitar que aparezca el scroll*/
 }
 /*CONTIDO DE SECCIONES*/
-.Secciones ul, .Secciones h2{
-    position: absolute;
-}
-.Secciones ul, .Secciones ol {
-    display: inline-block;
-    padding-left: 35px;
-}
-.Secciones ul{
-    opacity: 0;
-    -webkit-transition: opacity 0.7s ease;
-    transition: opacity 0.7s ease;
-    top: 56px;
-}
-.Secciones ul.seleccionada{
-    opacity: 1;
-}
-.Secciones li {
-    display: block;
-    float: left;
-    width: 154px;
-    margin-right: 20px;
-    margin-bottom: 26px;
-    text-align: center;
-    color: $mainRed;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 24px;
-}
-.Secciones li:nth-child(2n+1) {
-    clear:both;
-}
-.Secciones li strong{
-display: block;
-}
-.Secciones h2{
-    left: 16px;
-    top: 20px;
-    cursor: pointer;
-    opacity: 0.3;
-    -webkit-transition: opacity 500ms ease;
-    transition: opacity 500ms ease;
-}
-.Secciones h2:hover{opacity: 0.8;}
-.Secciones h2:last-of-type{
-    right: 0;
-    left: inherit;
-}
-.Secciones h2.seleccionada{
-    border-bottom: solid 2px $mainRed;
-    opacity: 1;
-}
-.Secciones p:last-child:after{
-    content: "";
-    background-image: url($gotas2);
-    background-position: 0 -5px;
-    height: 18px;
-    width: 16px;
-    display: inline-block;
-}
 
-.Secciones a {
-    color: $mainRed;
-    text-decoration: none;
-}
-
-.Secciones a:active,
-.Secciones a:hover,
-.Secciones a:focus {
-    opacity: 0.8;
-    outline: 0;
-}
 
 /*--- • 1 • e REGLAS EXCLUSIVAS del CONTENIDO SIN COLUMNAS ---*/
 .container_menu {
@@ -341,42 +345,6 @@ display: block;
     position: fixed; z-index:1;
     @extend .col-1; height: 55px;
     overflow: hidden;
-}
-/*--- • 1 • f REGLAS EXCLUSIVAS del CONTENIDO LISTADO ---*/
-.list-info ul {
-    list-style: none;
-    position: relative;
-    opacity: 1;
-    top: 0;
-}
-.list-info li {
-    color: $mainGray;
-    display: inline-block;
-    float: none;
-    margin-bottom: 15px;
-    margin-right: 0;
-    text-align: left;
-    width: 80%;
-}
-.list-info .ico-content {
-    display: inline-block;
-    position: relative;
-    vertical-align: middle;
-    width: 20px;
-}
-.list-info .ico-content i{
-      background-image: url($gotas);
-      background-position: 0 -5px;
-      content: "";
-      display: block;
-      height: 18px;
-      width: 16px;
-}
-.list-info .text-content {
-    display: inline-block;
-    position: relative;
-    vertical-align: middle;
-    @extend .col-9-10;
 }
 
 /*.container_menu~.col_none {margin-top:  55px;}*/
@@ -803,4 +771,8 @@ text-align: left;
 .listado_meses ul li {
   display: inline;
   background-color: $whiteSmoke;
+}
+
+@media (min-width: 768px) {
+
 }
