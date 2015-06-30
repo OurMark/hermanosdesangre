@@ -228,14 +228,8 @@ ul#sobre_derecha li a:hover {
   color: $softRed;
 }
 
-@media (max-width: 767px) {
-   .mobile-navbar {
-    display: none;
-  }
-}
 
 @media (min-width:768px) {
-
 
   .faldon_top_container {
     display: block;

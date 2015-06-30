@@ -167,8 +167,14 @@
     }
   }
 
-  .video-home {
-    width: 75%;
+  .video-contener {
+    position: relative;
+    left: -24%;
+    top:0;
+
+    .video-home {
+      width: 100%;
+    }
   }
 
   .info-donantes {
@@ -179,7 +185,7 @@
 
   .col_izq .boton_donar {
     display: block;
-    left: 25%;
+    left: 3%;
     top: 40%;
   }
 }
