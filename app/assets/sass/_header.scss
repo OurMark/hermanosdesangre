@@ -98,25 +98,29 @@
     position: relative;
   }
 }
-.logo {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  background: url($biglogo) no-repeat center;
+
+.logo-container {
+  padding: 30px 0 0 0;
+  float: right;
 }
+
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 10px;
+}
+
 .text-logo {
-  bottom: 0;
+  display: inline-block;
+  vertical-align: bottom;
   color: $white;
-  font-size: 42px;
+  font-size: 3em;
   line-height: 55px;
-  margin-left: 50%;
+  width: 200px;
   padding: 0;
-  position: absolute;
-  right: 0;
   text-transform: uppercase;
 }
+
 .menus {
   height: 40%;
   background-color: #ffffff;
@@ -230,7 +234,6 @@ ul#sobre_derecha li a:hover {
 
 
 @media (min-width:768px) {
-
   .faldon_top_container {
     display: block;
   }
@@ -244,6 +247,9 @@ ul#sobre_derecha li a:hover {
   }
 }
 @media (min-width:992px) {
+  .logo {
+    padding: 0 30px;
+  }
   .navbar-logo a {
     width: 100%;
   }
