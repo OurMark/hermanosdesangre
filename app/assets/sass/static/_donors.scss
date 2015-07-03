@@ -1,15 +1,65 @@
 /*===================================================
 =            Donnors seccion and options            =
 ===================================================*/
+.bolsa {
+  background-color: $softRed;
+  background-image: url($bolsa);
+  background-size: 46px 25px;
+  background-repeat: no-repeat;
+  background-position: 18px 32px;
+  position: absolute;
+  height: 62px;
+  width: 64px;
+  left: 168px;
+  @include border-radius(50%);
+
+  &:before {
+    border-bottom-width: 0;
+    border-radius: 6px;
+    border: solid 2px white;
+    bottom: 25px;
+    color: $softRed;
+    content: "---";
+    display: block;
+    font-size: 21px;
+    left: 18px;
+    margin: auto;
+    position: absolute;
+    right: 22px;
+    text-align: center;
+    top: 9px;
+    @include transition(border-bottom-width, 500ms, ease);
+  }
+}
+
+.bolsa:hover:before {
+  border-bottom-width: 7px;
+}
+
+.bolsa.llena:before {
+  border-bottom-width: 26px;
+}
+
+.bolsa.llena:hover:before {
+  border-bottom-width: 19px;
+}
+
+.col_div .cota {
+  line-height: 17px;
+  font-size: 13px;
+  font-style: italic;
+}
+
+
 .Secciones {
   h2 {
     position: absolute;
+    font-size: 1em;
     left: 16px;
     top: 20px;
     cursor: pointer;
     opacity: 0.3;
-    -webkit-transition: opacity 500ms ease;
-    transition: opacity 500ms ease;
+    @include transition(opacity, 500s, ease);
 
     &:hover {
       opacity: 0.8;
@@ -33,9 +83,9 @@
 
   ul {
     opacity: 0;
-    -webkit-transition: opacity 0.7s ease;
-    transition: opacity 0.7s ease;
-    top: 56px;
+    position: absolute;
+    top: 70px;
+    @include transition(opacity, 0.7s, ease);
 
     &.seleccionada {
       opacity: 1;
@@ -65,13 +115,12 @@
   }
 
   & > div {
-    position: relative;
-    opacity: 0;
-    width: 400px;
-    -webkit-transition: opacity 700ms ease-in;
-    transition: opacity 700ms ease-in;
     height: 0;
+    opacity: 0;
     overflow: hidden;
+    position: relative;
+    @include transition(opacity, 0.7s, ease-in);
+    width: 400px;
   }
 
   p:last-child:after {
@@ -112,37 +161,34 @@
 .Opciones {
   margin-left: 15px;
   margin-top: 60px;
-  transition: height 400ms ease;
-  -webkit-transition: height 400ms ease;
+  @include transition(height, 400ms, ease);
   overflow: hidden;
 
-  & > div {
+  div {
     -khtml-user-select: none;
     -moz-user-select: none;
     background-color: $softRed;
     border-bottom: solid 3px $mainRed;
-    border-radius: 0 0 3px 3px;
-    box-shadow: #000 0px 0px 25px -5px;
-    -webkit-box-shadow: #000 0px 0px 25px -5px;
-    color: white;
+    @include border-radius(0, 3px);
+    @include box-shadow($black, 0px, 0px, 25px, -5px);
+    color: $white;
     cursor: pointer;
     float: left;
-    font-size: 1em;
-    font-weight: 300;
+    font-size: 1.1em;
+    font-weight: lighter;
     height: 60px;
     margin: 18px 18px 134px 18px;
     padding: 25px 20px 0 20px;
     position: relative;
     text-align: center;
-    width: 100px;
+    width: 130px;
 
     span {
       color: $mainRed;
       line-height: 18px;
       position: absolute;
       left: -22px;
-      top: 80px;
-      text-align: left;
+      top: 110px;
       width: 85%;
     }
   }
@@ -151,14 +197,14 @@
     margin-top: -17px;
     height: auto;
 
-    & > div,
+    div,
     span {
       display: none;
     }
 
-    & > .seleccionada {
+    .seleccionada {
       display: block;
-      margin: 87px 0px 87px 140px;
+      margin: 87px 0px 87px 120px;
     }
   }
 }

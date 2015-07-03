@@ -1,28 +1,3 @@
-/* CSS HERMANOS DE SANGRE - Indice
-
-• 1 REGLAS GENERALES
---- • 1 • a CABECERA
---- • 1 • b CONTENIDO
---- • 1 • c FORMULARIOS
---- • 1 • d SECCIONES
---- • 1 • e CONTENIDO SIN COLUMNAS
---- • 1 • f CONTENIDO LISTADO
-
-• 2 REGLAS EXCLUSIVAS (por páginas)
---- • 2 • a HOME
---- • 2 • b DONANTES
---- • 2 • c ¿QUIENES SOMOS?
---- • 2 • d ENTRAR Y REGISTRAR
---- • 2 • e PERFIL de USUARIO
---- • 2 • f LISTA DE ONGS
-
-• 3 REGLAS DE PARCIALES
---- • 3 • a BARRA DE PORCENTAJE
---- • 3 • b GOTA
---- • 3 • c BADGETS
-
-• 4 ANIMACIONES
-*/
 body {
   background: $white;
   font-family: $mainFont;
@@ -223,50 +198,7 @@ form INPUT[type="submit"]:focus{
 }
 
 /*--- • 2 • b REGLAS EXCLUSIVAS de DONANTES ------------------*/
-.bolsa{
-    background-color: $softRed;
-    background-image:url($bolsa);
-    background-size: 46px 25px;
-    background-repeat: no-repeat;
-    background-position: 18px 32px;
-    position: absolute;
-    height: 62px;
-    width: 64px;
-    left: 168px;
-    border-radius: 50%;
-}
-.bolsa:before{
-    content: "---";
-    display: block;
-    position: absolute;
-    border: solid 2px white;
-    margin: auto;
-    top: 9px;
-    bottom: 25px;
-    left: 18px;
-    right: 22px;
-    border-radius: 6px;
-    border-bottom-width: 0;
-    -webkit-transition: border-bottom-width 500ms ease;
-    transition: border-bottom-width 500ms ease;
-    text-align: center;
-    font-size: 21px;
-    color: $softRed;
-}
-.bolsa:hover:before{
-    border-bottom-width: 7px;
-}
-.bolsa.llena:before{
-    border-bottom-width: 26px;
-}
-.bolsa.llena:hover:before{
-    border-bottom-width: 19px;
-}
-.col_div .cota{
-    line-height: 17px;
-    font-size: 13px;
-    font-style: italic;
-}
+
 
 /*--- • 2 • c REGLAS EXCLUSIVAS de ¿QUIENES SOMOS? -----------*/
 .col_div.us {
