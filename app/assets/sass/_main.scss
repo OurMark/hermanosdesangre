@@ -556,6 +556,59 @@ text-align: left;
   background-color: $whiteSmoke;
 }
 
-@media (min-width: 768px) {
 
+.col_der {
+  background: $white;
+  padding-left: 50%;
+  padding: 5px 10px 25px 10px;
+
+}
+
+.col_izq {
+  height: auto;
+  background: $softRed;
+  display: inline-block;
+  vertical-align: top;
+
+  .boton_donar {
+    @include gota_donar;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .col_der {
+    &.columna {
+      min-height: 805px;
+    }
+  }
+
+  .col_izq {
+    background: $softRed;
+    bottom: 0;
+    min-height: 1024px;
+    padding-right: 0;
+    padding-left: 2%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+
+    .boton_donar {
+      @include gota_donar;
+      position: none;
+    }
+  }
+
+}
+
+@media (min-width:1200px) {
+  .col_izq .boton_donar {
+    display: block;
+    left: 3%;
+    top: 40%;
+  }
 }

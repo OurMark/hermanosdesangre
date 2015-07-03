@@ -87,7 +87,6 @@
 .navbar-logo {
   @include span(1 of 2);
   background: $softRed;
-  height: 100%;
   padding-right: 1%;
 
   a {
@@ -100,7 +99,7 @@
 }
 
 .logo-container {
-  padding: 30px 0 0 0;
+  padding: 15px 0 0 0;
   float: right;
 }
 
