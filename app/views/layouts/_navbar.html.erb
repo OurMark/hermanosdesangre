@@ -2,10 +2,8 @@
   <div class="faldon_top">
     <div class="navbar-logo col-1-2">
       <%= link_to root_path, :class => "col-1" do %>
-        <figure class="logo-container">
-          <%= image_tag("big-logo.png", :class=> "logo") %>
-          <figcaption class="text-logo">Hermanos de sangre</figcaption>
-        </figure>
+          <span class="logo col-1-2"></span>
+          <h1 class="text-logo col-1-2">Hermanos de sangre</h1>
       <% end %>
     </div>
     <div class="menus col-1-2 last">
@@ -44,47 +42,10 @@
       </ul>
     </div>
     <div class="abrir-menu"><div></div></div>
+    <script type="text/javascript">
+    $(".abrir-menu").click(function(){
+      $(".abrir-menu, .abrir-menu div, .menus").toggleClass("mAbierto");
+    });
+    </script>
   </div>
-</div>
-
-<!-- mobile menu -->
-<div class="container-fluid navbar-content hidden-sm hidden-md hidden-lg">
-  <a href="<%= root_path %>" class="navbar-brand">
-    Hermanos de Sangre
-  </a>
-  <div class="nav-header">
-    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-  </div>
-  <nav class="navbar-collapse collapse" id="bs-navbar">
-    <ul class="nav navbar-nav">
-      <li class="dropdown">
-        <a href="<%= donors_path %>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Donantes <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><%= link_to "Impacto", impact_path %></li>
-          <li><%= link_to "Requisitos", requirements_path %></li>
-          <li><%= link_to "Consejos", advises_path %></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="<%= about_us_path %>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Acerca De <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><%= link_to "Cómo funciona", how_works_path %></li>
-          <li><%= link_to "¿Quiénes somos?", about_us_path %></li>
-          <li><%= link_to "La campaña", campaign_path %></li>
-        </ul>
-      </li>
-      <% if current_user %>
-      <li><%= link_to "Mi cuenta",user_path(current_user) %></li>
-      <li><%= link_to "SALIR", destroy_user_session_path, :method => :delete %></li>
-      <% else %>
-      <li><%= link_to "Regístrate", new_user_registration_path %></li>
-      <li><%= link_to "Ingresa", user_session_path %></li>
-      <% end %>
-    </ul>
-  </nav>
 </div>

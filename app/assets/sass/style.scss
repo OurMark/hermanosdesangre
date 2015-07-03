@@ -3,29 +3,14 @@
 
 @import "compass";
 @import "susy";
-
-//bootstrap
-@import "bootstrap-sprockets";
-@import "bootstrap";
-
 // variables
 @import "variables";
 
-//mixins
-@import "mixin";
-
 // grids
 @import "grids";
-
 // project
 @import "header";
 
 // from old project
-@import "main";
+@import "custom";
 @import "mobile";
-
-//views
-
-@import "static/home";
-@import "static/how_works";
-@import "static/donors";

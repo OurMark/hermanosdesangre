@@ -8,7 +8,8 @@
 */
 
 /* • 1 REGLAS PANTALLAS MENORES A 798px, IPAD y SMARTPHONE ---*/
-@media (max-width: 768px){ /*@media only screen and (max-device-width: 798px)*/
+@media (max-width: 798px){ /*@media only screen and (max-device-width: 798px)*/
+html{overflow: visible;}
 
 /*--- • 1 • a MENÚ MOBILE -----------------------------------*/
 
@@ -95,7 +96,7 @@ ul#sobre_derecha>li:last-child a{
     display: inline-block;
     margin: 0;
     padding: 12px;
-    text-transform: uppercase;
+    text-transform: uppercase;    
 }
 .HS_email:hover {width: auto;}
 .HS_email a{padding: 0;}
@@ -105,7 +106,7 @@ ul#sobre_derecha>li:last-child a{
 /*-----botón abrir menú-------*/
 .abrir-menu {
     cursor: pointer;
-    height: 36px;
+    height: 36px; 
     width: 36px;
     position: absolute;
     right: 10px; bottom: 25px;
@@ -177,8 +178,27 @@ ul#sobre_derecha>li:last-child a{
 }
 
 /*--- • 1 • b CONTENIDO VARIOS-------------------------------*/
-.content_container {
+.content_container {    
     border-top: none;
+}
+.h_container {
+    position: relative;
+    left: 0; top: 0;
+    margin-left: 0;
+    width: auto; height: auto;
+    text-align: center;
+    padding: 25px 5px;
+}
+.h_container h1 {
+    color: black;
+    margin-bottom: 5px;
+}
+.h_container~.col_der {
+    padding-top: 5px;
+}
+.col_der {
+    padding: 5px 10px 25px 10px;
+    min-height: inherit;
 }
 .col_div {
     margin: 0 auto;
@@ -193,8 +213,15 @@ margin: 5px 0;
 .col_div iframe{
     width: 100% !important;
 }
-
-
+.col_izq {
+    position: relative;
+    width: auto; height: auto;
+    padding:  55px 10px;
+}
+.boton_donar {
+    margin: 0 auto;
+    float: none;
+}
 .campania {
     color: $mainRed;
 }
@@ -208,11 +235,11 @@ margin: 5px 0;
     margin-right: 0;
 }
 .col_div form INPUT[type="password"], .col_div form INPUT[type="text"], .col_div form INPUT[type="email"]{
-    width:100%;
+    width:100%;  
 }
 .slogan {
     margin: 45px auto;
-}
+}   
 .pregunta {
     margin: 8px 0px;
 }
@@ -231,7 +258,7 @@ margin: 5px 0;
     height: auto;
     text-align: center;
 }
-.slogan p{
+.slogan p{    
     display: inline-block;
 }
 .slogan p, .slogan h2, .slogan h3 {
