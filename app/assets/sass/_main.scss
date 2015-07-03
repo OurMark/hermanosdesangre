@@ -1,181 +1,15 @@
-/* CSS HERMANOS DE SANGRE - Indice
-
-• 1 REGLAS GENERALES
---- • 1 • a CABECERA
---- • 1 • b CONTENIDO
---- • 1 • c FORMULARIOS
---- • 1 • d SECCIONES
---- • 1 • e CONTENIDO SIN COLUMNAS
---- • 1 • f CONTENIDO LISTADO
-
-• 2 REGLAS EXCLUSIVAS (por páginas)
---- • 2 • a HOME
---- • 2 • b DONANTES
---- • 2 • c ¿QUIENES SOMOS?
---- • 2 • d ENTRAR Y REGISTRAR
---- • 2 • e PERFIL de USUARIO
---- • 2 • f LISTA DE ONGS
-
-• 3 REGLAS DE PARCIALES
---- • 3 • a BARRA DE PORCENTAJE
---- • 3 • b GOTA
---- • 3 • c BADGETS
-
-• 4 ANIMACIONES
-*/
-/* • 1 GENERALES ---------------------------------------------*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, img, ins, kbd, q, s, samp,
-small, strike, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    text-decoration: none;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-html { overflow-x: hidden;}
 body {
-    line-height: 1;
-    background-color:$softRed;
-    color: $mainGray;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  background: $white;
+  font-family: $mainFont;
+  font-weight: normal;
+  font-size: 14px;
 }
 
-/*--- • 1 • a REGLAS de la CABECERA --------------------------*/
-.faldon_top_container{
-    @extend .col-1;
-    font-family: $mainFont;
-    font-size: 14px;
-    position: fixed;
-    z-index:2;
-    height: 220px;
+.content_container {
 }
-.faldon_top{
-    position: relative;
-    height: 220px;
-    margin: 0 auto;
-}
-.logo_top_container{
-    position: absolute;
-    top: 12px;
-    left: 4px;
-    background: $mainRed;
-    border-bottom: solid 2px $mainRed;
-    -webkit-box-shadow: black 0px 0px 25px -5px;
-    box-shadow: black 0px 0px 25px -5px;
-    z-index: 9999;
-}
-/*MENU*/
-
 
 /*--- • 1 • b REGLAS del CONTENIDO ---------------------------*/
-.content_container{
-    @extend .col-1;
-    position: relative;
-    background: $white;
-    font-family: $mainFont;
-}
-.h_container{
-    position: absolute;
-    top: 245px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    max-width: 800px;
-    width: auto;
-    height: 35px;
-    z-index: 1;
-    // text-align: center;
-}
 
-h1 {
-    font-size: 30px;
-    margin-bottom: 35px;
-}
-.h_container h1 {
-    font-family: $mainFont;
-    text-align: center;
-    color: white;
-    padding: 5px;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
-
-.h_container span {
-  margin-left: 15px;
-}
-
-.blood-text {
-    color: $softRed;
-}
-
-
-.video-home {
-  padding: 65px 90px;
-  background: $white;
-  margin-top: 20px;
-  border-top: 4px solid $softRed;
-
-  p {
-    color: $softBlack;
-    letter-spacing: 1px;
-    font-weight: 200;
-    line-height: 25px;
-    margin-bottom: 20px;
-  }
-}
-
-.col_der{
-  background: white;
-  min-height: 966px;
-  padding-left: 50%;
-
-  &.columna {
-    min-height: 805px;
-  }
-}
-.col_izq{
-    @extend .col-1-2;
-    position: absolute;
-    height:100%; 
-    top: 0; 
-    left: 0; 
-    bottom: 0;
-    padding-right: 0;
-    padding-left: 2%;
-    background: $softRed;
-}
-
-.col_izq .col_div {float: right;}
 .col_div{
   overflow: hidden;
   font-family: $mainFont;
@@ -328,155 +162,7 @@ form INPUT[type="submit"]:focus{
     border-bottom: solid $mainRed 2px;
     outline: none;
 }
-/*--- • 1 • d REGLAS de SECCIONES ----------------------------*/
-/*OPCIONES*/
-.donors {
-  max-width: 400px;
-}
-.Opciones {
-    margin-left: 15px;
-    margin-top: 60px;
-    height: auto;
-    -webkit-transition: height 400ms ease;
-    transition: height 400ms ease;
-    overflow: hidden;
-}
-.Opciones>div{
-    font-size: 115%;
-    width: 100px;
-    height: 60px;
-    background-color: $softRed;
-    color: white;
-    font-weight: 300;
-    text-align: center;
-    padding: 25px 20px 0 20px;
-    margin: 18px 18px 134px 18px;
-    cursor: pointer;
-    border-bottom: solid 3px $mainRed;
-    border-radius: 0 0 3px 3px;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-box-shadow: black 0px 0px 25px -5px;
-    box-shadow: black 0px 0px 25px -5px;
-    float:left;
-    position: relative;
-}
-.Opciones>div span{
-    width: 85%;
-    font-size: 13px;
-    line-height: 18px;
-    color: $mainRed;
-    position: absolute;
-    top: 110px; left: -22px;
-}
-/*SECCIONES*/
-.about,
-.Secciones{
-    clear: both;
-    background: $white;
-}
-.Secciones>div {
-    position: relative;
-    opacity: 0;
-    width: 400px;
-    -webkit-transition: opacity 700ms ease-in;
-    transition: opacity 700ms ease-in;
-    height: 0;
-    overflow: hidden;
-}
-/*MODIFICACIÓN AL SELECCIONAR*/
-.Opciones.seleccionada{
-    margin-top: -17px;
-    height: auto;
-}
-.Opciones.seleccionada>div, .Opciones.seleccionada span{
-  display:none;
-  /*importante ocultar las opciones para asegurarse de elegir
-  solo una a la vez*/
-}
-.Opciones.seleccionada>.seleccionada {
-  display:block;
-  margin: 87px 0px 87px 105px;
-}
-.Secciones>.seleccionada {
-  opacity: 1;
-  height: auto;
-  min-height: 406px;
-  -webkit-animation: noscroll 400ms;
-  animation: noscroll 400ms;/*para evitar que aparezca el scroll*/
-}
-/*CONTIDO DE SECCIONES*/
-.Secciones ul, .Secciones h2{
-    position: absolute;
-}
-.Secciones ul, .Secciones ol {
-    display: inline-block;
-    padding-left: 35px;
-}
-.Secciones ul{
-    opacity: 0;
-    -webkit-transition: opacity 0.7s ease;
-    transition: opacity 0.7s ease;
-    top: 56px;
-}
-.Secciones ul.seleccionada{
-    opacity: 1;
-}
-.Secciones li {
-    display: block;
-    float: left;
-    width: 154px;
-    margin-right: 20px;
-    margin-bottom: 26px;
-    text-align: center;
-    color: $mainRed;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 24px;
-}
-.Secciones li:nth-child(2n+1) {
-    clear:both;
-}
-.Secciones li strong{
-display: block;
-}
-.Secciones h2{
-    left: 16px;
-    top: 20px;
-    cursor: pointer;
-    opacity: 0.3;
-    -webkit-transition: opacity 500ms ease;
-    transition: opacity 500ms ease;
-}
-.Secciones h2:hover{opacity: 0.8;}
-.Secciones h2:last-of-type{
-    right: 0;
-    left: inherit;
-}
-.Secciones h2.seleccionada{
-    border-bottom: solid 2px $mainRed;
-    opacity: 1;
-}
-.Secciones p:last-child:after{
-    content: "";
-    background-image: url($gotas2);
-    background-position: 0 -5px;
-    height: 18px;
-    width: 16px;
-    display: inline-block;
-}
 
-.Secciones a {
-    color: $mainRed;
-    text-decoration: none;
-}
-
-.Secciones a:active,
-.Secciones a:hover,
-.Secciones a:focus {
-    opacity: 0.8;
-    outline: 0;
-}
 
 /*--- • 1 • e REGLAS EXCLUSIVAS del CONTENIDO SIN COLUMNAS ---*/
 .container_menu {
@@ -485,42 +171,6 @@ display: block;
     position: fixed; z-index:1;
     @extend .col-1; height: 55px;
     overflow: hidden;
-}
-/*--- • 1 • f REGLAS EXCLUSIVAS del CONTENIDO LISTADO ---*/
-.list-info ul {
-    list-style: none;
-    position: relative;
-    opacity: 1;
-    top: 0;
-}
-.list-info li {
-    color: $mainGray;
-    display: inline-block;
-    float: none;
-    margin-bottom: 15px;
-    margin-right: 0;
-    text-align: left;
-    width: 80%;
-}
-.list-info .ico-content {
-    display: inline-block;
-    position: relative;
-    vertical-align: middle;
-    width: 20px;
-}
-.list-info .ico-content i{
-      background-image: url($gotas);
-      background-position: 0 -5px;
-      content: "";
-      display: block;
-      height: 18px;
-      width: 16px;
-}
-.list-info .text-content {
-    display: inline-block;
-    position: relative;
-    vertical-align: middle;
-    @extend .col-9-10;
 }
 
 /*.container_menu~.col_none {margin-top:  55px;}*/
@@ -548,50 +198,7 @@ display: block;
 }
 
 /*--- • 2 • b REGLAS EXCLUSIVAS de DONANTES ------------------*/
-.bolsa{
-    background-color: $softRed;
-    background-image:url($bolsa);
-    background-size: 46px 25px;
-    background-repeat: no-repeat;
-    background-position: 18px 32px;
-    position: absolute;
-    height: 62px;
-    width: 64px;
-    left: 168px;
-    border-radius: 50%;
-}
-.bolsa:before{
-    content: "---";
-    display: block;
-    position: absolute;
-    border: solid 2px white;
-    margin: auto;
-    top: 9px;
-    bottom: 25px;
-    left: 18px;
-    right: 22px;
-    border-radius: 6px;
-    border-bottom-width: 0;
-    -webkit-transition: border-bottom-width 500ms ease;
-    transition: border-bottom-width 500ms ease;
-    text-align: center;
-    font-size: 21px;
-    color: $softRed;
-}
-.bolsa:hover:before{
-    border-bottom-width: 7px;
-}
-.bolsa.llena:before{
-    border-bottom-width: 26px;
-}
-.bolsa.llena:hover:before{
-    border-bottom-width: 19px;
-}
-.col_div .cota{
-    line-height: 17px;
-    font-size: 13px;
-    font-style: italic;
-}
+
 
 /*--- • 2 • c REGLAS EXCLUSIVAS de ¿QUIENES SOMOS? -----------*/
 .col_div.us {
@@ -843,63 +450,6 @@ text-align: left;
   }
 }
 
-.boton_donar{
-    position: relative;
-    font-family: $mainFont;
-    text-align: center;
-    display: block;
-    margin-top: 500px;
-    width: 256px;
-    height: 400px;
-
-  a {
-    font-size: 28px;
-    font-weight: 700;
-    color: $saddleBrown;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 256px;
-    height: 367px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 35px;
-
-    p {
-      position: absolute;
-      bottom: 15%;
-      left: 0;
-      right: 0;
-      margin: 0 20px;
-      line-height: 40px;
-
-      &:before {
-        top: -100px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        content: "";
-        position: absolute;
-        width: 56px;
-        height: 72px;
-        background-image: url($miniLogo);
-        background-repeat:no-repeat;
-      }
-    }
-    
-    &:before {
-      top: 0;
-      left: 0;
-      content: "";
-      position: absolute;
-      width: 256px;
-      height: 367px;
-      background-image: url($quieroDonar2);
-      background-repeat:no-repeat;
-    }
-  }
-}
 
 
 /*--- • 3 • c REGLAS de los BADGETS --------------------------*/
@@ -1004,4 +554,8 @@ text-align: left;
 .listado_meses ul li {
   display: inline;
   background-color: $whiteSmoke;
+}
+
+@media (min-width: 768px) {
+
 }
