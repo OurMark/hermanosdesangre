@@ -8,10 +8,10 @@
 */
 
 /* • 1 REGLAS PANTALLAS MENORES A 798px, IPAD y SMARTPHONE ---*/
-@media (max-width: 798px){ /*@media only screen and (max-device-width: 798px)*/
-html{overflow: visible;}
+@media (max-width: 768px){ /*@media only screen and (max-device-width: 798px)*/
 
 /*--- • 1 • a MENÚ MOBILE -----------------------------------*/
+
 .faldon_top_container {
     position: relative;
     width: 100%;
@@ -27,15 +27,15 @@ html{overflow: visible;}
 .logo_top_container {
     position: relative;
     top: 0;left: 0;
-    background: #F16B6B;
+    background: $softRed;
     text-align: center;
 }
 
 .menus {
     height: 0px;
     overflow: hidden;
-    background-color: #f16b6b;
-    border-bottom: 0px solid #d35555;
+    background-color: $softRed;
+    border-bottom: 0px solid $mainRed;
     -webkit-box-shadow: black 0px 0px 25px -5px;
     box-shadow: black 0px 0px 25px -5px;
 }
@@ -69,7 +69,7 @@ ul#sobre_derecha>li a{
     background: none !important;
 }
 ul#sobre_derecha>li:last-child a{
-    color: #f16b6b;
+    color: $softRed;
 }
 
 .menus>ul>li:first-child{
@@ -77,7 +77,7 @@ ul#sobre_derecha>li:last-child a{
     padding-top: 4px;
 }
 .menus>ul>li:nth-child(2){
-    background: whitesmoke;
+    background: $whiteSmoke;
 }
 .menus #sobre_derecha>li:last-child a{
     color: white;
@@ -95,7 +95,7 @@ ul#sobre_derecha>li:last-child a{
     display: inline-block;
     margin: 0;
     padding: 12px;
-    text-transform: uppercase;    
+    text-transform: uppercase;
 }
 .HS_email:hover {width: auto;}
 .HS_email a{padding: 0;}
@@ -105,7 +105,7 @@ ul#sobre_derecha>li:last-child a{
 /*-----botón abrir menú-------*/
 .abrir-menu {
     cursor: pointer;
-    height: 36px; 
+    height: 36px;
     width: 36px;
     position: absolute;
     right: 10px; bottom: 25px;
@@ -123,11 +123,11 @@ ul#sobre_derecha>li:last-child a{
     bottom: -16px;
 }
 .abrir-menu:hover, .abrir-menu.mAbierto {
-  background: whitesmoke;
+  background: $whiteSmoke;
 }
 
 .abrir-menu div {
-  background: #d35555;
+  background: $mainRed;
   height: 4px; width: 20px;
   margin-left: 8px;
   margin-top: 16px;
@@ -136,7 +136,7 @@ ul#sobre_derecha>li:last-child a{
   transform: translateY(0px) rotate(45deg);
 }
 .abrir-menu div::before, .abrir-menu div::after {
-  background: #D35555;
+  background: $mainRed;
   content: '';
   display: block;
   height: 4px;
@@ -177,27 +177,8 @@ ul#sobre_derecha>li:last-child a{
 }
 
 /*--- • 1 • b CONTENIDO VARIOS-------------------------------*/
-.content_container {    
+.content_container {
     border-top: none;
-}
-.h_container {
-    position: relative;
-    left: 0; top: 0;
-    margin-left: 0;
-    width: auto; height: auto;
-    text-align: center;
-    padding: 25px 5px;
-}
-.h_container h1 {
-    color: black;
-    margin-bottom: 5px;
-}
-.h_container~.col_der {
-    padding-top: 5px;
-}
-.col_der {
-    padding: 5px 10px 25px 10px;
-    min-height: inherit;
 }
 .col_div {
     margin: 0 auto;
@@ -212,17 +193,10 @@ margin: 5px 0;
 .col_div iframe{
     width: 100% !important;
 }
-.col_izq {
-    position: relative;
-    width: auto; height: auto;
-    padding:  55px 10px;
-}
-.boton_donar {
-    margin: 0 auto;
-    float: none;
-}
+
+
 .campania {
-    color: #d35555;
+    color: $mainRed;
 }
 .col_div .imagen{
     float: none;
@@ -234,11 +208,11 @@ margin: 5px 0;
     margin-right: 0;
 }
 .col_div form INPUT[type="password"], .col_div form INPUT[type="text"], .col_div form INPUT[type="email"]{
-    width:100%;  
+    width:100%;
 }
 .slogan {
     margin: 45px auto;
-}   
+}
 .pregunta {
     margin: 8px 0px;
 }
@@ -257,7 +231,7 @@ margin: 5px 0;
     height: auto;
     text-align: center;
 }
-.slogan p{    
+.slogan p{
     display: inline-block;
 }
 .slogan p, .slogan h2, .slogan h3 {

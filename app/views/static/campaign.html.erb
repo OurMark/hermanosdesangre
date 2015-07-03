@@ -1,19 +1,21 @@
-<div class="col_der">
-    <div class="col_div">
-        <div class="slogan">
-            <p>el objetivo ideal es que el</p>
-            <p>100%<p/>
-            <p>de los donantes sean</p>
-            <h2>VOLUNTARIO</h2>
-            <h3>HABITUAL</h3>
+<div class="row">
+  <div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 col_der columna">
+		<div class="about">
+			<div class="col_div us">
+				<h1>Campaña:</h1>
+				<p>La campaña de lanzamiento de Hermanos de Sangre busca inspirar a las personas a comprometerse con la donación voluntaria y habitual de sangre.</p>
+				<p>Te invitamos a compartir las piezas de difusión:</p>
+				<h2>Videos de difusión:</h2>
+				<iframe width="330px" height="175px" src="//www.youtube-nocookie.com/embed/oXuqPhhqj1c?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6 columna col_izq">
+    <div class="how-works-boton-donar">
+        <%= link_to content_tag(:p, "quiero donar"), current_user ? ongs_path : user_session_path %>
+        <div>
+          <p>Si puedes hacerlo, debes hacerlo</p>
         </div>
-        <h1>Campaña:</h1>
-        <p>Tú puedes inspirar a miles de personas a volverse donantes habituales. Te invitamos a compartir y difundir permanentemente. ¡Cuéntale a todo el mundo lo que haces, y lo bien que se siente!</p>
-        <!--<h2>Gráficas para compartir en redes sociales:</h2>-->
-        <h2>Videos de difusión:</h2>
-        <iframe width="330px" height="175px" src="//www.youtube-nocookie.com/embed/oXuqPhhqj1c?rel=0&amp;showinfo=0&amp;controls=0" frameborder="0" allowfullscreen=""></iframe>
     </div>
-</div>
-<div class="columna col_izq">
-  <%= render partial: 'shared/gota_donar' %>
+  </div>
 </div>

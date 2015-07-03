@@ -1,0 +1,34 @@
+/* List of stylesheet variables: +/
+
+/* COLORS: */
+
+$mainRed: #D35555;
+$softRed: #F16B6B;
+$lightRed: rgba(241, 107, 107, 0.9);
+$mainGray: #313131;
+$whiteSmoke: #F5F5F5;
+$bronce: #C9712A;
+$oro: #CCA14A;
+$plata: #B3B4BD;
+$azul: #5476BA;
+$white: #FFFFFF;
+$softWhite: rgba(255, 255, 255, 0.9);
+$black: #313131;
+$softBlack: #5F5F5F;
+$saddleBrown: #6E2F26;
+
+/* IMAGES */
+
+$biglogo: asset-path('big-logo.png');
+$miniLogo: asset-path('mini-logo.png');
+$gotas: "/assets/gotas.png";
+$gotas2: asset-path('gotas.png');
+$quieroDonar: asset-path('quierodonar_btn.png');
+$quieroDonar2: asset-path('big-gota.png');
+$email: "http://w.sharethis.com/images/email_16.png";
+$bolsa: asset-path('bolsa.png');
+
+
+/* FONTS */
+
+$mainFont: 'Oswald', sans-serif;

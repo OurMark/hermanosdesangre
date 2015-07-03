@@ -1,0 +1,261 @@
+.navbar-brand {
+  color: $white;
+
+  &:focus, &:active, &:visited {
+    color: $white;
+  }
+  .navbar-logo-hermanos {
+    position: relative;
+    bottom: 5px;
+    right: 11px;
+    width: 32px;
+  }
+}
+.dropdown-toggle {
+  color: $white;
+}
+.container-fluid > .navbar-collapse {
+  width: 100%;
+}
+.nav > li {
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+.navbar-nav > li > a {
+  color: $white;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: $softRed;
+  color: $white;
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background-color: $mainRed;
+  border-color: $softRed;
+  color: $white;
+}
+.navbar-nav .open .dropdown-menu > li > a {
+  color: $white;
+
+  &:hover {
+    background-color: $mainRed;
+  }
+}
+.navbar-content {
+  background: $softRed;
+  border-bottom: 4px solid $mainRed;
+  border-radius: 0 0 2px 2px;
+}
+.navbar-toggle {
+  margin-right: 0;
+}
+.icon-bar {
+  background-color: $white;
+}
+.faldon_top_container {
+  display: none;
+  font-size: 1em;
+  position: fixed;
+  top:0;
+  z-index: 2;
+  height: 220px;
+  width: 100%;
+
+  .sub-menu {
+    ul {
+      li {
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+.faldon_top {
+  position: relative;
+  height: 220px;
+  margin: 0 auto;
+}
+.logo_top_container {
+  position: absolute;
+  top: 12px;
+  left: 4px;
+  background: $mainRed;
+  border-bottom: solid 2px $mainRed;
+  -webkit-box-shadow: black 0px 0px 25px -5px;
+  box-shadow: black 0px 0px 25px -5px;
+  z-index: 9999;
+}
+.navbar-logo {
+  @include span(1 of 2);
+  background: $softRed;
+  height: 100%;
+  padding-right: 1%;
+
+  a {
+    font-family: $mainFont;
+    height: 100%;
+    float: right;
+    width: 70%;
+    position: relative;
+  }
+}
+
+.logo-container {
+  padding: 30px 0 0 0;
+  float: right;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 10px;
+}
+
+.text-logo {
+  display: inline-block;
+  vertical-align: bottom;
+  color: $white;
+  font-size: 3em;
+  line-height: 55px;
+  width: 200px;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.menus {
+  height: 40%;
+  background-color: #ffffff;
+
+  &.last {
+    padding-left: 1%;
+  }
+}
+ul#menu, ul.sub-menu, ul#sobre_derecha {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  list-style: none;
+
+  li {
+    display: inline-block;
+    position: relative;
+  }
+}
+ul#menu {
+  top: 34px;
+}
+ul#sobre_derecha {
+  right: 5%;
+}
+.top30 {
+  top: 30px;
+}
+.sub-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  padding-top: 10px;
+
+  li:hover & {
+    display: block;
+  }
+  li {
+    background: $softWhite;
+    width: 130px;
+    padding: 10px 5px;
+
+    &:hover {
+      background-color: $white;
+    }
+  }
+  a {
+    color: $mainRed;
+    padding: 5px;
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      font-weight: 700;
+    }
+  }
+}
+ul#menu>li>a, ul#sobre_derecha>li>a {
+  color: $softRed;
+  text-decoration: none;
+  padding: 6px 9px;
+  display: inline-block;
+  border-right: 1px solid $mainRed;
+  letter-spacing: 1px;
+}
+ul#sobre_derecha li a:hover {
+  font-style: italic;
+}
+
+/*sobre derecha*/
+#sobre_derecha li>a {
+  padding: 9px !important;
+  background-color: $whiteSmoke;
+}
+#sobre_derecha li:last-child>a {
+  background-color: $softRed;
+  color: white;
+}
+#sobre_derecha li>span {
+  position: relative;
+  right: 28px;
+  bottom: 1px;
+}
+#sobre_derecha .HS_email {
+  background-color: $whiteSmoke;
+  background-image: url($email);
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  right: 9px;
+  position: absolute;
+  z-index: 10;
+  -webkit-transition: width 500ms ease-in;
+  transition: width 500ms ease;
+}
+#sobre_derecha .HS_email:hover {
+  width: 75px;
+}
+
+.HS_email,
+.st_facebook,
+.st_twitter {
+  display: none;
+}
+
+.HS_email a {
+  padding: 0 21px;
+  color: $softRed;
+}
+
+
+@media (min-width:768px) {
+  .faldon_top_container {
+    display: block;
+  }
+
+  .navbar-logo a {
+    width: 110%;
+  }
+
+  ul#sobre_derecha {
+    right: 2%;
+  }
+}
+@media (min-width:992px) {
+  .logo {
+    padding: 0 30px;
+  }
+  .navbar-logo a {
+    width: 100%;
+  }
+  .HS_email,
+  .st_facebook,
+  .st_twitter {
+    display: inline-block;
+  }
+}
