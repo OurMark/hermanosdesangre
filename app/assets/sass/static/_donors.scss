@@ -148,8 +148,9 @@
     opacity: 1;
     height: auto;
     min-height: 406px;
+    animation: noscroll 400ms; //para evitar que aparezca el scroll
     -webkit-animation: noscroll 400ms;
-    animation: noscroll 400ms;/*para evitar que aparezca el scroll*/
+    margin: 60px auto 0 auto;
   }
 
   .list-info ul {
@@ -213,7 +214,7 @@
     float: left;
     font-size: 1.1em;
     font-weight: lighter;
-    height: 60px;
+    height: 70px;
     margin: 18px 10px 134px 10px;
     padding: 25px 20px 0 20px;
     position: relative;
@@ -224,15 +225,14 @@
       color: $mainRed;
       line-height: 18px;
       position: absolute;
-      left: -22px;
+      left: 0;
       top: 70px;
-      width: 85%;
+      margin-top: 10px;
     }
   }
 
   &.seleccionada {
-    margin-top: -17px;
-    height: auto;
+    margin: 60px auto 0 auto;
 
     div,
     span {
@@ -241,18 +241,18 @@
 
     .seleccionada {
       display: block;
-      margin: 87px 0px 87px 120px;
+      margin: 30px auto;
+      float: none;
     }
   }
 }
 
 @media (min-width: 768px) {
   .donors {
-    max-width: 400px;
+    max-width: 335px;
   }
 
   .Opciones {
-    margin-left: 15px;
     margin-top: 60px;
 
     div {
