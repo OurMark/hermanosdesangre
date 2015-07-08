@@ -1,5 +1,5 @@
-<div class="col_der">
-  <div class="col_div ingresar">
+<div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 ingresar">
+  <div class="ingresar-form">
     <h1><strong>INGRESA</strong></h1>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="inputLargo">
@@ -21,6 +21,8 @@
     </div>
   </div>
 </div>
-<div class="columna col_izq">
-  <%= render partial: 'shared/gota_sin_donar' %>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6 col_izq">
+      <%= render partial: 'shared/gota_sin_donar' %>
+    </div>
 </div>

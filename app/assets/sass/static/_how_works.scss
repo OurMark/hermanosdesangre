@@ -13,7 +13,7 @@
   }
 
   span {
-    margin: 5px 0;
+    margin: 5px 0 0 35px;
   }
 
   .quieres-donar {
@@ -21,6 +21,7 @@
     a {
       color: $mainRed;
       text-align: center;
+      display: block;
       &:after {
         background-image: url($gotas);
         background-position: 0 -5px;
@@ -75,11 +76,6 @@
 }
 
 .col_izq {
-  height: auto;
-  background: $softRed;
-  display: inline-block;
-  vertical-align: top;
-
   .how-works-boton-donar {
     @include gota_donar;
     position: relative;
@@ -89,9 +85,13 @@
   }
 }
 
+.center-gota {
+  @extend .how-works-boton-donar;
+}
+
 @media (min-width: 768px) {
   .how-works {
-    margin-top: 120px;
+    margin-top: 170px;
     padding: 20px;
 
   }

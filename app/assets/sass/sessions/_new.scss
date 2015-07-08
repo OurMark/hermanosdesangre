@@ -1,0 +1,26 @@
+.ingresar {
+  .ingresar-form {
+    width: 330px;
+    margin: 0 auto;
+
+    .btn_ingresar {
+      width: 315px;
+      margin-bottom: 30px;
+      float: none;
+    }
+  }
+}
+
+.col_izq .gota-sin-donar {
+  @extend .how-works-boton-donar;
+  a p {
+    bottom: 70px;
+  }
+}
+
+@media (min-width: 768px) {
+  .ingresar {
+    margin-top: 220px;
+    padding: 10px;
+  }
+}

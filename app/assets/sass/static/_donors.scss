@@ -52,9 +52,10 @@
 
 
 .Secciones {
+
   h2 {
     position: absolute;
-    font-size: 1em;
+    font-size: 1.1em;
     left: 16px;
     top: 20px;
     cursor: pointer;
@@ -64,7 +65,6 @@
     &:hover {
       opacity: 0.8;
     }
-
     &:last-of-type {
       right: 0;
       left: inherit;
@@ -148,19 +148,57 @@
     opacity: 1;
     height: auto;
     min-height: 406px;
+    animation: noscroll 400ms; //para evitar que aparezca el scroll
     -webkit-animation: noscroll 400ms;
-    animation: noscroll 400ms;/*para evitar que aparezca el scroll*/
+    margin: 60px auto 0 auto;
+  }
+
+  .list-info ul {
+    list-style: none;
+    position: relative;
+    opacity: 1;
+    top: 0;
+    margin-top: 30px;
+
+    li {
+      color: $black;
+      display: inline-block;
+      float: none;
+      margin-bottom: 15px;
+      margin-right: 0;
+      text-align: left;
+      width: 80%;
+      .ico-content {
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        width: 20px;
+        i {
+          background-image: url($gotas2);
+          background-position: 0 -5px;
+          content: "";
+          display: block;
+          height: 18px;
+          width: 16px;
+        }
+      }
+      .text-content {
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        width: 90%;
+      }
+    }
   }
 }
 
 /*OPCIONES*/
 .donors {
-  max-width: 400px;
+  max-width: 300px;
 }
 
 .Opciones {
-  margin-left: 15px;
-  margin-top: 60px;
+  margin: 0 auto;
   @include transition(height, 400ms, ease);
   overflow: hidden;
 
@@ -176,8 +214,8 @@
     float: left;
     font-size: 1.1em;
     font-weight: lighter;
-    height: 60px;
-    margin: 18px 18px 134px 18px;
+    height: 70px;
+    margin: 18px 10px 134px 10px;
     padding: 25px 20px 0 20px;
     position: relative;
     text-align: center;
@@ -187,15 +225,14 @@
       color: $mainRed;
       line-height: 18px;
       position: absolute;
-      left: -22px;
-      top: 110px;
-      width: 85%;
+      left: 0;
+      top: 70px;
+      margin-top: 10px;
     }
   }
 
   &.seleccionada {
-    margin-top: -17px;
-    height: auto;
+    margin: 60px auto 0 auto;
 
     div,
     span {
@@ -204,7 +241,22 @@
 
     .seleccionada {
       display: block;
-      margin: 87px 0px 87px 120px;
+      margin: 30px auto;
+      float: none;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .donors {
+    max-width: 335px;
+  }
+
+  .Opciones {
+    margin-top: 60px;
+
+    div {
+      margin: 18px 18px 134px 18px;
     }
   }
 }
