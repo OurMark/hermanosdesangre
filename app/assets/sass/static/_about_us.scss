@@ -1,5 +1,4 @@
 .about {
-  margin-top: 220px;
   padding: 10px;
   .us {
     max-width: 400px;
@@ -42,5 +41,11 @@
       width: 100%;
       height: 300px;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .about {
+    margin-top: 220px;
   }
 }

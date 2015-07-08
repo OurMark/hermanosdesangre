@@ -76,11 +76,6 @@
 }
 
 .col_izq {
-  height: auto;
-  background: $softRed;
-  display: inline-block;
-  vertical-align: top;
-
   .how-works-boton-donar {
     @include gota_donar;
     position: relative;
