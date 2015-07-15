@@ -1,8 +1,71 @@
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+
 body {
   font-family: $mainFont;
   font-weight: normal;
   font-size: 14px;
 }
+
+label {
+  font-size: 14px;
+  color: $mainRed;
+  padding-left: 10px;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.similInput {
+  width: 100%;
+  -webkit-transition: background 500ms ease;
+  background-color: $whiteSmoke;
+  border-bottom: 1px dashed $mainRed;
+  border: none;
+  font-family: $mainFont;
+  font-size: 17px;
+  height: 30px;
+  padding-left: 10px;
+  transition: background 500ms ease;
+}
+
+form INPUT[type="password"],
+form INPUT[type="text"],
+form INPUT[type="email"] {
+  @extend .similInput;
+}
+
+label:after {
+  content: ":";
+}
+
+form INPUT[type="password"]:focus,
+form INPUT[type="text"]:focus,
+form INPUT[type="email"]:focus,
+select:focus {
+  background-color: $mainRed;
+  color: white;
+  outline: none;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: white;
+}
+input:focus::-moz-placeholder {
+  color: white;
+}
+input:focus:-ms-input-placeholder {
+  color: white;
+}
+input:focus:-moz-placeholder {
+  color: white;
+}
+
+
 .content_container {
 }
 
@@ -11,7 +74,6 @@ body {
   overflow: hidden;
   font-family: $mainFont;
   position: relative;
-  top: 160px;
 }
 .col_div p, .col_div span {
   font-size: 13px;
@@ -47,7 +109,7 @@ body {
   background-color: $lightRed;
   position: fixed;
   z-index: 1;
-  @extend .col-1;
+  width: 100%;
   height: 55px;
   overflow: hidden;
 }
@@ -312,7 +374,7 @@ body {
   border-radius: 10px;
   height: 37px;
   background: $softRed;
-  @extend .col-1;
+  width: 100%;
   overflow: hidden;
   border: solid 1px white;
   color: white;
@@ -329,7 +391,7 @@ body {
 .bar div {
   background: $mainRed;
   height: 100%;
-  @extend .col-1;
+  width: 100%;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -530,7 +592,6 @@ body {
   background: $softRed;
   display: inline-block;
   vertical-align: top;
-  min-height: 1024px;
 
   .boton_donar {
     @include gota_donar;
@@ -541,6 +602,9 @@ body {
   }
 }
 @media (min-width:768px) {
+  .col_div {
+    top: 160px;
+  }
   .col_der {
     &.columna {
       min-height: 805px;
@@ -549,10 +613,11 @@ body {
   .col_izq {
     background: $softRed;
     bottom: 0;
-    padding-right: 0;
-    padding-left: 2%;
-    position: absolute;
     left: 0;
+    min-height: 1024px;
+    padding-left: 2%;
+    padding-right: 0;
+    position: absolute;
     top: 0;
     width: 50%;
 

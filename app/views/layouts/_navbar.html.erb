@@ -1,14 +1,14 @@
 <div class="faldon_top_container">
   <div class="faldon_top">
     <div class="navbar-logo">
-      <%= link_to root_path, :class => "col-1" do %>
+      <a href="/">
         <figure class="logo-container">
           <%= image_tag("big-logo.png", :class=> "logo") %>
           <figcaption class="text-logo">Hermanos de sangre</figcaption>
         </figure>
-      <% end %>
+      </a>
     </div>
-    <div class="menus col-1-2 last">
+    <div class="menus last">
       <ul id="menu">
         <li>
           <%= link_to "DONANTES", donors_path %>

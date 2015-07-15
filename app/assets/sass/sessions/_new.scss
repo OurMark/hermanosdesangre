@@ -4,9 +4,7 @@
     margin: 0 auto;
 
     .btn_ingresar {
-      width: 315px;
-      margin-bottom: 30px;
-      float: none;
+      @extend .submit-button;
     }
   }
 }
