@@ -1,25 +1,16 @@
 .inputLargo {
-  width: 315px;
+  width: 100%;
   margin-bottom: 10px;
   overflow: hidden;
 }
 .inputCorto {
-  width: 155px;
+  width: 100%;
   display: inline-block;
   margin-right: 5px;
   margin-bottom: 10px;
   overflow: hidden;
 }
-label {
-  font-size: 14px;
-  color: $mainRed;
-  padding-left: 10px;
-  display: block;
-  margin-bottom: 3px;
-}
-label:after {
-  content: ":";
-}
+
 .similInput label {
   display: inline-block;
   margin-bottom: 0;
@@ -30,41 +21,13 @@ label:after {
 .similInput label:after {
   content: none;
 }
-form INPUT[type="password"], form INPUT[type="text"], form INPUT[type="email"], .similInput {
-  @extend .col-1;
-  height: 30px;
-  border: none;
-  border-bottom: 1px dashed $mainRed;
-  background-color: $whiteSmoke;
-  font-family: $mainFont;
-  font-size: 17px;
-  padding-left: 10px;
-  -webkit-transition: background 500ms ease;
-  transition: background 500ms ease;
-}
 .similInput INPUT {
   margin: 10px 0 0 0;
 }
 .similInput div {
   padding-top: 6px;
 }
-form INPUT[type="password"]:focus, form INPUT[type="text"]:focus, form INPUT[type="email"]:focus, select:focus {
-  background-color: $mainRed;
-  color: white;
-  outline: none;
-}
-input:focus::-webkit-input-placeholder {
-  color: white;
-}
-input:focus::-moz-placeholder {
-  color: white;
-}
-input:focus:-ms-input-placeholder {
-  color: white;
-}
-input:focus:-moz-placeholder {
-  color: white;
-}
+
 .col_div .notificacion {
   margin: 0;
   text-align: right;
@@ -85,25 +48,42 @@ input:focus:-moz-placeholder {
 .submitArea label:after {
   content: none;
 }
-form INPUT[type="submit"] {
-  cursor: pointer;
-  float: right;
-  border: none;
-  border-bottom: solid white 1px;
+
+.submit-button {
   background: $whiteSmoke;
-  font-family: $mainFont;
-  color: $mainRed;
-  text-align: center;
-  font-size: 13px;
-  @extend .col-1;
-  padding: 9px;
-  margin-right: 15px;
-  -webkit-box-shadow: #AAA 0px 2px 20px -5px;
+  border-bottom: solid white 1px;
+  border: none;
   box-shadow: #AAA 0px 2px 20px -5px;
+  -webkit-box-shadow: #AAA 0px 2px 20px -5px;
+  color: $mainRed;
+  cursor: pointer;
+  float: none;
+  font-family: $mainFont;
+  font-size: 13px;
+  margin-bottom: 30px;
+  margin-right: 15px;
+  padding: 9px;
+  text-align: center;
+  width: 100%;
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: $softRed;
+    border-bottom: solid $mainRed 2px;
+    outline: none;
+  }
 }
-form INPUT[type="submit"]:hover, form INPUT[type="submit"]:focus {
-  color: white;
-  background-color: $softRed;
-  border-bottom: solid $mainRed 2px;
-  outline: none;
+
+@media (min-width: 768px) {
+  .inputCorto {
+    width: 125px
+  }
+
+  .inputLargo {
+    width: 315px;
+  }
+
+  .submit-button {
+    width: 315px;
+  }
 }

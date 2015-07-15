@@ -14,9 +14,6 @@
 //mixins
 @import "mixin";
 
-// grids
-@import "grids";
-
 // project
 @import "header";
 
@@ -31,3 +28,4 @@
 @import "static/about_us";
 @import "static/donors";
 @import "sessions/new";
+@import "registrations/new";
