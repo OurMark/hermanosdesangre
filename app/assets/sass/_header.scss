@@ -122,10 +122,12 @@
 }
 
 .menus {
+  @include span(1 of 2);
   height: 40%;
   background-color: #ffffff;
 
   &.last {
+    @include span(1 of 2 last);
     padding-left: 1%;
   }
 }

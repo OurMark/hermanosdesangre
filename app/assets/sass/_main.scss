@@ -74,7 +74,6 @@ input:focus:-moz-placeholder {
   overflow: hidden;
   font-family: $mainFont;
   position: relative;
-  top: 160px;
 }
 .col_div p, .col_div span {
   font-size: 13px;
@@ -603,6 +602,9 @@ input:focus:-moz-placeholder {
   }
 }
 @media (min-width:768px) {
+  .col_div {
+    top: 160px;
+  }
   .col_der {
     &.columna {
       min-height: 805px;
