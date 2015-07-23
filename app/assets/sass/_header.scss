@@ -59,6 +59,20 @@
   height: 220px;
   width: 100%;
 
+  .faldon-background-container {
+      position: absolute;
+      background-color: $white;
+      height: 220px;
+      width: 100%;
+      
+      .faldon_izq {
+          width: 50%;
+          height: 220px;
+          background-color: $softRed;
+      }
+
+  }
+
   .sub-menu {
     ul {
       li {
