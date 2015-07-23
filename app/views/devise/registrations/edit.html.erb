@@ -1,9 +1,11 @@
-<div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 columna col_der">
-  <div class="col_div perfil" style="padding-top: 10px">
+<div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 col_der">
+  <div class="registrarse">
     <%= render 'form' %>
   </div>
 </div>
-<div class="columna col_izq">
+<div class="col-xs-12 col-sm-12 col-md-6 col_izq">
+  <div class="users-gota-donar">
   <%= render partial: 'shared/gota_donar' %>
   <%= link_to "Registrar mi Banco de Sangre u ONG de donación", new_ong_path,{ :class =>"botonONG"}%>
+  </div>
 </div>
