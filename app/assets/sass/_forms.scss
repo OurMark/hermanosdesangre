@@ -38,6 +38,7 @@
 .notificacion a, .notificacion a:hover, .notificacion a:visited {
   color: $mainRed;
 }
+
 .submitArea label, .col_div .submitArea>p {
   display: inline-block;
   margin-bottom: 0;
@@ -45,6 +46,7 @@
   padding-left: 0;
   color: black;
 }
+
 .submitArea label:after {
   content: none;
 }

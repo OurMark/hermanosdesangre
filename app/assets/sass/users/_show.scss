@@ -54,22 +54,31 @@
   padding-top: 12px;
   text-align: left;
 }
-.cambiar {
-  -webkit-box-shadow: #AAA 0px 2px 20px -5px;
+
+.input-submit {
   background: $whiteSmoke;
   border-bottom: solid white 1px;
   border: none;
-  bottom: 34px;
-  right: 10px;
   box-shadow: #AAA 0px 2px 20px -5px;
+  -webkit-box-shadow: #AAA 0px 2px 20px -5px;
   color: $mainRed;
   cursor: pointer;
   font-size: 1em;
   padding: 9px;
-  position: absolute;
+  margin-right: 5px;
   text-align: center;
   width: 100px;
 }
+
+.cambiar {
+  @extend .input-submit;
+  position: absolute;
+  bottom: 34px;
+  right: 10px;
+}
+
+
+
 .perfil .submitArea {
   height: 42px;
   margin-top: 14px;
