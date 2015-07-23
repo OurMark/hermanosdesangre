@@ -36,7 +36,7 @@
     <label>Provincia</label>
     <%= f.select :addressState, [["Buenos Aires", "Buenos Aires"]], {}, { class: "similInput" } %>
   </div>
-  <div class="inputLargo">
+  <div class="inputCorto">
     <label>Ciudad</label>
     <%= f.select :city, [["Mar del Plata", "Mar del Plata"]], {}, { class: "similInput" } %>
   </div>
@@ -70,6 +70,6 @@
   </div>
   <p class="notificacion">solo si pertenece a una red</p>
   <div class="submitArea">
-    <%= f.submit "ENVIAR" %>
+    <%= f.submit "ENVIAR", class: "input-submit" %>
   </div>
 <% end %>
