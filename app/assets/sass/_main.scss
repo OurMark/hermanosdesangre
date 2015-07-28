@@ -187,11 +187,18 @@ input:focus:-moz-placeholder {
 /*--- • 2 • f REGLAS EXCLUSIVAS de LISTA DE ONGS -------------*/
 .banco {
   border: solid 1px $whiteSmoke;
+  color: $white;
   margin: 62px 4px;
   padding: 22px 8px;
   -webkit-box-shadow: 0 35px 35px -35px #699;
   box-shadow: 0 30px 35px -35px #699;
   position: relative;
+}
+
+.ongs {
+    .banco {
+        color: $black;
+    }
 }
 .banco:first-child {
   margin-top: 95px;
@@ -202,7 +209,6 @@ input:focus:-moz-placeholder {
 }
 .banco h3 {
   font-size: 18px;
-  color: $softRed;
 }
 .banco h4, .ficha_banco p {
   font-size: 14px;
@@ -400,9 +406,19 @@ input:focus:-moz-placeholder {
     display: block;
   }
 }
+
+.ong-registered {
+    padding: 0 30px;
+    p {
+        font-weight: normal;
+    }
+}
 @media (min-width:768px) {
   .col_div {
-    top: 160px;
+    top: 220px;
+  }
+  .listado_meses, .ong, .ongs, .ong-registered {
+    margin-top: 220px;
   }
   .col_der {
     &.columna {

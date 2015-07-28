@@ -12,19 +12,11 @@
     <label>Nombre*</label>
     <%= f.text_field :name %>
   </div>
-  <div class="inputCorto">
-    <label>Camas disponibles</label>
-    <%= f.number_field :beds %>
-  </div>
-  <div class="inputCorto" %>
-    <label>Franja horaria</label>
-    <%= f.select :timelapse, [["10 min", 10], ["20 min", 20], ["30 min", 30]], {}, { class: "similInput" } %>
-  </div>
-  <div class="inputCorto">
+  <div class="inputLargo">
     <label>Dirección*</label>
     <%= f.text_field :address %>
   </div>
-  <div class="inputCorto">
+  <div class="inputLargo">
     <label>Referencias de dirección</label>
     <%= f.text_field :address2 %>
   </div>

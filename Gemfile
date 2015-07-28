@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.2'
+ruby '2.1.5'
 
 gem 'rails', '4.1.4'
 gem 'mysql2', '~> 0.3.18'
@@ -12,6 +12,8 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'tzinfo-data'
 
 gem 'jquery-rails'
+gem 'twitter-typeahead-rails'
+
 gem 'turbolinks'
 gem 'jbuilder'
 gem 'sdoc', '~> 0.4.0',          group: :doc
