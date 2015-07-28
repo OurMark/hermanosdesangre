@@ -22,15 +22,20 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+    <!-- navbar -->
     <%= render partial: 'layouts/navbar' %>
+
+    <!-- content -->
     <div class="container-fluid content_container">
       <%= yield %>
     </div>
+
+    <!-- footer -->
+    <%= render partial: 'layouts/footer' %>
 
     <!-- share this script -->
     <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
     <script type="text/javascript">stLight.options({publisher: "bf3e2466-d2a8-421b-a6fb-270f720fbc8a", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </body>
-  <%= render partial: 'layouts/script' %>
 </html>
