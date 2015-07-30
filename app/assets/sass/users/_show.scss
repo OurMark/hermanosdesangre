@@ -1,4 +1,7 @@
 /*--- • 2 • e REGLAS EXCLUSIVAS de PERFIL de USUARIO ---------*/
+.banco {
+    margin-bottom: 20px;
+}
 .perfil {
   margin-top: 0;
 }
@@ -84,18 +87,17 @@
   margin-top: 14px;
 }
 
-
+ul.ong_botones {
+    position: static;
+}
 .botonONG {
   background-color: $mainRed;
-  bottom: 160px;
   color: white;
   display: none;
   font-family: $mainFont;
   font-size: 1em;
   font-weight: lighter;
-  left:30%;
   padding: 4px;
-  position: absolute;
   &:hover {
     color: $white;
   }
@@ -208,7 +210,9 @@
   .perfil {
     margin-top: 220px;
   }
-
+  .users-gota-donar {
+      margin-top: 220px;
+  }
   .col_izq .users-gota-donar .boton_donar {
     display: block;
     left:30%;

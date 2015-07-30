@@ -12,6 +12,8 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'tzinfo-data'
 
 gem 'jquery-rails'
+gem 'twitter-typeahead-rails'
+
 gem 'turbolinks'
 gem 'jbuilder'
 gem 'sdoc', '~> 0.4.0',          group: :doc
