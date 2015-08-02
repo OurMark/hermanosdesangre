@@ -1,3 +1,6 @@
+/*=========================================
+=            login form styles            =
+=========================================*/
 .ingresar {
   .ingresar-form {
     width: 330px;
@@ -17,8 +20,11 @@
 }
 
 @media (min-width: 768px) {
-  .ingresar {
-    margin-top: 220px;
+  .ingresar-form {
     padding: 10px;
+    margin-top: 220px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 400px;
   }
 }

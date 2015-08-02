@@ -1,0 +1,11 @@
+.footer {
+  display: none;
+  background: $saddleBrown;
+  height: 50px;
+}
+
+@media (min-width:768px){
+  .footer {
+    display: block;
+  }
+}

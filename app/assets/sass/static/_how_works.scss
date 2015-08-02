@@ -5,8 +5,6 @@
 .how-works {
   clear: both;
   background: $white;
-  padding: 10px;
-
 
   p {
     font-weight: lighter;
@@ -92,13 +90,10 @@
 @media (min-width: 768px) {
   .how-works {
     margin-top: 170px;
-    padding: 20px;
 
   }
 
   .col_izq .how-works-boton-donar{
-    position: absolute;
-    left: 31%;
     top: 280px;
   }
 }
