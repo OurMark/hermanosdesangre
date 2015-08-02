@@ -1,17 +1,10 @@
-$susy: (
-  columns: 12,
-  gutters: 1/4,
-  math: fluid,
-  output: float,
-  gutter-position: inside,
-);
+$susy: (columns:12, gutters:1/4, math:fluid, output:float, gutter-position:inside, );
 
 body {
   font-family: $mainFont;
   font-weight: normal;
   font-size: 14px;
 }
-
 label {
   font-size: 14px;
   color: $mainRed;
@@ -19,7 +12,6 @@ label {
   display: block;
   margin-bottom: 3px;
 }
-
 .similInput {
   width: 100%;
   -webkit-transition: background 500ms ease;
@@ -32,26 +24,17 @@ label {
   padding-left: 10px;
   transition: background 500ms ease;
 }
-
-form INPUT[type="password"],
-form INPUT[type="text"],
-form INPUT[type="email"] {
+form INPUT[type="password"], form INPUT[type="text"], form INPUT[type="email"] {
   @extend .similInput;
 }
-
 label:after {
   content: ":";
 }
-
-form INPUT[type="password"]:focus,
-form INPUT[type="text"]:focus,
-form INPUT[type="email"]:focus,
-select:focus {
+form INPUT[type="password"]:focus, form INPUT[type="text"]:focus, form INPUT[type="email"]:focus, select:focus {
   background-color: $mainRed;
   color: white;
   outline: none;
 }
-
 input:focus::-webkit-input-placeholder {
   color: white;
 }
@@ -64,6 +47,12 @@ input:focus:-ms-input-placeholder {
 input:focus:-moz-placeholder {
   color: white;
 }
+
+.content_container {
+  //padding-left: 0;
+  //padding-rigth: 0;
+}
+
 
 /*--- • 1 • b REGLAS del CONTENIDO ---------------------------*/
 .col_div {
@@ -136,8 +125,6 @@ input:focus:-moz-placeholder {
   padding-top: 250px;
 }
 
-/*--- • 2 • b REGLAS EXCLUSIVAS de DONANTES ------------------*/
-
 /*--- • 2 • c REGLAS EXCLUSIVAS de ¿QUIENES SOMOS? -----------*/
 .col_div.us {
   max-width: 400px;
@@ -194,11 +181,10 @@ input:focus:-moz-placeholder {
   box-shadow: 0 30px 35px -35px #699;
   position: relative;
 }
-
 .ongs {
-    .banco {
-        color: $black;
-    }
+  .banco {
+    color: $black;
+  }
 }
 .banco:first-child {
   margin-top: 95px;
@@ -360,7 +346,6 @@ input:focus:-moz-placeholder {
   }
 }
 
-
 /* Calendario */
 .calendario {
   float: right;
@@ -390,13 +375,14 @@ input:focus:-moz-placeholder {
 }
 .col_der {
   background: $white;
-  padding-left: 50%;
   padding: 5px 10px 25px 10px;
+  margin: 0;
+  float: right;
 }
 .col_izq {
   background: $softRed;
-  display: inline-block;
   vertical-align: top;
+  float: left;
 
   .boton_donar {
     @include gota_donar;
@@ -406,12 +392,12 @@ input:focus:-moz-placeholder {
     display: block;
   }
 }
-
 .ong-registered {
-    padding: 0 30px;
-    p {
-        font-weight: normal;
-    }
+  padding: 0 30px;
+
+  p {
+    font-weight: normal;
+  }
 }
 @media (min-width:768px) {
   .col_div {
@@ -421,31 +407,29 @@ input:focus:-moz-placeholder {
     margin-top: 220px;
   }
   .col_der {
+    min-height: 1080px;
     &.columna {
       min-height: 805px;
     }
   }
   .col_izq {
-    background: $softRed;
-    bottom: 0;
-    left: 0;
-    min-height: 1024px;
-    padding-left: 2%;
-    padding-right: 0;
-    position: absolute;
-    top: 0;
+    min-height: 1080px;
     width: 50%;
 
     .boton_donar {
       @include gota_donar;
-      position: none;
     }
+  }
+
+  //only for the home page
+  .quiero-donar .col_izq .boton_donar {
+    position: absolute;
+    left: 3%;
+    top: 40%;
   }
 }
 @media (min-width:1200px) {
   .col_izq .boton_donar {
     display: block;
-    left: 3%;
-    top: 40%;
   }
 }
