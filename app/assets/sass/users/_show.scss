@@ -1,7 +1,44 @@
 /*--- • 2 • e REGLAS EXCLUSIVAS de PERFIL de USUARIO ---------*/
+
 .banco {
-    margin-bottom: 20px;
+  -webkit-box-shadow: 0 35px 35px -35px #699;
+  border: solid 1px $whiteSmoke;
+  box-shadow: 0 30px 35px -35px #699;
+  color: $white;
+  margin-bottom: 20px;
+  margin: 62px 4px;
+  padding: 22px 8px;
+  position: relative;
 }
+.ongs {
+  .banco {
+    color: $black;
+  }
+}
+.banco:first-child {
+  margin-top: 220px;
+}
+.banco h2 {
+  font-size: 24px;
+  margin: 15px 0;
+}
+.banco h3 {
+  font-size: 18px;
+}
+.banco h4, .ficha_banco p {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 11px 0;
+}
+.ficha_banco p {
+  padding-left: 5px;
+}
+.ficha_banco {
+  float: right;
+  width: 65%;
+  padding-left: 8px;
+}
+
 .perfil {
   margin-top: 0;
 }

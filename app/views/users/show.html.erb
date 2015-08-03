@@ -24,12 +24,12 @@
     </div>
   </div>
   <div class="col-xs-12 col-sm-12 col-md-6 col_izq">
-    <div class="users-gota-donar">
     <% if current_user.ongs.any? %>
       <% current_user.ongs.each do |ong| %>
         <%= render partial: 'ong_list', locals: {ong: ong} %>
       <% end %>
     <% else %>
+    <div class="users-gota-donar">
       <%= render partial: 'shared/gota_donar' %>
     </div>
     <% end %>

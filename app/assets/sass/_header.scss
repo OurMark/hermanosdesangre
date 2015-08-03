@@ -102,7 +102,6 @@
   z-index: 9999;
 }
 .navbar-logo {
-  @include span(1 of 2);
   background: $softRed;
   padding-left: 5%;
 
@@ -139,12 +138,10 @@
 }
 
 .menus {
-  @include span(1 of 2);
   height: 40%;
   background-color: #ffffff;
 
   &.last {
-    @include span(1 of 2 last);
     padding-left: 1%;
   }
 }
