@@ -1,14 +1,13 @@
 /*=========================================
 =            login form styles            =
 =========================================*/
-.ingresar {
-  .ingresar-form {
-    width: 330px;
-    margin: 0 auto;
 
-    .btn_ingresar {
-      @extend .submit-button;
-    }
+.ingresar-form {
+  width: 330px;
+  margin: 0 auto;
+
+  .btn_ingresar {
+    @extend .submit-button;
   }
 }
 

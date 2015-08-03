@@ -4,11 +4,11 @@ ruby '2.1.2'
 gem 'rails', '4.1.4'
 gem 'mysql2', '~> 0.3.18'
 gem 'sqlite3', group: :test
-gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'sprockets', '~> 2.0'
 gem 'bootstrap-sass', '~> 3.3.5'
+gem 'sass-rails', '>= 3.2'
 gem 'tzinfo-data'
 
 gem 'jquery-rails'
@@ -30,7 +30,6 @@ end
 
 group :assets do
 	gem "compass-rails", github: "Compass/compass-rails", branch: "master"
-	gem 'susy'
 end
 
 gem 'byebug', group: [:development, :test]
