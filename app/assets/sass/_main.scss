@@ -339,6 +339,7 @@ input:focus:-moz-placeholder {
   padding: 5px 10px 25px 10px;
   margin: 0;
   float: right;
+
 }
 .col_izq {
   background: $softRed;
@@ -361,20 +362,17 @@ input:focus:-moz-placeholder {
   }
 }
 @media (min-width:768px) {
-  .col_div {
-    top: 160px;
-  }
   .listado_meses, .ong, .ongs, .ong-registered {
-    margin-top: 220px;
+    //margin-top: 220px;
   }
   .col_der {
-    min-height: 1080px;
+    min-height: 870px;
     &.columna {
       min-height: 805px;
     }
   }
   .col_izq {
-    min-height: 1080px;
+    min-height: 870px;
     width: 50%;
 
     .boton_donar {
@@ -386,7 +384,7 @@ input:focus:-moz-placeholder {
   .quiero-donar .col_izq .boton_donar {
     position: absolute;
     left: 3%;
-    top: 40%;
+    top: 20%;
   }
 }
 @media (min-width:1200px) {
