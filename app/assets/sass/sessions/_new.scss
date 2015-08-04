@@ -3,7 +3,7 @@
 =========================================*/
 
 .ingresar-form {
-  width: 330px;
+
   margin: 0 auto;
 
   .btn_ingresar {
@@ -20,8 +20,8 @@
 
 @media (min-width: 768px) {
   .ingresar-form {
+    width: 330px;
     padding: 10px;
-    margin-top: 220px;
     margin-right: auto;
     margin-left: auto;
     width: 400px;
