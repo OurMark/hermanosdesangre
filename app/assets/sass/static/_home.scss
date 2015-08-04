@@ -2,6 +2,21 @@
 =            Home view styles            =
 ========================================*/
 
+.actions-home {
+  display: none;
+  margin: 20px auto;
+
+  .actions-circle {
+    color: $saddleBrown;
+    display: inline-block;
+    margin-left: 10px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+    width: 160px;
+  }
+}
+
 .h_container {
   margin: 0 auto;
   z-index: 1;
@@ -67,6 +82,7 @@
 
 @media (min-width:768px) {
 
+
   .h_container {
     position: absolute;
     right: 2%;
@@ -84,7 +100,7 @@
 
     .video-contener {
       .video-home {
-        padding: 40px 10px 60px 60px;
+        padding: 20px 10px 0 60px;
         border-bottom: 4px solid $softRed;
 
         p {
@@ -104,6 +120,11 @@
 }
 
 @media (min-width:992px) {
+  .actions-home {
+    display: block;
+    width: 80%;
+  }
+
   .h_container {
     right: 3%;
 

@@ -150,7 +150,10 @@
     min-height: 406px;
     animation: noscroll 400ms; //para evitar que aparezca el scroll
     -webkit-animation: noscroll 400ms;
-    margin: 60px auto 0 auto;
+    margin: 0 auto;
+    h1 {
+      margin-top: 0;
+    }
   }
 
   .list-info ul {
@@ -232,7 +235,7 @@
   }
 
   &.seleccionada {
-    margin: 60px auto 0 auto;
+    margin: 0 auto;
 
     div,
     span {
@@ -253,7 +256,6 @@
   }
 
   .Opciones {
-    margin-top: 60px;
 
     div {
       margin: 18px 18px 134px 18px;

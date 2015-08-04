@@ -9,7 +9,10 @@
 
 @media (min-width: 768px){
   .ongs-new {
-    margin: 220px auto 0 auto;
+    margin: 0 auto;
     width: 400px;
+    h1 {
+      margin-top: 0;
+    }
   }
 }

@@ -5,22 +5,22 @@ Error: File to import not found or unreadable: bootstrap-sprockets.
          /home/fernando/hermanosdesangre/app/assets/sass
          /home/fernando/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets
          /home/fernando/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/susy-2.2.5/sass
-        on line 8 of /home/fernando/hermanosdesangre/app/assets/sass/style.scss
+        on line 7 of /home/fernando/hermanosdesangre/app/assets/sass/style.scss
 
+2: // ======
 3: 
 4: @import "compass";
-5: @import "susy";
-6: 
-7: //bootstrap
-8: @import "bootstrap-sprockets";
-9: @import "bootstrap";
-10: 
-11: // variables
-12: @import "variables";
-13: 
+5: 
+6: //bootstrap
+7: @import "bootstrap-sprockets";
+8: @import "bootstrap";
+9: 
+10: // variables
+11: @import "variables";
+12: 
 
 Backtrace:
-/home/fernando/hermanosdesangre/app/assets/sass/style.scss:8
+/home/fernando/hermanosdesangre/app/assets/sass/style.scss:7
 /home/fernando/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/import_node.rb:67:in `rescue in import'
 /home/fernando/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/import_node.rb:45:in `import'
 /home/fernando/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -63,4 +63,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: bootstrap-sprockets.\A        Load paths:\A          Compass::SpriteImporter\A          /home/fernando/hermanosdesangre/app/assets/sass\A          /home/fernando/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets\A          /home/fernando/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/susy-2.2.5/sass\A         on line 8 of /home/fernando/hermanosdesangre/app/assets/sass/style.scss\A \A 3: \A 4: @import \"compass\";\A 5: @import \"susy\";\A 6: \A 7: //bootstrap\A 8: @import \"bootstrap-sprockets\";\A 9: @import \"bootstrap\";\A 10: \A 11: // variables\A 12: @import \"variables\";\A 13: "; }
+  content: "Error: File to import not found or unreadable: bootstrap-sprockets.\A        Load paths:\A          Compass::SpriteImporter\A          /home/fernando/hermanosdesangre/app/assets/sass\A          /home/fernando/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets\A          /home/fernando/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/susy-2.2.5/sass\A         on line 7 of /home/fernando/hermanosdesangre/app/assets/sass/style.scss\A \A 2: // ======\A 3: \A 4: @import \"compass\";\A 5: \A 6: //bootstrap\A 7: @import \"bootstrap-sprockets\";\A 8: @import \"bootstrap\";\A 9: \A 10: // variables\A 11: @import \"variables\";\A 12: "; }
