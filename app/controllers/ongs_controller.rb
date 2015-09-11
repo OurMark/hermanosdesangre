@@ -6,6 +6,10 @@ class OngsController < ApplicationController
   # GET /ongs.json
   def index
     @ongs = Ong.all
+    respond_to do |format|
+        format.html
+        format.json { render json: @ongs  }
+    end
   end
 
   def user_ongs
@@ -31,13 +35,13 @@ class OngsController < ApplicationController
   # POST /ongs.json
   def create
     @ong = Ong.new(ong_params)
-    @ong.hasImage = 1
+    @ong.hasImage = "1"
 
     respond_to do |format|
       if @ong.save
         current_user.ongs << @ong
         @ong.create_ong_detail(beds: params[:ong][:beds], timelapse: params[:ong][:timelapse])
-        format.html { redirect_to @ong, notice: 'Ong was successfully created.' }
+        format.html { redirect_to ong_registered_path}
         format.json { render :show, status: :created, location: @ong }
       else
         format.html { render :new }
@@ -73,6 +77,12 @@ class OngsController < ApplicationController
     end
   end
 
+  def ong_registered
+  end
+
+  def ong_search
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_ong
@@ -81,9 +91,9 @@ class OngsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ong_params
-      params.require(:ong).permit(:name, :street1, :street2, :city, :state,
-                                  :country, :zip, :country, :phone, :email,
-                                  :website, :facebook, :national_network,
-                                  :international_network, :comments)
+      params.require(:ong).permit(:name, :address, :address2, :city, :addressState,
+                                  :country, :zip, :country, :phone, :adminEmail,
+                                  :websiteUrl, :facebookPage, :nationalNetworkName,
+                                  :internationalNetworkName, :comments)
     end
 end

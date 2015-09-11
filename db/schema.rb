@@ -342,16 +342,18 @@ ActiveRecord::Schema.define(version: 20150507132507) do
     t.date     "lastLogin"
     t.string   "name"
     t.string   "encrypted_password"
-    t.integer  "points",              limit: 8
+    t.integer  "points",                 limit: 8
     t.string   "sessionToken"
     t.string   "surname"
     t.string   "twitterToken"
     t.string   "twitterTokenSecret"
     t.string   "username"
-    t.integer  "version",             limit: 8
-    t.integer  "image_id",            limit: 8
-    t.integer  "location_id",         limit: 8
+    t.integer  "version",                limit: 8
+    t.integer  "image_id",               limit: 8
+    t.integer  "location_id",            limit: 8
     t.datetime "remember_created_at"
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
   end
 
   add_index "user", ["image_id"], name: "FK36EBCB6D5C60E9", using: :btree
