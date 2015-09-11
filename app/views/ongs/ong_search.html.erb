@@ -1,0 +1,31 @@
+<div class="row">
+	<div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 col_der">
+		<div class="ong-registered">
+			<h1>Registro de Banco de Sangre</h1>
+			<p>¡Hola! Para registrar una organización: </p>
+			<ol type="a">
+				<li>debes tener un mail de esa organizacion; o</li>
+				<li> <a href="#">descarga y postea este anuncio</a> en la Fanpage oficial de la organización en Facebook (y taguea a OurMark).</li>
+			</ol>
+			<p> <a href="#">Conocé el proceso de verficiación.</a> </p>
+			<%= form_tag do |f| %>
+			<div class="ong-search">
+		      <label>Busca tu organización en OurMark</label>
+		      <%= text_field_tag :name , nil,  class: 'typeahead'%>
+		    </div>
+			<p class="notificacion">Ayuda: busca por "nombre organización" + "ciudad" para mejores resultados.</p>
+			<label>¿No la encuentras?</label>
+			<%= link_to 'haz click aqui.', new_user_ong_path(current_user) %>
+		  <% end %>
+			<p>En cuanto validemos sus datos como Administrador del Banco de Sangre registrado le enviaremos un email de confirmación y podra comenzar a Configurar el Calendario de su institución</p>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6 columna col_izq">
+	  <div class="how-works-boton-donar">
+	      <%= link_to content_tag(:p, "quiero donar"), current_user ? ongs_path : user_session_path %>
+	      <div>
+	        <p>Si puedes hacerlo, debes hacerlo</p>
+	      </div>
+	  </div>
+	</div>
+</div>

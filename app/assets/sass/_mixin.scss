@@ -1,0 +1,61 @@
+@mixin gota_donar {
+  background-image: url($quieroDonar2);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  display: none;
+  font-family: $mainFont;
+  height: 400px;
+  margin-top: 500px;
+  margin: 0 auto;
+  text-align: center;
+  width: 256px;
+
+  a {
+    bottom: 0;
+    color: $saddleBrown;
+    font-size: 2.5em;
+    font-weight: bold;
+    height: 367px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 256px;
+
+    p {
+      line-height: 40px;
+      margin: 0 20px;
+      position: absolute;
+      bottom: 100px;
+      left: 0;
+      right: 0;
+
+      &:before {
+        background-image: url($miniLogo);
+        background-repeat: no-repeat;
+        content: "";
+        height: 72px;
+        left: 0;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        top: -100px;
+        width: 56px;
+      }
+    }
+  }
+
+  div {
+    display: none;
+    margin: 0 auto;
+    width: 133px;
+    position: absolute;
+    left: 25%;
+    top: 100%;
+    color: white;
+    font-size: 1.5em;
+    font-weight: lighter;
+
+    @media (min-width: 1200px) {
+      display: block;
+    }
+  }
+}

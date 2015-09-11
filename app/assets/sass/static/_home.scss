@@ -1,0 +1,166 @@
+/*========================================
+=            Home view styles            =
+========================================*/
+
+.actions-home {
+  display: none;
+  margin: 20px auto;
+
+  .actions-circle {
+    color: $saddleBrown;
+    display: inline-block;
+    margin-left: 10px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+    width: 160px;
+  }
+}
+
+.h_container {
+  margin: 0 auto;
+  z-index: 1;
+
+  .head-content {}
+
+  .h_container-col {
+    padding:0;
+  }
+
+  h1 {
+    text-align: center;
+    color: $white;
+    padding: 5px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  span {
+    color: $black;
+    display: block;
+  }
+
+  .blood-text {
+    color: $softRed;
+  }
+  .video-contener {
+
+    .video-home {
+      background: $white;
+      margin-top: 20px;
+      border-top: 4px solid $softRed;
+
+
+      .video-home-iframe {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: $softBlack;
+        letter-spacing: 1px;
+        font-weight: lighter;
+        line-height: 25px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    }
+  }
+  .foot-legend {
+    padding: 10px 0 0 30px;
+
+    p {
+      color: $saddleBrown;
+      font-size: 2em;
+      font-weight: bold;
+      width: 200px;
+    }
+  }
+}
+
+
+@media (min-width:768px) {
+
+
+  .h_container {
+    position: absolute;
+    right: 2%;
+    top: 30%;
+    width: 95%;
+
+    span {
+      display: inline-block;
+      margin-left: 19px;
+      font-size: 0.8em;
+      &:first-child {
+        color: $white;
+      }
+    }
+
+    .video-contener {
+      .video-home {
+        padding: 20px 10px 0 60px;
+        border-bottom: 4px solid $softRed;
+
+        p {
+          text-align: left;
+        }
+
+        .video-home-iframe {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .h_container .video-contener .video-home p {
+    letter-spacing: 0;
+  }
+}
+
+@media (min-width:992px) {
+  .actions-home {
+    display: block;
+    width: 80%;
+  }
+
+  .h_container {
+    right: 3%;
+
+    span {
+      margin-left: 39px;
+      font-size: 0.9em;
+    }
+
+    .blood-text {
+      background: $white;
+    }
+  }
+}
+
+@media (min-width:1200px) {
+  .h_container {
+    width: 67%;
+    span {
+      margin-left: 25px;
+    }
+  }
+
+  .video-contener {
+    position: relative;
+    left: -24%;
+    top:0;
+
+    .video-home {
+      width: 100%;
+    }
+  }
+
+  .info-donantes {
+    position: relative;
+    left:-24%;
+    top:0;
+  }
+
+}

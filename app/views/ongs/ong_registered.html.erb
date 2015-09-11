@@ -1,0 +1,17 @@
+<div class="row">
+	<div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 col_der">
+		<div class="ong-registered">
+				<h1>Registro de Banco de Sangre</h1>
+				<p>Su solicitud ha sido recibida con exito!</p>
+				<p>En cuanto validemos sus datos como Administrador del Banco de Sangre registrado le enviaremos un email de confirmación y podra comenzar a Configurar el Calendario de su institución</p>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-6 col-md-6 columna col_izq">
+	  <div class="how-works-boton-donar">
+	      <%= link_to content_tag(:p, "quiero donar"), current_user ? ongs_path : user_session_path %>
+	      <div>
+	        <p>Si puedes hacerlo, debes hacerlo</p>
+	      </div>
+	  </div>
+	</div>
+</div>

@@ -1,28 +1,42 @@
-<div class="container_menu">
-    <div class="faldon_top">
-        <form><input type="text" value placeholder="Mar del Plata" title="Ciudad"></form>
-    </div>
-</div>
-<div class="col_none">
-  <% @ongs.each do |ong| %>
-    <div class="banco">
-      <div class="ficha_banco">
-        <div class="bar-main-container">
-          <div class="campania">Septiembre 2014</div><div class="faltandias">20</div>
-          <div class="bar-container">
-            <div class="objetivo">300</div>
-            <div class="bar" style="width: 70%;"><div>70%</div></div>
-            <div class="registrados">210</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 col_der">
+    <div class="ongs">
+      <!--
+      <div class="container_menu">
+          <div class="faldon_top">
+              <form><input type="text" value placeholder="Mar del Plata" title="Ciudad"></form>
           </div>
-        </div>
-        <p><%= ong.phone %> - <%= ong.adminEmail %></p>
-        <p><%= ong.websiteUrl %> - <%= ong.facebookPage %></p>
-        <div class="reservar"><%= link_to "Donar aquí", new_ong_booking_path(ong) %></div>
       </div>
-      <h3><%= ong.name %></h3>
-      <h2><%= ong.address %>,<br/><%= ong.address2 %></h2>
-      <h4>c.p. <%= ong.zip %>. <%= ong.city %>, <%= ong.state %>, <%= ong.country_id %>.</h4>
-      <div style="clear:both;"></div>
+      -->
+      <% @ongs.each do |ong| %>
+        <div class="banco col-md-12">
+          <div class="ficha_banco">
+            <div class="bar-main-container">
+              <div class="campania">Septiembre 2014</div><div class="faltandias">20</div>
+              <div class="bar-container">
+                <div class="objetivo">300</div>
+                <div class="bar" style="width: 70%;"><div>70%</div></div>
+                <div class="registrados">210</div>
+              </div>
+            </div>
+            <p><%= ong.phone %> - <%= ong.adminEmail %></p>
+            <p><%= ong.websiteUrl %> - <%= ong.facebookPage %></p>
+            <div class="reservar"><%= link_to "Donar aquí", new_ong_booking_path(ong) %></div>
+          </div>
+          <h3><%= ong.name %></h3>
+          <h2><%= ong.address %>,<br/><%= ong.address2 %></h2>
+          <h4>c.p. <%= ong.zip %>. <%= ong.city %>, <%= ong.state %>, <%= ong.country_id %>.</h4>
+          <div style="clear:both;"></div>
+        </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-6 columna col_izq">
+    <div class="how-works-boton-donar">
+        <%= link_to content_tag(:p, "quiero donar"), current_user ? ongs_path : user_session_path %>
+        <div>
+          <p>Si puedes hacerlo, debes hacerlo</p>
+        </div>
+    </div>
+  </div>
 </div>
