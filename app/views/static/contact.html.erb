@@ -1,11 +1,9 @@
-<div class="row">
-  <div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 col_der">
+<div class="col_der columna">
     <div class="col_div">
-      <h1><strong>CONTACTO</strong></h1>
-      <form id="form1" method="post" action="enviarcorreoCAS.php"> <table width="357" border="0"> <tr> <td width="90">Apellido:</td> <td width="257"><input name="apellido" type="text" id="apellido" size=30 /></td> </tr> <tr> <td>Nombre/s:</td> <td><label> <input name="nombre" type="text" id="nombre" size=30 /> </label></td> </tr> <tr> <td>Empresa:</td> <td><label> <input name="empresa" type="text" id="empresa" size=30 /> </label></td> </tr> <tr> <td>Mail:</td> <td><label> <input name="correo" type="text" id="correo" size=30 /> </label></td> </tr> <tr> <td>Asunto:</td> <td><input name="asunto" type="text" id="asunto" size=30 /></td> </tr> <tr> <td height="59" colspan="2"></td> </tr> <tr> <td height="91" colspan="2"><textarea name="consulta" cols="55" rows="5" id="consulta">Escribanos aqui su consulta</textarea></td> </tr> <tr> <td height="41" colspan="2"><label></label> <div align="center"> <input type="submit" name="Submit" value="Enviar" /> <label> <input type="reset" name="Submit2" value="Cancelar" /> </label> </div></td> </tr> </table> </form>
+        <h1><strong>CONTACTO</strong></h1>
+        <form id="form1" method="post" action="enviarcorreoCAS.php"> <table width="357" border="0"> <tr> <td width="90">Apellido:</td> <td width="257"><input name="apellido" type="text" id="apellido" size=30 /></td> </tr> <tr> <td>Nombre/s:</td> <td><label> <input name="nombre" type="text" id="nombre" size=30 /> </label></td> </tr> <tr> <td>Empresa:</td> <td><label> <input name="empresa" type="text" id="empresa" size=30 /> </label></td> </tr> <tr> <td>Mail:</td> <td><label> <input name="correo" type="text" id="correo" size=30 /> </label></td> </tr> <tr> <td>Asunto:</td> <td><input name="asunto" type="text" id="asunto" size=30 /></td> </tr> <tr> <td height="59" colspan="2"></td> </tr> <tr> <td height="91" colspan="2"><textarea name="consulta" cols="55" rows="5" id="consulta">Escribanos aqui su consulta</textarea></td> </tr> <tr> <td height="41" colspan="2"><label></label> <div align="center"> <input type="submit" name="Submit" value="Enviar" /> <label> <input type="reset" name="Submit2" value="Cancelar" /> </label> </div></td> </tr> </table> </form>
     </div>
-  </div>
-  <div class="col-xs-12 col-sm-6 col-md-6 col_izq">
-    <%= render partial: 'shared/gota_sin_donar' %>
-  </div>
+</div>
+<div class="columna col_izq">
+  <%= render partial: 'shared/gota_sin_donar' %>
 </div>

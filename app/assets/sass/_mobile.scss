@@ -1,0 +1,274 @@
+/* CSS HERMANOS DE SANGRE - para MOBILES Y TABLES - Indice
+
+• 1 REGLAS PANTALLAS MENORES A 798px, IPAD y SMARTPHONE
+--- • 1 • a MENÚ MOBILE
+--- • 1 • b CONTENIDOS VARIOS
+
+• 2 REGLAS MOBILES Y PANTALLAS MENORES A 365px
+*/
+
+/* • 1 REGLAS PANTALLAS MENORES A 798px, IPAD y SMARTPHONE ---*/
+@media (max-width: 798px){ /*@media only screen and (max-device-width: 798px)*/
+html{overflow: visible;}
+
+/*--- • 1 • a MENÚ MOBILE -----------------------------------*/
+
+.faldon_top_container {
+    position: relative;
+    width: 100%;
+    background: white;
+    height: auto;
+}
+
+.faldon_top {
+    width: 100%;
+    height: auto;
+}
+
+.logo_top_container {
+    position: relative;
+    top: 0;left: 0;
+    background: $softRed;
+    text-align: center;
+}
+
+.menus {
+    height: 0px;
+    overflow: hidden;
+    background-color: $softRed;
+    border-bottom: 0px solid $mainRed;
+    -webkit-box-shadow: black 0px 0px 25px -5px;
+    box-shadow: black 0px 0px 25px -5px;
+}
+ul#menu, ul#sobre_derecha{
+    position: relative;
+    left: auto; top: auto; right: auto;
+}
+ul#menu li,
+ul#sobre_derecha li{
+    display: block;
+    width: auto;
+    position: relative;
+    text-align: center;
+}
+ul#menu ul.sub-menu li{
+    display: inline-block;
+    background: none;
+}
+ul#menu li ul.sub-menu{
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+ul#menu>li>a:after{ content: " :"}
+ul#sobre_derecha li>a:after{ content: none}
+
+ul#menu>li a,
+ul#sobre_derecha>li a{
+    border-right: none;
+    background: none !important;
+}
+ul#sobre_derecha>li:last-child a{
+    color: $softRed;
+}
+
+.menus>ul>li:first-child{
+    background: white;
+    padding-top: 4px;
+}
+.menus>ul>li:nth-child(2){
+    background: $whiteSmoke;
+}
+.menus #sobre_derecha>li:last-child a{
+    color: white;
+}
+
+#sobre_derecha>span,
+#sobre_derecha .HS_email {
+    width: auto;
+    height: auto;
+    overflow: initial;
+    top: 0;
+    right: 0;
+    position: relative;
+    background: none;
+    display: inline-block;
+    margin: 0;
+    padding: 12px;
+    text-transform: uppercase;    
+}
+.HS_email:hover {width: auto;}
+.HS_email a{padding: 0;}
+.st_facebook, .st_twitter{
+    display: none;
+}
+/*-----botón abrir menú-------*/
+.abrir-menu {
+    cursor: pointer;
+    height: 36px; 
+    width: 36px;
+    position: absolute;
+    right: 10px; bottom: 25px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 9999;
+    border-radius: 50% 0% 50% 50%;
+  -webkit-transform: translateY(0px) rotate(-45deg);
+  -ms-transform: translateY(0px) rotate(-45deg);
+  transform: translateY(0px) rotate(-45deg);
+}
+.abrir-menu.mAbierto{
+    bottom: -16px;
+}
+.abrir-menu:hover, .abrir-menu.mAbierto {
+  background: $whiteSmoke;
+}
+
+.abrir-menu div {
+  background: $mainRed;
+  height: 4px; width: 20px;
+  margin-left: 8px;
+  margin-top: 16px;
+  -webkit-transform: translateY(0px) rotate(45deg);
+  -ms-transform: translateY(0px) rotate(45deg);
+  transform: translateY(0px) rotate(45deg);
+}
+.abrir-menu div::before, .abrir-menu div::after {
+  background: $mainRed;
+  content: '';
+  display: block;
+  height: 4px;
+  width: 20px;
+}
+.abrir-menu div::before {
+  -webkit-transform: translateY(-7px);
+  -ms-transform: translateY(-7px);
+  transform: translateY(-7px);
+}
+.abrir-menu div::after {
+  -webkit-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  transform: translateY(3px);
+}
+
+/*----- animación menú -------*/
+.abrir-menu, .abrir-menu:hover, .abrir-menu.mAbierto, .abrir-menu div, .abrir-menu div::before, .abrir-menu div::after, .menus, .menus.mAbierto {
+  -webkit-transition: 600ms all;
+  transition: 600ms all;
+}
+.abrir-menu div.mAbierto {
+  background: transparent;
+}
+.abrir-menu div.mAbierto::before {
+  -webkit-transform: translateY(0px) rotate(-45deg);
+  -ms-transform: translateY(0rem) rotate(-45deg);
+  transform: translateY(0px) rotate(-45deg);
+}
+.abrir-menu div.mAbierto::after {
+  -webkit-transform: translateY(-4px) rotate(45deg);
+  -ms-transform: translateY(-4px) rotate(45deg);
+  transform: translateY(-4px)rotate(45deg);
+}
+.menus.mAbierto{
+    height: 280px;
+    border-bottom-width: 2px;
+}
+
+/*--- • 1 • b CONTENIDO VARIOS-------------------------------*/
+.content_container {    
+    border-top: none;
+}
+.h_container {
+    position: relative;
+    left: 0; top: 0;
+    margin-left: 0;
+    width: auto; height: auto;
+    text-align: center;
+    padding: 25px 5px;
+}
+.h_container h1 {
+    color: black;
+    margin-bottom: 5px;
+}
+.h_container~.col_der {
+    padding-top: 5px;
+}
+.col_der {
+    padding: 5px 10px 25px 10px;
+    min-height: inherit;
+}
+.col_div {
+    margin: 0 auto;
+}
+.col_div.home, .col_div.us {
+    padding-top: inherit;
+    padding-bottom: inherit;
+}
+.col_div p, .col_div iframe, .col_div form, .col_div img {
+margin: 5px 0;
+}
+.col_div iframe{
+    width: 100% !important;
+}
+.col_izq {
+    position: relative;
+    width: auto; height: auto;
+    padding:  55px 10px;
+}
+.boton_donar {
+    margin: 0 auto;
+    float: none;
+}
+.campania {
+    color: $mainRed;
+}
+.col_div .imagen{
+    float: none;
+    width: 60%;
+    margin: 0 20% 12px 20%;
+}
+.col_div h1, .col_div h2,.col_div h3 {
+    margin-left: 0;
+    margin-right: 0;
+}
+.col_div form INPUT[type="password"], .col_div form INPUT[type="text"], .col_div form INPUT[type="email"]{
+    width:100%;  
+}
+.slogan {
+    margin: 45px auto;
+}   
+.pregunta {
+    margin: 8px 0px;
+}
+.bar-main-container {
+    margin-top: 40px;
+}
+.container_menu{
+    position: relative;
+}
+}
+
+/* • 2 REGLAS MOBILES Y PANTALLAS MENORES A 365px ------------*/
+@media (max-width: 365px) {
+.slogan{
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+.slogan p{    
+    display: inline-block;
+}
+.slogan p, .slogan h2, .slogan h3 {
+    position: relative;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+}
+.menus.mAbierto{
+    height: 325px;
+}
+}

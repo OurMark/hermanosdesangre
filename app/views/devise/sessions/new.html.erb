@@ -1,28 +1,26 @@
-<div class="row">
-    <div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 col_der">
-      <div class="ingresar-form">
-        <h1><strong>INGRESA</strong></h1>
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="inputLargo">
-            <label>E-mail registrado</label>
-            <%= f.email_field :email, autofocus: true %>
-        </div>
-        <p class="notificacion"><%= link_to "¿No estás registrado?", new_user_registration_path %></p>
-        <div class="inputLargo">
-            <label>Contraseña</label>
-            <%= f.password_field :password, autocomplete: "off" %>
-        </div>
-        <p class="notificacion"><%= link_to "¿Olvidaste tu contraseña?", new_user_password_path %></p>
-        <div class="submitArea">
-            <% if devise_mapping.rememberable? -%>
-            <%= f.check_box :remember_me %> <%= f.label :remember_me, "Mantener sesión" %>
-            <% end -%>
-            <%= f.submit "INGRESAR", class: "btn_ingresar" %>
-        <% end %>
-        </div>
-      </div>
+<div class="col_der">
+  <div class="col_div ingresar">
+    <h1><strong>INGRESA</strong></h1>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="inputLargo">
+        <label>E-mail registrado</label>
+        <%= f.email_field :email, autofocus: true %>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col_izq">
-      <%= render partial: 'shared/gota_sin_donar' %>
+    <p class="notificacion"><%= link_to "¿No estás registrado?", new_user_registration_path %></p>
+    <div class="inputLargo">
+        <label>Contraseña</label>
+        <%= f.password_field :password, autocomplete: "off" %>
     </div>
+    <p class="notificacion"><%= link_to "¿Olvidaste tu contraseña?", new_user_password_path %></p>
+    <div class="submitArea">
+        <% if devise_mapping.rememberable? -%>
+        <%= f.check_box :remember_me %> <%= f.label :remember_me, "Mantener sesión" %>
+        <% end -%>
+        <%= f.submit "INGRESAR", class: "btn_ingresar" %>
+    <% end %>
+    </div>
+  </div>
+</div>
+<div class="columna col_izq">
+  <%= render partial: 'shared/gota_sin_donar' %>
 </div>

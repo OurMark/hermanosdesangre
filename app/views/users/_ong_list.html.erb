@@ -17,7 +17,8 @@
   <h4>c.p. <%= ong.zip %>. <%= ong.city %>, <%= ong.state %>, <%= ong.country_id %>.</h4>
   <div style="clear:both;"></div>
 </div>
-    <ul class="no-top botones_sobre_derecha ong_botones">
+
+    <ul id="sobre_derecha" class="no-top">
       <li><%= link_to "Editar información", edit_user_ong_path(current_user, ong) %></li>
       <li><%= link_to "Gestionar turnos", ong_bookings_path(ong) %></li>
     </ul>

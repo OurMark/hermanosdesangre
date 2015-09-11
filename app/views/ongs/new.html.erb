@@ -1,17 +1,10 @@
-<div class="row">
-  <div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 col_der">
-   <div class="ongs-new">
-       <h1>Registrar Banco de Sangre</h1>
-       <p>Sólo debes registrar el  Banco de Sangre si perteneces a la organización y/o con permiso de ésta. Si no podemos validar que tienes autorización para registrar el banco de sangre, la cuenta será eliminada.</p>
-       <%= render 'form' %>
-    </div>
-  </div>
-  <div class="col-xs-12 col-sm-6 col-md-6 columna col_izq">
-    <div class="how-works-boton-donar">
-        <%= link_to content_tag(:p, "quiero donar"), current_user ? ongs_path : user_session_path %>
-        <div>
-          <p>Si puedes hacerlo, debes hacerlo</p>
-        </div>
-    </div>
-  </div>
+<div class="columna col_der">
+     <div class="col_div">
+         <h1>Nueva ONG</h1>
+         <p>Sólo debes registrar el  Banco de Sangre si perteneces a la organización y/o con permiso de ésta. Si no podemos validar que tienes autorización para registrar el banco de sangre, la cuenta será eliminada.</p>
+         <%= render 'form' %>
+      </div>
+</div>
+<div class="columna col_izq">
+  <%= render partial: 'shared/gota_sin_donar' %>
 </div>
