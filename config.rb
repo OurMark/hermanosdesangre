@@ -1,3 +1,5 @@
+require 'susy'
+
 http_path = '/'
 css_dir = 'app/assets/stylesheets'
 sass_dir = 'app/assets/sass'

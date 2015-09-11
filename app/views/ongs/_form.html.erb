@@ -12,11 +12,19 @@
     <label>Nombre*</label>
     <%= f.text_field :name %>
   </div>
-  <div class="inputLargo">
+  <div class="inputCorto">
+    <label>Camas disponibles</label>
+    <%= f.number_field :beds %>
+  </div>
+  <div class="inputCorto" %>
+    <label>Franja horaria</label>
+    <%= f.select :timelapse, [["10 min", 10], ["20 min", 20], ["30 min", 30]], {}, { class: "similInput" } %>
+  </div>
+  <div class="inputCorto">
     <label>Dirección*</label>
     <%= f.text_field :address %>
   </div>
-  <div class="inputLargo">
+  <div class="inputCorto">
     <label>Referencias de dirección</label>
     <%= f.text_field :address2 %>
   </div>
@@ -28,7 +36,7 @@
     <label>Provincia</label>
     <%= f.select :addressState, [["Buenos Aires", "Buenos Aires"]], {}, { class: "similInput" } %>
   </div>
-  <div class="inputCorto">
+  <div class="inputLargo">
     <label>Ciudad</label>
     <%= f.select :city, [["Mar del Plata", "Mar del Plata"]], {}, { class: "similInput" } %>
   </div>
@@ -62,6 +70,6 @@
   </div>
   <p class="notificacion">solo si pertenece a una red</p>
   <div class="submitArea">
-    <%= f.submit "ENVIAR", class: "input-submit" %>
+    <%= f.submit "ENVIAR" %>
   </div>
 <% end %>
