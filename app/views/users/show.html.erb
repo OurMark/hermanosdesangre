@@ -1,38 +1,46 @@
 <div class="row">
-  <div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 col_der">
-    <div class="perfil">
-        <div class="Secciones">
-            <div class="seleccionada"> <!-- Perfil -->
-                <h1><strong><%= current_user.name %> <%= current_user.surname %></strong></h1>
-                <h3><%= current_user.dni %></h3>
-                <h2><%= current_user.bloodtype %></h2>
-                <h4>Fecha de Nacimiento:</h4>
-                <p><%= current_user.birthDate %></p>
-                <h4>Sexo:</h4>
-                <p><%= current_user.gender %></p>
-                <h4>Ubicación:</h4>
-                <p><%= current_user.user_locale.city %>, <%= current_user.user_locale.state %>, <%= current_user.user_locale.country %></p>
-                <h4>E-mail:</h4>
-                <p><%= current_user.email %></p>
-                <h4>Contraseña:</h4>
-                <p>********</p>
-                <%= link_to "CAMBIAR DATOS", edit_user_registration_path, class: "cambiar" %>
-            </div>
+    <div class="col-xs-12 col-sm-3 menu-column hidden-xs">
+        <div class="menu">
+            <div class="panel-group" id="menu-bancos" role="tablist" aria-multiselectable="true">
+                <div class="panel">
+                  <div role="tab" id="heading-banco-1">
+                    <h4 class="panel-title menu-header">
+                        Mis Bancos
+                    </h4>
+                  </div>
+                  <% current_user.ongs.each do |ong| %>
+                    <%= render partial: 'ong_list_menu', locals: {ong: ong} %>
+                  <% end %>
+              </div>
+          </div>
         </div>
-        <%= render partial: 'badges', locals: { badges: current_user.badges } %>
-        <h4 class="badgets-title"><a href="@">Próximo turno: <strong>Fecha hora, lugar</strong> - Ver todos.</a></h4>
+        <div class="users-gota-donar">
+            <%= render partial: 'shared/gota_donar' %>
+        </div>
     </div>
-  </div>
-  <div class="col-xs-12 col-sm-12 col-md-6 col_izq">
-    <% if current_user.ongs.any? %>
-      <% current_user.ongs.each do |ong| %>
-        <%= render partial: 'ong_list', locals: {ong: ong} %>
-      <% end %>
-    <% else %>
-    <div class="users-gota-donar">
-      <%= render partial: 'shared/gota_donar' %>
+    <div class="col-xs-12 col-sm-9">
+        <div class="perfil">
+            <div class="Secciones">
+                <div class="seleccionada"> <!-- Perfil -->
+                    <h1><strong><%= current_user.name %> <%= current_user.surname %></strong></h1>
+                    <h3><%= current_user.dni %></h3>
+                    <h2><%= current_user.bloodtype %></h2>
+                    <h4>Fecha de Nacimiento:</h4>
+                    <p><%= current_user.birthDate %></p>
+                    <h4>Sexo:</h4>
+                    <p><%= current_user.gender %></p>
+                    <h4>Ubicación:</h4>
+                    <p><%= current_user.user_locale.city %>, <%= current_user.user_locale.state %>, <%= current_user.user_locale.country %></p>
+                    <h4>E-mail:</h4>
+                    <p><%= current_user.email %></p>
+                    <h4>Contraseña:</h4>
+                    <p>********</p>
+                    <%= link_to "CAMBIAR DATOS", edit_user_registration_path, class: "cambiar" %>
+                </div>
+            </div>
+            <%= render partial: 'badges', locals: { badges: current_user.badges } %>
+            <h4 class="badgets-title"><a href="@">Próximo turno: <strong>Fecha hora, lugar</strong> - Ver todos.</a></h4>
+            <%= link_to "Registrar mi Banco de Sangre u ONG de donación", ong_search_path,{ :class =>"botonONG"}%>
+        </div>
     </div>
-    <% end %>
-    <%= link_to "Registrar mi Banco de Sangre u ONG de donación", ong_search_path,{ :class =>"botonONG"}%>
-  </div>
 </div>
