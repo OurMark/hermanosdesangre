@@ -1,0 +1,76 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-3 menu-column hidden-xs">
+        <%= render partial: 'shared/ong_my_banks_menu', locals:{ong: @ong ,selectedOng: @ong }%>
+     <div class="users-gota-donar">
+         <%= render partial: 'shared/gota_donar' %>
+     </div>
+ </div>
+    <div class="col-xs-12 col-sm-9">
+        <div class="configuracion-atencion">
+        <%= form_tag do |f| %>
+        <h1>Configuración de Atención</h1>
+        <p>Configura los días de tu semana, con los horarios de atención, y la duración de los turnos.</p>
+        <p>Esta semana se trasladara a tu calendario anual, donde podrás modificar o bloquear días particulares.</p>
+        <div class="form-group">
+            <label class="form-label">Días de Atención</label>
+            <div class="row">
+            <%  @days = ['ALL', 'LU', 'MA', 'MI' , 'JU', 'VI', 'SA', 'DO']
+                for @each in @days %>
+                    <div class="col-sm-1 col-xs-3">
+                        <%= label_tag(@each, @each) %>
+                        <%= check_box_tag(@each) %>
+                    </div>
+                <% end %>
+                <div class="col-xs-12">
+                    <a href="#" class="accion" id="agregar-horarios-diferenciados">Agregar horarios diferenciados por día</a>
+                </div>
+                <div id="horarios-diferenciados" class="hidden">
+                <%  @days = ['ALL', 'LU', 'MA', 'MI' , 'JU', 'VI', 'SA', 'DO']
+                    for @each in @days %>
+                        <div class="col-sm-1 col-xs-3">
+                            <%= label_tag(@each, @each) %>
+                            <%= check_box_tag(@each) %>
+                        </div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Horarios de Atención</label>
+            <div class="row">
+                <div class="col-xs-4">
+                    <label>INICIO</label>
+                    <%= select_tag(:inicio, options_for_select(@intervalo_horario)) %>
+                </div>
+                <div class="col-xs-4">
+                    <label>HASTA</label>
+                    <%= select_tag(:hasta, options_for_select(@intervalo_horario)) %>
+                </div>
+                <div class="col-xs-12">
+                    <a href="#" class="accion" id="definir-horario-cortado">Definir horario cortado</a>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Capacidad</label>
+            <div class="row">
+                <div class="col-xs-12">
+                    <label>DONANTES POR TURNO</label>
+                    <%= select_tag(:duracion, options_for_select(1..10)) %>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Habilitar calendario a partir de</label>
+            <div class="row">
+                <div class="col-xs-12 inputCorto">
+                    <label>FECHA DE COMIENZO</label>
+                    <%= text_field_tag :fechaInicio %>
+                  </div>
+            </div>
+        </div>
+        <%= link_to "Guardar y continuar", ong_calendar_path, class: "cambiar" %>
+        <% end #End Form%>
+    </div>
+    </div>
+</div>
