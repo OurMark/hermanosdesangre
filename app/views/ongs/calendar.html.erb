@@ -18,11 +18,11 @@
                 for @each in @days %>
                     <div class="col-sm-1 col-xs-3">
                         <%= label_tag(@each, @each) %>
-                        <%= check_box_tag(@each) %>
+                        <%= check_box_tag(@each, 1, false, class: 'dayEnabled') %>
                     </div>
                 <% end %>
                 <div class="col-xs-12">
-                    <a href="#" class="accion" id="agregar-horarios-diferenciados">Agregar horarios diferenciados por día</a>
+                    <a href="#" class="accion" id="accion-horarios-diferenciados">Agregar horarios diferenciados por día</a>
                 </div>
                 <div id="horarios-diferenciados" class="hidden">
                 <%  @days = ['ALL', 'LU', 'MA', 'MI' , 'JU', 'VI', 'SA', 'DO']
@@ -37,19 +37,18 @@
         </div>
         <div class="form-group">
             <label class="form-label">Horarios de Atención</label>
-            <div class="row">
-                <div class="col-xs-4">
-                    <label>INICIO</label>
-                    <%= select_tag(:inicio, options_for_select(@intervalo_horario)) %>
-                </div>
-                <div class="col-xs-4">
-                    <label>HASTA</label>
-                    <%= select_tag(:hasta, options_for_select(@intervalo_horario)) %>
-                </div>
-                <div class="col-xs-12">
-                    <a href="#" class="accion" id="definir-horario-cortado">Definir horario cortado</a>
-                </div>
+            <div class="row horarios-diferenciados">
+                <%= render partial: 'from_to', locals:{day: 0 , day_name_label: ' '} %>
             </div>
+            <div class="row horarios-diferenciados">
+                <a href="#" class="accion-toggle-horario-cortado">Definir horario cortado</a>
+            </div>
+            <%  @days = ['LU', 'MA', 'MI' , 'JU', 'VI', 'SA', 'DO']
+                    @days.each_with_index {|each, index| %>
+                <div class="row horarios-diferenciados hidden">
+                    <%= render partial: 'from_to', locals:{day: index, day_name_label: each} %>
+                </div>
+                <% } %>
         </div>
         <div class="form-group">
             <label class="form-label">Capacidad</label>

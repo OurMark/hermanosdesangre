@@ -1,0 +1,27 @@
+
+
+    <%
+    @day_name = day_name_label
+    if day_name_label == ' ' then
+        @day_name = 'ALL'
+    end %>
+<div class="from-to <%=@day_name %>">
+    <div class="col-xs-1"> <label><%=@day_name %></label> </div>
+    <div class="col-xs-2">
+        <label>INICIO</label>
+        <%= select_tag(@day_name + '[inicio]'  , options_for_select(@intervalo_horario)) %>
+    </div>
+    <div class="col-xs-2">
+        <label>HASTA</label>
+        <%= select_tag(@day_name + '[hasta]', options_for_select(@intervalo_horario)) %>
+    </div>
+    <div class="col-xs-2 horario-cortado hidden">
+        <label>INICIO</label>
+        <%= select_tag(@day_name +'[inicio_cortado]', options_for_select(@intervalo_horario)) %>
+    </div>
+    <div class="col-xs-2 horario-cortado hidden">
+        <label>HASTA</label>
+        <%= select_tag(@day_name +'[hasta_cortado]', options_for_select(@intervalo_horario)) %>
+        <%= hidden_field_tag(:input_horario_cortado, '0')%>
+    </div>
+</div>
