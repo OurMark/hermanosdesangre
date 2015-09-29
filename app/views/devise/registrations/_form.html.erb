@@ -30,7 +30,7 @@
   <% end %>
   <div class="inputCorto">
     <label>Fecha de Nacimiento</label>
-    <%= f.text_field :birthDate, placeholder: "dd/mm/aaaa" %>
+    <%= f.text_field :birthDate, placeholder: "dd/mm/aaaa", :value => (f.object.birthDate.strftime('%d/%m/%Y') if f.object.birthDate) %>
   </div>
   <div class="inputCorto">
     <label>Sexo</label>
