@@ -20,6 +20,7 @@
   padding-left: 0;
   color: black;
   font-size: 17px;
+  font-weight: normal;
 }
 .similInput label:after {
   content: none;
@@ -79,9 +80,13 @@
   }
 }
 
+.help-block {
+    padding-left : 10px;
+  }
+
 @media (min-width: 768px) {
   .inputCorto {
-    width: 125px
+    width: 153px;
   }
 
   .inputLargo {
