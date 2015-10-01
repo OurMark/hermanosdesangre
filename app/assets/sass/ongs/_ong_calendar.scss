@@ -1,0 +1,22 @@
+.horarios-diferenciados {
+    label {
+        padding-top: 10px;
+    }
+}
+.configuracion-atencion {
+    a {
+        color: $saddleBrown;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-weight: normal;
+        font-size: 12px;
+    }
+    a.hover {
+        text-decoration: none;
+        cursor: pointer;
+    }
+    a.horario-cortado {
+        margin-left: 45px;
+    }
+
+}
