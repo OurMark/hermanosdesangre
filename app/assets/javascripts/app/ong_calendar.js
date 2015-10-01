@@ -2,15 +2,16 @@
 (function($) {
       $(document).on('ready', function() {
         $('.horarios-diferenciados.ALL').toggleClass('hidden');
-        $('#accion-horarios-diferenciados').bind('click', function () {
+        $('.accion-horarios-diferenciados').bind('click', function () {
             $('.horarios-diferenciados').toggleClass('hidden');
+            $('.accion-horarios-diferenciados').toggleClass('hidden');
+
         });
         $('.accion-toggle-horario-cortado').bind('click', function () {
             $('.horario-cortado').toggleClass('hidden');
             $('#input_horario_cortado').val($('#input_horario_cortado').val() === '0' ? '1' : '0');
         });
         $('.accion-toggle-horario-cortado-each').click(function (event) {
-            console.log(event.target.name);
             $('.horario-cortado.' + event.target.name).toggleClass('hidden');
         });
         $('input[type="checkbox"].days-all').change( function (event) {

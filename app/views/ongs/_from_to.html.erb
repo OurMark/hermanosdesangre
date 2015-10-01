@@ -29,6 +29,7 @@
 
 <div class="row from-to horarios-diferenciados hidden <%= @day_name %> ">
     <div class="col-xs-12">
-        <a name="<%= @day_name %>" class="horario-cortado accion-toggle-horario-cortado-each">Definir horario cortado</a>
+        <a name="<%= @day_name %>" class="horario-cortado accion-toggle-horario-cortado-each <%= @day_name %>">Definir horario cortado</a>
+        <a name="<%= @day_name %>" class="horario-cortado accion-toggle-horario-cortado-each hidden <%= @day_name %>">Cancelar horario cortado</a>
     </div>
 </div>
