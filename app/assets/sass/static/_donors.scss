@@ -60,7 +60,6 @@
     top: 20px;
     cursor: pointer;
     opacity: 0.3;
-    @include transition(opacity, 500s, ease);
 
     &:hover {
       opacity: 0.8;
