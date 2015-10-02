@@ -6,6 +6,7 @@
   margin-bottom: 10px;
   overflow: hidden;
 }
+
 .inputCorto {
   width: 100%;
   display: inline-block;
@@ -80,8 +81,12 @@
 }
 
 @media (min-width: 768px) {
+  textarea{
+    width: 315px !important;
+  }
+
   .inputCorto {
-    width: 125px
+    width: 125px;
   }
 
   .inputLargo {
