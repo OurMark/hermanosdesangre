@@ -80,6 +80,23 @@
   }
 }
 
+.form-group {
+    margin-bottom: 30px;
+
+    label {
+        padding-left: 0px;
+        font-weight: normal;
+    }
+    label.form-label {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+}
+
 @media (min-width: 768px) {
   textarea{
     width: 315px !important;

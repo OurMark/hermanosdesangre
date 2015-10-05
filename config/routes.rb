@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :turnos, controller: :bookings, as: 'bookings'
     get '/turnos-dia', to: 'bookings#day_bookings', as: 'day_bookings'
     resources :objetivos, controller: :challenges, as: 'challenges'
+    get '/calendar', to: 'ongs#calendar', as: 'calendar'
     member do
       get 'bookings'
     end
