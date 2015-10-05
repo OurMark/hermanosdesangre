@@ -16,6 +16,10 @@
   @extend .submit-button;
 }
 
+.btn-enviar {
+  @extend .submit-button;
+}
+
 @media (min-width: 768px) {
   .registrarse {
     width: 400px;
