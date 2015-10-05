@@ -13,7 +13,7 @@
                     <h3><%= current_user.dni %></h3>
                     <h2><%= current_user.bloodtype %></h2>
                     <h4>Fecha de Nacimiento:</h4>
-                    <p><%= current_user.birthDate %></p>
+                    <p><%= current_user.birthDate.strftime("%d/%m/%Y") %></p>
                     <h4>Sexo:</h4>
                     <p><%= current_user.gender %></p>
                     <h4>Ubicación:</h4>
