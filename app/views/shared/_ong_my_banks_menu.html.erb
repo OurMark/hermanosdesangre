@@ -1,0 +1,14 @@
+<div class="menu">
+    <div class="panel-group" id="menu-bancos" role="tablist" aria-multiselectable="true">
+        <div class="panel">
+          <div role="tab" id="heading-banco-1">
+            <h4 class="panel-title menu-header">
+                Mis Bancos
+            </h4>
+          </div>
+          <% current_user.ongs.each do |ong| %>
+            <%= render partial: 'shared/ong_list_menu', locals: {ong: ong, selected: selectedOng} %>
+          <% end %>
+      </div>
+  </div>
+</div>

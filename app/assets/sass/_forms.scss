@@ -6,6 +6,7 @@
   margin-bottom: 10px;
   overflow: hidden;
 }
+
 .inputCorto {
   width: 100%;
   display: inline-block;
@@ -80,11 +81,33 @@
   }
 }
 
+
 .help-block {
     padding-left : 10px;
-  }
+}
+
+.form-group {
+    margin-bottom: 30px;
+
+    label {
+        padding-left: 0px;
+        font-weight: normal;
+    }
+    label.form-label {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+}
 
 @media (min-width: 768px) {
+  textarea{
+    width: 315px !important;
+  }
+
   .inputCorto {
     width: 153px;
   }
