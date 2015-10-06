@@ -11,10 +11,14 @@
     <label>Apellido*</label>
     <%= f.text_field :surname %>
   </div>
+  <div class="inputCorto">
+    <label>Fecha de Nacimiento</label>
+    <%= f.text_field :birthDate, placeholder: "dd/mm/aaaa", :maxlength=>"10", :value => (f.object.birthDate.strftime('%d/%m/%Y') if f.object.birthDate)%>
+  </div>
   <%= f.fields_for :user_detail do |ff| %>
     <div class="inputCorto">
       <label>DNI*</label>
-      <%= ff.text_field :dni %>
+      <%= ff.text_field :dni, :maxlength=>"8",:'data-toggle'=>"tooltip", :'data-placement'=>"right", :title=>"DNI inválido", :'data-trigger'=>"manual" %>
     </div>
     <div class="inputCorto">
       <label>Grupo Sanguineo</label>
@@ -28,10 +32,6 @@
                     ["0 negativo", "0-"]], {}, {class: "similInput", id: "user_bloodtype"} %>
     </div>
   <% end %>
-  <div class="inputCorto">
-    <label>Fecha de Nacimiento</label>
-    <%= f.text_field :birthDate, placeholder: "dd/mm/aaaa", :value => (f.object.birthDate.strftime('%d/%m/%Y') if f.object.birthDate) %>
-  </div>
   <div class="inputCorto">
     <label>Sexo</label>
     <div class="similInput">
@@ -57,7 +57,7 @@
   <% end %>
   <div class="inputLargo">
     <label>E-mail*</label>
-    <%= f.email_field :username %>
+    <%= f.email_field :username, :'data-toggle'=>"tooltip", :'data-placement'=>"right", :title=>"E-mail no válido", :'data-trigger'=>"manual" %>
   </div>
   <div class="inputLargo">
     <label>Contraseña actual</label>
@@ -70,7 +70,7 @@
   </div>
   <div class="inputCorto">
     <label>Repite el nuevo Password</label>
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", :'data-toggle'=>"tooltip", :'data-placement'=>"right", :title=>"Las contraseñas ingresadas no son iguales", :'data-trigger'=>"manual" %>
   </div>
   <p class="notificacion">Completa solo si deseas cambiar tu password.</p>
   <div class="submitArea">
