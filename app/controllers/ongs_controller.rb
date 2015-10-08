@@ -83,6 +83,17 @@ class OngsController < ApplicationController
   def ong_search
   end
 
+  def calendar
+      @ong = Ong.find(params[:ong_id])
+      @intervalo_horario = []
+    (00..23).each {|hour|
+        ['00', '30'].each {|minutes|
+         @intervalo_horario.append(hour.to_s + ':' + minutes)
+         }
+     }
+      @duracion_turnos = ['30', '45', '60']
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_ong
