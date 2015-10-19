@@ -20,6 +20,23 @@
   @extend .submit-button;
 }
 
+.sin-margen{
+  margin-bottom: 0;
+}
+
+.texto-validacion{
+  color: #c0a16b;
+  font-size: 12px;
+  font-weight: lighter;
+  padding-left: 10px;
+}
+
+.tiene-error{
+    border-color:#66512c;
+    -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b;
+    box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b;
+}
+
 @media (min-width: 768px) {
   .registrarse {
     width: 400px;

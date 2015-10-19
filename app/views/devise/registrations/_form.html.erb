@@ -3,22 +3,25 @@
   <% flash.each do |name, msg| -%>
     <%= content_tag :div, msg, class: name %>
   <% end -%>
-  <div class="inputCorto">
+  <div class="inputCorto sin-margen">
     <label>Nombre*</label>
     <%= f.text_field :name, autofocus: true %>
+    <span class="texto-validacion"></span>
   </div>
-  <div class="inputCorto">
+  <div class="inputCorto sin-margen">
     <label>Apellido*</label>
     <%= f.text_field :surname %>
+    <span class="texto-validacion"></span>
   </div>
-  <div class="inputCorto">
+  <div class="inputCorto ">
     <label>Fecha de Nacimiento</label>
     <%= f.text_field :birthDate, placeholder: "dd/mm/aaaa", :maxlength=>"10", :value => (f.object.birthDate.strftime('%d/%m/%Y') if f.object.birthDate)%>
   </div>
   <%= f.fields_for :user_detail do |ff| %>
-    <div class="inputCorto">
+    <div class="inputCorto sin-margen">
       <label>DNI*</label>
-      <%= ff.text_field :dni, :maxlength=>"8",:'data-toggle'=>"tooltip", :'data-placement'=>"right", :title=>"DNI inválido", :'data-trigger'=>"manual" %>
+      <%= ff.text_field :dni, :maxlength=>"8" %>
+      <span class="texto-validacion"></span>
     </div>
     <div class="inputCorto">
       <label>Grupo Sanguineo</label>
@@ -32,7 +35,7 @@
                     ["0 negativo", "0-"]], {}, {class: "similInput", id: "user_bloodtype"} %>
     </div>
   <% end %>
-  <div class="inputCorto">
+  <div class="inputCorto sin-margen">
     <label>Sexo</label>
     <div class="similInput">
       <%= f.radio_button(:gender, "Hombre") %>
@@ -55,24 +58,29 @@
       <%= ff.select :city, [["Mar del Plata", "MDQ" ]], {}, class: "similInput" %>
     </div>
   <% end %>
-  <div class="inputLargo">
+  <div class="inputLargo sin-margen">
     <label>E-mail*</label>
-    <%= f.email_field :username, :'data-toggle'=>"tooltip", :'data-placement'=>"right", :title=>"E-mail no válido", :'data-trigger'=>"manual" %>
+    <%= f.email_field :username %>
+    <span class="texto-validacion"></span>
   </div>
-  <div class="inputLargo">
-    <label>Contraseña actual</label>
+  <div class="inputLargo sin-margen">
+    <label>Contraseña actual*</label>
     <%= f.password_field :current_password, autocomplete: "off" %>
+    <span class="texto-validacion"></span>
   </div>
-  <p class="notificacion">Campo obligatorio.</p>
-  <div class="inputCorto">
-    <label>Nuevo Password</label>
-    <%= f.password_field :password, autocomplete: "off" %>
+  <div>
+    <p class="notificacion">Completa solo si deseas cambiar tu password:</p>
+    <div class="inputCorto sin-margen">
+      <label>Nuevo Password</label>
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+    <div class="inputCorto sin-margen">
+      <label>Repite el nuevo Password</label>
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
   </div>
-  <div class="inputCorto">
-    <label>Repite el nuevo Password</label>
-    <%= f.password_field :password_confirmation, autocomplete: "off", :'data-toggle'=>"tooltip", :'data-placement'=>"right", :title=>"Las contraseñas ingresadas no son iguales", :'data-trigger'=>"manual" %>
-  </div>
-  <p class="notificacion">Completa solo si deseas cambiar tu password.</p>
+  <span class="texto-validacion"></span>
+  <p class="notificacion">*Campos obligatorios.</p>
   <div class="submitArea">
     <input type="reset" class="input-submit" name="CANCELAR" value="CANCELAR"/>
     <%= f.submit "ACTUALIZAR", class: 'input-submit' %>
