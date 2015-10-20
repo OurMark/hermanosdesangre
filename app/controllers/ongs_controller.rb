@@ -35,7 +35,7 @@ class OngsController < ApplicationController
   # POST /ongs.json
   def create
     @ong = Ong.new(ong_params)
-    @ong.hasImage = "1"
+    @ong.hasImage = 1
 
     respond_to do |format|
       if @ong.save
