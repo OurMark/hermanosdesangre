@@ -5,6 +5,8 @@ class Ong < ActiveRecord::Base
   has_many :users, through: :ong_admins, foreign_key: :admins_user_id
   has_one :ong_detail
 
+  self.inheritance_column = :_type_disabled
+
   def user_is_admin?(user)
     user.ongs.include?(self)
   end
