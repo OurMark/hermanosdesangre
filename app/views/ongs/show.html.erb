@@ -1,73 +1,74 @@
-<div class="columna col_der">
-  <div class="col_div ong">
-    <p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 col_der">
+   <div class="ongs-new">
+       <h1> <%= @ong.name %></h1>
+       <p id="notice"><%= notice %></p>
+       <p>
+         <strong>Direccion:</strong>
+         <%= @ong.address %>
+       </p>
 
-    <p>
-      <strong>Name:</strong>
-      <%= @ong.name %>
-    </p>
+       <p>
+         <strong>Referencias de dirección:</strong>
+         <%= @ong.address2 %>
+       </p>
 
-    <p>
-      <strong>Street1:</strong>
-      <%= @ong.address %>
-    </p>
+       <p>
+         <strong>ciudad:</strong>
+         <%= @ong.city %>
+       </p>
 
-    <p>
-      <strong>Street2:</strong>
-      <%= @ong.address2 %>
-    </p>
+       <p>
+         <strong>Provincia:</strong>
+         <%= @ong.state %>
+       </p>
 
-    <p>
-      <strong>City:</strong>
-      <%= @ong.city %>
-    </p>
+       <p>
+         <strong>Pais:</strong>
+         <%= @ong.country_id %> <!-- @TODO mostrar el pais correctamente -->
+       </p>
 
-    <p>
-      <strong>State:</strong>
-      <%= @ong.state %>
-    </p>
+       <p>
+         <strong>Código Postal:</strong>
+         <%= @ong.zip %>
+       </p>
 
-    <p>
-      <strong>Country:</strong>
-      <%= @ong.country_id %>
-    </p>
+       <p>
+         <strong>Telefono:</strong>
+         <%= @ong.phone %>
+       </p>
 
-    <p>
-      <strong>Zip:</strong>
-      <%= @ong.zip %>
-    </p>
+       <p>
+         <strong>Email:</strong>
+         <%= @ong.adminEmail %>
+       </p>
 
-    <p>
-      <strong>Phone:</strong>
-      <%= @ong.phone %>
-    </p>
+       <p>
+         <strong>Website:</strong>
+         <%= @ong.websiteUrl %>
+       </p>
 
-    <p>
-      <strong>Email:</strong>
-      <%= @ong.adminEmail %>
-    </p>
+       <p>
+         <strong>Facebook:</strong>
+         <%= @ong.facebookPage %>
+       </p>
 
-    <p>
-      <strong>Website:</strong>
-      <%= @ong.websiteUrl %>
-    </p>
+       <p>
+         <strong>Red Nacional:</strong>
+         <%= @ong.nationalNetworkName %>
+       </p>
 
-    <p>
-      <strong>Facebook:</strong>
-      <%= @ong.facebookPage %>
-    </p>
+       <p>
+         <strong>Red Internacional:</strong>
+         <%= @ong.internationalNetworkName %>
+       </p>
+       <%= link_to "Volver al usuario",user_path(current_user), class: 'input-submit'%>
 
-    <p>
-      <strong>National network:</strong>
-      <%= @ong.nationalNetworkName %>
-    </p>
-
-    <p>
-      <strong>International network:</strong>
-      <%= @ong.internationalNetworkName %>
-    </p>
+   </div>
   </div>
-</div>
-<div class="columna col_izq">
-  <%= render partial: 'shared/gota_donar' %>
+  <div class="col-xs-12 col-sm-12 col-md-6 col_izq">
+    <div class="users-gota-donar">
+      <%= render partial: 'shared/gota_sin_donar' %>
+    </div>
+  </div>
 </div>

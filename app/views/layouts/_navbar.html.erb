@@ -1,14 +1,18 @@
 <div class="faldon_top_container">
+  <div class="faldon-background-container">
+      <div class="faldon_izq">
+      </div>
+  </div>
   <div class="faldon_top">
-    <div class="navbar-logo col-1-2">
-      <%= link_to root_path, :class => "col-1" do %>
+    <div class="col-sm-6 navbar-logo">
+      <a href="/">
         <figure class="logo-container">
           <%= image_tag("big-logo.png", :class=> "logo") %>
           <figcaption class="text-logo">Hermanos de sangre</figcaption>
         </figure>
-      <% end %>
+      </a>
     </div>
-    <div class="menus col-1-2 last">
+    <div class="col-sm-offset-6 menus last">
       <ul id="menu">
         <li>
           <%= link_to "DONANTES", donors_path %>
@@ -16,6 +20,7 @@
             <li><%= link_to "Impacto", impact_path %></li>
             <li><%= link_to "Requisitos", requirements_path %></li>
             <li><%= link_to "Consejos", advises_path %></li>
+            <li><%= link_to "Más Info", more_info_path %></li>
           </ul>
         </li>
         <li><%= link_to "ACERCA DE", about_us_path %>
@@ -32,7 +37,7 @@
           </ul>
         </li>
       </ul>
-      <ul id="sobre_derecha" class="top30">
+      <ul class="top30 botones_sobre_derecha">
         <li><span class='HS_email'><%= link_to "contacto", contact_path %></span><span class='st_facebook'></span><span class='st_twitter'></span></li>
         <% if current_user %>
           <li><%= link_to "Mi cuenta",user_path(current_user) %></li>
@@ -68,6 +73,7 @@
           <li><%= link_to "Impacto", impact_path %></li>
           <li><%= link_to "Requisitos", requirements_path %></li>
           <li><%= link_to "Consejos", advises_path %></li>
+          <li><%= link_to "Más Info", more_info_path %></li>
         </ul>
       </li>
       <li class="dropdown">

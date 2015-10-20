@@ -1,3 +1,6 @@
+/*================================================
+=            header and navbar styles            =
+================================================*/
 .navbar-brand {
   color: $white;
 
@@ -53,11 +56,22 @@
 .faldon_top_container {
   display: none;
   font-size: 1em;
-  position: fixed;
-  top:0;
-  z-index: 2;
   height: 220px;
   width: 100%;
+
+  .faldon-background-container {
+      position: absolute;
+      background-color: $white;
+      height: 220px;
+      width: 100%;
+
+      .faldon_izq {
+          width: 50%;
+          height: 220px;
+          background-color: $softRed;
+      }
+
+  }
 
   .sub-menu {
     ul {
@@ -85,10 +99,8 @@
   z-index: 9999;
 }
 .navbar-logo {
-  @include span(1 of 2);
   background: $softRed;
-  height: 100%;
-  padding-right: 1%;
+  padding-left: 5%;
 
   a {
     font-family: $mainFont;
@@ -100,8 +112,9 @@
 }
 
 .logo-container {
-  padding: 30px 0 0 0;
-  float: right;
+  padding: 15px 0 0 0;
+  margin: 0 auto;
+  width: 400px;
 }
 
 .logo {
@@ -129,7 +142,7 @@
     padding-left: 1%;
   }
 }
-ul#menu, ul.sub-menu, ul#sobre_derecha {
+ul#menu, ul.sub-menu, ul.botones_sobre_derecha {
   padding: 0;
   margin: 0;
   position: absolute;
@@ -143,7 +156,7 @@ ul#menu, ul.sub-menu, ul#sobre_derecha {
 ul#menu {
   top: 34px;
 }
-ul#sobre_derecha {
+ul.botones_sobre_derecha {
   right: 5%;
 }
 .top30 {
@@ -169,7 +182,6 @@ ul#sobre_derecha {
   }
   a {
     color: $mainRed;
-    padding: 5px;
     display: block;
     text-decoration: none;
 
@@ -178,7 +190,7 @@ ul#sobre_derecha {
     }
   }
 }
-ul#menu>li>a, ul#sobre_derecha>li>a {
+ul#menu>li>a, ul.botones_sobre_derecha>li>a {
   color: $softRed;
   text-decoration: none;
   padding: 6px 9px;
@@ -186,25 +198,25 @@ ul#menu>li>a, ul#sobre_derecha>li>a {
   border-right: 1px solid $mainRed;
   letter-spacing: 1px;
 }
-ul#sobre_derecha li a:hover {
+ul.botones_sobre_derecha li a:hover {
   font-style: italic;
 }
 
 /*sobre derecha*/
-#sobre_derecha li>a {
+.botones_sobre_derecha li>a {
   padding: 9px !important;
   background-color: $whiteSmoke;
 }
-#sobre_derecha li:last-child>a {
+.botones_sobre_derecha li:last-child>a {
   background-color: $softRed;
   color: white;
 }
-#sobre_derecha li>span {
+.botones_sobre_derecha li>span {
   position: relative;
   right: 28px;
   bottom: 1px;
 }
-#sobre_derecha .HS_email {
+.botones_sobre_derecha .HS_email {
   background-color: $whiteSmoke;
   background-image: url($email);
   background-repeat: no-repeat;
@@ -217,7 +229,7 @@ ul#sobre_derecha li a:hover {
   -webkit-transition: width 500ms ease-in;
   transition: width 500ms ease;
 }
-#sobre_derecha .HS_email:hover {
+.botones_sobre_derecha .HS_email:hover {
   width: 75px;
 }
 
@@ -242,10 +254,11 @@ ul#sobre_derecha li a:hover {
     width: 110%;
   }
 
-  ul#sobre_derecha {
+  ul.botones_sobre_derecha {
     right: 2%;
   }
 }
+
 @media (min-width:992px) {
   .logo {
     padding: 0 30px;

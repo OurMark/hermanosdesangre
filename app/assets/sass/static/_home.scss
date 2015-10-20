@@ -2,6 +2,21 @@
 =            Home view styles            =
 ========================================*/
 
+.actions-home {
+  display: none;
+  margin: 20px auto;
+
+  .actions-circle {
+    color: $saddleBrown;
+    display: inline-block;
+    margin-left: 10px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+    width: 160px;
+  }
+}
+
 .h_container {
   margin: 0 auto;
   z-index: 1;
@@ -53,7 +68,7 @@
     }
   }
   .foot-legend {
-    padding: 20px 0 0 30px;
+    padding: 10px 0 0 30px;
 
     p {
       color: $saddleBrown;
@@ -63,54 +78,15 @@
     }
   }
 }
-.col_der {
-  background: $white;
-  padding-left: 50%;
-  padding: 5px 10px 25px 10px;
 
-  &.columna {
-    min-height: 805px;
-  }
-}
-
-.col_izq {
-  height: auto;
-  background: $softRed;
-  display: inline-block;
-  vertical-align: top;
-
-  .boton_donar {
-    @include gota_donar;
-    position: relative;
-    left: 0;
-    bottom: 0;
-    display: block;
-  }
-}
 
 @media (min-width:768px) {
 
-  .col_izq {
-    background: $softRed;
-    bottom: 0;
-    min-height: 1024px;
-    padding-right: 0;
-    padding-left: 2%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 50%;
-
-    .boton_donar {
-      @include gota_donar;
-      position: none;
-    }
-  }
 
   .h_container {
     position: absolute;
     right: 2%;
-    top: 27%;
+    top: 30%;
     width: 95%;
 
     span {
@@ -124,7 +100,7 @@
 
     .video-contener {
       .video-home {
-        padding: 40px 10px 60px 60px;
+        padding: 20px 10px 0 60px;
         border-bottom: 4px solid $softRed;
 
         p {
@@ -144,6 +120,11 @@
 }
 
 @media (min-width:992px) {
+  .actions-home {
+    display: block;
+    width: 80%;
+  }
+
   .h_container {
     right: 3%;
 
@@ -182,9 +163,4 @@
     top:0;
   }
 
-  .col_izq .boton_donar {
-    display: block;
-    left: 3%;
-    top: 40%;
-  }
 }

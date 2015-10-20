@@ -1,0 +1,29 @@
+/*============================================
+=            register form styles            =
+============================================*/
+.registrarse {
+  h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+  }
+  .input-corto {
+    width: 100%;
+  }
+}
+
+.btn-registrar {
+  @extend .submit-button;
+}
+
+.btn-enviar {
+  @extend .submit-button;
+}
+
+@media (min-width: 768px) {
+  .registrarse {
+    width: 400px;
+    margin: 0 auto;
+  }
+}
+

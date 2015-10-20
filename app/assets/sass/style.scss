@@ -2,7 +2,6 @@
 // ======
 
 @import "compass";
-@import "susy";
 
 //bootstrap
 @import "bootstrap-sprockets";
@@ -14,18 +13,21 @@
 //mixins
 @import "mixin";
 
-// grids
-@import "grids";
-
 // project
 @import "header";
-
-// from old project
 @import "main";
-@import "mobile";
+@import "forms";
+@import "footer";
 
 //views
 
 @import "static/home";
 @import "static/how_works";
+@import "static/about_us";
 @import "static/donors";
+@import "sessions/new";
+@import "registrations/new";
+@import "users/show";
+@import "ongs/new";
+@import "ongs/ong_search";
+@import "ongs/ong_calendar";

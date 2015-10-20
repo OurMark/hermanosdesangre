@@ -1,16 +1,16 @@
 <div class="row">
-  <div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 col_der columna">
+  <div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 col_der">
 		<div class="about">
-			<div class="col_div us">
+			<div class="us">
 				<h1>Campaña:</h1>
 				<p>La campaña de lanzamiento de Hermanos de Sangre busca inspirar a las personas a comprometerse con la donación voluntaria y habitual de sangre.</p>
 				<p>Te invitamos a compartir las piezas de difusión:</p>
 				<h2>Videos de difusión:</h2>
-				<iframe width="330px" height="175px" src="//www.youtube-nocookie.com/embed/oXuqPhhqj1c?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
+				<iframe class="campaign-video" src="//www.youtube-nocookie.com/embed/oXuqPhhqj1c?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe>
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-12 col-sm-6 col-md-6 columna col_izq">
+	<div class="col-xs-12 col-sm-6 col-md-6 col_izq">
     <div class="how-works-boton-donar">
         <%= link_to content_tag(:p, "quiero donar"), current_user ? ongs_path : user_session_path %>
         <div>
