@@ -355,6 +355,9 @@ input:focus:-moz-placeholder {
     display: block;
   }
 }
+.col_medio{
+      margin-left : 30% !important;
+ }
 .ong-registered {
   padding: 0 30px;
 
@@ -362,8 +365,11 @@ input:focus:-moz-placeholder {
     font-weight: normal;
   }
 }
-@media (min-width:768px) {
 
+@media (min-width:768px) {
+    .col_medio{
+      margin-left : 30% !important;
+    }
     /* Menu izquierda user page */
     .menu-column {
         min-height: 870px;
