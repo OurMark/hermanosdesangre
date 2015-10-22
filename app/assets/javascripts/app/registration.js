@@ -1,37 +1,40 @@
 (function($) {
 
 
- /* $('#new_user').on('submit', function( event ) {
+  $('.registrarse #new_user').on('submit', function( event ) {
     var nombre = validarNoVacio($('#user_name'));
     var apellido = validarNoVacio($('#user_surname'));
     var contraseniaValida = validarContrasenias();
     var dniValido = validarDni();
     var emailValido = validarEmail();
     return nombre && apellido && contraseniaValida && dniValido && emailValido ;
-  })*/
+  })
 
 
-  $('#edit_user').on('submit', function( event ) {
+  $('.registrarse #edit_user').on('submit', function( event ) {
     var nombre = validarNoVacio($('#user_name'));
     var apellido = validarNoVacio($('#user_surname'));
     var contrasenia = validarNoVacio($('#user_current_password'));
+    var dniValido = validarDni();
     var emailValido = validarEmail();
-    console.log(nombre);
-    console.log(apellido);
-    console.log(contrasenia);
-    console.log(emailValido);
-    return nombre && apellido && contrasenia && emailValido;
+    var contraseniaNueva = true;
+    if ($('#user_password_confirmation').val() != ''){
+      contraseniaNueva = validarContrasenias();
+    }
+    return nombre && apellido && dniValido && contrasenia && emailValido && contraseniaNueva;
   })
 
 
    function validarContrasenias(){
-    var passwordConfirmation = $('#user_password_confirmation');
     var userPassword = $('#user_password');
+    var passwordConfirmation = $('#user_password_confirmation');
 
-    if ( userPassword.val() === ''){
-      userPassword.addClass('tiene-error');
-      userPassword.parent().parent().next().html('Este campo es obligatorio');
-      return false;
+    if ( userPassword.parents('form:first').attr('id') == 'new_user' ){
+      if ( userPassword.val() === ''){
+        userPassword.addClass('tiene-error');
+        userPassword.parent().parent().next().html('Este campo es obligatorio');
+        return false;
+      }
     }
     if ( userPassword.val() === passwordConfirmation.val() ){
       userPassword.removeClass('tiene-error');
@@ -44,7 +47,6 @@
     userPassword.parent().parent().next().html('Las contraseñas ingresadas no son iguales');
     return false;
   }
-
 
   function validarDni(){
     var dni = $('#user_user_detail_attributes_dni');
