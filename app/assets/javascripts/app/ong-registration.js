@@ -21,7 +21,7 @@
     }
     if ((/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i).test( email.val())){
       email.removeClass('tiene-error');
-      email.next().html('');
+      email.next().html('&nbsp;');
       return true;
     }else{
       email.addClass('tiene-error');
@@ -41,7 +41,7 @@
       return false;
     }
     nombre.removeClass('tiene-error');
-    nombre.next().html('');
+    nombre.next().html('&nbsp;');
     return true;
   }
 

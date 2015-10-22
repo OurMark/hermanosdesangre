@@ -8,23 +8,23 @@
         <div class="inputCorto sin-margen">
           <label>Nombre*</label>
           <%= f.text_field :name, autofocus: true %>
-          <span class="texto-validacion"></span>
+          <span class="texto-validacion">&nbsp;</span>
         </div>
         <div class="inputCorto sin-margen">
           <label>Apellido*</label>
           <%= f.text_field :surname %>
-          <span class="texto-validacion"></span>
+          <span class="texto-validacion">&nbsp;</span>
         </div>
         <%= f.fields_for :user_detail do |ff| %>
         <div class="inputCorto sin-margen">
           <label>Fecha de Nacimiento</label>
           <%= f.text_field :birthDate, placeholder: "dd/mm/aaaa", :maxlength=>"10" %>
-          <span class="texto-validacion"></span>
+          <span class="texto-validacion">&nbsp;</span>
         </div>
         <div class="inputCorto sin-margen">
             <label>DNI*</label>
             <%= ff.text_field :dni, :maxlength=>"8" %>
-            <span class="texto-validacion"></span>
+            <span class="texto-validacion">&nbsp;</span>
           </div>
         <div class="inputCorto">
             <label>Grupo Sanguineo</label>

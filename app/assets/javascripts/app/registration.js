@@ -39,7 +39,7 @@
     if ( userPassword.val() === passwordConfirmation.val() ){
       userPassword.removeClass('tiene-error');
       passwordConfirmation.removeClass('tiene-error');
-      userPassword.parent().parent().next().html('');
+      userPassword.parent().parent().next().html(' ');
       return true;
     }
     userPassword.addClass('tiene-error');
@@ -57,7 +57,7 @@
     }
     if ((/^[0-9]{8}$/).test(dni.val()) ){
       dni.removeClass('tiene-error');
-      dni.next().html('');
+      dni.next().html('&nbsp;');
       return true;
     }
     dni.addClass('tiene-error');
@@ -76,7 +76,7 @@
     }
     if ((/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i).test( email.val())){
       email.removeClass('tiene-error');
-      email.next().html('');
+      email.next().html('&nbsp;');
       return true;
     }else{
       email.addClass('tiene-error');
@@ -96,7 +96,7 @@
       return false;
     }
     nombre.removeClass('tiene-error');
-    nombre.next().html('');
+    nombre.next().html('&nbsp;');
     return true;
   }
 
