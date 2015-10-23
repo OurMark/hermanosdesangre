@@ -16,7 +16,7 @@
 
     /*definimos sub-boton*/
     $(".Secciones>div:nth-child(3) h2, .bolsa").click(function(){
-      $(".Secciones .seleccionada ul, .Secciones .seleccionada h2").toggleClass("seleccionada"); 
+      $(".Secciones .seleccionada ul, .Secciones .seleccionada h2").toggleClass("seleccionada");
       $(".bolsa").toggleClass("llena");
     });
 
