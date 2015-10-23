@@ -2,22 +2,24 @@
 
 
   $('.registrarse #new_user').on('submit', function( event ) {
-    var nombre = validarNoVacio($('#user_name'));
-    var apellido = validarNoVacio($('#user_surname'));
-    var contraseniaValida = validarContrasenias();
-    var dniValido = validarDni();
-    var emailValido = validarEmail();
+    var nombre = validarNoVacio($('#user_name')),
+    apellido = validarNoVacio($('#user_surname')),
+    contraseniaValida = validarContrasenias(),
+    dniValido = validarDni(),
+    emailValido = validarEmail();
+
     return nombre && apellido && contraseniaValida && dniValido && emailValido ;
   })
 
 
   $('.registrarse #edit_user').on('submit', function( event ) {
-    var nombre = validarNoVacio($('#user_name'));
-    var apellido = validarNoVacio($('#user_surname'));
-    var contrasenia = validarNoVacio($('#user_current_password'));
-    var dniValido = validarDni();
-    var emailValido = validarEmail();
-    var contraseniaNueva = true;
+    var nombre = validarNoVacio($('#user_name')),
+    apellido = validarNoVacio($('#user_surname')),
+    contrasenia = validarNoVacio($('#user_current_password')),
+    dniValido = validarDni(),
+    emailValido = validarEmail(),
+    contraseniaNueva = true;
+
     if ($('#user_password_confirmation').val() != ''){
       contraseniaNueva = validarContrasenias();
     }
@@ -26,8 +28,8 @@
 
 
    function validarContrasenias(){
-    var userPassword = $('#user_password');
-    var passwordConfirmation = $('#user_password_confirmation');
+    var userPassword = $('#user_password'),
+    passwordConfirmation = $('#user_password_confirmation');
 
     if ( userPassword.parents('form:first').attr('id') == 'new_user' ){
       if ( userPassword.val() === ''){
@@ -50,6 +52,7 @@
 
   function validarDni(){
     var dni = $('#user_user_detail_attributes_dni');
+
     if ( dni.val() == '' ){
       dni.addClass('tiene-error');
       dni.next().html('Este campo es obligatorio');
@@ -67,6 +70,7 @@
 
   function validarEmail(){
     var email = $('#user_username');
+
     if ( email.val() === '' ){
       email.next().removeClass('texto-ayuda');
       email.next().addClass('texto-validacion');
@@ -100,16 +104,16 @@
     return true;
   }
 
-  $('#user_name').on('blur keyup', function() {
-    validarNoVacio($('#user_name'));
+  $('#user_name').on('blur keyup', function(evt) {
+    validarNoVacio($(evt.target));
   });
 
-  $('#user_surname').on('blur keyup', function() {
-    validarNoVacio($('#user_surname'));
+  $('#user_surname').on('blur keyup', function(evt) {
+    validarNoVacio($(evt.target));
   });
 
-  $('#user_current_password').on('blur keyup', function() {
-    validarNoVacio($('#user_current_password'));
+  $('#user_current_password').on('blur keyup', function(evt) {
+    validarNoVacio($(evt.target));
   });
 
   $('#user_user_detail_attributes_dni').on('blur keyup', validarDni);

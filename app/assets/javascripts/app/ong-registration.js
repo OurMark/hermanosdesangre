@@ -1,17 +1,18 @@
 (function($) {
 
-
   $('#new_ong').on('submit', function( event ) {
-    var nombre = validarNoVacio($('#ong_name'));
-    var direccion = validarNoVacio($('#ong_address'));
-    var codigoPostal = validarNoVacio($('#ong_zip'));
-    var telefono = validarNoVacio($('#ong_phone'));
-    var emailValido = validarEmail();
+    var nombre = validarNoVacio($('#ong_name')),
+    direccion = validarNoVacio($('#ong_address')),
+    codigoPostal = validarNoVacio($('#ong_zip')),
+    telefono = validarNoVacio($('#ong_phone')),
+    emailValido = validarEmail();
+
     return nombre && direccion && codigoPostal && telefono && emailValido;
   })
 
   function validarEmail(){
     var email = $('#ong_adminEmail');
+
     if ( email.val() === '' ){
       email.next().removeClass('texto-ayuda');
       email.next().addClass('texto-validacion');
@@ -45,20 +46,20 @@
     return true;
   }
 
-  $('#ong_name').on('blur keyup', function() {
-    validarNoVacio($('#ong_name'));
+  $('#ong_name').on('blur keyup', function(evt) {
+    validarNoVacio($(evt.target));
   });
 
-  $('#ong_address').on('blur keyup', function() {
-    validarNoVacio($('#ong_address'));
+  $('#ong_address').on('blur keyup', function(evt) {
+    validarNoVacio($(evt.target));
   });
 
-  $('#ong_zip').on('blur keyup', function() {
-    validarNoVacio($('#ong_zip'));
+  $('#ong_zip').on('blur keyup', function(evt) {
+    validarNoVacio($(evt.target));
   });
 
-  $('#ong_phone').on('blur keyup', function() {
-    validarNoVacio($('#ong_phone'));
+  $('#ong_phone').on('blur keyup', function(evt) {
+    validarNoVacio($(evt.target));
   });
 
   $('#ong_adminEmail').on('blur keyup', validarEmail);
