@@ -7,7 +7,7 @@
  </div>
     <div class="col-xs-12 col-sm-9">
         <div class="configuracion-atencion">
-        <%= form_tag do |f| %>
+        <%= form_tag ong_save_calendar_path(@ong), method: 'post' do |f| %>
         <h1>Configuración de Atención</h1>
         <p>Configura los días de tu semana, con los horarios de atención, y la duración de los turnos.</p>
         <p>Esta semana se trasladara a tu calendario anual, donde podrás modificar o bloquear días particulares.</p>
@@ -22,7 +22,7 @@
                 for @each in @days %>
                     <div class="col-sm-1 col-xs-3">
                         <%= label_tag('days-' + @each, @each) %>
-                        <%= check_box_tag(@each, 1, false, class: 'days-each') %>
+                        <%= check_box_tag(@each + '[dif]', 1, false, class: 'days-each') %>
                     </div>
                 <% end %>
                 <div class="col-xs-12">
@@ -34,7 +34,7 @@
                     for each in @days %>
                         <div class="col-sm-1 col-xs-3">
                             <%= label_tag(each, each) %>
-                            <%= check_box_tag(each) %>
+                            <%= check_box_tag(each + '[dif]') %>
                         </div>
                     <% end %>
                 </div>
@@ -62,7 +62,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <label>DONANTES POR TURNO</label>
-                    <%= select_tag(:duracion, options_for_select(1..10)) %>
+                    <%= select_tag(:camas, options_for_select(1..10)) %>
                 </div>
             </div>
         </div>
@@ -75,7 +75,7 @@
                   </div>
             </div>
         </div>
-        <%= link_to "Guardar y continuar", ong_calendar_path, class: "cambiar" %>
+        <%= submit_tag "Guardar y continuar", class: "cambiar" %>
         <% end #End Form%>
     </div>
     </div>
