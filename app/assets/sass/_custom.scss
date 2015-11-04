@@ -1,0 +1,394 @@
+body {
+  font-family: $mainFont;
+  font-weight: normal;
+  font-size: 14px;
+}
+label {
+  font-size: 14px;
+  color: $mainRed;
+  padding-left: 10px;
+  display: block;
+  margin-bottom: 3px;
+}
+.similInput {
+  width: 100%;
+  -webkit-transition: background 500ms ease;
+  background-color: $whiteSmoke;
+  border-bottom: 1px dashed $mainRed;
+  border: none;
+  font-family: $mainFont;
+  font-size: 17px;
+  height: 30px;
+  padding-left: 10px;
+  transition: background 500ms ease;
+}
+form INPUT[type="password"], form INPUT[type="text"], form INPUT[type="email"] {
+  @extend .similInput;
+}
+label:after {
+  content: ":";
+}
+form INPUT[type="password"]:focus, form INPUT[type="text"]:focus, form INPUT[type="email"]:focus, select:focus {
+  background-color: $mainRed;
+  color: white;
+  outline: none;
+}
+input:focus::-webkit-input-placeholder {
+  color: white;
+}
+input:focus::-moz-placeholder {
+  color: white;
+}
+input:focus:-ms-input-placeholder {
+  color: white;
+}
+input:focus:-moz-placeholder {
+  color: white;
+}
+
+.content_container {
+  //padding-left: 0;
+  //padding-rigth: 0;
+}
+
+
+/*--- • 1 • b REGLAS del CONTENIDO ---------------------------*/
+.col_div {
+  overflow: hidden;
+  font-family: $mainFont;
+  position: relative;
+}
+.col_div p, .col_div span {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: justify;
+}
+.col_div .imagen {
+  position: relative;
+  float: right;
+  width: 160px;
+  height: auto;
+}
+.col_div>p, .col_div div>p, .col_div iframe, .col_div form, .col_div img {
+  margin: 0 35px 32px;
+}
+.col_div>p:last-child {
+  margin-bottom: 0;
+}
+.col_div h1, .col_div h2, .col_div h3, .col_div h4 {
+  margin: 5px 35px;
+}
+.Logos {
+  text-align: center;
+}
+.Logos img {
+  margin: 0 30px 32px;
+}
+
+/*--- • 1 • e REGLAS EXCLUSIVAS del CONTENIDO SIN COLUMNAS ---*/
+.container_menu {
+  background-color: $softRed;
+  background-color: $lightRed;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 55px;
+  overflow: hidden;
+}
+
+/*.container_menu~.col_none {margin-top:  55px;}*/
+.container_menu .faldon_top {
+  margin-top: 12px;
+}
+.container_menu form INPUT {
+  float: right;
+  width: 250px;
+  background: $mainRed;
+  color: white;
+}
+.col_none {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 55px;
+}
+.col_none td {
+  padding: 6px;
+  font-size: 14px;
+}
+
+/*--- • 2 • a REGLAS EXCLUSIVAS de la HOME -------------------*/
+.col_div.home {
+  padding-top: 250px;
+}
+
+/*--- • 2 • c REGLAS EXCLUSIVAS de ¿QUIENES SOMOS? -----------*/
+.col_div.us {
+  max-width: 400px;
+}
+.slogan {
+  width: 330px;
+  height: 80px;
+  position: relative;
+  margin: 80px 35px 60px 35px;
+}
+.col_div .slogan>p, .slogan h2, .slogan h3 {
+  margin: 0px;
+  position: absolute;
+  font-weight: bold;
+  color: $mainRed;
+}
+.slogan p {
+  top: 48px;
+  left: 0;
+  font-size: 20px;
+}
+.slogan p:first-child {
+  top: 0;
+  left: 0;
+  font-size: 16px;
+}
+.slogan p:nth-child(2) {
+  top: 24px;
+  left: 50px;
+  font-size: 28px;
+}
+.slogan h2 {
+  top: 0;
+  right: 1px;
+  font-size: 28px;
+}
+.slogan h3 {
+  top: 36px;
+  right: 0;
+  font-size: 36px;
+}
+.slogan h3:hover, .slogan h2:hover {
+  font-size: 39px;
+  background: white;
+}
+
+/*--- • 2 • f REGLAS EXCLUSIVAS de LISTA DE ONGS -------------*/
+.reservar a {
+  height: 48px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: $whiteSmoke;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  text-align: center;
+  padding-top: 12px;
+  transition: background-color 500ms ease;
+}
+.reservar a, .reservar a:visited {
+  color: $mainRed;
+}
+.reservar a:hover {
+  color: white;
+  background-color: $mainRed;
+}
+
+/*--- • 3 • a REGLAS de la BARRA DE PORCENTAJES --------------*/
+.campania {
+  letter-spacing: 1px;
+  width: 69%;
+  font-weight: 300;
+  font-size: 14px;
+  color: white;
+  margin-left: 1%;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+.campania:before {
+  content: "Donantes en: ";
+  font-weight: 400;
+}
+.banco .campania {
+  color: black;
+}
+.banco .campania:before {
+  content: "";
+}
+.faltandias {
+  position: relative;
+  width: 29%;
+  font-size: 14px;
+  color: $softRed;
+  text-align: right;
+  margin-right: 1%;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+.faltandias:before {
+  content: "faltan ";
+}
+.faltandias:after {
+  content: " días";
+}
+.bar-main-container {
+  width: 99%;
+  font-family: $mainFont;
+  text-align: left;
+  margin: 0 auto;
+}
+.bar-container {
+  position: relative;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  height: 37px;
+  background: $softRed;
+  width: 100%;
+  overflow: hidden;
+  border: solid 1px white;
+  color: white;
+}
+.bar, .registrados, .objetivo {
+  font-size: 20px;
+  line-height: 2;
+}
+.bar {
+  float: left;
+  height: 100%;
+  position: relative;
+}
+.bar div {
+  background: $mainRed;
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  text-align: right;
+  -webkit-animation: ensanchar 3s;
+  animation: ensanchar 3s;
+}
+.bar div:after {
+  content: " ";
+  background: url(asset-path('gotas.png')) 0px 1px no-repeat;
+  display: inline-block;
+  width: 20px;
+  height: 27px;
+  position: relative;
+  top: 2px;
+  margin: 0 10px;
+}
+.objetivo:before, .registrados:after {
+  font-size: 13px;
+  font-weight: 300;
+}
+.objetivo {
+  position: absolute;
+  right: 6px;
+}
+.registrados {
+  position: absolute;
+  left: 1px;
+  padding: 0 9px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: $mainRed;
+  height: 36px;
+}
+.registrados:after {
+  content: " REGISTRADOS";
+}
+.objetivo:before {
+  content: "OBJETIVO: ";
+}
+
+/*--- • 3 • b REGLAS de la GOTA ------------------------------*/
+.columna {
+  .boton_donar {
+    margin-top: 250px;
+  }
+}
+
+/* Calendario */
+.calendario {
+  float: right;
+  margin: 10px 25px 0 0;
+}
+.calendario tr {
+}
+.calendario tr th {
+  padding: 5px 10px 5px 10px;
+}
+.calendario tr td {
+  padding-top: 15px;
+  text-align: center;
+}
+.calendario tr td a {
+  font-size: 25px;
+}
+.listado_meses {
+  float: right;
+  margin: 50px 25px 0 0;
+}
+.listado_meses ul {
+}
+.listado_meses ul li {
+  display: inline;
+  background-color: $whiteSmoke;
+}
+.col_der {
+  background: $white;
+  padding: 5px 10px 25px 10px;
+  margin: 0;
+  float: right;
+
+}
+.col_izq {
+  background: $softRed;
+  vertical-align: top;
+  float: left;
+
+  .boton_donar {
+    @include gota_donar;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    display: block;
+  }
+}
+.ong-registered {
+  padding: 0 30px;
+
+  p {
+    font-weight: normal;
+  }
+}
+@media (min-width:768px) {
+  .listado_meses, .ong, .ongs, .ong-registered {
+    //margin-top: 220px;
+  }
+  .col_der {
+    min-height: 870px;
+    &.columna {
+      min-height: 805px;
+    }
+  }
+  .col_izq {
+    min-height: 870px;
+    width: 50%;
+
+    .boton_donar {
+      @include gota_donar;
+    }
+  }
+
+  //only for the home page
+  .quiero-donar .col_izq .boton_donar {
+    position: absolute;
+    left: 3%;
+    top: 20%;
+  }
+}
+@media (min-width:1200px) {
+  .col_izq .boton_donar {
+    display: block;
+  }
+}
