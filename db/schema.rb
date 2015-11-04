@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150507132507) do
+ActiveRecord::Schema.define(version: 20151104152417) do
 
   create_table "Classfield_daysOfEvent", id: false, force: true do |t|
     t.integer "Classfield_classfield_id", limit: 8, null: false
@@ -292,6 +292,17 @@ ActiveRecord::Schema.define(version: 20150507132507) do
   add_index "ong_admins", ["admins_user_id"], name: "FKB98330BB6ABDD00B", using: :btree
   add_index "ong_admins", ["ong_ong_id"], name: "FKB98330BB43F323A3", using: :btree
 
+  create_table "ong_calendars", force: true do |t|
+    t.time     "start_time"
+    t.time     "end_time"
+    t.time     "start_time_differential"
+    t.time     "end_time_differental"
+    t.string   "day"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "ong_id"
+  end
+
   create_table "ong_details", force: true do |t|
     t.integer "ong_id"
     t.integer "beds"
@@ -353,7 +364,7 @@ ActiveRecord::Schema.define(version: 20150507132507) do
     t.integer  "location_id",            limit: 8
     t.datetime "remember_created_at"
     t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
+    t.string   "reset_password_sent_at"
   end
 
   add_index "user", ["image_id"], name: "FK36EBCB6D5C60E9", using: :btree
