@@ -25,7 +25,7 @@
         });
 
         $('input[type="checkbox"].days-each').change(function (event) {
-            var fromTo = $('.from-to.'  + event.target.name);
+            var fromTo = $('.from-to.'  + event.target.name.slice(0,2));
             if (event.target.checked) {
                 fromTo.show(300);
             } else {
