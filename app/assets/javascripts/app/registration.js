@@ -1,59 +1,125 @@
 (function($) {
-    $('[data-toggle="tooltip"]').tooltip();
 
-  $('.registrarse form').on('submit', function( event ) {
-    var contraseniaValida = validarContrasenias();
-    var dniValido = validarDni();
-    var emailValido = validarEmail();
-    return contraseniaValida && dniValido && emailValido;
+
+  $('.registrarse #new_user').on('submit', function( event ) {
+    var nombre = validarNoVacio($('#user_name')),
+    apellido = validarNoVacio($('#user_surname')),
+    contraseniaValida = validarContrasenias(),
+    dniValido = validarDni(),
+    emailValido = validarEmail();
+
+    return nombre && apellido && contraseniaValida && dniValido && emailValido ;
   })
 
-  function validarContrasenias(){
-    var passwordConfirmation = $('#user_password_confirmation');
-    var userPassword = $('#user_password');
-    if ( userPassword.val() == '' ){
-      passwordConfirmation.attr('data-original-title', 'Campo de contraseña vacío');
-      passwordConfirmation.tooltip('show');
-      return false;
+
+  $('.registrarse #edit_user').on('submit', function( event ) {
+    var nombre = validarNoVacio($('#user_name')),
+    apellido = validarNoVacio($('#user_surname')),
+    contrasenia = validarNoVacio($('#user_current_password')),
+    dniValido = validarDni(),
+    emailValido = validarEmail(),
+    contraseniaNueva = true;
+
+    if ($('#user_password_confirmation').val() != ''){
+      contraseniaNueva = validarContrasenias();
+    }
+    return nombre && apellido && dniValido && contrasenia && emailValido && contraseniaNueva;
+  })
+
+
+   function validarContrasenias(){
+    var userPassword = $('#user_password'),
+    passwordConfirmation = $('#user_password_confirmation');
+
+    if ( userPassword.parents('form:first').attr('id') == 'new_user' ){
+      if ( userPassword.val() === ''){
+        userPassword.addClass('tiene-error');
+        userPassword.parent().parent().next().html('Este campo es obligatorio');
+        return false;
+      }
     }
     if ( userPassword.val() === passwordConfirmation.val() ){
-      passwordConfirmation.tooltip('hide');
+      userPassword.removeClass('tiene-error');
+      passwordConfirmation.removeClass('tiene-error');
+      userPassword.parent().parent().next().html(' ');
       return true;
     }
-    passwordConfirmation.attr('data-original-title', 'Las contraseñas ingresadas no son iguales');
-    passwordConfirmation.tooltip('show');
+    userPassword.addClass('tiene-error');
+    passwordConfirmation.addClass('tiene-error');
+    userPassword.parent().parent().next().html('Las contraseñas ingresadas no son iguales');
     return false;
   }
 
-
   function validarDni(){
-    if ((/^[0-9]{8}$/).test($('#user_user_detail_attributes_dni').val()) ){
-      $('#user_user_detail_attributes_dni').tooltip('hide');
-      return true;
-    }else{
-      $('#user_user_detail_attributes_dni').tooltip('show');
+    var dni = $('#user_user_detail_attributes_dni');
+
+    if ( dni.val() == '' ){
+      dni.addClass('tiene-error');
+      dni.next().html('Este campo es obligatorio');
       return false;
     }
+    if ((/^[0-9]{8}$/).test(dni.val()) ){
+      dni.removeClass('tiene-error');
+      dni.next().html('&nbsp;');
+      return true;
+    }
+    dni.addClass('tiene-error');
+    dni.next().html('DNI inválido');
+    return false;
   }
 
   function validarEmail(){
-    if ((/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i).test( $('#user_username').val())){
-      $('#user_username').tooltip('hide');
+    var email = $('#user_username');
+
+    if ( email.val() === '' ){
+      email.next().removeClass('texto-ayuda');
+      email.next().addClass('texto-validacion');
+      email.addClass('tiene-error');
+      email.next().html('Este campo es obligatorio');
+      return false;
+    }
+    if ((/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i).test( email.val())){
+      email.removeClass('tiene-error');
+      email.next().html('&nbsp;');
       return true;
     }else{
-      $('#user_username').tooltip('show');
+      email.addClass('tiene-error');
+      email.next().html('Email incorrecto');
       return false;
     }
   }
 
-  $('#user_user_detail_attributes_dni').blur( validarDni );
+  function validarNoVacio(nombre){
+    if ( nombre.val() === '' ){
+      nombre.addClass('tiene-error');
+      if (nombre.next().hasClass('texto-validacion')){
+        nombre.next().html('Este campo es obligatorio');
+      }else{
+        nombre.nextAll('span:first').html('Este campo es obligatorio');
+      }
+      return false;
+    }
+    nombre.removeClass('tiene-error');
+    nombre.next().html('&nbsp;');
+    return true;
+  }
 
-  $('#user_username').blur(function() {
-    validarEmail();
+  $('#user_name').on('blur keyup', function(evt) {
+    validarNoVacio($(evt.target));
   });
 
-  $('#user_password, #user_password_confirmation').blur(function() {
-    validarContrasenias();
+  $('#user_surname').on('blur keyup', function(evt) {
+    validarNoVacio($(evt.target));
   });
+
+  $('#user_current_password').on('blur keyup', function(evt) {
+    validarNoVacio($(evt.target));
+  });
+
+  $('#user_user_detail_attributes_dni').on('blur keyup', validarDni);
+
+  $('#user_username').on('blur keyup', validarEmail);
+
+  $('#user_password, #user_password_confirmation').on('blur keyup', validarContrasenias);
 
 }(window.jQuery));
