@@ -5,7 +5,7 @@ class OngsController < ApplicationController
   # GET /ongs
   # GET /ongs.json
   def index
-    @ongs = Ong.recent(10)
+    @ongs = Topic.blood_donation.first.ongs.limited_to(2000)
     respond_to do |format|
         format.html
         format.json { render json: @ongs  }

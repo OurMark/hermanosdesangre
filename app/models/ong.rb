@@ -5,10 +5,12 @@ class Ong < ActiveRecord::Base
   has_many :users, through: :ong_admins, foreign_key: :admins_user_id
   has_one :ong_detail
   has_many :ong_calendars
+  has_and_belongs_to_many :topics, :join_table => :ong_topic
 
   self.inheritance_column = :_type_disabled
 
-  scope :recent, ->(num) { order('ong_id').limit(num) }
+  scope :limited_to, ->(num) { order('ong_id').limit(num) }
+  scope :blood_donation, -> {includes(:topics).where("topic.name = ? ", 'BLOOD_DONATION')}
 
   def user_is_admin?(user)
     user.ongs.include?(self)
