@@ -4,55 +4,74 @@
 .navbar-brand {
   color: $white;
 
-  &:focus, &:active, &:visited {
+  &:focus,
+  &:active,
+  &:visited {
     color: $white;
   }
+
   .navbar-logo-hermanos {
     position: relative;
     bottom: 5px;
     right: 11px;
     width: 32px;
   }
+
 }
+
 .dropdown-toggle {
   color: $white;
 }
+
 .container-fluid > .navbar-collapse {
   width: 100%;
 }
+
 .nav > li {
   border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
+
 .navbar-nav > li > a {
   color: $white;
 }
-.nav > li > a:hover, .nav > li > a:focus {
+
+.nav > li > a:hover,
+.nav > li > a:focus {
   background-color: $softRed;
   color: $white;
 }
-.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
   background-color: $mainRed;
   border-color: $softRed;
   color: $white;
 }
+
 .navbar-nav .open .dropdown-menu > li > a {
   color: $white;
 
   &:hover {
     background-color: $mainRed;
   }
+
 }
+
 .navbar-content {
   background: $softRed;
   border-bottom: 4px solid $mainRed;
   border-radius: 0 0 2px 2px;
 }
+
 .navbar-toggle {
   margin-right: 0;
 }
+
 .icon-bar {
   background-color: $white;
 }
+
 .faldon_top_container {
   display: none;
   font-size: 1em;
@@ -60,16 +79,16 @@
   width: 100%;
 
   .faldon-background-container {
-      position: absolute;
-      background-color: $white;
-      height: 220px;
-      width: 100%;
+    position: absolute;
+    background-color: $white;
+    height: 220px;
+    width: 100%;
 
-      .faldon_izq {
-          width: 50%;
-          height: 220px;
-          background-color: $softRed;
-      }
+    .faldon_izq {
+      width: 50%;
+      height: 220px;
+      background-color: $softRed;
+    }
 
   }
 
@@ -79,15 +98,21 @@
         a {
           text-decoration: none;
         }
+
       }
+
     }
+
   }
+
 }
+
 .faldon_top {
   position: relative;
   height: 220px;
   margin: 0 auto;
 }
+
 .logo_top_container {
   position: absolute;
   top: 12px;
@@ -98,6 +123,7 @@
   box-shadow: black 0px 0px 25px -5px;
   z-index: 9999;
 }
+
 .navbar-logo {
   background: $softRed;
   padding-left: 5%;
@@ -109,6 +135,7 @@
     width: 70%;
     position: relative;
   }
+
 }
 
 .logo-container {
@@ -141,8 +168,12 @@
   &.last {
     padding-left: 1%;
   }
+
 }
-ul#menu, ul.sub-menu, ul.botones_sobre_derecha {
+
+ul#menu,
+ul.sub-menu,
+ul.botones_sobre_derecha {
   padding: 0;
   margin: 0;
   position: absolute;
@@ -152,16 +183,21 @@ ul#menu, ul.sub-menu, ul.botones_sobre_derecha {
     display: inline-block;
     position: relative;
   }
+
 }
+
 ul#menu {
   top: 34px;
 }
+
 ul.botones_sobre_derecha {
   right: 5%;
 }
+
 .top30 {
   top: 30px;
 }
+
 .sub-menu {
   display: none;
   position: absolute;
@@ -171,6 +207,7 @@ ul.botones_sobre_derecha {
   li:hover & {
     display: block;
   }
+
   li {
     background: $softWhite;
     width: 130px;
@@ -179,7 +216,9 @@ ul.botones_sobre_derecha {
     &:hover {
       background-color: $white;
     }
+
   }
+
   a {
     color: $mainRed;
     display: block;
@@ -188,9 +227,13 @@ ul.botones_sobre_derecha {
     &:hover {
       font-weight: 700;
     }
+
   }
+
 }
-ul#menu>li>a, ul.botones_sobre_derecha>li>a {
+
+ul#menu>li>a,
+ul.botones_sobre_derecha>li>a {
   color: $softRed;
   text-decoration: none;
   padding: 6px 9px;
@@ -198,6 +241,7 @@ ul#menu>li>a, ul.botones_sobre_derecha>li>a {
   border-right: 1px solid $mainRed;
   letter-spacing: 1px;
 }
+
 ul.botones_sobre_derecha li a:hover {
   font-style: italic;
 }
@@ -207,15 +251,18 @@ ul.botones_sobre_derecha li a:hover {
   padding: 9px !important;
   background-color: $whiteSmoke;
 }
+
 .botones_sobre_derecha li:last-child>a {
   background-color: $softRed;
   color: white;
 }
+
 .botones_sobre_derecha li>span {
   position: relative;
   right: 28px;
   bottom: 1px;
 }
+
 .botones_sobre_derecha .HS_email {
   background-color: $whiteSmoke;
   background-image: url($email);
@@ -229,6 +276,7 @@ ul.botones_sobre_derecha li a:hover {
   -webkit-transition: width 500ms ease-in;
   transition: width 500ms ease;
 }
+
 .botones_sobre_derecha .HS_email:hover {
   width: 75px;
 }
@@ -244,8 +292,7 @@ ul.botones_sobre_derecha li a:hover {
   color: $softRed;
 }
 
-
-@media (min-width:768px) {
+@media #{$medium-up} {
   .faldon_top_container {
     display: block;
   }
@@ -257,18 +304,22 @@ ul.botones_sobre_derecha li a:hover {
   ul.botones_sobre_derecha {
     right: 2%;
   }
+
 }
 
-@media (min-width:992px) {
+@media #{$large-up} {
   .logo {
     padding: 0 30px;
   }
+
   .navbar-logo a {
     width: 100%;
   }
+
   .HS_email,
   .st_facebook,
   .st_twitter {
     display: inline-block;
   }
+
 }
