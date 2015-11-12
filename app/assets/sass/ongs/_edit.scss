@@ -1,0 +1,31 @@
+/*============================================
+=            ong edit form styles            =
+============================================*/
+
+@media #{$medium-up} {
+  .ong-edit-page {
+    .ongs-new {
+      margin: 0px auto;
+      width: 90%;
+      h1 {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media #{$large-up} {
+  .ong-edit-page {
+    .ongs-new {
+      width: 70%;
+    }
+  }
+}
+
+@media #{$xlarge-up} {
+  .ong-edit-page {
+    .ongs-new {
+      width: 55%;
+    }
+  }
+}

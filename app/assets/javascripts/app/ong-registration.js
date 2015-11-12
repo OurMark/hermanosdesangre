@@ -1,42 +1,43 @@
 (function($) {
+  'use strict';
 
-  $('#new_ong').on('submit', function( event ) {
+  $('#new_ong').on('submit', function() {
     var nombre = validarNoVacio($('#ong_name')),
-    direccion = validarNoVacio($('#ong_address')),
-    codigoPostal = validarNoVacio($('#ong_zip')),
-    telefono = validarNoVacio($('#ong_phone')),
-    emailValido = validarEmail();
+      direccion = validarNoVacio($('#ong_address')),
+      codigoPostal = validarNoVacio($('#ong_zip')),
+      telefono = validarNoVacio($('#ong_phone')),
+      emailValido = validarEmail();
 
     return nombre && direccion && codigoPostal && telefono && emailValido;
-  })
+  });
 
-  function validarEmail(){
+  function validarEmail() {
     var email = $('#ong_adminEmail');
 
-    if ( email.val() === '' ){
+    if (email.val() === '') {
       email.next().removeClass('texto-ayuda');
       email.next().addClass('texto-validacion');
       email.addClass('tiene-error');
       email.next().html('Este campo es obligatorio');
       return false;
     }
-    if ((/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i).test( email.val())){
+    if ((/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i).test(email.val())) {
       email.removeClass('tiene-error');
       email.next().html('&nbsp;');
       return true;
-    }else{
+    } else {
       email.addClass('tiene-error');
       email.next().html('Email incorrecto');
       return false;
     }
   }
 
-  function validarNoVacio(nombre){
-    if ( nombre.val() === '' ){
+  function validarNoVacio(nombre) {
+    if (nombre.val() === '') {
       nombre.addClass('tiene-error');
-      if (nombre.next().hasClass('texto-validacion')){
+      if (nombre.next().hasClass('texto-validacion')) {
         nombre.next().html('Este campo es obligatorio');
-      }else{
+      } else {
         nombre.nextAll('span:first').html('Este campo es obligatorio');
       }
       return false;

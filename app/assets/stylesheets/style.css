@@ -2,9 +2,10 @@
 Error: File to import not found or unreadable: bootstrap-sprockets.
        Load paths:
          Compass::SpriteImporter
-         /home/dexxo/hermanosdesangre/app/assets/sass
-         /home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets
-        on line 7 of /home/dexxo/hermanosdesangre/app/assets/sass/style.scss
+         /home/fernando.fajardo/hermanosdesangre/app/assets/sass
+         /home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets
+         /home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/susy-2.2.5/sass
+        on line 7 of /home/fernando.fajardo/hermanosdesangre/app/assets/sass/style.scss
 
 2: // ======
 3: 
@@ -19,50 +20,50 @@ Error: File to import not found or unreadable: bootstrap-sprockets.
 12: 
 
 Backtrace:
-/home/dexxo/hermanosdesangre/app/assets/sass/style.scss:7
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/import_node.rb:45:in `import'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/import_node.rb:28:in `imported_file'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/import_node.rb:37:in `css_import?'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `visit'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/stack.rb:79:in `block in with_base'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/stack.rb:115:in `with_frame'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/stack.rb:79:in `with_base'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:52:in `map'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `visit'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/root_node.rb:36:in `css_tree'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/root_node.rb:20:in `render'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/engine.rb:268:in `render'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:209:in `each'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:293:in `watch'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:46:in `watch!'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/watch_project.rb:41:in `perform'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:44:in `call'
-/home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
-/home/dexxo/.rbenv/versions/2.1.2/bin/compass:23:in `load'
-/home/dexxo/.rbenv/versions/2.1.2/bin/compass:23:in `<main>'
+/home/fernando.fajardo/hermanosdesangre/app/assets/sass/style.scss:7
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/import_node.rb:45:in `import'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/import_node.rb:28:in `imported_file'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/import_node.rb:37:in `css_import?'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/stack.rb:79:in `block in with_base'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/stack.rb:115:in `with_frame'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/stack.rb:79:in `with_base'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:52:in `map'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/root_node.rb:36:in `css_tree'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/tree/root_node.rb:20:in `render'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/engine.rb:268:in `render'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:209:in `each'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:293:in `watch'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:46:in `watch!'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/watch_project.rb:41:in `perform'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:44:in `call'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/bin/compass:23:in `load'
+/home/fernando.fajardo/.rbenv/versions/2.1.2/bin/compass:23:in `<main>'
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: bootstrap-sprockets.\A        Load paths:\A          Compass::SpriteImporter\A          /home/dexxo/hermanosdesangre/app/assets/sass\A          /home/dexxo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets\A         on line 7 of /home/dexxo/hermanosdesangre/app/assets/sass/style.scss\A \A 2: // ======\A 3: \A 4: @import \"compass\";\A 5: \A 6: //bootstrap\A 7: @import \"bootstrap-sprockets\";\A 8: @import \"bootstrap\";\A 9: \A 10: // variables\A 11: @import \"variables\";\A 12: "; }
+  content: "Error: File to import not found or unreadable: bootstrap-sprockets.\A        Load paths:\A          Compass::SpriteImporter\A          /home/fernando.fajardo/hermanosdesangre/app/assets/sass\A          /home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets\A          /home/fernando.fajardo/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/susy-2.2.5/sass\A         on line 7 of /home/fernando.fajardo/hermanosdesangre/app/assets/sass/style.scss\A \A 2: // ======\A 3: \A 4: @import \"compass\";\A 5: \A 6: //bootstrap\A 7: @import \"bootstrap-sprockets\";\A 8: @import \"bootstrap\";\A 9: \A 10: // variables\A 11: @import \"variables\";\A 12: "; }

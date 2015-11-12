@@ -21,12 +21,15 @@
   font-size: 17px;
   font-weight: normal;
 }
+
 .similInput label:after {
   content: none;
 }
+
 .similInput INPUT {
   margin: 10px 0 0 0;
 }
+
 .similInput div {
   padding-top: 6px;
 }
@@ -38,11 +41,15 @@
   position: relative;
   bottom: 10px;
 }
-.notificacion a, .notificacion a:hover, .notificacion a:visited {
+
+.notificacion a,
+.notificacion a:hover,
+.notificacion a:visited {
   color: $mainRed;
 }
 
-.submitArea label, .col_div .submitArea>p {
+.submitArea label,
+.col_div .submitArea>p {
   display: inline-block;
   margin-bottom: 0;
   margin-left: 0;
@@ -70,6 +77,7 @@
   padding: 9px;
   text-align: center;
   width: 100%;
+
   &:hover,
   &:focus {
     color: white;
@@ -77,32 +85,35 @@
     border-bottom: solid $mainRed 2px;
     outline: none;
   }
+
 }
 
-
 .help-block {
-    padding-left : 10px;
+  padding-left: 10px;
 }
 
 .form-group {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 
-    label {
-        padding-left: 0px;
-        font-weight: normal;
-    }
-    label.form-label {
-        font-size: 18px;
-        font-weight: bold;
-    }
-    input[type="checkbox"] {
-        width: 20px;
-        height: 20px;
-    }
+  label {
+    padding-left: 0px;
+    font-weight: normal;
+  }
+
+  label.form-label {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  }
+
 }
 
-@media (min-width: 768px) {
-  textarea{
+@media #{$medium-up} {
+  textarea {
     width: 315px !important;
   }
 
@@ -117,4 +128,5 @@
   .submit-button {
     width: 315px;
   }
+
 }

@@ -1,66 +1,66 @@
-<div class="row">
+<div class="row ong-show-page">
   <div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 col_der">
    <div class="ongs-new">
        <h1> <%= @ong.name %></h1>
        <p id="notice"><%= notice %></p>
        <p>
          <strong>Direccion:</strong>
-         <%= @ong.address %>
+         <span><%= @ong.address %></span>
        </p>
 
        <p>
          <strong>Referencias de dirección:</strong>
-         <%= @ong.address2 %>
+         <span><%= @ong.address2 %></span>
        </p>
 
        <p>
          <strong>ciudad:</strong>
-         <%= @ong.city %>
+         <span><%= @ong.city %></span>
        </p>
 
        <p>
          <strong>Provincia:</strong>
-         <%= @ong.state %>
+         <span><%= @ong.state %></span>
        </p>
 
        <p>
          <strong>Pais:</strong>
-         <%= @ong.country_id %> <!-- @TODO mostrar el pais correctamente -->
+         <span><%= @ong.country_id %></span> <!-- @TODO mostrar el pais correctamente -->
        </p>
 
        <p>
          <strong>Código Postal:</strong>
-         <%= @ong.zip %>
+         <span><%= @ong.zip %></span>
        </p>
 
        <p>
          <strong>Telefono:</strong>
-         <%= @ong.phone %>
+         <span><%= @ong.phone %></span>
        </p>
 
        <p>
          <strong>Email:</strong>
-         <%= @ong.adminEmail %>
+         <span><%= @ong.adminEmail %></span>
        </p>
 
        <p>
          <strong>Website:</strong>
-         <%= @ong.websiteUrl %>
+         <span><%= @ong.websiteUrl %></span>
        </p>
 
        <p>
          <strong>Facebook:</strong>
-         <%= @ong.facebookPage %>
+         <span><%= @ong.facebookPage %></span>
        </p>
 
        <p>
          <strong>Red Nacional:</strong>
-         <%= @ong.nationalNetworkName %>
+         <span><%= @ong.nationalNetworkName %></span>
        </p>
 
        <p>
          <strong>Red Internacional:</strong>
-         <%= @ong.internationalNetworkName %>
+         <span><%= @ong.internationalNetworkName %></span>
        </p>
        <%= link_to "Volver al usuario",user_path(current_user), class: 'input-submit'%>
 
