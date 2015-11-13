@@ -1,16 +1,20 @@
-$ong-search-width: 315px;
-
+/*=========================================
+=            ong search styles            =
+=========================================*/
 .ong-search {
   input[type="text"].tt-input {
     color: $black;
     background-color: $whiteSmoke;
   }
+
   input[type="text"].tt-hint {
     color: $lightRed;
   }
+
   .typeahead {
     width: $ong-search-width;
   }
+
   .tt-menu {
     background-color: $white;
     width: $ong-search-width;
@@ -18,11 +22,15 @@ $ong-search-width: 315px;
     border-width: 0px 1px 1px 1px;
     padding: 10px;
   }
-  .tt-cursor, .tt-selectable:hover {
+
+  .tt-cursor,
+  .tt-selectable:hover {
     background-color: $softRed;
     color: white;
   }
+
   .tt-selectable {
     padding: 5px;
   }
+
 }
