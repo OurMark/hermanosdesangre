@@ -1,28 +1,41 @@
-== README
-
+README
+------
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+>* Ruby version
 
-* System dependencies
+>* System dependencies
 
-* Configuration
+>* Configuration
 
-* Database creation
+>* Database creation
 
-* Database initialization
+>* Database initialization
 
-* How to run the test suite
+>* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+>* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
+>* Deployment instructions
 
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+###FRONT-END DEVELOPMENT
+
+In this project we use several tools and a CSS UI frameworks, like SASS, Grunt, Nodejs, Javascript ( Vanilla ),
+TW bootstrap 3 etc.
+
+In order to work on this project you should use the following commands and instructions:
+
+>1. open a command line.
+
+>2. go to project folder.
+
+>3. run command --> ``` npm install ```
+
+>4. run command --> ``` grunt ```

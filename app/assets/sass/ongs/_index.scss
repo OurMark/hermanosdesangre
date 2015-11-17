@@ -1,0 +1,38 @@
+/*=======================================
+=            ong list styles            =
+=======================================*/
+
+.ong-list-page {
+
+}
+
+@media #{$xlarge-up} {
+  .ong-list-page {
+
+    .col_der {
+      padding: 5px;
+    }
+
+    .ongs {
+      height: 800px;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    .banco {
+      margin: 10px 0;
+      cursor:pointer;
+
+      &:hover {
+        border: 1px solid $mainRed;
+      }
+    }
+
+    .reservar a {
+      height: auto;
+      padding: 5px 10px;
+      font-size: 0.9em;
+      @include border-radius(40%, 40%);
+    }
+  }
+}
