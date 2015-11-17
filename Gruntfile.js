@@ -20,7 +20,7 @@ module.exports = function(grunt) {
        files: [{
          expand: true,
          cwd: 'app/assets/images/',
-         src: ['**/*.{png,jpg,svg}'],
+         src: ['**/*.{png,jpg,svg,gif}'],
          dest: 'app/assets/images/'
        }]
       }
@@ -88,7 +88,7 @@ module.exports = function(grunt) {
         files: [
           '<%= jshint.all %>'
         ],
-        tasks: ['jshint']
+        tasks: ['jshint', 'concat', 'uglify', 'clean']
       }
     },
   });
@@ -98,7 +98,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'clean', 'watch']);
+  grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'clean', 'compass', 'watch']);
   grunt.registerTask('sass', ['compass']); //sass files compilation task
   grunt.registerTask('image', ['imagemin']); //image optimization task
 };
