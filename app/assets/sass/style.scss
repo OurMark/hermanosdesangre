@@ -3,9 +3,9 @@
 
 @import "compass";
 
-//bootstrap
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
 
 // variables
 @import "variables";
@@ -31,3 +31,7 @@
 @import "ongs/new";
 @import "ongs/ong_search";
 @import "ongs/ong_calendar";
+@import "ongs/show";
+@import "ongs/edit";
+@import "ongs/index";
+@import "ongs/ong_registered";

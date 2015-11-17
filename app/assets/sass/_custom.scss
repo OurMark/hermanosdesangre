@@ -354,24 +354,15 @@ input:focus:-moz-placeholder {
     display: block;
   }
 }
-.ong-registered {
-  padding: 0 30px;
 
-  p {
-    font-weight: normal;
-  }
-}
-@media (min-width:768px) {
-  .listado_meses, .ong, .ongs, .ong-registered {
-    //margin-top: 220px;
-  }
+@media #{$medium-up} {
   .col_der {
     min-height: 870px;
     &.columna {
       min-height: 805px;
     }
   }
-  .col_izq {
+$  .col_izq {
     min-height: 870px;
     width: 50%;
 
@@ -387,7 +378,8 @@ input:focus:-moz-placeholder {
     top: 20%;
   }
 }
-@media (min-width:1200px) {
+
+@media #{$xlarge-up} {
   .col_izq .boton_donar {
     display: block;
   }
