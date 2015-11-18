@@ -22,3 +22,45 @@
     }
 
 }
+
+
+.configuracion-calendario{
+    padding: 10px 30px;
+
+    h3{
+        color: $saddleBrown;
+        padding-bottom: 10px;
+    }
+
+    .titulo-rosa{
+        color: $softRed;
+    }
+}
+
+.tabla-calendario{
+   width: 70%;
+   max-width: 70%;
+   margin-top: 3%;
+
+   th{
+     color: $softRed;
+     font-weight: normal;
+     text-align: center;
+   }
+
+   td{
+     width: 14%;
+     height: 40px;
+     padding: 5px;
+     border: 10px solid white;
+     text-align: center;
+   }
+}
+
+.habilitado{
+   background-color: $whiteSmoke;
+}
+
+.deshabilitado{
+   background-color: $plata;
+}
