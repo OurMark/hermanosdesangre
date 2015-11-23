@@ -3,6 +3,25 @@
         padding-top: 10px;
     }
 }
+
+.semana{
+  color: $saddleBrown;
+  font-size: 20px;
+  text-align: center;
+}
+
+.margen-superior{
+  margin-top: 5px;
+}
+
+.margen-inferior{
+  margin-bottom: 30px;
+}
+
+.margen-izquierdo{
+  margin-left: 85px;
+}
+
 .configuracion-atencion {
     padding: 10px 30px;
 
@@ -23,7 +42,6 @@
 
 }
 
-
 .configuracion-calendario{
     padding: 10px 30px;
 
@@ -38,29 +56,63 @@
 }
 
 .tabla-calendario{
-   width: 70%;
-   max-width: 70%;
-   margin-top: 3%;
+   width: 100%;
+   table-layout: fixed;
 
    th{
      color: $softRed;
-     font-weight: normal;
+     font-weight: lighter;
      text-align: center;
    }
 
    td{
      width: 14%;
-     height: 40px;
-     padding: 5px;
+     height: 42px;
      border: 10px solid white;
      text-align: center;
    }
+
+   i {
+    background-image: url($gota);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 16px;
+    width: 18px;
+    margin-left: 3%;
+  }
 }
 
-.habilitado{
-   background-color: $whiteSmoke;
+.celdas-horario{
+    padding-right: 17px;
 }
 
-.deshabilitado{
-   background-color: $plata;
-}
+  .habilitado{
+     background-color: $whiteSmoke;
+  }
+
+  .deshabilitado{
+     background-color: $plata;
+  }
+
+  .completo{
+     background-color: brown;
+     color: white;
+  }
+
+  .cuadrado{
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+  }
+
+  .opciones-calendario{
+    color: #F16B6B;
+    font-weight: lighter;
+    text-align: center;
+    padding-left: 4px;
+  }
+
+  .borde{
+    border-bottom: solid 2px $softRed;
+    border-top: solid 2px $softRed;
+  }
