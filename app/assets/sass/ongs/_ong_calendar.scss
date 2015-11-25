@@ -53,6 +53,10 @@
     .titulo-rosa{
         color: $softRed;
     }
+
+    .dia{
+      cursor: pointer;
+    }
 }
 
 .tabla-calendario{
@@ -95,7 +99,7 @@
   }
 
   .completo{
-     background-color: brown;
+     background-color: saddlebrown;
      color: white;
   }
 

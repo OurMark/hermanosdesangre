@@ -36,5 +36,54 @@
         $('input[type="checkbox"].days-all').prop('checked', true);
         $('input[type="checkbox"].days-all').change();
 
+        function sumarTotal(dia){
+            var suma = 0;
+
+            ($("."+dia).not('.dia, .total')).each(function(){
+                if ($(this).text() != '')
+                    suma = suma + parseInt(($(this).text()));
+            });
+
+            if (suma != 0){
+                $('.total.'+dia).html(suma);
+            }else{
+                $('.total.'+dia).html('');
+            }
+        }
+
+        $(".total").each(function(){
+            var dia = ($(this).attr('class').split(' ')[2]);
+            sumarTotal(dia);
+        });
+
+        $(".dia").on('click', (function() {
+            var clases = $(this).attr('class'),
+                dia = clases.split(' ')[1],
+                diaHabilitacion = clases.split(' ')[2];
+
+            if ( diaHabilitacion == 'dia-habilitado'){
+                ($("."+dia).not('.dia, .total')).each(function(){
+                    $(this).removeClass("habilitado");
+                    $(this).addClass("deshabilitado");
+                    $(".dia").removeClass("dia-habilitado");
+
+                    //mandar mail y borrar en backend los turnos
+                    $(this).html('');
+                    $(this).removeClass('completo');
+                    //Falta que quede deshabilitado en el sistema
+                });
+            }else{
+                ($("."+dia).not('.dia, .total')).each(function(){
+                    $(this).removeClass("deshabilitado");
+                    $(this).addClass("habilitado");
+                    $(".dia").addClass("dia-habilitado");
+                    //Falta que quede habilitado en el sistema
+                });
+            }
+
+            sumarTotal(dia);
+
+        }));
+
     });
 }(window.jQuery));
