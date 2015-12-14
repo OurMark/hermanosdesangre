@@ -15,3 +15,4 @@
 //= require jquery_ujs
 //= require bootstrap-sass/assets/javascripts/bootstrap.min
 //= require twitter/typeahead
+//= require_tree .
