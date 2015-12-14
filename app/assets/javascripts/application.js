@@ -13,6 +13,6 @@
 // Loads all Bootstrap javascripts
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
+//= require bootstrap-sass/assets/javascripts/bootstrap.min
 //= require twitter/typeahead
 //= require_tree .

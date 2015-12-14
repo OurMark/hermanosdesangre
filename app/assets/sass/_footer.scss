@@ -2,9 +2,10 @@
   display: none;
   background: $saddleBrown;
   height: 50px;
+
 }
 
-@media (min-width:768px){
+@media #{$medium-up}{
   .footer {
     display: block;
   }

@@ -3,9 +3,10 @@
 
 @import "compass";
 
-//bootstrap
-@import "bootstrap-sprockets";
-@import "bootstrap";
+$icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
+@import "bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
+
 
 // variables
 @import "variables";
@@ -31,3 +32,7 @@
 @import "ongs/new";
 @import "ongs/ong_search";
 @import "ongs/ong_calendar";
+@import "ongs/show";
+@import "ongs/edit";
+@import "ongs/index";
+@import "ongs/ong_registered";

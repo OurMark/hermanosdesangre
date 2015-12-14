@@ -12,6 +12,8 @@ class Ong < ActiveRecord::Base
   scope :limited_to, ->(num) { order('ong_id').limit(num) }
   scope :blood_donation, -> {includes(:topics).where("topic.name = ? ", 'BLOOD_DONATION')}
 
+  after_create :add_topic
+
   def user_is_admin?(user)
     user.ongs.include?(self)
   end
@@ -27,5 +29,13 @@ class Ong < ActiveRecord::Base
   def check_calendar_day(day)
     ong_calendars.find_by_day(day)
     false
+  end
+
+  private
+
+  def add_topic
+    topic = Topic.find_by name: 'BLOOD_DONATION'
+    topics << topic
+    save
   end
 end
