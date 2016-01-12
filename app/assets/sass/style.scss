@@ -21,7 +21,6 @@ $icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
 @import "footer";
 
 //views
-
 @import "static/home";
 @import "static/how_works";
 @import "static/about_us";
@@ -36,3 +35,5 @@ $icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
 @import "ongs/edit";
 @import "ongs/index";
 @import "ongs/ong_registered";
+@import "passwords/new";
+
