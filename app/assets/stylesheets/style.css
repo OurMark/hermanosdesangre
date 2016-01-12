@@ -10011,7 +10011,7 @@ input:focus:-moz-placeholder {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 8, ../sass/_footer.scss */
+/* line 9, ../sass/_footer.scss */
   .footer {
     display: block;
   }
