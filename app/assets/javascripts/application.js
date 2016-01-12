@@ -16,3 +16,4 @@
 //= require bootstrap-sass/assets/javascripts/bootstrap.min
 //= require jquery.twbsPagination.min
 //= require twitter/typeahead
+//= require_tree .

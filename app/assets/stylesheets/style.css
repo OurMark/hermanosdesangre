@@ -10011,7 +10011,7 @@ input:focus:-moz-placeholder {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 9, ../sass/_footer.scss */
+/* line 9, ../sass/_footer.scss */
   .footer {
     display: block;
   }
@@ -11244,15 +11244,21 @@ ul.ong_botones {
     padding: 5px;
   }
   /* line 16, ../sass/ongs/_index.scss */
+  .ong-list-page .ongs {
+    height: 800px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  /* line 22, ../sass/ongs/_index.scss */
   .ong-list-page .banco {
     margin: 10px 0;
     cursor: pointer;
   }
-  /* line 20, ../sass/ongs/_index.scss */
+  /* line 26, ../sass/ongs/_index.scss */
   .ong-list-page .banco:hover {
     border: 1px solid #D35555;
   }
-  /* line 25, ../sass/ongs/_index.scss */
+  /* line 31, ../sass/ongs/_index.scss */
   .ong-list-page .reservar a {
     height: auto;
     padding: 5px 10px;
