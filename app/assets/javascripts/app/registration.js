@@ -1,6 +1,12 @@
 (function($) {
   'use strict';
 
+  $('.forget-password #new_user').on('submit', function() {
+    var emailValido = validarEmail($('#user_email'));
+
+    return emailValido;
+  });
+
   $('.registrarse #new_user').on('submit', function() {
     var nombre = validarNoVacio($('#user_name')),
       apellido = validarNoVacio($('#user_surname')),
@@ -73,8 +79,8 @@
     return valido;
   }
 
-  function validarEmail() {
-    var email = $('#user_username');
+  function validarEmail(userEmail) {
+    var email = userEmail ? userEmail : $('#user_username');
 
     if (email.val() === '') {
       email.next().removeClass('texto-ayuda');
