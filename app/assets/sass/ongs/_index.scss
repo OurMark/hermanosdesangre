@@ -3,7 +3,24 @@
 =======================================*/
 
 .ong-list-page {
+  .pagination {
 
+    @media #{$large-up} {
+      display: block;
+      margin: 20px auto;
+      width: 450px;
+    }
+
+    li a {
+      color: $softRed;
+    }
+
+    & > .active > a,
+    & > .active > a:hover {
+      background-color: $plata;
+      border-color: $plata;
+    }
+  }
 }
 
 @media #{$xlarge-up} {
