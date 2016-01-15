@@ -54,9 +54,10 @@
         color: $softRed;
     }
 
-    .dia{
+    .dia, .semana-anterior, .semana-posterior{
       cursor: pointer;
     }
+
 }
 
 .tabla-calendario{

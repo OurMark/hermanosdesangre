@@ -97,32 +97,46 @@
 
         }));
 
-        var hoy = "03-01-2016";
+        renderizarSemana("03-01-2016");
+        var lunesAnterior, lunesPosterior;
+
+        function renderizarSemana(dia){
         var hoyFormat = "DD-MM-YYYY";
-        var dia = moment(hoy, hoyFormat);
 
-        console.log('Dia: ' + dia.format('DD-MM-YYYY'));
-
-        var lunesAnterior = moment(hoy, hoyFormat).startOf('isoweek').day(-6).format('DD-MM-YYYY');
-        //console.log('Lunes de semana anterior: ' + lunesAnterior);
-
-        var lunesEstaSemana = moment(hoy, hoyFormat).startOf('isoweek').format('DD-MM-YYYY');
-        console.log('Lunes de esta semana: '+ lunesEstaSemana);
-
-        var proximoLunes = moment(hoy, hoyFormat).startOf('isoweek').day(8).format('DD-MM-YYYY');
-        //console.log('Lunes de proxima semana: '+ proximoLunes);
+        lunesAnterior = moment(dia, hoyFormat).startOf('isoweek').day(-6).format(hoyFormat);
+        var lunesEstaSemana = moment(dia, hoyFormat).startOf('isoweek').format(hoyFormat);
+        lunesPosterior = moment(dia, hoyFormat).startOf('isoweek').day(8).format(hoyFormat);
 
         //A partir del lunes que me traiga la semana
         var ultimoDiaSemana;
-        ultimoDiaSemana = moment(lunesEstaSemana, hoyFormat).add(6, 'days').format('DD-MM-YYYY');
+        ultimoDiaSemana = moment(lunesEstaSemana, hoyFormat).add(6, 'days').format(hoyFormat);
 
-        var lunes = moment(lunesEstaSemana, hoyFormat);
-        console.log('LU '+ lunes.format('DD'));
-        console.log('MA '+ lunes.add(1, 'days').format('DD'));
-        console.log('MI '+ lunes.add(1, 'days').format('DD'));
-        console.log('JU '+ lunes.add(1, 'days').format('DD'));
-        console.log('VI '+ lunes.add(1, 'days').format('DD'));
-        console.log('SA '+ lunes.add(1, 'days').format('DD'));
-        console.log('DO '+ lunes.add(1, 'days').format('DD'));
+        var lunes = moment(lunesEstaSemana, hoyFormat),
+            diasAMostrar = $('.dia');
+
+            //Muestra los dias de la semana con su numero
+            diasAMostrar.eq(0).text(lunes.format('ddd DD'));
+            for (var i = 1; i < 7; i++)
+                diasAMostrar.eq(i).text(lunes.add(1, 'days').format('ddd DD'));
+
+            //Mostrar rango de dias a mostrar en calendario
+            var primerFecha = moment(lunesEstaSemana, hoyFormat);
+            var segundaFecha = moment(ultimoDiaSemana, hoyFormat);
+            $('.texto-semana').first().text(primerFecha.format('DD MMMM YYYY')+' - '+segundaFecha.format('DD MMMM YYYY'));
+
+        }
+
+        //renderiza semana anterior
+        $(".semana-anterior").on('click', (function() {
+            renderizarSemana(lunesAnterior);
+            //falta que reemplace todos los valores interiores de la tabla, lo tiene q traer de backend
+        }));
+
+        //renderiza semana posterior
+        $(".semana-posterior").on('click', (function() {
+            renderizarSemana(lunesPosterior);
+            //falta que reemplace todos los valores interiores de la tabla, lo tiene q traer de backend
+        }));
+
     });
 }(window.jQuery));
