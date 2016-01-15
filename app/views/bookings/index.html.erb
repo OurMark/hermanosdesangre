@@ -12,49 +12,49 @@
                 <span>Configuración actual con disponibilidad: </span><span class="titulo-rosa">X donantes por turno</span>
             </div>
           <p class="semana"> < 20 - 26 Abril 2015 > </p>
-          <table class="tabla-calendario margen-inferior">
+          <table id="calendario" class="tabla-calendario margen-inferior">
             <thead>
               <tr>
                 <th></th>
-                <th class="dia lunes dia-habilitado">LU 20</th>
-                <th class="dia martes dia-habilitado">MA 21</th>
-                <th class="dia miercoles dia-habilitado">MI 22</th>
-                <th class="dia jueves">JU 23</th>
-                <th class="dia viernes dia-habilitado">VI 24</th>
-                <th class="dia sabado dia-habilitado">SA 25</th>
-                <th class="dia domingo">DO 26</th>
+                <th class="dia dia-habilitado">LU 20</th>
+                <th class="dia dia-habilitado">MA 21</th>
+                <th class="dia dia-habilitado">MI 22</th>
+                <th class="dia">JU 23</th>
+                <th class="dia dia-habilitado">VI 24</th>
+                <th class="dia dia-habilitado">SA 25</th>
+                <th class="dia">DO 26</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th scope="row">8.00</th>
-                <td class="lunes habilitado"></td>
-                <td class="martes habilitado"></td>
-                <td class="miercoles habilitado">3<i></i></td>
-                <td class="jueves deshabilitado"></td>
-                <td class="viernes habilitado"></td>
-                <td class="sabado habilitado">2<i></i></td>
-                <td class="domingo deshabilitado"></td>
+                <td class="habilitado"></td>
+                <td class="habilitado"></td>
+                <td class="habilitado">3<i></i></td>
+                <td class="deshabilitado"></td>
+                <td class="habilitado"></td>
+                <td class="habilitado">2<i></i></td>
+                <td class="deshabilitado"></td>
               </tr>
               <tr>
-                <th scope="row">8.00</th>
-                <td class="lunes habilitado"></td>
-                <td class="martes habilitado"></td>
-                <td class="miercoles habilitado"></td>
-                <td class="jueves deshabilitado"></td>
-                <td class="viernes habilitado"></td>
-                <td class="sabado habilitado"></td>
-                <td class="domingo deshabilitado"></td>
+                <th scope="row">8.30</th>
+                <td class="habilitado"></td>
+                <td class="habilitado"></td>
+                <td class="habilitado"></td>
+                <td class="deshabilitado"></td>
+                <td class="habilitado"></td>
+                <td class="habilitado"></td>
+                <td class="deshabilitado"></td>
               </tr>
               <tr>
-                <th scope="row">8.00</th>
-                <td class="lunes habilitado completo">4<i></i></td>
-                <td class="martes habilitado"></td>
-                <td class="miercoles habilitado">3<i></i></td>
-                <td class="jueves deshabilitado"></td>
-                <td class="viernes habilitado"></td>
-                <td class="sabado habilitado"></td>
-                <td class="domingo deshabilitado"></td>
+                <th scope="row">9.00</th>
+                <td class="habilitado completo">4<i></i></td>
+                <td class="habilitado"></td>
+                <td class="habilitado">3<i></i></td>
+                <td class="deshabilitado"></td>
+                <td class="habilitado"></td>
+                <td class="habilitado"></td>
+                <td class="deshabilitado"></td>
               </tr>
             </tbody>
           </table>
@@ -68,22 +68,26 @@
                 <div class="cuadrado deshabilitado"></div>
                 <span class="opciones-calendario">Turnos bloqueados</span>
             </div>
+            <div>
+                <div class="cuadrado completo"></div>
+                <span class="opciones-calendario">Turnos ocupados</span>
+            </div>
         </div>
 
 
        <div class="borde">
-            <table class="tabla-calendario margen-superior">
+            <table id="totales-calendario" class="tabla-calendario margen-superior">
                 <thead><tr></tr></thead>
                 <tbody>
                   <tr>
                     <th scope="row">Total donantes</th>
-                    <td class="habilitado total lunes"></td>
-                    <td class="habilitado total martes"></td>
-                    <td class="habilitado total miercoles"></td>
-                    <td class="habilitado total jueves"></td>
-                    <td class="habilitado total viernes"></td>
-                    <td class="habilitado total sabado"></td>
-                    <td class="habilitado total domingo"></td>
+                    <td class="habilitado total"></td>
+                    <td class="habilitado total"></td>
+                    <td class="habilitado total"></td>
+                    <td class="habilitado total"></td>
+                    <td class="habilitado total"></td>
+                    <td class="habilitado total"></td>
+                    <td class="habilitado total"></td>
                   </tr>
                 </tbody>
           </table>

@@ -39,30 +39,42 @@
         function sumarTotal(dia){
             var suma = 0;
 
-            ($("."+dia).not('.dia, .total')).each(function(){
+            $('#calendario td:nth-child('+(dia+1)+')').each(function(){
                 if ($(this).text() != '')
                     suma = suma + parseInt(($(this).text()));
             });
 
             if (suma != 0){
-                $('.total.'+dia).html(suma);
+                $('#totales-calendario td:nth-child('+(dia+1)+')').html(suma);
             }else{
-                $('.total.'+dia).html('');
+                $('#totales-calendario td:nth-child('+(dia+1)+')').html('');
             }
+
         }
 
         $(".total").each(function(){
-            var dia = ($(this).attr('class').split(' ')[2]);
+            var dia = 0,
+                nodo = $(this)[0];
+
+            while( (nodo = nodo.previousElementSibling ) != null )
+                dia++;
+
             sumarTotal(dia);
         });
 
         $(".dia").on('click', (function() {
-            var clases = $(this).attr('class'),
-                dia = clases.split(' ')[1],
-                diaHabilitacion = clases.split(' ')[2];
+            var dia = $(this),
+                numeroDia = 0,
+                nodo = dia[0],
+                tabla;
 
-            if ( diaHabilitacion == 'dia-habilitado'){
-                ($("."+dia).not('.dia, .total')).each(function(){
+            while( (nodo = nodo.previousElementSibling ) != null )
+                numeroDia++;
+
+            tabla = dia.closest('.tabla-calendario');
+
+            if (dia.hasClass('dia-habilitado')){
+                $('#calendario td:nth-child('+(numeroDia+1)+')').each(function(){
                     $(this).removeClass("habilitado");
                     $(this).addClass("deshabilitado");
                     $(".dia").removeClass("dia-habilitado");
@@ -71,9 +83,9 @@
                     $(this).html('');
                     $(this).removeClass('completo');
                     //Falta que quede deshabilitado en el sistema
-                });
+                })
             }else{
-                ($("."+dia).not('.dia, .total')).each(function(){
+                $('#calendario td:nth-child('+(numeroDia+1)+')').each(function(){
                     $(this).removeClass("deshabilitado");
                     $(this).addClass("habilitado");
                     $(".dia").addClass("dia-habilitado");
@@ -81,9 +93,36 @@
                 });
             }
 
-            sumarTotal(dia);
+            sumarTotal(numeroDia);
 
         }));
 
+        var hoy = "03-01-2016";
+        var hoyFormat = "DD-MM-YYYY";
+        var dia = moment(hoy, hoyFormat);
+
+        console.log('Dia: ' + dia.format('DD-MM-YYYY'));
+
+        var lunesAnterior = moment(hoy, hoyFormat).startOf('isoweek').day(-6).format('DD-MM-YYYY');
+        //console.log('Lunes de semana anterior: ' + lunesAnterior);
+
+        var lunesEstaSemana = moment(hoy, hoyFormat).startOf('isoweek').format('DD-MM-YYYY');
+        console.log('Lunes de esta semana: '+ lunesEstaSemana);
+
+        var proximoLunes = moment(hoy, hoyFormat).startOf('isoweek').day(8).format('DD-MM-YYYY');
+        //console.log('Lunes de proxima semana: '+ proximoLunes);
+
+        //A partir del lunes que me traiga la semana
+        var ultimoDiaSemana;
+        ultimoDiaSemana = moment(lunesEstaSemana, hoyFormat).add(6, 'days').format('DD-MM-YYYY');
+
+        var lunes = moment(lunesEstaSemana, hoyFormat);
+        console.log('LU '+ lunes.format('DD'));
+        console.log('MA '+ lunes.add(1, 'days').format('DD'));
+        console.log('MI '+ lunes.add(1, 'days').format('DD'));
+        console.log('JU '+ lunes.add(1, 'days').format('DD'));
+        console.log('VI '+ lunes.add(1, 'days').format('DD'));
+        console.log('SA '+ lunes.add(1, 'days').format('DD'));
+        console.log('DO '+ lunes.add(1, 'days').format('DD'));
     });
 }(window.jQuery));
