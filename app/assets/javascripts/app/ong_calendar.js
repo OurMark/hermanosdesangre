@@ -52,7 +52,7 @@
 
         }
 
-        $(".total").each(function(){
+        $('.total').each(function(){
             var dia = 0,
                 nodo = $(this)[0];
 
@@ -62,7 +62,7 @@
             sumarTotal(dia);
         });
 
-        $(".dia").on('click', (function() {
+        $('.dia').on('click', (function() {
             var dia = $(this),
                 numeroDia = 0,
                 nodo = dia[0],
@@ -73,11 +73,10 @@
 
             tabla = dia.closest('.tabla-calendario');
 
-            if (dia.hasClass('dia-habilitado')){
+            if (($('#calendario td:nth-child('+(numeroDia+1)+')').first()).hasClass('habilitado')){
                 $('#calendario td:nth-child('+(numeroDia+1)+')').each(function(){
-                    $(this).removeClass("habilitado");
-                    $(this).addClass("deshabilitado");
-                    $(".dia").removeClass("dia-habilitado");
+                    $(this).removeClass('habilitado');
+                    $(this).addClass('deshabilitado');
 
                     //mandar mail y borrar en backend los turnos
                     $(this).html('');
@@ -86,9 +85,8 @@
                 })
             }else{
                 $('#calendario td:nth-child('+(numeroDia+1)+')').each(function(){
-                    $(this).removeClass("deshabilitado");
-                    $(this).addClass("habilitado");
-                    $(".dia").addClass("dia-habilitado");
+                    $(this).removeClass('deshabilitado');
+                    $(this).addClass('habilitado');
                     //Falta que quede habilitado en el sistema
                 });
             }
@@ -97,21 +95,22 @@
 
         }));
 
-        renderizarSemana("03-01-2016");
+        renderizarSemana(moment().format('DD-MM-YYYY'));
+        //Variables globales
         var lunesAnterior, lunesPosterior;
 
         function renderizarSemana(dia){
-        var hoyFormat = "DD-MM-YYYY";
+        var hoyFormat = 'DD-MM-YYYY',
+            lunesEstaSemana, ultimoDiaSemana, lunes, primerFecha, segundaFecha, diasAMostrar;
 
         lunesAnterior = moment(dia, hoyFormat).startOf('isoweek').day(-6).format(hoyFormat);
-        var lunesEstaSemana = moment(dia, hoyFormat).startOf('isoweek').format(hoyFormat);
+        lunesEstaSemana = moment(dia, hoyFormat).startOf('isoweek').format(hoyFormat);
         lunesPosterior = moment(dia, hoyFormat).startOf('isoweek').day(8).format(hoyFormat);
 
         //A partir del lunes que me traiga la semana
-        var ultimoDiaSemana;
         ultimoDiaSemana = moment(lunesEstaSemana, hoyFormat).add(6, 'days').format(hoyFormat);
 
-        var lunes = moment(lunesEstaSemana, hoyFormat),
+        lunes = moment(lunesEstaSemana, hoyFormat),
             diasAMostrar = $('.dia');
 
             //Muestra los dias de la semana con su numero
@@ -120,20 +119,42 @@
                 diasAMostrar.eq(i).text(lunes.add(1, 'days').format('ddd DD'));
 
             //Mostrar rango de dias a mostrar en calendario
-            var primerFecha = moment(lunesEstaSemana, hoyFormat);
-            var segundaFecha = moment(ultimoDiaSemana, hoyFormat);
+            primerFecha = moment(lunesEstaSemana, hoyFormat);
+            segundaFecha = moment(ultimoDiaSemana, hoyFormat);
             $('.texto-semana').first().text(primerFecha.format('DD MMMM YYYY')+' - '+segundaFecha.format('DD MMMM YYYY'));
 
         }
 
+        function renderizarTurnos(){
+            /*
+            Por cada fila:
+                Horario:
+                <tr>
+                    <th scope="row">8.00</th>
+
+                Si dia bloqueado{
+                    <td class="deshabilitado"></td>
+                }
+                Sino{
+                    Si turnos ocupados <> 0 {
+                        <td class="habilitado">nro<i></i></td>
+                    }
+                    Si turnos ocupados = max{
+                        <td class="habilitado completo">max<i></i></td>
+                    }
+                }
+                </tr>
+            */
+        }
+
         //renderiza semana anterior
-        $(".semana-anterior").on('click', (function() {
+        $('.semana-anterior').on('click', (function() {
             renderizarSemana(lunesAnterior);
             //falta que reemplace todos los valores interiores de la tabla, lo tiene q traer de backend
         }));
 
         //renderiza semana posterior
-        $(".semana-posterior").on('click', (function() {
+        $('.semana-posterior').on('click', (function() {
             renderizarSemana(lunesPosterior);
             //falta que reemplace todos los valores interiores de la tabla, lo tiene q traer de backend
         }));
