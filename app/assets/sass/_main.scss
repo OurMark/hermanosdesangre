@@ -355,73 +355,84 @@ input:focus:-moz-placeholder {
     display: block;
   }
 }
-.ong-registered {
-  padding: 0 30px;
+.col_medio{
+      margin-left : 30% !important;
+ }
 
-  p {
-    font-weight: normal;
-  }
-}
-@media (min-width:768px) {
+@media #{$medium-up} {
+  /* Menu izquierda user page */
+  .menu-column {
+    min-height: 870px;
+    padding: 0px;
+    background-color: $softRed;
 
-    /* Menu izquierda user page */
-    .menu-column {
-        min-height: 870px;
-        padding: 0px;
-        background-color: $softRed;
-        .boton_donar {
-            display: none;
-        }
-        .menu {
-            text-align: right;
-            background-color: $white;
-            border-bottom: 4px solid $saddleBrown;
-            a {
-                color: $saddleBrown;
-                padding-top: 5px;
-                padding-bottom: 1px;
-            }
-            .panel {
-                border: 0px;
-            }
-            a:hover {
-                color: black;
-                text-decoration: none;
-            }
-            .menu-header {
-                background-color: $saddleBrown;
-                color: $white;
-                padding: 10px 15px;
-            }
-            .panel-group {
-                margin-bottom: 0px;
-            }
-            .panel-heading {
-                .panel-title {
-                    a {
-                        text-transform: uppercase;
-                    }
-                }
-            }
-            .panel-collapse {
-                border-bottom: 4px solid $softRed;
-                .panel-body {
-                    border-top: 0px;
-                    padding: 0px;
-                }
-            }
-        }
+    .boton_donar {
+      display: none;
     }
 
-  .listado_meses, .ong, .ongs, .ong-registered {
-    //margin-top: 220px;
+    .menu {
+      text-align: right;
+      background-color: $white;
+      border-bottom: 4px solid $saddleBrown;
+
+      a {
+        color: $saddleBrown;
+        padding-top: 5px;
+        padding-bottom: 1px;
+      }
+
+      .panel {
+        border: 0px;
+      }
+
+      a:hover {
+        color: black;
+        text-decoration: none;
+      }
+
+      .menu-header {
+        background-color: $saddleBrown;
+        color: $white;
+        padding: 10px 15px;
+      }
+
+      .panel-group {
+        margin-bottom: 0px;
+      }
+
+      .panel-heading {
+        .panel-title {
+          a {
+            text-transform: uppercase;
+          }
+
+        }
+
+      }
+
+      .panel-collapse {
+        border-bottom: 4px solid $softRed;
+
+        .panel-body {
+          border-top: 0px;
+          padding: 0px;
+        }
+
+      }
+
+    }
+
   }
+
   .col_der {
     min-height: 870px;
+
     &.columna {
       min-height: 805px;
     }
+
   }
+
   .col_izq {
     min-height: 870px;
     width: 50%;
@@ -429,6 +440,7 @@ input:focus:-moz-placeholder {
     .boton_donar {
       @include gota_donar;
     }
+
   }
 
   //only for the home page
@@ -438,17 +450,19 @@ input:focus:-moz-placeholder {
     top: 20%;
   }
 }
-@media (min-width:1200px) {
+
+@media #{$xlarge-up} {
   .col_izq .boton_donar {
     display: block;
   }
+
   .menu-column {
-      .boton_donar {
-        @include gota_donar;
-        position: relative;
-        left: 0;
-        bottom: 0;
-        display: block;
-      }
+    .boton_donar {
+      @include gota_donar;
+      position: relative;
+      left: 0;
+      bottom: 0;
+      display: block;
     }
+  }
 }

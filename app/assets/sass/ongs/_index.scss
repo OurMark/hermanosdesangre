@@ -1,0 +1,49 @@
+/*=======================================
+=            ong list styles            =
+=======================================*/
+
+.ong-list-page {
+  .pagination {
+
+    @media #{$large-up} {
+      display: block;
+      margin: 20px auto;
+      width: 450px;
+    }
+
+    li a {
+      color: $softRed;
+    }
+
+    & > .active > a,
+    & > .active > a:hover {
+      background-color: $plata;
+      border-color: $plata;
+    }
+  }
+}
+
+@media #{$xlarge-up} {
+  .ong-list-page {
+
+    .col_der {
+      padding: 5px;
+    }
+
+    .banco {
+      margin: 10px 0;
+      cursor:pointer;
+
+      &:hover {
+        border: 1px solid $mainRed;
+      }
+    }
+
+    .reservar a {
+      height: auto;
+      padding: 5px 10px;
+      font-size: 0.9em;
+      @include border-radius(40%, 40%);
+    }
+  }
+}

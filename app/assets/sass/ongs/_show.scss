@@ -1,0 +1,49 @@
+/*=========================================================
+=            ong succesfull change info styles            =
+=========================================================*/
+
+.ong-show-page {
+  .ongs-new {
+    h1 {
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+  .input-submit {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+
+    &:hover,
+    &:focus {
+      color: white;
+      background-color: $softRed;
+      border-bottom: solid $mainRed 2px;
+      outline: none;
+    }
+  }
+}
+
+
+@media #{$medium-up} {
+  .ong-show-page {
+    .ongs-new {
+      margin: 0 auto;
+      width: 60%;
+
+      h1 {
+        margin-top: 0;
+      }
+
+      strong {
+        text-transform: uppercase;
+      }
+
+      span {
+        float: right;
+      }
+
+    }
+  }
+}

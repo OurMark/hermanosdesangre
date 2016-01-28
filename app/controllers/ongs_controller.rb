@@ -5,7 +5,7 @@ class OngsController < ApplicationController
   # GET /ongs
   # GET /ongs.json
   def index
-    @ongs = Ong.all
+    @ongs = Topic.blood_donation.first.ongs.limited_to(2000)
     respond_to do |format|
         format.html
         format.json { render json: @ongs  }
@@ -35,7 +35,7 @@ class OngsController < ApplicationController
   # POST /ongs.json
   def create
     @ong = Ong.new(ong_params)
-    @ong.hasImage = "1"
+    @ong.hasImage = 1
 
     respond_to do |format|
       if @ong.save
@@ -85,6 +85,7 @@ class OngsController < ApplicationController
 
   def calendar
       @ong = Ong.find(params[:ong_id])
+      @days = ['LU', 'MA', 'MI' , 'JU', 'VI', 'SA', 'DO']
       @intervalo_horario = []
     (00..23).each {|hour|
         ['00', '30'].each {|minutes|
@@ -92,6 +93,27 @@ class OngsController < ApplicationController
          }
      }
       @duracion_turnos = ['30', '45', '60']
+  end
+
+  def save_calendar
+    @days = [:LU, :MA, :MI, :JU, :VI, :SA, :DO]
+    logger.info 'Find ong'
+    @ong = Ong.find(params[:ong_id])
+    # @ong.ong_detail.update(beds: params[:camas], timelapse: params[:duracion])
+    @days.each { |day|
+      logger.info 'Find or create day #{day}'
+      calendar = @ong.ong_calendars.find_or_create_by(day: day)
+
+      calendar.start_time = params[day][:inicio]
+      calendar.end_time = params[day][:hasta]
+      calendar.day = day
+      calendar.save
+    }
+    respond_to do |format|
+      format.html { redirect_to user_path(current_user), notice: 'Calendario guardado' }
+      format.json { head :no_content }
+    end
+
   end
 
   private

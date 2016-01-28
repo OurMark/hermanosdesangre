@@ -22,13 +22,15 @@
     <label>Referencias de dirección</label>
     <%= f.text_field :address2 %>
   </div>
-  <div class="inputCorto">
+  <div class="inputCorto sin-margen">
     <label>País</label>
     <%= f.select :country_id, [["Argentina", "Argentina"]], {}, { class: "similInput" } %>
+    <span class="texto-validacion">&nbsp;</span>
   </div>
-  <div class="inputCorto">
+  <div class="inputCorto sin-margen">
     <label>Provincia</label>
     <%= f.select :addressState, [["Buenos Aires", "Buenos Aires"]], {}, { class: "similInput" } %>
+    <span class="texto-validacion">&nbsp;</span>
   </div>
   <div class="inputCorto sin-margen">
     <label>Ciudad</label>

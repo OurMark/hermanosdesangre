@@ -1,0 +1,22 @@
+/*=============================================
+=            ong registered styles            =
+=============================================*/
+
+.ong-registered-page {
+  //...
+}
+
+.ong-registered {
+  p {
+    font-weight: normal;
+  }
+}
+
+
+@media #{$medium-up} {
+  .ong-registered {
+    padding: 0 30px;
+    width: 90%;
+    margin: 0 auto;
+  }
+}

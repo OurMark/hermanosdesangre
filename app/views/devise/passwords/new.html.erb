@@ -1,10 +1,21 @@
-<div class="col_none">
-    <div class="col_div">
-        <h2>¿Olvidaste tu contraseña?</h2>
-        <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-        <%= devise_error_messages! %>
-        <%= f.label :email %> <%= f.email_field :email, autofocus: true %> <br />
-        <%= f.submit "Recuperar" %>
-        <% end %>
+<div class="row">
+  <div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 col_der">
+    <div class="forget-password">
+      <h2>¿Olvidaste tu contraseña?</h2>
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <%= devise_error_messages! %>
+      <%= f.label :email %> <%= f.email_field :email, autofocus: true %>
+      <span class="texto-validacion"></span>
+      <%= f.submit "Recuperar", class: 'btn-registrar' %>
+      <% end %>
     </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-6 col_izq">
+    <div class="how-works-boton-donar">
+        <%= link_to content_tag(:p, "quiero donar"), current_user ? ongs_path : user_session_path %>
+        <div>
+          <p>Si puedes hacerlo, debes hacerlo</p>
+        </div>
+    </div>
+  </div>
 </div>
