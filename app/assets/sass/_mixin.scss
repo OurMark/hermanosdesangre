@@ -59,3 +59,27 @@
     }
   }
 }
+
+@mixin respond-to($media) {
+  @if $media == "small-only" {
+    @media #{$small-only} { @content; }
+  }
+  @else if $media == "small-and-up" {
+    #{$small-up} { @content; }
+  }
+  @else if $media == "medium-only" {
+    @media #{$medium-only} { @content; }
+  }
+  @else if $media == "medium-and-up" {
+    @media #{$medium-up} { @content; }
+  }
+  @else if $media == "large" {
+    @media #{$large-only}{ @content; }
+  }
+  @else if $media == "large-and-up" {
+    @media #{$large-up}{ @content; }
+  }
+  @else if $media == "xlarge" {
+    @media #{$xlarge-up}{ @content; }
+  }
+}

@@ -10011,7 +10011,7 @@ input:focus:-moz-placeholder {
 }
 
 @media only screen and (min-width: 768px) {
-/* line 9, ../sass/_footer.scss */
+  /* line 9, ../sass/_footer.scss */
   .footer {
     display: block;
   }
@@ -10686,13 +10686,13 @@ input:focus:-moz-placeholder {
 =            register form styles            =
 ============================================*/
 /* line 5, ../sass/registrations/_new.scss */
-.registrarse h1 {
+.registrarse h1, .forget-password h1 {
   font-size: 2.5em;
   font-weight: bold;
   text-align: center;
 }
 /* line 10, ../sass/registrations/_new.scss */
-.registrarse .input-corto {
+.registrarse .input-corto, .forget-password .input-corto {
   width: 100%;
 }
 
@@ -10718,7 +10718,7 @@ input:focus:-moz-placeholder {
 
 @media (min-width: 768px) {
   /* line 41, ../sass/registrations/_new.scss */
-  .registrarse {
+  .registrarse, .forget-password {
     width: 400px;
     margin: 0 auto;
   }
@@ -11107,20 +11107,20 @@ ul.ong_botones {
 =            ong search styles            =
 =========================================*/
 /* line 5, ../sass/ongs/_ong_search.scss */
-.ong-search input[type="text"].tt-input {
+.ong-search input[type="text"].tt-input, .ong-list-page .ongs-filter input[type="text"].tt-input {
   color: #313131;
   background-color: #F5F5F5;
 }
 /* line 10, ../sass/ongs/_ong_search.scss */
-.ong-search input[type="text"].tt-hint {
+.ong-search input[type="text"].tt-hint, .ong-list-page .ongs-filter input[type="text"].tt-hint {
   color: rgba(241, 107, 107, 0.9);
 }
 /* line 14, ../sass/ongs/_ong_search.scss */
-.ong-search .typeahead {
+.ong-search .typeahead, .ong-list-page .ongs-filter .typeahead {
   width: 315px;
 }
 /* line 18, ../sass/ongs/_ong_search.scss */
-.ong-search .tt-menu {
+.ong-search .tt-menu, .ong-list-page .ongs-filter .tt-menu {
   background-color: #FFFFFF;
   width: 315px;
   border: solid #313131;
@@ -11128,13 +11128,14 @@ ul.ong_botones {
   padding: 10px;
 }
 /* line 26, ../sass/ongs/_ong_search.scss */
-.ong-search .tt-cursor,
-.ong-search .tt-selectable:hover {
+.ong-search .tt-cursor, .ong-list-page .ongs-filter .tt-cursor,
+.ong-search .tt-selectable:hover,
+.ong-list-page .ongs-filter .tt-selectable:hover {
   background-color: #F16B6B;
   color: white;
 }
 /* line 32, ../sass/ongs/_ong_search.scss */
-.ong-search .tt-selectable {
+.ong-search .tt-selectable, .ong-list-page .ongs-filter .tt-selectable {
   padding: 5px;
 }
 
@@ -11146,11 +11147,40 @@ ul.ong_botones {
   padding-top: 10px;
 }
 
-/* line 10, ../sass/ongs/_ong_calendar.scss */
+/* line 11, ../sass/ongs/_ong_calendar.scss */
+.semana {
+  color: #6E2F26;
+  font-size: 20px;
+  text-align: center;
+  display: inline-flex;
+  margin-left: 22%;
+}
+
+/* line 19, ../sass/ongs/_ong_calendar.scss */
+.texto-semana {
+  width: 370px;
+}
+
+/* line 23, ../sass/ongs/_ong_calendar.scss */
+.margen-superior {
+  margin-top: 5px;
+}
+
+/* line 27, ../sass/ongs/_ong_calendar.scss */
+.margen-inferior {
+  margin-bottom: 30px;
+}
+
+/* line 31, ../sass/ongs/_ong_calendar.scss */
+.margen-izquierdo {
+  margin-left: 85px;
+}
+
+/* line 35, ../sass/ongs/_ong_calendar.scss */
 .configuracion-atencion {
   padding: 10px 30px;
 }
-/* line 13, ../sass/ongs/_ong_calendar.scss */
+/* line 38, ../sass/ongs/_ong_calendar.scss */
 .configuracion-atencion a {
   color: #6E2F26;
   padding-top: 5px;
@@ -11158,14 +11188,104 @@ ul.ong_botones {
   font-weight: normal;
   font-size: 12px;
 }
-/* line 20, ../sass/ongs/_ong_calendar.scss */
+/* line 45, ../sass/ongs/_ong_calendar.scss */
 .configuracion-atencion a.hover {
   text-decoration: none;
   cursor: pointer;
 }
-/* line 24, ../sass/ongs/_ong_calendar.scss */
+/* line 49, ../sass/ongs/_ong_calendar.scss */
 .configuracion-atencion a.horario-cortado {
   margin-left: 45px;
+}
+
+/* line 55, ../sass/ongs/_ong_calendar.scss */
+.configuracion-calendario {
+  padding: 10px 30px;
+}
+/* line 58, ../sass/ongs/_ong_calendar.scss */
+.configuracion-calendario h3 {
+  color: #6E2F26;
+  padding-bottom: 10px;
+}
+/* line 63, ../sass/ongs/_ong_calendar.scss */
+.configuracion-calendario .titulo-rosa {
+  color: #F16B6B;
+}
+/* line 67, ../sass/ongs/_ong_calendar.scss */
+.configuracion-calendario .dia, .configuracion-calendario .semana-anterior, .configuracion-calendario .semana-posterior {
+  cursor: pointer;
+}
+
+/* line 73, ../sass/ongs/_ong_calendar.scss */
+.tabla-calendario {
+  width: 100%;
+  table-layout: fixed;
+}
+/* line 77, ../sass/ongs/_ong_calendar.scss */
+.tabla-calendario th {
+  color: #F16B6B;
+  font-weight: lighter;
+  text-align: center;
+}
+/* line 83, ../sass/ongs/_ong_calendar.scss */
+.tabla-calendario td {
+  width: 14%;
+  height: 42px;
+  border: 10px solid white;
+  text-align: center;
+}
+/* line 90, ../sass/ongs/_ong_calendar.scss */
+.tabla-calendario i {
+  background-image: url("/assets/gota-transparente.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  height: 16px;
+  width: 18px;
+  margin-left: 3%;
+  margin-bottom: 7%;
+}
+
+/* line 102, ../sass/ongs/_ong_calendar.scss */
+.celdas-horario {
+  padding-right: 17px;
+}
+
+/* line 106, ../sass/ongs/_ong_calendar.scss */
+.habilitado {
+  background-color: #F5F5F5;
+}
+
+/* line 110, ../sass/ongs/_ong_calendar.scss */
+.deshabilitado {
+  background-color: #B3B4BD;
+}
+
+/* line 114, ../sass/ongs/_ong_calendar.scss */
+.completo {
+  background-color: saddlebrown;
+  color: white;
+}
+
+/* line 119, ../sass/ongs/_ong_calendar.scss */
+.cuadrado {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+}
+
+/* line 125, ../sass/ongs/_ong_calendar.scss */
+.opciones-calendario {
+  color: #F16B6B;
+  font-weight: lighter;
+  text-align: center;
+  padding-left: 4px;
+}
+
+/* line 132, ../sass/ongs/_ong_calendar.scss */
+.borde {
+  border-bottom: solid 2px #F16B6B;
+  border-top: solid 2px #F16B6B;
 }
 
 /*=========================================================
@@ -11239,26 +11359,20 @@ ul.ong_botones {
 =            ong list styles            =
 =======================================*/
 @media only screen and (min-width: 1200px) {
-  /* line 12, ../sass/ongs/_index.scss */
+  /* line 8, ../sass/ongs/_index.scss */
   .ong-list-page .col_der {
     padding: 5px;
   }
-  /* line 16, ../sass/ongs/_index.scss */
-  .ong-list-page .ongs {
-    height: 800px;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-  /* line 22, ../sass/ongs/_index.scss */
+  /* line 12, ../sass/ongs/_index.scss */
   .ong-list-page .banco {
     margin: 10px 0;
     cursor: pointer;
   }
-  /* line 26, ../sass/ongs/_index.scss */
+  /* line 16, ../sass/ongs/_index.scss */
   .ong-list-page .banco:hover {
     border: 1px solid #D35555;
   }
-  /* line 31, ../sass/ongs/_index.scss */
+  /* line 21, ../sass/ongs/_index.scss */
   .ong-list-page .reservar a {
     height: auto;
     padding: 5px 10px;
@@ -11268,6 +11382,39 @@ ul.ong_botones {
     border-radius: 40% / 40%;
   }
 }
+/* line 31, ../sass/ongs/_index.scss */
+.ong-list-page .ongs-filter .type-ahead {
+  width: 200px;
+}
+@media only screen and (min-width: 992px) {
+  /* line 31, ../sass/ongs/_index.scss */
+  .ong-list-page .ongs-filter .type-ahead {
+    width: 345px;
+  }
+}
+/* line 37, ../sass/ongs/_index.scss */
+.ong-list-page .ongs-filter .input-submit, .ong-list-page .ongs-filter .cambiar {
+  display: inline-block;
+  vertical-align: top;
+}
+@media only screen and (min-width: 992px) {
+  /* line 43, ../sass/ongs/_index.scss */
+  .ong-list-page .pagination {
+    display: block;
+    margin: 20px auto;
+    width: 460px;
+  }
+}
+/* line 49, ../sass/ongs/_index.scss */
+.ong-list-page .pagination li a {
+  color: #F16B6B;
+}
+/* line 53, ../sass/ongs/_index.scss */
+.ong-list-page .pagination > .active > a, .ong-list-page .pagination > .active > a:hover {
+  background-color: #B3B4BD;
+  border-color: #B3B4BD;
+}
+
 /*=============================================
 =            ong registered styles            =
 =============================================*/
@@ -11283,4 +11430,13 @@ ul.ong_botones {
     width: 90%;
     margin: 0 auto;
   }
+}
+/*===========================================
+=            new password styles            =
+===========================================*/
+/* line 8, ../sass/passwords/_new.scss */
+.forget-password .texto-validacion {
+  display: block;
+  margin: 10px 0;
+  padding-left: 0;
 }

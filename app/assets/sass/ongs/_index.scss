@@ -3,29 +3,8 @@
 =======================================*/
 
 .ong-list-page {
-  .pagination {
 
-    @media #{$large-up} {
-      display: block;
-      margin: 20px auto;
-      width: 450px;
-    }
-
-    li a {
-      color: $softRed;
-    }
-
-    & > .active > a,
-    & > .active > a:hover {
-      background-color: $plata;
-      border-color: $plata;
-    }
-  }
-}
-
-@media #{$xlarge-up} {
-  .ong-list-page {
-
+  @include respond-to("xlarge") {
     .col_der {
       padding: 5px;
     }
@@ -44,6 +23,37 @@
       padding: 5px 10px;
       font-size: 0.9em;
       @include border-radius(40%, 40%);
+    }
+  }
+
+  .ongs-filter {
+    @extend .ong-search;
+    .type-ahead {
+      width: 200px;
+      @include respond-to("large-and-up") {
+        width: 345px;
+      }
+    }
+    .input-submit {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  .pagination {
+    @include respond-to("large-and-up") {
+      display: block;
+      margin: 20px auto;
+      width: 460px;
+    }
+    li a {
+      color: $softRed;
+    }
+
+    & > .active > a,
+    & > .active > a:hover {
+      background-color: $plata;
+      border-color: $plata;
     }
   }
 }
