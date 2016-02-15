@@ -1,0 +1,14 @@
+/*===========================================
+=            new password styles            =
+===========================================*/
+
+.forget-password {
+  @extend .registrarse;
+
+  .texto-validacion {
+    display: block;
+    margin: 10px 0;
+    padding-left: 0;
+  }
+
+}

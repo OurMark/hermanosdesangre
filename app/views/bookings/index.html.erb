@@ -1,20 +1,101 @@
-<div class="columna col_izq">
-  <div class="listado_meses">
-    <h2>Seleccione mes y año:<h3>
-    <ul id="lista_meses">
-      <% Range.new(Time.now.to_i, 5.months.from_now.to_i).step(1.month) do |month| %>
-       <li><%= link_to "#{Time.at(month).month}/#{Time.at(month).year.to_s[-2,2]}", ong_bookings_path(year: Time.at(month).year, month: Time.at(month).month) %></li>
-      <% end %>
-    </ul>
-  <div style="clear:both"></div>
-  <h2>Seleccione dia:<h3>
-  <%= render partial: 'calendar', locals: { year: @year, month: @month } %>
-  </div>
-</div>
-<div id="bookings" class="columna col_der">
-  <% if params[:date] %>
-    <%= render partial: 'turnos_dia', locals: { turnos: @bookings } %>
-  <% else %>
-    <h3>Seleccione el dia del calendario para ver los turnos disponibles<h3>
-  <% end %>
+<div class="row">
+    <div class="col-xs-12 col-sm-3 col-md-3 menu-column hidden-xs">
+        <%= render partial: 'shared/ong_my_banks_menu' , locals:{selectedOng: nil}%>
+        <div class="users-gota-donar">
+            <%= render partial: 'shared/gota_donar' %>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-9 col-md-7">
+        <div class="configuracion-calendario">
+            <div class="margen-inferior">
+                <h3>Calendario</h3>
+                <span>Configuración actual con disponibilidad: </span><span class="titulo-rosa">4 donantes por turno</span>
+            </div>
+          <div class="semana">
+            <span class="semana-anterior"><</span>
+            <p class="texto-semana"></p>
+            <span class="semana-posterior">></span>
+          </div>
+          <table id="calendario" class="tabla-calendario margen-inferior">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="dia"></th>
+                <th class="dia"></th>
+                <th class="dia"></th>
+                <th class="dia"></th>
+                <th class="dia"></th>
+                <th class="dia"></th>
+                <th class="dia"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">8.00</th>
+                <td class="habilitado"></td>
+                <td class="habilitado"></td>
+                <td class="habilitado">3<i></i></td>
+                <td class="deshabilitado"></td>
+                <td class="habilitado"></td>
+                <td class="habilitado">2<i></i></td>
+                <td class="deshabilitado"></td>
+              </tr>
+              <tr>
+                <th scope="row">8.30</th>
+                <td class="habilitado"></td>
+                <td class="habilitado"></td>
+                <td class="habilitado"></td>
+                <td class="deshabilitado"></td>
+                <td class="habilitado"></td>
+                <td class="habilitado"></td>
+                <td class="deshabilitado"></td>
+              </tr>
+              <tr>
+                <th scope="row">9.00</th>
+                <td class="habilitado completo">4<i></i></td>
+                <td class="habilitado"></td>
+                <td class="habilitado">3<i></i></td>
+                <td class="deshabilitado"></td>
+                <td class="habilitado"></td>
+                <td class="habilitado"></td>
+                <td class="deshabilitado"></td>
+              </tr>
+            </tbody>
+          </table>
+
+        <div class="margen-izquierdo margen-inferior">
+            <div>
+                <div class="cuadrado habilitado"></div>
+                <span class="opciones-calendario">Turnos disponibles</span>
+            </div>
+            <div>
+                <div class="cuadrado deshabilitado"></div>
+                <span class="opciones-calendario">Turnos bloqueados</span>
+            </div>
+            <div>
+                <div class="cuadrado completo"></div>
+                <span class="opciones-calendario">Turnos ocupados</span>
+            </div>
+        </div>
+
+
+       <div class="borde">
+            <table id="totales-calendario" class="tabla-calendario margen-superior">
+                <thead><tr></tr></thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Total donantes</th>
+                    <td class="total habilitado"></td>
+                    <td class="total habilitado"></td>
+                    <td class="total habilitado"></td>
+                    <td class="total habilitado"></td>
+                    <td class="total habilitado"></td>
+                    <td class="total habilitado"></td>
+                    <td class="total habilitado"></td>
+                  </tr>
+                </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
 </div>

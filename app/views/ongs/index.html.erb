@@ -1,5 +1,12 @@
 <div class="row ong-list-page">
   <div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 col_der">
+    <div class="col-xs-12 ongs-filter">
+      <div class="form-group">
+        <label for=""> Busca aqui tu ONG/Banco de sangre mas cercano</label>
+        <input type="text" class="typeahead form-control ong-filter-input" name="ong-filter" id="ong-filter" placeholder="Escribe tu busqueda...">
+        <button type="button" class="input-submit" id="clear-filter">Borrar Busqueda</button>
+      </div>
+    </div>
     <div class="ongs">
       <% @ongs.each do |ong| %>
         <% if ong.has_details? %>
@@ -25,6 +32,8 @@
         <% end -%>
       <% end %>
     </div>
+    <div class="ongs"></div>
+    <ul id="ong-list-page-pagging" class="pagination"></ul>
   </div>
   <div class="col-xs-12 col-sm-6 col-md-6 columna col_izq">
     <div class="how-works-boton-donar">

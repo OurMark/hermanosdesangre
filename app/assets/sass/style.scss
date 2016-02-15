@@ -3,8 +3,9 @@
 
 @import "compass";
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
+$icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
+@import "bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
 
 
 // variables
@@ -20,7 +21,6 @@
 @import "footer";
 
 //views
-
 @import "static/home";
 @import "static/how_works";
 @import "static/about_us";
@@ -35,3 +35,5 @@
 @import "ongs/edit";
 @import "ongs/index";
 @import "ongs/ong_registered";
+@import "passwords/new";
+
