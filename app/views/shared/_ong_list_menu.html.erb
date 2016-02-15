@@ -10,7 +10,7 @@
       <ul class="nav nav-pils nav-stacked">
           <li><%= link_to "Editar información", edit_user_ong_path(current_user, ong) %></li>
           <li><%= link_to "Gestionar turnos", ong_bookings_path(ong) %></li>
-          <li><%= link_to "Configurar Calendario", ong_calendar_path(current_user, ong) %></li>
+          <li><%= link_to "Configurar Calendario", ong_calendar_path(ong) %></li>
           <li><%= link_to "Vista mensual", edit_user_ong_path(current_user, ong) %></li>
           <li><%= link_to "Imprimir vista actual", edit_user_ong_path(current_user, ong) %></li>
           <li><%= link_to "Gestionar desafios", edit_user_ong_path(current_user, ong) %></li>

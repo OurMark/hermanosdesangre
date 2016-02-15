@@ -7,6 +7,31 @@
         padding-top: 10px;
     }
 }
+
+.semana{
+  color: $saddleBrown;
+  font-size: 20px;
+  text-align: center;
+  display: inline-flex;
+  margin-left: 22%;
+}
+
+.texto-semana{
+  width: 370px;
+}
+
+.margen-superior{
+  margin-top: 5px;
+}
+
+.margen-inferior{
+  margin-bottom: 30px;
+}
+
+.margen-izquierdo{
+  margin-left: 85px;
+}
+
 .configuracion-atencion {
     padding: 10px 30px;
 
@@ -26,3 +51,85 @@
     }
 
 }
+
+.configuracion-calendario{
+    padding: 10px 30px;
+
+    h3{
+        color: $saddleBrown;
+        padding-bottom: 10px;
+    }
+
+    .titulo-rosa{
+        color: $softRed;
+    }
+
+    .dia, .semana-anterior, .semana-posterior{
+      cursor: pointer;
+    }
+
+}
+
+.tabla-calendario{
+   width: 100%;
+   table-layout: fixed;
+
+   th{
+     color: $softRed;
+     font-weight: lighter;
+     text-align: center;
+   }
+
+   td{
+     width: 14%;
+     height: 42px;
+     border: 10px solid white;
+     text-align: center;
+   }
+
+   i {
+    background-image: url($gota);
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    height: 16px;
+    width: 18px;
+    margin-left: 3%;
+    margin-bottom: 7%;
+  }
+}
+
+.celdas-horario{
+    padding-right: 17px;
+}
+
+  .habilitado{
+     background-color: $whiteSmoke;
+  }
+
+  .deshabilitado{
+     background-color: $plata;
+  }
+
+  .completo{
+     background-color: saddlebrown;
+     color: white;
+  }
+
+  .cuadrado{
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+  }
+
+  .opciones-calendario{
+    color: #F16B6B;
+    font-weight: lighter;
+    text-align: center;
+    padding-left: 4px;
+  }
+
+  .borde{
+    border-bottom: solid 2px $softRed;
+    border-top: solid 2px $softRed;
+  }

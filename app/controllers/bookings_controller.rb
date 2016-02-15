@@ -77,6 +77,7 @@ class BookingsController < ApplicationController
   def find_ong
     if params[:ong_id]
       @ong = Ong.find(params[:ong_id])
+      Rails.logger.debug @ong.to_json
     end
   end
 

@@ -1,6 +1,11 @@
 (function($) {
   'use strict';
 
+  $('.forget-password #new_user').on('submit', function() {
+    var emailValido = validarEmail($('#user_email'));
+
+    return emailValido;
+  });
 
   $('.registrarse #new_user').on('submit', function() {
     var nombre = validarNoVacio($('#user_name')),
@@ -50,25 +55,32 @@
   }
 
   function validarDni() {
-    var dni = $('#user_user_detail_attributes_dni');
+    var dni = $('#user_user_detail_attributes_dni'),
+      valido = false;
 
     if (dni.val() === '') {
       dni.addClass('tiene-error');
       dni.next().html('Este campo es obligatorio');
-      return false;
+      valido = false;
     }
+
     if ((/^[0-9]{8}$/).test(dni.val())) {
       dni.removeClass('tiene-error');
       dni.next().html('&nbsp;');
-      return true;
+      valido = true;
+
+    } else {
+
+      dni.addClass('tiene-error');
+      dni.next().html('DNI inválido');
+      valido = false;
     }
-    dni.addClass('tiene-error');
-    dni.next().html('DNI inválido');
-    return false;
+
+    return valido;
   }
 
-  function validarEmail() {
-    var email = $('#user_username');
+  function validarEmail(userEmail) {
+    var email = userEmail ? userEmail : $('#user_username');
 
     if (email.val() === '') {
       email.next().removeClass('texto-ayuda');
