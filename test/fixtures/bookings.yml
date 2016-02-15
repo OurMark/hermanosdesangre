@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ong_id: 1
+  start_time: 2015-11-19 17:35:05
+  end_time: 2015-11-19 17:35:05
+  length: 1
+  dni: MyString
+
+two:
+  ong_id: 1
+  start_time: 2015-11-19 17:35:05
+  end_time: 2015-11-19 17:35:05
+  length: 1
+  dni: MyString

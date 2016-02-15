@@ -28,4 +28,12 @@ class Ong < ActiveRecord::Base
     ong_calendars.find_by_day(day)
     false
   end
+
+  def has_calendar()
+    
+  end
+
+  def has_details?()
+    ong_detail.present?
+  end
 end
