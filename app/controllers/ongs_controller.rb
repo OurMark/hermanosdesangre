@@ -5,7 +5,7 @@ class OngsController < ApplicationController
   # GET /ongs
   # GET /ongs.json
   def index
-    @ongs = Topic.blood_donation.first.ongs.limited_to(2000)
+    @ongs = Topic.blood_donation.first.ongs
     respond_to do |format|
         format.html
         format.json { render json: @ongs  }
@@ -81,6 +81,14 @@ class OngsController < ApplicationController
   end
 
   def ong_search
+    if params['q']
+      # buscamos la ong
+      @ongs = Ong.includes(:topics).where(topic: { name: 'BLOOD_DONATION' }).where('ong.name like ?','%'+params['q']+'%')
+    end
+    respond_to do |format|
+      format.html
+      format.json { render json: @ongs }
+    end
   end
 
   def calendar

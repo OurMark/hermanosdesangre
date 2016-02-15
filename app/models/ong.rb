@@ -31,6 +31,14 @@ class Ong < ActiveRecord::Base
     false
   end
 
+  def has_calendar()
+    
+  end
+
+  def has_details?()
+    ong_detail.present?
+  end
+  
   private
 
   def add_topic
