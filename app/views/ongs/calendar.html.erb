@@ -1,10 +1,10 @@
 <div>
     <script type="text/javascript">
     var calendar = [
-<% @ong.ong_calendars.each do |cal| %>
+<% @ong_calendars.each do |cal| %>
     <%= raw cal.to_json %>,
 <% end %>
-    ]
+    ];
 </script>
 </div>
 <div class="row">
