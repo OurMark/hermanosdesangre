@@ -1,12 +1,3 @@
-<div>
-    <script type="text/javascript">
-    var calendar = [
-<% @ong_calendars.each do |cal| %>
-    <%= raw cal.to_json %>,
-<% end %>
-    ];
-</script>
-</div>
 <div class="row">
     <div class="col-xs-12 col-sm-3 menu-column hidden-xs">
         <%= render partial: 'shared/ong_my_banks_menu', locals:{ong: @ong ,selectedOng: @ong }%>
@@ -16,6 +7,7 @@
  </div>
     <div class="col-xs-12 col-sm-9">
         <div class="configuracion-atencion">
+        <input type="hidden" name="calendar_ong_id" id="calendar_ong_id" value="<%= @ong.id %>" />
         <%= form_tag ong_save_calendar_path(@ong), method: 'post' do |f| %>
         <h1>Configuración de Atención</h1>
         <p>Configura los días de tu semana, con los horarios de atención, y la duración de los turnos.</p>

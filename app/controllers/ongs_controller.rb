@@ -94,7 +94,7 @@ class OngsController < ApplicationController
   def calendar
     @ong = Ong.find(params[:ong_id])
     @ong_calendars = @ong.ong_calendars
-    @days = ['LU', 'MA', 'MI' , 'JU', 'VI', 'SA', 'DO']
+    @days = ['ALL', 'LU', 'MA', 'MI' , 'JU', 'VI', 'SA', 'DO']
     @intervalo_horario = []
     (00..23).each do |hour|
       ['00', '30'].each do |minutes|
@@ -102,6 +102,10 @@ class OngsController < ApplicationController
       end
     end
     @duracion_turnos = ['30', '45', '60']
+    respond_to do |format|
+      format.html
+      format.json { render json: @ong_calendars  }
+    end
   end
 
   def save_calendar
@@ -143,6 +147,13 @@ class OngsController < ApplicationController
         end
       end
     end
+
+    # save ong details
+    ongdetail = @ong.ong_detail
+    ongdetail.beds = params[:camas]
+    ongdetail.timelapse = params[:duracion]
+    ongdetail.save
+
     respond_to do |format|
       format.html { redirect_to user_path(current_user), notice: 'Calendario guardado' }
       format.json { head :no_content }

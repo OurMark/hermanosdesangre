@@ -128,25 +128,7 @@
     }
 
     function renderizarTurnos() {
-      /*
-      Por cada fila:
-          Horario:
-          <tr>
-              <th scope="row">8.00</th>
-
-          Si dia bloqueado{
-              <td class="deshabilitado"></td>
-          }
-          Sino{
-              Si turnos ocupados <> 0 {
-                  <td class="habilitado">nro<i></i></td>
-              }
-              Si turnos ocupados = max{
-                  <td class="habilitado completo">max<i></i></td>
-              }
-          }
-          </tr>
-      */
+      //...
     }
 
     //renderiza semana anterior
@@ -160,6 +142,28 @@
       renderizarSemana(lunesPosterior);
       //falta que reemplace todos los valores interiores de la tabla, lo tiene q traer de backend
     }));
+
+    //only for calendar configuration
+    if ($('.configuracion-atencion').length > 0) {
+
+      var $ongid = $('#calendar_ong_id').val();
+      var promise = $.getJSON('/ongs/'+ $ongid +'/calendar.json');
+
+      // success
+      promise.done(function(data){
+        $.each(data, function(index, calendar){
+          var startTime = new Date(calendar.start_time).getHours();
+          var endTime = new Date(calendar.end_time).getHours();
+          console.log(JSON.stringify(calendar));
+        });
+      });
+
+      // error
+      promise.fail(function(jqXHR, textStatus, errorThrown){
+        console.log('request error: ' + textStatus);
+        console.log(errorThrown);
+      });
+    }
 
   });
 }(window.jQuery));
