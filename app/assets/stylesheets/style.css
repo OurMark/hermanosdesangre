@@ -11142,12 +11142,12 @@ ul.ong_botones {
 /*===========================================
 =            ong calendar styles            =
 ===========================================*/
-/* line 6, ../sass/ongs/_ong_calendar.scss */
+/* line 5, ../sass/ongs/_ong_calendar.scss */
 .horarios-diferenciados label {
   padding-top: 10px;
 }
 
-/* line 11, ../sass/ongs/_ong_calendar.scss */
+/* line 9, ../sass/ongs/_ong_calendar.scss */
 .semana {
   color: #6E2F26;
   font-size: 20px;
@@ -11156,31 +11156,31 @@ ul.ong_botones {
   margin-left: 22%;
 }
 
-/* line 19, ../sass/ongs/_ong_calendar.scss */
+/* line 16, ../sass/ongs/_ong_calendar.scss */
 .texto-semana {
   width: 370px;
 }
 
-/* line 23, ../sass/ongs/_ong_calendar.scss */
+/* line 19, ../sass/ongs/_ong_calendar.scss */
 .margen-superior {
   margin-top: 5px;
 }
 
-/* line 27, ../sass/ongs/_ong_calendar.scss */
+/* line 22, ../sass/ongs/_ong_calendar.scss */
 .margen-inferior {
   margin-bottom: 30px;
 }
 
-/* line 31, ../sass/ongs/_ong_calendar.scss */
+/* line 25, ../sass/ongs/_ong_calendar.scss */
 .margen-izquierdo {
   margin-left: 85px;
 }
 
-/* line 35, ../sass/ongs/_ong_calendar.scss */
+/* line 28, ../sass/ongs/_ong_calendar.scss */
 .configuracion-atencion {
   padding: 10px 30px;
 }
-/* line 38, ../sass/ongs/_ong_calendar.scss */
+/* line 31, ../sass/ongs/_ong_calendar.scss */
 .configuracion-atencion a {
   color: #6E2F26;
   padding-top: 5px;
@@ -11188,53 +11188,59 @@ ul.ong_botones {
   font-weight: normal;
   font-size: 12px;
 }
-/* line 45, ../sass/ongs/_ong_calendar.scss */
+/* line 38, ../sass/ongs/_ong_calendar.scss */
 .configuracion-atencion a.hover {
   text-decoration: none;
   cursor: pointer;
 }
-/* line 49, ../sass/ongs/_ong_calendar.scss */
+/* line 42, ../sass/ongs/_ong_calendar.scss */
 .configuracion-atencion a.horario-cortado {
   margin-left: 45px;
 }
+/* line 45, ../sass/ongs/_ong_calendar.scss */
+.configuracion-atencion .cambiar {
+  position: relative;
+  top: 0;
+  left: 0;
+}
 
-/* line 55, ../sass/ongs/_ong_calendar.scss */
+/* line 51, ../sass/ongs/_ong_calendar.scss */
 .configuracion-calendario {
   padding: 10px 30px;
 }
-/* line 58, ../sass/ongs/_ong_calendar.scss */
+/* line 54, ../sass/ongs/_ong_calendar.scss */
 .configuracion-calendario h3 {
   color: #6E2F26;
   padding-bottom: 10px;
 }
-/* line 63, ../sass/ongs/_ong_calendar.scss */
+/* line 58, ../sass/ongs/_ong_calendar.scss */
 .configuracion-calendario .titulo-rosa {
   color: #F16B6B;
 }
-/* line 67, ../sass/ongs/_ong_calendar.scss */
+/* line 61, ../sass/ongs/_ong_calendar.scss */
 .configuracion-calendario .dia, .configuracion-calendario .semana-anterior, .configuracion-calendario .semana-posterior {
   cursor: pointer;
 }
 
-/* line 73, ../sass/ongs/_ong_calendar.scss */
+/* line 65, ../sass/ongs/_ong_calendar.scss */
 .tabla-calendario {
   width: 100%;
   table-layout: fixed;
 }
-/* line 77, ../sass/ongs/_ong_calendar.scss */
+/* line 69, ../sass/ongs/_ong_calendar.scss */
 .tabla-calendario th {
   color: #F16B6B;
   font-weight: lighter;
   text-align: center;
 }
-/* line 83, ../sass/ongs/_ong_calendar.scss */
+/* line 74, ../sass/ongs/_ong_calendar.scss */
 .tabla-calendario td {
   width: 14%;
   height: 42px;
   border: 10px solid white;
   text-align: center;
 }
-/* line 90, ../sass/ongs/_ong_calendar.scss */
+/* line 80, ../sass/ongs/_ong_calendar.scss */
 .tabla-calendario i {
   background-image: url("/assets/gota-transparente.png");
   background-repeat: no-repeat;
@@ -11246,35 +11252,35 @@ ul.ong_botones {
   margin-bottom: 7%;
 }
 
-/* line 102, ../sass/ongs/_ong_calendar.scss */
+/* line 91, ../sass/ongs/_ong_calendar.scss */
 .celdas-horario {
   padding-right: 17px;
 }
 
-/* line 106, ../sass/ongs/_ong_calendar.scss */
+/* line 94, ../sass/ongs/_ong_calendar.scss */
 .habilitado {
   background-color: #F5F5F5;
 }
 
-/* line 110, ../sass/ongs/_ong_calendar.scss */
+/* line 97, ../sass/ongs/_ong_calendar.scss */
 .deshabilitado {
   background-color: #B3B4BD;
 }
 
-/* line 114, ../sass/ongs/_ong_calendar.scss */
+/* line 100, ../sass/ongs/_ong_calendar.scss */
 .completo {
   background-color: saddlebrown;
   color: white;
 }
 
-/* line 119, ../sass/ongs/_ong_calendar.scss */
+/* line 104, ../sass/ongs/_ong_calendar.scss */
 .cuadrado {
   display: inline-block;
   width: 23px;
   height: 23px;
 }
 
-/* line 125, ../sass/ongs/_ong_calendar.scss */
+/* line 109, ../sass/ongs/_ong_calendar.scss */
 .opciones-calendario {
   color: #F16B6B;
   font-weight: lighter;
@@ -11282,7 +11288,7 @@ ul.ong_botones {
   padding-left: 4px;
 }
 
-/* line 132, ../sass/ongs/_ong_calendar.scss */
+/* line 115, ../sass/ongs/_ong_calendar.scss */
 .borde {
   border-bottom: solid 2px #F16B6B;
   border-top: solid 2px #F16B6B;

@@ -1,27 +1,12 @@
-<div class="row">
-  <div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 col_der columna">
-    <div class="col_div">
-      <div class="Opciones donors">
-          <div>IMPACTO<span class="info_boton">Conocé los beneficios de convertirte en donante VOLUNTARIO Y HABITUAL</span></div>
-          <div>REQUISITOS<span class="info_boton">Ténes dudas de si podes donar? Lee las condiciones que tiene que tener un DONANTE</span></div>
-          <div class="col_medio">CONSEJOS<span class="info_boton">Hace que tu donación se convierta en un acto SEGURO, CONFORTABLE Y GRATIFICANTE</span></div>
-          <!--<div>MÁS INFO<span class="info_boton">Querés informarte más del tema? Te ofrecemos links de interés sobre la donación de sangre.</span></div>-->
-      </div>
-
-      <div class="Secciones">
-          <%= render partial: 'static/donors/impact' %>
-          <%= render partial: 'static/donors/requirements' %>
-          <%= render partial: 'static/donors/advises' %>
-      </div>
-
-    </div>
+<div class="col_div">
+  <div class="Opciones donors">
+    <div>IMPACTO<span class="info_boton">Conocé los beneficios de convertirte en donante VOLUNTARIO Y HABITUAL</span></div>
+    <div>REQUISITOS<span class="info_boton">Ténes dudas de si podes donar? Lee las condiciones que tiene que tener un DONANTE</span></div>
+    <div class="col_medio">CONSEJOS<span class="info_boton">Hace que tu donación se convierta en un acto SEGURO, CONFORTABLE Y GRATIFICANTE</span></div>
   </div>
-  <div class="col-xs-12 col-sm-6 col-md-6 columna col_izq">
-    <div class="how-works-boton-donar">
-        <%= link_to content_tag(:p, "quiero donar"), current_user ? ongs_path : user_session_path %>
-        <div>
-          <p>Si puedes hacerlo, debes hacerlo</p>
-        </div>
-    </div>
+  <div class="Secciones">
+    <%= render partial: 'static/donors/impact' %>
+    <%= render partial: 'static/donors/requirements' %>
+    <%= render partial: 'static/donors/advises' %>
   </div>
 </div>

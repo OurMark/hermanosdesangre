@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   respond_to :html, :xml, :json
   before_action :find_ong
+  layout 'myaccount', only: [:index]
 
   def index
     @month = params[:month] || Time.now.month
