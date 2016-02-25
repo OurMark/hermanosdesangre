@@ -9180,14 +9180,14 @@ input:focus:-moz-placeholder {
 }
 
 /*--- • 1 • b REGLAS del CONTENIDO ---------------------------*/
-/* line 57, ../sass/_main.scss */
+/* line 55, ../sass/_main.scss */
 .col_div {
   overflow: hidden;
   font-family: "Oswald", sans-serif;
   position: relative;
 }
 
-/* line 62, ../sass/_main.scss */
+/* line 60, ../sass/_main.scss */
 .col_div p, .col_div span {
   font-size: 13px;
   font-weight: 300;
@@ -9195,7 +9195,7 @@ input:focus:-moz-placeholder {
   text-align: justify;
 }
 
-/* line 68, ../sass/_main.scss */
+/* line 66, ../sass/_main.scss */
 .col_div .imagen {
   position: relative;
   float: right;
@@ -9203,33 +9203,33 @@ input:focus:-moz-placeholder {
   height: auto;
 }
 
-/* line 74, ../sass/_main.scss */
+/* line 72, ../sass/_main.scss */
 .col_div > p, .col_div div > p, .col_div iframe, .col_div form, .col_div img {
   margin: 0 35px 32px;
 }
 
-/* line 77, ../sass/_main.scss */
+/* line 75, ../sass/_main.scss */
 .col_div > p:last-child {
   margin-bottom: 0;
 }
 
-/* line 80, ../sass/_main.scss */
+/* line 78, ../sass/_main.scss */
 .col_div h1, .col_div h2, .col_div h3, .col_div h4 {
   margin: 5px 35px;
 }
 
-/* line 83, ../sass/_main.scss */
+/* line 81, ../sass/_main.scss */
 .Logos {
   text-align: center;
 }
 
-/* line 86, ../sass/_main.scss */
+/* line 84, ../sass/_main.scss */
 .Logos img {
   margin: 0 30px 32px;
 }
 
 /*--- • 1 • e REGLAS EXCLUSIVAS del CONTENIDO SIN COLUMNAS ---*/
-/* line 91, ../sass/_main.scss */
+/* line 89, ../sass/_main.scss */
 .container_menu {
   background-color: #F16B6B;
   background-color: rgba(241, 107, 107, 0.9);
@@ -9241,12 +9241,12 @@ input:focus:-moz-placeholder {
 }
 
 /*.container_menu~.col_none {margin-top:  55px;}*/
-/* line 102, ../sass/_main.scss */
+/* line 100, ../sass/_main.scss */
 .container_menu .faldon_top {
   margin-top: 12px;
 }
 
-/* line 105, ../sass/_main.scss */
+/* line 103, ../sass/_main.scss */
 .container_menu form INPUT {
   float: right;
   width: 250px;
@@ -9254,7 +9254,7 @@ input:focus:-moz-placeholder {
   color: white;
 }
 
-/* line 111, ../sass/_main.scss */
+/* line 109, ../sass/_main.scss */
 .col_none {
   max-width: 800px;
   margin-left: auto;
@@ -9262,25 +9262,25 @@ input:focus:-moz-placeholder {
   margin-top: 55px;
 }
 
-/* line 117, ../sass/_main.scss */
+/* line 115, ../sass/_main.scss */
 .col_none td {
   padding: 6px;
   font-size: 14px;
 }
 
 /*--- • 2 • a REGLAS EXCLUSIVAS de la HOME -------------------*/
-/* line 123, ../sass/_main.scss */
+/* line 121, ../sass/_main.scss */
 .col_div.home {
   padding-top: 250px;
 }
 
 /*--- • 2 • c REGLAS EXCLUSIVAS de ¿QUIENES SOMOS? -----------*/
-/* line 128, ../sass/_main.scss */
+/* line 126, ../sass/_main.scss */
 .col_div.us {
   max-width: 400px;
 }
 
-/* line 131, ../sass/_main.scss */
+/* line 129, ../sass/_main.scss */
 .slogan {
   width: 330px;
   height: 80px;
@@ -9288,7 +9288,7 @@ input:focus:-moz-placeholder {
   margin: 80px 35px 60px 35px;
 }
 
-/* line 137, ../sass/_main.scss */
+/* line 135, ../sass/_main.scss */
 .col_div .slogan > p, .slogan h2, .slogan h3 {
   margin: 0px;
   position: absolute;
@@ -9296,49 +9296,49 @@ input:focus:-moz-placeholder {
   color: #D35555;
 }
 
-/* line 143, ../sass/_main.scss */
+/* line 141, ../sass/_main.scss */
 .slogan p {
   top: 48px;
   left: 0;
   font-size: 20px;
 }
 
-/* line 148, ../sass/_main.scss */
+/* line 146, ../sass/_main.scss */
 .slogan p:first-child {
   top: 0;
   left: 0;
   font-size: 16px;
 }
 
-/* line 153, ../sass/_main.scss */
+/* line 151, ../sass/_main.scss */
 .slogan p:nth-child(2) {
   top: 24px;
   left: 50px;
   font-size: 28px;
 }
 
-/* line 158, ../sass/_main.scss */
+/* line 156, ../sass/_main.scss */
 .slogan h2 {
   top: 0;
   right: 1px;
   font-size: 28px;
 }
 
-/* line 163, ../sass/_main.scss */
+/* line 161, ../sass/_main.scss */
 .slogan h3 {
   top: 36px;
   right: 0;
   font-size: 36px;
 }
 
-/* line 168, ../sass/_main.scss */
+/* line 166, ../sass/_main.scss */
 .slogan h3:hover, .slogan h2:hover {
   font-size: 39px;
   background: white;
 }
 
 /*--- • 2 • f REGLAS EXCLUSIVAS de LISTA DE ONGS -------------*/
-/* line 174, ../sass/_main.scss */
+/* line 172, ../sass/_main.scss */
 .reservar a {
   height: 48px;
   width: 60px;
@@ -9352,19 +9352,19 @@ input:focus:-moz-placeholder {
   transition: background-color 500ms ease;
 }
 
-/* line 186, ../sass/_main.scss */
+/* line 184, ../sass/_main.scss */
 .reservar a, .reservar a:visited {
   color: #D35555;
 }
 
-/* line 189, ../sass/_main.scss */
+/* line 187, ../sass/_main.scss */
 .reservar a:hover {
   color: white;
   background-color: #D35555;
 }
 
 /*--- • 3 • a REGLAS de la BARRA DE PORCENTAJES --------------*/
-/* line 195, ../sass/_main.scss */
+/* line 193, ../sass/_main.scss */
 .campania {
   letter-spacing: 1px;
   width: 69%;
@@ -9376,23 +9376,23 @@ input:focus:-moz-placeholder {
   display: inline-block;
 }
 
-/* line 205, ../sass/_main.scss */
+/* line 203, ../sass/_main.scss */
 .campania:before {
   content: "Donantes en: ";
   font-weight: 400;
 }
 
-/* line 209, ../sass/_main.scss */
+/* line 207, ../sass/_main.scss */
 .banco .campania {
   color: black;
 }
 
-/* line 212, ../sass/_main.scss */
+/* line 210, ../sass/_main.scss */
 .banco .campania:before {
   content: "";
 }
 
-/* line 215, ../sass/_main.scss */
+/* line 213, ../sass/_main.scss */
 .faltandias {
   position: relative;
   width: 29%;
@@ -9404,17 +9404,17 @@ input:focus:-moz-placeholder {
   display: inline-block;
 }
 
-/* line 225, ../sass/_main.scss */
+/* line 223, ../sass/_main.scss */
 .faltandias:before {
   content: "faltan ";
 }
 
-/* line 228, ../sass/_main.scss */
+/* line 226, ../sass/_main.scss */
 .faltandias:after {
   content: " días";
 }
 
-/* line 231, ../sass/_main.scss */
+/* line 229, ../sass/_main.scss */
 .bar-main-container {
   width: 99%;
   font-family: "Oswald", sans-serif;
@@ -9422,7 +9422,7 @@ input:focus:-moz-placeholder {
   margin: 0 auto;
 }
 
-/* line 237, ../sass/_main.scss */
+/* line 235, ../sass/_main.scss */
 .bar-container {
   position: relative;
   -webkit-border-radius: 10px;
@@ -9436,20 +9436,20 @@ input:focus:-moz-placeholder {
   color: white;
 }
 
-/* line 249, ../sass/_main.scss */
+/* line 247, ../sass/_main.scss */
 .bar, .registrados, .objetivo {
   font-size: 20px;
   line-height: 2;
 }
 
-/* line 253, ../sass/_main.scss */
+/* line 251, ../sass/_main.scss */
 .bar {
   float: left;
   height: 100%;
   position: relative;
 }
 
-/* line 258, ../sass/_main.scss */
+/* line 256, ../sass/_main.scss */
 .bar div {
   background: #D35555;
   height: 100%;
@@ -9462,7 +9462,7 @@ input:focus:-moz-placeholder {
   animation: ensanchar 3s;
 }
 
-/* line 269, ../sass/_main.scss */
+/* line 267, ../sass/_main.scss */
 .bar div:after {
   content: " ";
   background: url(asset-path("gotas.png")) 0px 1px no-repeat;
@@ -9474,19 +9474,19 @@ input:focus:-moz-placeholder {
   margin: 0 10px;
 }
 
-/* line 279, ../sass/_main.scss */
+/* line 277, ../sass/_main.scss */
 .objetivo:before, .registrados:after {
   font-size: 13px;
   font-weight: 300;
 }
 
-/* line 283, ../sass/_main.scss */
+/* line 281, ../sass/_main.scss */
 .objetivo {
   position: absolute;
   right: 6px;
 }
 
-/* line 287, ../sass/_main.scss */
+/* line 285, ../sass/_main.scss */
 .registrados {
   position: absolute;
   left: 1px;
@@ -9498,58 +9498,58 @@ input:focus:-moz-placeholder {
   height: 36px;
 }
 
-/* line 297, ../sass/_main.scss */
+/* line 295, ../sass/_main.scss */
 .registrados:after {
   content: " REGISTRADOS";
 }
 
-/* line 300, ../sass/_main.scss */
+/* line 298, ../sass/_main.scss */
 .objetivo:before {
   content: "OBJETIVO: ";
 }
 
 /*--- • 3 • b REGLAS de la GOTA ------------------------------*/
-/* line 306, ../sass/_main.scss */
+/* line 304, ../sass/_main.scss */
 .columna .boton_donar {
   margin-top: 250px;
 }
 
 /* Calendario */
-/* line 312, ../sass/_main.scss */
+/* line 310, ../sass/_main.scss */
 .calendario {
   float: right;
   margin: 10px 25px 0 0;
 }
 
-/* line 318, ../sass/_main.scss */
+/* line 316, ../sass/_main.scss */
 .calendario tr th {
   padding: 5px 10px 5px 10px;
 }
 
-/* line 321, ../sass/_main.scss */
+/* line 319, ../sass/_main.scss */
 .calendario tr td {
   padding-top: 15px;
   text-align: center;
 }
 
-/* line 325, ../sass/_main.scss */
+/* line 323, ../sass/_main.scss */
 .calendario tr td a {
   font-size: 25px;
 }
 
-/* line 328, ../sass/_main.scss */
+/* line 326, ../sass/_main.scss */
 .listado_meses {
   float: right;
   margin: 50px 25px 0 0;
 }
 
-/* line 334, ../sass/_main.scss */
+/* line 332, ../sass/_main.scss */
 .listado_meses ul li {
   display: inline;
   background-color: #F5F5F5;
 }
 
-/* line 338, ../sass/_main.scss */
+/* line 336, ../sass/_main.scss */
 .col_der {
   background: #FFFFFF;
   padding: 5px 10px 25px 10px;
@@ -9557,13 +9557,13 @@ input:focus:-moz-placeholder {
   float: right;
 }
 
-/* line 345, ../sass/_main.scss */
+/* line 342, ../sass/_main.scss */
 .col_izq {
   background: #F16B6B;
   vertical-align: top;
   float: left;
 }
-/* line 350, ../sass/_main.scss */
+/* line 347, ../sass/_main.scss */
 .col_izq .boton_donar {
   background-image: url(asset-path("big-gota.png"));
   background-position: 50%;
@@ -9632,83 +9632,83 @@ input:focus:-moz-placeholder {
   }
 }
 
-/* line 358, ../sass/_main.scss */
+/* line 355, ../sass/_main.scss */
 .col_medio {
   margin-left: 30% !important;
 }
 
 @media only screen and (min-width: 768px) {
   /* Menu izquierda user page */
-  /* line 364, ../sass/_main.scss */
+  /* line 361, ../sass/_main.scss */
   .menu-column {
     min-height: 870px;
     padding: 0px;
     background-color: #F16B6B;
   }
-  /* line 369, ../sass/_main.scss */
+  /* line 366, ../sass/_main.scss */
   .menu-column .boton_donar {
     display: none;
   }
-  /* line 373, ../sass/_main.scss */
+  /* line 369, ../sass/_main.scss */
   .menu-column .menu {
     text-align: right;
     background-color: #FFFFFF;
     border-bottom: 4px solid #6E2F26;
   }
-  /* line 378, ../sass/_main.scss */
+  /* line 374, ../sass/_main.scss */
   .menu-column .menu a {
     color: #6E2F26;
     padding-top: 5px;
     padding-bottom: 1px;
   }
-  /* line 384, ../sass/_main.scss */
+  /* line 379, ../sass/_main.scss */
   .menu-column .menu .panel {
     border: 0px;
   }
-  /* line 388, ../sass/_main.scss */
+  /* line 382, ../sass/_main.scss */
   .menu-column .menu a:hover {
     color: black;
     text-decoration: none;
   }
-  /* line 393, ../sass/_main.scss */
+  /* line 386, ../sass/_main.scss */
   .menu-column .menu .menu-header {
     background-color: #6E2F26;
     color: #FFFFFF;
     padding: 10px 15px;
   }
-  /* line 399, ../sass/_main.scss */
+  /* line 391, ../sass/_main.scss */
   .menu-column .menu .panel-group {
     margin-bottom: 0px;
   }
-  /* line 405, ../sass/_main.scss */
+  /* line 396, ../sass/_main.scss */
   .menu-column .menu .panel-heading .panel-title a {
     text-transform: uppercase;
   }
-  /* line 413, ../sass/_main.scss */
+  /* line 401, ../sass/_main.scss */
   .menu-column .menu .panel-collapse {
     border-bottom: 4px solid #F16B6B;
   }
-  /* line 416, ../sass/_main.scss */
+  /* line 404, ../sass/_main.scss */
   .menu-column .menu .panel-collapse .panel-body {
     border-top: 0px;
     padding: 0px;
   }
 
-  /* line 427, ../sass/_main.scss */
+  /* line 411, ../sass/_main.scss */
   .col_der {
     min-height: 870px;
   }
-  /* line 430, ../sass/_main.scss */
+  /* line 414, ../sass/_main.scss */
   .col_der.columna {
     min-height: 805px;
   }
 
-  /* line 436, ../sass/_main.scss */
+  /* line 418, ../sass/_main.scss */
   .col_izq {
     min-height: 870px;
     width: 50%;
   }
-  /* line 440, ../sass/_main.scss */
+  /* line 422, ../sass/_main.scss */
   .col_izq .boton_donar {
     background-image: url(asset-path("big-gota.png"));
     background-position: 50%;
@@ -9775,7 +9775,7 @@ input:focus:-moz-placeholder {
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 447, ../sass/_main.scss */
+  /* line 427, ../sass/_main.scss */
   .quiero-donar .col_izq .boton_donar {
     position: absolute;
     left: 3%;
@@ -9783,12 +9783,12 @@ input:focus:-moz-placeholder {
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 455, ../sass/_main.scss */
+  /* line 434, ../sass/_main.scss */
   .col_izq .boton_donar {
     display: block;
   }
 
-  /* line 460, ../sass/_main.scss */
+  /* line 438, ../sass/_main.scss */
   .menu-column .boton_donar {
     background-image: url(asset-path("big-gota.png"));
     background-position: 50%;
@@ -9855,6 +9855,38 @@ input:focus:-moz-placeholder {
   /* line 46, ../sass/_mixin.scss */
   .menu-column .boton_donar div {
     display: block;
+  }
+}
+
+/* line 448, ../sass/_main.scss */
+.container-myaccount-custom {
+  margin: 0 auto;
+}
+/* line 451, ../sass/_main.scss */
+.container-myaccount-custom h1 {
+  text-align: center;
+  margin: 10px 0;
+}
+@media only screen and (min-width: 768px) {
+  /* line 451, ../sass/_main.scss */
+  .container-myaccount-custom h1 {
+    margin: 30px 0 10px 0;
+  }
+}
+/* line 68, ../sass/_mixin.scss */
+.container-myaccount-custom only screen {
+  width: 90%;
+}
+@media only screen and (min-width: 992px) {
+  /* line 448, ../sass/_main.scss */
+  .container-myaccount-custom {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  /* line 448, ../sass/_main.scss */
+  .container-myaccount-custom {
+    width: 642px;
   }
 }
 
@@ -11078,31 +11110,24 @@ ul.ong_botones {
 .ongs-new-page .ongs-new .submitArea {
   text-align: center;
 }
-
-@media (min-width: 768px) {
-  /* line 15, ../sass/ongs/_new.scss */
-  .ongs-new-page .col_der {
-    padding-bottom: 0;
-  }
-  /* line 19, ../sass/ongs/_new.scss */
-  .ongs-new-page .notificacion {
-    margin-bottom: 5px;
-  }
-  /* line 23, ../sass/ongs/_new.scss */
-  .ongs-new-page .ongs-new {
-    margin: 0 auto;
-    width: 400px;
-  }
-  /* line 26, ../sass/ongs/_new.scss */
-  .ongs-new-page .ongs-new h1 {
-    margin-top: 0;
-    margin-bottom: 3px;
-  }
-  /* line 32, ../sass/ongs/_new.scss */
-  .ongs-new-page .ongs-new .new_ong .btn-enviar {
-    margin-bottom: 0px;
-  }
+/* line 11, ../sass/ongs/_new.scss */
+.ongs-new-page only screen .col_der {
+  padding-bottom: 0;
 }
+/* line 14, ../sass/ongs/_new.scss */
+.ongs-new-page only screen .notificacion {
+  margin-bottom: 5px;
+}
+/* line 19, ../sass/ongs/_new.scss */
+.ongs-new-page only screen .ongs-new h1 {
+  margin-top: 0;
+  margin-bottom: 3px;
+}
+/* line 24, ../sass/ongs/_new.scss */
+.ongs-new-page only screen .ongs-new .new_ong .btn-enviar {
+  margin-bottom: 0px;
+}
+
 /*=========================================
 =            ong search styles            =
 =========================================*/
@@ -11176,11 +11201,7 @@ ul.ong_botones {
   margin-left: 85px;
 }
 
-/* line 28, ../sass/ongs/_ong_calendar.scss */
-.configuracion-atencion {
-  padding: 10px 30px;
-}
-/* line 31, ../sass/ongs/_ong_calendar.scss */
+/* line 29, ../sass/ongs/_ong_calendar.scss */
 .configuracion-atencion a {
   color: #6E2F26;
   padding-top: 5px;
@@ -11188,59 +11209,59 @@ ul.ong_botones {
   font-weight: normal;
   font-size: 12px;
 }
-/* line 38, ../sass/ongs/_ong_calendar.scss */
+/* line 36, ../sass/ongs/_ong_calendar.scss */
 .configuracion-atencion a.hover {
   text-decoration: none;
   cursor: pointer;
 }
-/* line 42, ../sass/ongs/_ong_calendar.scss */
+/* line 40, ../sass/ongs/_ong_calendar.scss */
 .configuracion-atencion a.horario-cortado {
   margin-left: 45px;
 }
-/* line 45, ../sass/ongs/_ong_calendar.scss */
+/* line 43, ../sass/ongs/_ong_calendar.scss */
 .configuracion-atencion .cambiar {
   position: relative;
   top: 0;
   left: 0;
 }
 
-/* line 51, ../sass/ongs/_ong_calendar.scss */
+/* line 49, ../sass/ongs/_ong_calendar.scss */
 .configuracion-calendario {
   padding: 10px 30px;
 }
-/* line 54, ../sass/ongs/_ong_calendar.scss */
+/* line 52, ../sass/ongs/_ong_calendar.scss */
 .configuracion-calendario h3 {
   color: #6E2F26;
   padding-bottom: 10px;
 }
-/* line 58, ../sass/ongs/_ong_calendar.scss */
+/* line 56, ../sass/ongs/_ong_calendar.scss */
 .configuracion-calendario .titulo-rosa {
   color: #F16B6B;
 }
-/* line 61, ../sass/ongs/_ong_calendar.scss */
+/* line 59, ../sass/ongs/_ong_calendar.scss */
 .configuracion-calendario .dia, .configuracion-calendario .semana-anterior, .configuracion-calendario .semana-posterior {
   cursor: pointer;
 }
 
-/* line 65, ../sass/ongs/_ong_calendar.scss */
+/* line 63, ../sass/ongs/_ong_calendar.scss */
 .tabla-calendario {
   width: 100%;
   table-layout: fixed;
 }
-/* line 69, ../sass/ongs/_ong_calendar.scss */
+/* line 67, ../sass/ongs/_ong_calendar.scss */
 .tabla-calendario th {
   color: #F16B6B;
   font-weight: lighter;
   text-align: center;
 }
-/* line 74, ../sass/ongs/_ong_calendar.scss */
+/* line 72, ../sass/ongs/_ong_calendar.scss */
 .tabla-calendario td {
   width: 14%;
   height: 42px;
   border: 10px solid white;
   text-align: center;
 }
-/* line 80, ../sass/ongs/_ong_calendar.scss */
+/* line 78, ../sass/ongs/_ong_calendar.scss */
 .tabla-calendario i {
   background-image: url("/assets/gota-transparente.png");
   background-repeat: no-repeat;
@@ -11252,35 +11273,35 @@ ul.ong_botones {
   margin-bottom: 7%;
 }
 
-/* line 91, ../sass/ongs/_ong_calendar.scss */
+/* line 89, ../sass/ongs/_ong_calendar.scss */
 .celdas-horario {
   padding-right: 17px;
 }
 
-/* line 94, ../sass/ongs/_ong_calendar.scss */
+/* line 92, ../sass/ongs/_ong_calendar.scss */
 .habilitado {
   background-color: #F5F5F5;
 }
 
-/* line 97, ../sass/ongs/_ong_calendar.scss */
+/* line 95, ../sass/ongs/_ong_calendar.scss */
 .deshabilitado {
   background-color: #B3B4BD;
 }
 
-/* line 100, ../sass/ongs/_ong_calendar.scss */
+/* line 98, ../sass/ongs/_ong_calendar.scss */
 .completo {
   background-color: saddlebrown;
   color: white;
 }
 
-/* line 104, ../sass/ongs/_ong_calendar.scss */
+/* line 102, ../sass/ongs/_ong_calendar.scss */
 .cuadrado {
   display: inline-block;
   width: 23px;
   height: 23px;
 }
 
-/* line 109, ../sass/ongs/_ong_calendar.scss */
+/* line 107, ../sass/ongs/_ong_calendar.scss */
 .opciones-calendario {
   color: #F16B6B;
   font-weight: lighter;
@@ -11288,7 +11309,7 @@ ul.ong_botones {
   padding-left: 4px;
 }
 
-/* line 115, ../sass/ongs/_ong_calendar.scss */
+/* line 113, ../sass/ongs/_ong_calendar.scss */
 .borde {
   border-bottom: solid 2px #F16B6B;
   border-top: solid 2px #F16B6B;
@@ -11338,29 +11359,33 @@ ul.ong_botones {
 /*============================================
 =            ong edit form styles            =
 ============================================*/
+/* line 7, ../sass/ongs/_edit.scss */
+.ong-edit-page .ongs-new .submit-container {
+  text-align: center;
+}
+/* line 11, ../sass/ongs/_edit.scss */
+.ong-edit-page .ongs-new .btn-enviar {
+  margin: 0 0 20px 0;
+}
 @media only screen and (min-width: 768px) {
-  /* line 7, ../sass/ongs/_edit.scss */
+  /* line 5, ../sass/ongs/_edit.scss */
   .ong-edit-page .ongs-new {
     margin: 0px auto;
-    width: 90%;
-  }
-  /* line 10, ../sass/ongs/_edit.scss */
-  .ong-edit-page .ongs-new h1 {
-    margin-top: 0;
   }
 }
 @media only screen and (min-width: 992px) {
-  /* line 19, ../sass/ongs/_edit.scss */
+  /* line 5, ../sass/ongs/_edit.scss */
   .ong-edit-page .ongs-new {
     width: 70%;
   }
 }
 @media only screen and (min-width: 1200px) {
-  /* line 27, ../sass/ongs/_edit.scss */
+  /* line 5, ../sass/ongs/_edit.scss */
   .ong-edit-page .ongs-new {
-    width: 55%;
+    width: 642px;
   }
 }
+
 /*=======================================
 =            ong list styles            =
 =======================================*/

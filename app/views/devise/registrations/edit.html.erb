@@ -1,13 +1,14 @@
 <div class="row">
-  <div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 col_der">
-    <div class="registrarse">
-      <%= render 'form' %>
+  <div class="col-xs-12 col-sm-3 menu-column hidden-xs">
+    <%= render partial: 'shared/ong_my_banks_menu', locals:{ong: @ong ,selectedOng: @ong }%>
+    <div class="users-gota-donar">
+      <%= render partial: 'shared/gota_donar' %>
     </div>
   </div>
-  <div class="col-xs-12 col-sm-12 col-md-6 col_izq">
-    <div class="users-gota-donar">
-    <%= render partial: 'shared/gota_donar' %>
-    <%= link_to "Registrar mi Banco de Sangre u ONG de donación", new_ong_path,{ :class =>"botonONG"}%>
+  <div class="col-xs-12 col-sm-9">
+    <div class="container-myaccount-custom registrarse">
+      <h1><strong>DATOS DE USUARIO</strong></h1>
+      <%= render 'form' %>
     </div>
   </div>
 </div>
