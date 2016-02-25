@@ -1,36 +1,29 @@
-<div class="row">
-  <div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 col_der">
-    <div class="col_div">
-      <h1><strong>CONTACTO</strong></h1>
-      <form id="form1" method="post" action="enviarcorreoCAS.php">
-       <div class="inputLargo">
-        <label>Nombre/s</label>
-        <input type="text" name="name" autofocus>
-       </div>
-       <div class="inputLargo">
-        <label>Apellido</label>
-        <input type="text" name="apellido">
-       </div>
-       <div class="inputLargo">
-        <label>Empresa</label>
-        <input type="text" name="empresa">
-       </div>
-       <div class="inputLargo">
-        <label>Mail</label>
-        <input type="text" name="correo">
-       </div>
-       <div class="inputLargo">
-        <label>Asunto</label>
-        <input type="text" name="asunto">
-       </div>
-       <div class="form-group">
-        <textarea class="form-control" rows="5" id="comment">Escriba aquí su consulta</textarea>
-       </div>
-       <input type="submit" class="btn-enviar" name="Submit" value="Enviar" />
-     </form>
-    </div>
-  </div>
-  <div class="col-xs-12 col-sm-6 col-md-6 col_izq">
-    <%= render partial: 'shared/gota_sin_donar' %>
-  </div>
+<div class="col_div">
+  <h1><strong>CONTACTO</strong></h1>
+  <form id="form1" method="post" action="enviarcorreoCAS.php">
+   <div class="inputLargo">
+    <label>Nombre/s</label>
+    <input type="text" name="name" autofocus>
+   </div>
+   <div class="inputLargo">
+    <label>Apellido</label>
+    <input type="text" name="apellido">
+   </div>
+   <div class="inputLargo">
+    <label>Empresa</label>
+    <input type="text" name="empresa">
+   </div>
+   <div class="inputLargo">
+    <label>Mail</label>
+    <input type="text" name="correo">
+   </div>
+   <div class="inputLargo">
+    <label>Asunto</label>
+    <input type="text" name="asunto">
+   </div>
+   <div class="form-group">
+    <textarea class="form-control" rows="5" id="comment">Escriba aquí su consulta</textarea>
+   </div>
+   <input type="submit" class="btn-enviar" name="Submit" value="Enviar" />
+ </form>
 </div>

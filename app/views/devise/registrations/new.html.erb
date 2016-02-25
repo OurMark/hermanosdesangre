@@ -1,90 +1,83 @@
-<div class="row">
-  <div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 columna col_der">
-    <div class="registrarse">
-      <h1><strong>REGISTRO NUEVO USUARIO</strong></h1>
-      <p>Debes estar registrado para poder confirmar un turno para donar sangre. También es necesario para registrar un banco de sangre</p>
-      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <p class="notificacion"><%= devise_error_messages! %></p>
-        <div class="inputCorto sin-margen">
-          <label>Nombre*</label>
-          <%= f.text_field :name, autofocus: true %>
-          <span class="texto-validacion">&nbsp;</span>
-        </div>
-        <div class="inputCorto sin-margen">
-          <label>Apellido*</label>
-          <%= f.text_field :surname %>
-          <span class="texto-validacion">&nbsp;</span>
-        </div>
-        <%= f.fields_for :user_detail do |ff| %>
-        <div class="inputCorto sin-margen">
-          <label>Fecha de Nacimiento</label>
-          <%= f.text_field :birthDate, placeholder: "dd/mm/aaaa", :maxlength=>"10" %>
-          <span class="texto-validacion">&nbsp;</span>
-        </div>
-        <div class="inputCorto sin-margen">
-            <label>DNI*</label>
-            <%= ff.text_field :dni, :maxlength=>"8" %>
-            <span class="texto-validacion">&nbsp;</span>
-          </div>
-        <div class="inputCorto">
-            <label>Grupo Sanguineo</label>
-            <%= ff.select :bloodtype, [["A positivo", "A+"],
-                          ["A negativo", "A-"],
-                          ["B positivo", "B+"],
-                          ["B negativo", "B-"],
-                          ["AB positivo", "AB+"],
-                          ["AB negativo", "AB-"],
-                          ["0 positivo", "0+"],
-                          ["0 negativo", "0-"]], {}, {class: "similInput", id: "user_bloodtype"} %>
-          </div>
-        <% end %>
-        <div class="inputCorto">
-          <label>Sexo</label>
-          <div class="similInput">
-            <%= f.radio_button(:gender, "Hombre") %>
-            <%= f.label(:gender, "Hombre") %>
-            <%= f.radio_button(:gender, "Mujer") %>
-            <%= f.label(:gender, "Mujer") %>
-          </div>
-        </div>
-        <%= f.fields_for :user_locale do |ff| %>
-          <div class="inputCorto">
-            <label>País*</label>
-            <%= ff.select :country, [["Argentina", "AR" ]], {}, class: "similInput" %>
-          </div>
-          <div class="inputCorto">
-            <label>Provincia*</label>
-            <%= ff.select :state, [["Buenos Aires", "BA" ]], {}, class: "similInput" %>
-          </div>
-          <div class="inputLargo">
-            <label>Ciudad*</label>
-            <%= ff.select :city, [["Mar del Plata", "MDQ" ]], {}, class: "similInput" %>
-          </div>
-        <% end %>
-        <div class="inputLargo sin-margen">
-          <label>E-mail*</label>
-          <%= f.email_field :username %>
-          <span class="texto-validacion">Este e-mail será tu usuario para ingresar</span>
-        </div>
-        <div>
-          <div class="inputCorto sin-margen">
-            <label>Contraseña*</label>
-            <%= f.password_field :password, autocomplete: "off" %>
-          </div>
-          <div class="inputCorto sin-margen">
-            <label>Repetir Contraseña*</label>
-            <%= f.password_field :password_confirmation, autocomplete: "off" %>
-          </div>
-        </div>
-        <span class="texto-validacion"></span>
-        <div class="submitArea">
-          <p>* Campos obligatorios</p>
-          <input type="submit" class="btn-registrar" value="REGISTRARME"/>
-        </div>
-      <% end %>
+<div class="registrarse">
+  <h1><strong>REGISTRO NUEVO USUARIO</strong></h1>
+  <p>Debes estar registrado para poder confirmar un turno para donar sangre. También es necesario para registrar un banco de sangre</p>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <p class="notificacion"><%= devise_error_messages! %></p>
+  <div class="inputCorto sin-margen">
+    <label>Nombre*</label>
+    <%= f.text_field :name, autofocus: true %>
+    <span class="texto-validacion">&nbsp;</span>
+  </div>
+  <div class="inputCorto sin-margen">
+    <label>Apellido*</label>
+    <%= f.text_field :surname %>
+    <span class="texto-validacion">&nbsp;</span>
+  </div>
+  <%= f.fields_for :user_detail do |ff| %>
+  <div class="inputCorto sin-margen">
+    <label>Fecha de Nacimiento</label>
+    <%= f.text_field :birthDate, placeholder: "dd/mm/aaaa", :maxlength=>"10" %>
+    <span class="texto-validacion">&nbsp;</span>
+  </div>
+  <div class="inputCorto sin-margen">
+    <label>DNI*</label>
+    <%= ff.text_field :dni, :maxlength=>"8" %>
+    <span class="texto-validacion">&nbsp;</span>
+  </div>
+  <div class="inputCorto">
+    <label>Grupo Sanguineo</label>
+    <%= ff.select :bloodtype, [["A positivo", "A+"],
+    ["A negativo", "A-"],
+    ["B positivo", "B+"],
+    ["B negativo", "B-"],
+    ["AB positivo", "AB+"],
+    ["AB negativo", "AB-"],
+    ["0 positivo", "0+"],
+    ["0 negativo", "0-"]], {}, {class: "similInput", id: "user_bloodtype"} %>
+  </div>
+  <% end %>
+  <div class="inputCorto">
+    <label>Sexo</label>
+    <div class="similInput">
+      <%= f.radio_button(:gender, "Hombre") %>
+      <%= f.label(:gender, "Hombre") %>
+      <%= f.radio_button(:gender, "Mujer") %>
+      <%= f.label(:gender, "Mujer") %>
     </div>
   </div>
-  <div class="col-xs-12 col-sm-12 col-md-6 col_izq">
-    <%= render partial: 'shared/gota_sin_donar' %>
+  <%= f.fields_for :user_locale do |ff| %>
+  <div class="inputCorto">
+    <label>País*</label>
+    <%= ff.select :country, [["Argentina", "AR" ]], {}, class: "similInput" %>
   </div>
+  <div class="inputCorto">
+    <label>Provincia*</label>
+    <%= ff.select :state, [["Buenos Aires", "BA" ]], {}, class: "similInput" %>
+  </div>
+  <div class="inputLargo">
+    <label>Ciudad*</label>
+    <%= ff.select :city, [["Mar del Plata", "MDQ" ]], {}, class: "similInput" %>
+  </div>
+  <% end %>
+  <div class="inputLargo sin-margen">
+    <label>E-mail*</label>
+    <%= f.email_field :username %>
+    <span class="texto-validacion">Este e-mail será tu usuario para ingresar</span>
+  </div>
+  <div>
+    <div class="inputCorto sin-margen">
+      <label>Contraseña*</label>
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+    <div class="inputCorto sin-margen">
+      <label>Repetir Contraseña*</label>
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
+  </div>
+  <span class="texto-validacion"></span>
+  <div class="submitArea">
+    <p>* Campos obligatorios</p>
+    <input type="submit" class="btn-registrar" value="REGISTRARME"/>
+  </div>
+  <% end %>
 </div>

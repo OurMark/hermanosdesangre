@@ -7,27 +7,19 @@
       text-align: center;
     }
   }
-}
-
-@media (min-width: 768px){
-  .ongs-new-page {
-
+  @include respond-to("small-and-up") {
     .col_der {
       padding-bottom: 0;
     }
-
     .notificacion {
       margin-bottom: 5px;
     }
-
     .ongs-new {
-      margin: 0 auto;
-      width: 400px;
+
       h1 {
         margin-top: 0;
         margin-bottom: 3px;
       }
-
       .new_ong {
         .btn-enviar {
           margin-bottom: 0px;

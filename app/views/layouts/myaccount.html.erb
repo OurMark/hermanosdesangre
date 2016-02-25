@@ -6,9 +6,7 @@
     </div>
   </div>
   <div class="col-xs-12 col-sm-9">
-    <div class="container-myaccount-custom registrarse">
-      <h1><strong>DATOS DE USUARIO</strong></h1>
-      <%= render 'form' %>
-    </div>
+    <%= yield %>
   </div>
 </div>
+<% parent_layout 'application' %>

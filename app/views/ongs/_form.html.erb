@@ -8,17 +8,17 @@
         <% end %>
     </ul>
   <% end %>
-  <div class="inputLargo sin-margen">
+  <div class=" sin-margen">
     <label>Nombre*</label>
     <%= f.text_field :name %>
     <span class="texto-validacion">&nbsp;</span>
   </div>
-  <div class="inputLargo sin-margen">
+  <div class=" sin-margen">
     <label>Dirección*</label>
     <%= f.text_field :address %>
     <span class="texto-validacion">&nbsp;</span>
   </div>
-  <div class="inputLargo">
+  <div class="">
     <label>Referencias de dirección</label>
     <%= f.text_field :address2 %>
   </div>
@@ -42,24 +42,25 @@
     <%= f.text_field :zip %>
     <span class="texto-validacion">&nbsp;</span>
   </div>
-  <div class="inputLargo sin-margen">
+  <div class=" sin-margen">
     <label>Teléfono*</label>
     <%= f.text_field :phone %>
     <span class="texto-validacion">&nbsp;</span>
   </div>
-  <div class="inputLargo sin-margen">
+  <div class=" sin-margen">
     <label>E-mail*</label>
     <%= f.text_field :adminEmail %>
     <span class="texto-validacion">&nbsp;</span>
   </div>
-  <div class="inputLargo">
+  <div class="">
     <label>Sitio web</label>
     <%= f.text_field :websiteUrl %>
   </div>
-  <div class="inputLargo">
+  <div class="">
     <label>Facebook</label>
     <%= f.text_field :facebookPage %>
   </div>
+  <p class="notificacion">Solo si pertenece a una red</p>
   <div class="inputCorto">
     <label>Red Nacional</label>
     <%= f.text_field :nationalNetworkName %>
@@ -68,8 +69,7 @@
     <label>Red Internacional</label>
     <%= f.text_field :internationalNetworkName %>
   </div>
-  <p class="notificacion">Solo si pertenece a una red</p>
-  <div>
+  <div class="submit-container">
     <%= f.submit "ENVIAR", class: "btn-enviar" %>
   </div>
 <% end %>
