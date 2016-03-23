@@ -6,6 +6,13 @@ class BookingsController < ApplicationController
   def index
     @month = params[:month] || Time.now.month
     @year = params[:year] || Time.now.year
+    @beds = OngDetail.where(ong_id: @ong.ong_id).take.beds
+    @timelapse = OngDetail.where(ong_id: @ong.ong_id).take.timelapse
+    @inicio_turnos = OngCalendar.where(ong_id: @ong.ong_id).take.start_time
+    @fin_turnos = OngCalendar.where(ong_id: @ong.ong_id).take.end_time
+    @inicio_turnos_diferenciado = OngCalendar.where(ong_id: @ong.ong_id).take.start_time_differential
+    @fin_turnos_diferenciado = OngCalendar.where(ong_id: @ong.ong_id).take.end_time_differental
+    @turnos_ocupados = Booking.where(ong_id: @ong.ong_id)
   end
 
   def new
