@@ -9139,7 +9139,7 @@ label {
   -webkit-transition: background 500ms ease;
   background-color: #F5F5F5;
   border-bottom: 1px dashed #D35555;
-  border: none;
+  /*border: none;*/
   font-family: "Oswald", sans-serif;
   font-size: 17px;
   height: 30px;
@@ -9964,7 +9964,7 @@ input:focus:-moz-placeholder {
 }
 
 /* line 64, ../sass/_forms.scss */
-.submit-button, .ingresar-form .btn_ingresar, .btn-registrar, .btn-enviar {
+.submit-button, .ingresar-form .btn_ingresar, .btn-enviar {
   background: #F5F5F5;
   border-bottom: solid white 1px;
   border: none;
@@ -9982,7 +9982,7 @@ input:focus:-moz-placeholder {
   width: 100%;
 }
 /* line 81, ../sass/_forms.scss */
-.submit-button:hover, .ingresar-form .btn_ingresar:hover, .btn-registrar:hover, .btn-enviar:hover, .submit-button:focus, .ingresar-form .btn_ingresar:focus, .btn-registrar:focus, .btn-enviar:focus {
+.submit-button:hover, .ingresar-form .btn_ingresar:hover, .btn-enviar:hover, .submit-button:focus, .ingresar-form .btn_ingresar:focus, .btn-enviar:focus {
   color: white;
   background-color: #F16B6B;
   border-bottom: solid #D35555 2px;
@@ -10031,7 +10031,7 @@ input:focus:-moz-placeholder {
   }
 
   /* line 128, ../sass/_forms.scss */
-  .submit-button, .ingresar-form .btn_ingresar, .btn-registrar, .btn-enviar {
+  .submit-button, .ingresar-form .btn_ingresar, .btn-enviar {
     width: 315px;
   }
 }
@@ -10718,22 +10718,84 @@ input:focus:-moz-placeholder {
 =            register form styles            =
 ============================================*/
 /* line 5, ../sass/registrations/_new.scss */
-.registrarse h1, .forget-password h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  text-align: center;
+.registrarse .finputCorto, .forget-password .finputCorto {
+  width: 41%;
+  float: left;
+  margin-right: 5%;
 }
 /* line 10, ../sass/registrations/_new.scss */
+.registrarse .inputs, .forget-password .inputs, .registrarse form INPUT[type="password"], .forget-password form INPUT[type="password"], .registrarse form INPUT[type="text"], .forget-password form INPUT[type="text"], .registrarse form INPUT[type="email"], .forget-password form INPUT[type="email"], .registrarse select, .registrarse .forget-password select, .forget-password .registrarse select, .forget-password select {
+  width: 100%;
+  -webkit-transition: background 500ms ease;
+  background-color: #F5F5F5;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px dashed #D35555;
+  font-family: Helvetica;
+  font-size: 17px;
+  font-weight: bold;
+  height: 30px;
+  padding-left: 10px;
+  transition: background 500ms ease;
+}
+/* line 26, ../sass/registrations/_new.scss */
+.registrarse h1, .forget-password h1 {
+  font-size: 2em;
+  /*font-weight: bold;*/
+  padding-top: 2%;
+  text-align: left;
+  margin-top: -3px;
+  border-top: solid #F16B6B;
+  font-family: Helvetica;
+  color: #6E2F26;
+}
+/* line 36, ../sass/registrations/_new.scss */
+.registrarse p, .forget-password p {
+  font-family: Helvetica;
+  width: 78%;
+  font-size: 1.2em;
+}
+/* line 41, ../sass/registrations/_new.scss */
+.registrarse form, .forget-password form {
+  width: 80%;
+}
+/* line 43, ../sass/registrations/_new.scss */
+.registrarse form label, .forget-password form label {
+  font-weight: bold;
+  font-family: Helvetica;
+}
+/* line 52, ../sass/registrations/_new.scss */
+.registrarse form INPUT[type="password"]:focus, .forget-password form INPUT[type="password"]:focus, .registrarse form INPUT[type="text"]:focus, .forget-password form INPUT[type="text"]:focus, .registrarse form INPUT[type="email"]:focus, .forget-password form INPUT[type="email"]:focus, .registrarse select:focus, .forget-password select:focus {
+  background-color: #D35555;
+  color: white;
+  outline: none;
+}
+/* line 57, ../sass/registrations/_new.scss */
 .registrarse .input-corto, .forget-password .input-corto {
   width: 100%;
 }
 
-/* line 23, ../sass/registrations/_new.scss */
+/* line 62, ../sass/registrations/_new.scss */
+.btn-registrar {
+  background: #6E2F26;
+  color: white;
+  border: none;
+  cursor: pointer;
+  float: right;
+  font-family: Helvetica;
+  margin-right: 13%;
+  padding: 9px;
+  text-align: center;
+  width: 20%;
+}
+
+/* line 80, ../sass/registrations/_new.scss */
 .sin-margen {
   margin-bottom: 0;
 }
 
-/* line 27, ../sass/registrations/_new.scss */
+/* line 84, ../sass/registrations/_new.scss */
 .texto-validacion {
   color: #c0a16b;
   font-size: 12px;
@@ -10741,7 +10803,7 @@ input:focus:-moz-placeholder {
   padding-left: 10px;
 }
 
-/* line 34, ../sass/registrations/_new.scss */
+/* line 91, ../sass/registrations/_new.scss */
 .tiene-error {
   border-color: #66512c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
@@ -10749,10 +10811,11 @@ input:focus:-moz-placeholder {
 }
 
 @media (min-width: 768px) {
-  /* line 41, ../sass/registrations/_new.scss */
+  /* line 98, ../sass/registrations/_new.scss */
   .registrarse, .forget-password {
-    width: 400px;
-    margin: 0 auto;
+    width: 55%;
+    margin-left: 4%;
+    /*margin: 0 auto;*/
   }
 }
 /*--- • 2 • e REGLAS EXCLUSIVAS de PERFIL de USUARIO ---------*/
