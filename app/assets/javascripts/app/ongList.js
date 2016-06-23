@@ -6,16 +6,32 @@
    * @param  {object} data data callback object
    * @return {void}
    */
-  function pageReder(data) {
-    var rows = data.length,
-      pageSize = 3,
-      pages = (rows / pageSize) - 1,
-      start,
-      end;
+  function pageRender(data) {
+    try {
+      if(data.length <= 0){
+          throw new Error('No se encontraron resultados');
+      }
+      var rows = data.length,
+          pageSize = 3,
+          pages = (rows / pageSize) - 1,
+          start,
+          end;
 
-    if ((rows % pageSize) !== 0) {
-      pages++;
-      pages = parseInt(pages);
+      if ((rows % pageSize) !== 0) {
+          pages++;
+          pages = parseInt(pages);
+      }
+      //paggin plugin declaration
+      $('#ong-list-page-pagging').twbsPagination({
+          totalPages: pages,
+          visiblePages: 5,
+          onPageClick: function(event, page) {
+              drawList(page);
+          }
+      });
+
+    } catch(e) {
+      $('.ongs').html(e.message);
     }
 
     /**
@@ -26,9 +42,8 @@
     function drawList(currentPage) {
       var html = '',
         currPage = currentPage ? currentPage : 1;
-
-      start = currPage * pageSize;
-      end = Math.min(start + pageSize, rows);
+        start = currPage * pageSize;
+        end = Math.min(start + pageSize, rows);
 
       for (var i = start; i < end; i++) {
         html += '' +
@@ -56,14 +71,6 @@
       var currentRows = $(html);
       $('.ongs').html(currentRows);
     }
-    //paggin plugin declaration
-    $('#ong-list-page-pagging').twbsPagination({
-      totalPages: pages,
-      visiblePages: 5,
-      onPageClick: function(event, page) {
-        drawList(page);
-      }
-    });
   }
 
   /**
@@ -72,7 +79,7 @@
    */
   function setupPaging(){
     if ($('.ong-list-page').length > 0) {
-      $.get('/ongs.json', pageReder, 'json');
+      $.get('/ongs.json', pageRender, 'json');
     }
   }
 
