@@ -1,26 +1,14 @@
-<div class="row">
-  <div class="col-xs-12 col-sm-offset-6 col-sm-6 col-md-offset-6 col-md-6 col_der columna">
-    <div class="about">
-      <div class="us">
-        <h1>¿Quiénes somos?</h1>
-        <h2>Nuestra Visión</h2>
-        <p>El 100% de la demanda de sangre, en toda la región, es cubierta con donaciones VOLUNTARIAS Y HABITUALES.</p>
-        <p>Hermanos de Sangre es una alianza de 3 organizaciones que han unido sus fuerzas para contribuir con la temática de donación de sangre en la región:</p>
-        <p>Este proyecto no sería posible sin el aporte desinteresado de los siguientes voluntarios:</p>
-        <div class="Logos">
-         <%= link_to image_tag("ourMark.png"), "http://ourmark.com", alt: 'Our Mark' %>
-         <%= link_to image_tag("globant.png"), "http://www.globant.com", alt: 'Globant' %>
-         <%= link_to image_tag("publicitarios.png"), "http://awbnetwork.org", alt: 'Publicitarios sin Fronteras' %>
-        </div>
-      </div>
-    </div>
-  </div>
-   <div class="col-xs-12 col-sm-6 col-md-6 columna col_izq">
-    <div class="how-works-boton-donar">
-        <%= link_to content_tag(:p, "quiero donar"), current_user ? ongs_path : user_session_path %>
-        <div>
-          <p>Si puedes hacerlo, debes hacerlo</p>
-        </div>
+<div class="about">
+  <div class="us">
+    <h1>¿Quiénes somos?</h1>
+    <h2>Nuestra Visión</h2>
+    <p>El 100% de la demanda de sangre, en toda la región, es cubierta con donaciones VOLUNTARIAS Y HABITUALES.</p>
+    <p>Hermanos de Sangre es una alianza de 3 organizaciones que han unido sus fuerzas para contribuir con la temática de donación de sangre en la región:</p>
+    <p>Este proyecto no sería posible sin el aporte desinteresado de los siguientes voluntarios:</p>
+    <div class="Logos">
+     <%= link_to image_tag("ourMark.png"), "http://ourmark.com", alt: 'Our Mark' %>
+     <%= link_to image_tag("globant.png"), "http://www.globant.com", alt: 'Globant' %>
+     <%= link_to image_tag("publicitarios.png"), "http://awbnetwork.org", alt: 'Publicitarios sin Fronteras' %>
     </div>
   </div>
 </div>

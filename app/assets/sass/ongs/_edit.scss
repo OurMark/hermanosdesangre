@@ -1,31 +1,26 @@
 /*============================================
 =            ong edit form styles            =
 ============================================*/
+.ong-edit-page {
+  .ongs-new {
 
-@media #{$medium-up} {
-  .ong-edit-page {
-    .ongs-new {
-      margin: 0px auto;
-      width: 90%;
-      h1 {
-        margin-top: 0;
-      }
+    .submit-container {
+      text-align: center;
     }
-  }
-}
 
-@media #{$large-up} {
-  .ong-edit-page {
-    .ongs-new {
+    .btn-enviar {
+      margin: 0 0 20px 0;
+    }
+
+    @include respond-to("medium-and-up") {
+      margin: 0px auto;
+    }
+
+    @include respond-to("large-and-up") {
       width: 70%;
     }
-  }
-}
-
-@media #{$xlarge-up} {
-  .ong-edit-page {
-    .ongs-new {
-      width: 55%;
+    @include respond-to("xlarge") {
+      width: 642px;
     }
   }
 }

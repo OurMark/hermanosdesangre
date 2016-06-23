@@ -46,12 +46,10 @@ input:focus:-ms-input-placeholder {
 input:focus:-moz-placeholder {
   color: white;
 }
-
 .content_container {
   //padding-left: 0;
   //padding-rigth: 0;
 }
-
 
 /*--- • 1 • b REGLAS del CONTENIDO ---------------------------*/
 .col_div {
@@ -340,7 +338,6 @@ input:focus:-moz-placeholder {
   padding: 5px 10px 25px 10px;
   margin: 0;
   float: right;
-
 }
 .col_izq {
   background: $softRed;
@@ -355,11 +352,11 @@ input:focus:-moz-placeholder {
     display: block;
   }
 }
-.col_medio{
-      margin-left : 30% !important;
- }
+.col_medio {
+  margin-left: 30% !important;
+}
+@include respond-to("medium-and-up") {
 
-@media #{$medium-up} {
   /* Menu izquierda user page */
   .menu-column {
     min-height: 870px;
@@ -369,7 +366,6 @@ input:focus:-moz-placeholder {
     .boton_donar {
       display: none;
     }
-
     .menu {
       text-align: right;
       background-color: $white;
@@ -380,36 +376,28 @@ input:focus:-moz-placeholder {
         padding-top: 5px;
         padding-bottom: 1px;
       }
-
       .panel {
         border: 0px;
       }
-
       a:hover {
         color: black;
         text-decoration: none;
       }
-
       .menu-header {
         background-color: $saddleBrown;
         color: $white;
         padding: 10px 15px;
       }
-
       .panel-group {
         margin-bottom: 0px;
       }
-
       .panel-heading {
         .panel-title {
           a {
             text-transform: uppercase;
           }
-
         }
-
       }
-
       .panel-collapse {
         border-bottom: 4px solid $softRed;
 
@@ -417,22 +405,16 @@ input:focus:-moz-placeholder {
           border-top: 0px;
           padding: 0px;
         }
-
       }
-
     }
-
   }
-
   .col_der {
     min-height: 870px;
 
     &.columna {
       min-height: 805px;
     }
-
   }
-
   .col_izq {
     min-height: 870px;
     width: 50%;
@@ -440,9 +422,7 @@ input:focus:-moz-placeholder {
     .boton_donar {
       @include gota_donar;
     }
-
   }
-
   //only for the home page
   .quiero-donar .col_izq .boton_donar {
     position: absolute;
@@ -450,12 +430,10 @@ input:focus:-moz-placeholder {
     top: 20%;
   }
 }
-
-@media #{$xlarge-up} {
+@include respond-to("xlarge") {
   .col_izq .boton_donar {
     display: block;
   }
-
   .menu-column {
     .boton_donar {
       @include gota_donar;
@@ -464,5 +442,29 @@ input:focus:-moz-placeholder {
       bottom: 0;
       display: block;
     }
+  }
+}
+
+.container-myaccount-custom {
+  margin: 0 auto;
+
+  h1 {
+    text-align: center;
+    margin: 10px 0;
+    @include respond-to("medium-and-up") {
+      margin: 30px 0 10px 0;
+    }
+  }
+
+  @include respond-to("small-and-up") {
+    width: 90%;
+  }
+
+  @include respond-to("large-and-up") {
+    width: 70%;
+  }
+
+  @include respond-to("xlarge") {
+    width: 642px;
   }
 }

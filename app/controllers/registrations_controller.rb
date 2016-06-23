@@ -1,5 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
   before_filter :update_sanitized_params
+  layout 'static', only: [:new]
 
   def new
     resource = build_resource({})

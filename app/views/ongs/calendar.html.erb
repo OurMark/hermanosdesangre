@@ -1,91 +1,72 @@
-<div>
-    <script type="text/javascript">
-    var calendar = [
-<% @ong.ong_calendars.each do |cal| %>
-    <%= raw cal.to_json %>,
-<% end %>
-    ]
-</script>
-</div>
-<div class="row">
-    <div class="col-xs-12 col-sm-3 menu-column hidden-xs">
-        <%= render partial: 'shared/ong_my_banks_menu', locals:{ong: @ong ,selectedOng: @ong }%>
-     <div class="users-gota-donar">
-         <%= render partial: 'shared/gota_donar' %>
-     </div>
- </div>
-    <div class="col-xs-12 col-sm-9">
-        <div class="configuracion-atencion">
-        <%= form_tag ong_save_calendar_path(@ong), method: 'post' do |f| %>
-        <h1>Configuración de Atención</h1>
-        <p>Configura los días de tu semana, con los horarios de atención, y la duración de los turnos.</p>
-        <p>Esta semana se trasladara a tu calendario anual, donde podrás modificar o bloquear días particulares.</p>
-        <div class="form-group">
-            <label class="form-label">Días de Atención</label>
-            <div class="row">
-                <div class="col-sm-1 col-xs-3">
-                    <%= label_tag('days-all', 'All') %>
-                    <%= check_box_tag('days-all', 1, false, class: 'days-all') %>
-                </div>
-            <%  @days = ['LU', 'MA', 'MI' , 'JU', 'VI', 'SA', 'DO']
-                for @each in @days %>
-                    <div class="col-sm-1 col-xs-3">
-                        <%= label_tag('days-' + @each, @each) %>
-                        <%= check_box_tag(@each + '[dif]', 1, false, class: 'days-each') %>
-                    </div>
-                <% end %>
-                <div class="col-xs-12">
-                    <a class="accion accion-horarios-diferenciados">Agregar horarios diferenciados por día</a>
-                    <a class="accion accion-horarios-diferenciados hidden">Cancelar horarios diferenciados por día</a>
-                </div>
-                <div id="horarios-diferenciados" class="hidden">
-                <%  @days = ['ALL', 'LU', 'MA', 'MI' , 'JU', 'VI', 'SA', 'DO']
-                    for each in @days %>
-                        <div class="col-sm-1 col-xs-3">
-                            <%= label_tag(each, each) %>
-                            <%= check_box_tag(each + '[dif]') %>
-                        </div>
-                    <% end %>
-                </div>
-            </div>
+<div class="container-myaccount-custom configuracion-atencion">
+  <%= form_tag ong_save_calendar_path(@ong), method: 'post' do |f| %>
+  <h1>Configuración de Atención</h1>
+  <p>Configura los días de tu semana, con los horarios de atención, y la duración de los turnos.</p>
+  <p>Esta semana se trasladara a tu calendario anual, donde podrás modificar o bloquear días particulares.</p>
+  <div class="form-group">
+    <label class="form-label">Días de Atención</label>
+    <div class="row">
+      <div class="col-sm-1 col-xs-3">
+        <%= label_tag('days-all', 'All') %>
+        <%= check_box_tag('days-all', 1, false, class: 'days-all') %>
+      </div>
+      <%  @days = ['LU', 'MA', 'MI' , 'JU', 'VI', 'SA', 'DO']
+      for @each in @days %>
+      <div class="col-sm-1 col-xs-3">
+        <%= label_tag('days-' + @each, @each) %>
+        <%= check_box_tag(@each + '[dif]', 1, false, class: 'days-each') %>
+      </div>
+      <% end %>
+      <div class="col-xs-12">
+        <a class="accion accion-horarios-diferenciados">Agregar horarios diferenciados por día</a>
+        <a class="accion accion-horarios-diferenciados hidden">Cancelar horarios diferenciados por día</a>
+      </div>
+      <div id="horarios-diferenciados" class="hidden">
+        <%  @days = ['ALL', 'LU', 'MA', 'MI' , 'JU', 'VI', 'SA', 'DO']
+        for each in @days %>
+        <div class="col-sm-1 col-xs-3">
+          <%= label_tag(each, each) %>
+          <%= check_box_tag(each + '[dif]') %>
         </div>
-        <div class="form-group">
-            <label class="form-label">Horarios de Atención</label>
-                <%= render partial: 'from_to', locals:{day: 0 , day_name_label: ' '} %>
-            <%  @days = ['LU', 'MA', 'MI' , 'JU', 'VI', 'SA', 'DO']
-                    @days.each_with_index {|each, index| %>
-                    <%= render partial: 'from_to', locals:{day: index, day_name_label: each} %>
-                <% } %>
-        </div>
-        <div class="form-group">
-            <label class="form-label">Duración de los Turnos</label>
-            <div class="row">
-                <div class="col-xs-12">
-                    <label>Minutos</label>
-                    <%= select_tag(:duracion, options_for_select((0..60).step(5))) %>
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="form-label">Capacidad</label>
-            <div class="row">
-                <div class="col-xs-12">
-                    <label>DONANTES POR TURNO</label>
-                    <%= select_tag(:camas, options_for_select(1..10)) %>
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="form-label">Habilitar calendario a partir de</label>
-            <div class="row">
-                <div class="col-xs-12 inputCorto">
-                    <label>FECHA DE COMIENZO</label>
-                    <%= text_field_tag :fechaInicio %>
-                  </div>
-            </div>
-        </div>
-        <%= submit_tag "Guardar y continuar", class: "cambiar" %>
-        <% end #End Form%>
+        <% end %>
+      </div>
     </div>
+  </div>
+  <div class="form-group">
+    <label class="form-label">Horarios de Atención</label>
+    <%= render partial: 'from_to', locals:{day: 0 , day_name_label: ' '} %>
+    <%  @days = ['LU', 'MA', 'MI' , 'JU', 'VI', 'SA', 'DO']
+    @days.each_with_index {|each, index| %>
+    <%= render partial: 'from_to', locals:{day: index, day_name_label: each} %>
+    <% } %>
+  </div>
+  <div class="form-group">
+    <label class="form-label">Duración de los Turnos</label>
+    <div class="row">
+      <div class="col-xs-12">
+        <label>Minutos</label>
+        <%= select_tag(:duracion, options_for_select((0..60).step(5))) %>
+      </div>
     </div>
+  </div>
+  <div class="form-group">
+    <label class="form-label">Capacidad</label>
+    <div class="row">
+      <div class="col-xs-12">
+        <label>DONANTES POR TURNO</label>
+        <%= select_tag(:camas, options_for_select(1..10)) %>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="form-label">Habilitar calendario a partir de</label>
+    <div class="row">
+      <div class="col-xs-12 inputCorto">
+        <label>FECHA DE COMIENZO</label>
+        <%= text_field_tag :fechaInicio %>
+      </div>
+    </div>
+  </div>
+  <%= submit_tag "Guardar y continuar", class: "cambiar" %>
+  <% end %>
 </div>
