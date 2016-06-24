@@ -1,7 +1,13 @@
+
 <div class="col_none">
-    <div class="col_div">
-      <h3>Solicitar turno para <%= @ong.name %></h3>
-         <%= render 'errors' %>
-         <%= render 'form' %>
-    </div>
+  <div class="col_div">
+    <% if @ong.has_calendar? and @ong.has_details? %>
+        <h3>Solicitar turno para <%= @ong.name %></h3>
+        <%= render 'errors' %>
+        <%= render 'form' %>
+    <% else %>
+        <h3><%= @ong.name %> no tiene calendario configurado</h3>
+        <%= link_to 'Volver', ongs_path %>
+    <% end %>
+  </div>
 </div>

@@ -7,15 +7,16 @@ class Ong < ActiveRecord::Base
   has_many :ong_admins, foreign_key: :ong_ong_id
   has_many :users, through: :ong_admins, foreign_key: :admins_user_id
   has_one :ong_detail
-  has_one :ong_calendar
+  has_many :ong_calendars
   has_and_belongs_to_many :topics, :join_table => :ong_topic
+  has_many :bookings
 
   self.inheritance_column = :_type_disabled
 
   default_scope {includes(:topics).where(topic: {topic_id:  TOPIC_ID})}
   scope :limited_to, ->(num) { order('ong_id').limit(num) }
   scope :has_detail, -> { includes(:ong_detail).where.not(ong_details: {:id => nil})}
-  scope :has_calendar, -> { includes(:ong_calendar).where.not(ong_calendars: {:id => nil})}
+  scope :has_calendar, -> { includes(:ong_calendars).where.not(ong_calendars: {:id => nil})}
 
   after_create :add_topic
 
@@ -32,12 +33,12 @@ class Ong < ActiveRecord::Base
   end
 
   def check_calendar_day(day)
-    ong_calendar.find_by_day(day)
+    ong_calendars.find_by_day(day)
     false
   end
 
   def has_calendar?
-    !self.ong_calendar.nil?
+    !self.ong_calendars.nil?
   end
 
   def has_details?
