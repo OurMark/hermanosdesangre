@@ -6,7 +6,7 @@ class OngsController < ApplicationController
   # GET /ongs
   # GET /ongs.json
   def index
-    @ongs = Ong.all.has_detail.has_calendar
+    @ongs = Ong.all
     respond_to do |format|
       format.html
       format.json { render json: @ongs  }
@@ -94,7 +94,7 @@ class OngsController < ApplicationController
 
   def calendar
     @ong = Ong.find(params[:ong_id])
-    @ong_calendar = @ong.ong_calendar
+    @ong_calendar = @ong.ong_calendars
     @days = ['ALL', 'LU', 'MA', 'MI' , 'JU', 'VI', 'SA', 'DO']
     @intervalo_horario = []
     (00..23).each do |hour|
