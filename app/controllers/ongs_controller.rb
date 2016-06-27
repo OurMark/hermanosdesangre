@@ -6,7 +6,7 @@ class OngsController < ApplicationController
   # GET /ongs
   # GET /ongs.json
   def index
-    @ongs = Topic.blood_donation.first.ongs
+    @ongs = Ong.all
     respond_to do |format|
       format.html
       format.json { render json: @ongs  }
@@ -94,7 +94,7 @@ class OngsController < ApplicationController
 
   def calendar
     @ong = Ong.find(params[:ong_id])
-    @ong_calendars = @ong.ong_calendars
+    @ong_calendar = @ong.ong_calendars
     @days = ['ALL', 'LU', 'MA', 'MI' , 'JU', 'VI', 'SA', 'DO']
     @intervalo_horario = []
     (00..23).each do |hour|
@@ -105,7 +105,7 @@ class OngsController < ApplicationController
     @duracion_turnos = ['30', '45', '60']
     respond_to do |format|
       format.html
-      format.json { render json: @ong_calendars  }
+      format.json { render json: @ong_calendar  }
     end
   end
 
