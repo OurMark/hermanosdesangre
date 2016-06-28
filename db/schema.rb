@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151119203504) do
+ActiveRecord::Schema.define(version: 20160628134312) do
 
   create_table "Classfield_daysOfEvent", id: false, force: true do |t|
     t.integer "Classfield_classfield_id", limit: 8, null: false
@@ -77,7 +77,12 @@ ActiveRecord::Schema.define(version: 20151119203504) do
     t.string   "dni"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.date     "date"
+    t.integer  "user_id"
+    t.datetime "start_at"
   end
+
+  add_index "bookings", ["user_id"], name: "index_bookings_on_user_id", using: :btree
 
   create_table "certificate", primary_key: "certificate_id", force: true do |t|
     t.string  "name"

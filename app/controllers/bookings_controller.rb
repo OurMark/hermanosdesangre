@@ -13,8 +13,7 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking =  Booking.new(params[:booking].permit(:ong_id, :start_time, :length, :dni))
-    @booking.ong = @ong
+    @booking =  Booking.new(bookings_params, user: current_user, ong: @ong)
     if @booking.save
       redirect_to ong_bookings_path(@ong, method: :get)
     else
@@ -80,6 +79,10 @@ class BookingsController < ApplicationController
       @ong = Ong.find(params[:ong_id])
       Rails.logger.debug @ong.to_json
     end
+  end
+
+  def booking_params
+    params[:booking].permit(:ong_id, :length, :dni, :date, :start_at)
   end
 
 end
