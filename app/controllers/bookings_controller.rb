@@ -13,7 +13,9 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking =  Booking.new(bookings_params, user: current_user, ong: @ong)
+    @booking =  Booking.new(booking_params, user: current_user, ong: @ong)
+    @booking.user = current_user
+    @booking.ong = @ong
     if @booking.save
       redirect_to ong_bookings_path(@ong, method: :get)
     else

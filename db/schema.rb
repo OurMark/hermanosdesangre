@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160628134312) do
+ActiveRecord::Schema.define(version: 20160629001958) do
 
   create_table "Classfield_daysOfEvent", id: false, force: true do |t|
     t.integer "Classfield_classfield_id", limit: 8, null: false
@@ -71,8 +71,6 @@ ActiveRecord::Schema.define(version: 20160628134312) do
 
   create_table "bookings", force: true do |t|
     t.integer  "ong_id"
-    t.time     "start_time"
-    t.time     "end_time"
     t.integer  "length"
     t.string   "dni"
     t.datetime "created_at"
