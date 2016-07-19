@@ -9964,7 +9964,7 @@ input:focus:-moz-placeholder {
 }
 
 /* line 64, ../sass/_forms.scss */
-.submit-button, .ingresar-form .btn_ingresar, .btn-registrar, .btn-enviar {
+.submit-button, .ingresar-form .btn_ingresar, .btn-enviar {
   background: #F5F5F5;
   border-bottom: solid white 1px;
   border: none;
@@ -9982,7 +9982,7 @@ input:focus:-moz-placeholder {
   width: 100%;
 }
 /* line 81, ../sass/_forms.scss */
-.submit-button:hover, .ingresar-form .btn_ingresar:hover, .btn-registrar:hover, .btn-enviar:hover, .submit-button:focus, .ingresar-form .btn_ingresar:focus, .btn-registrar:focus, .btn-enviar:focus {
+.submit-button:hover, .ingresar-form .btn_ingresar:hover, .btn-enviar:hover, .submit-button:focus, .ingresar-form .btn_ingresar:focus, .btn-enviar:focus {
   color: white;
   background-color: #F16B6B;
   border-bottom: solid #D35555 2px;
@@ -10031,7 +10031,7 @@ input:focus:-moz-placeholder {
   }
 
   /* line 128, ../sass/_forms.scss */
-  .submit-button, .ingresar-form .btn_ingresar, .btn-registrar, .btn-enviar {
+  .submit-button, .ingresar-form .btn_ingresar, .btn-enviar {
     width: 315px;
   }
 }
@@ -10718,22 +10718,116 @@ input:focus:-moz-placeholder {
 =            register form styles            =
 ============================================*/
 /* line 5, ../sass/registrations/_new.scss */
-.registrarse h1, .forget-password h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  text-align: center;
+.registrarse .finputCorto, .forget-password .finputCorto {
+  width: 41%;
+  float: left;
+  margin-right: 5%;
+  margin-bottom: 5px;
 }
-/* line 10, ../sass/registrations/_new.scss */
+/* line 11, ../sass/registrations/_new.scss */
+.registrarse .inputs, .forget-password .inputs, .registrarse form INPUT[type="password"], .forget-password form INPUT[type="password"], .registrarse form INPUT[type="text"], .forget-password form INPUT[type="text"], .registrarse form INPUT[type="email"], .forget-password form INPUT[type="email"], .registrarse select, .registrarse .forget-password select, .forget-password .registrarse select, .forget-password select {
+  width: 100%;
+  -webkit-transition: background 500ms ease;
+  background-color: #F5F5F5;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px dashed #D35555;
+  font-family: Helvetica;
+  font-size: 17px;
+  font-weight: bold;
+  height: 30px;
+  padding-left: 10px;
+  transition: background 500ms ease;
+}
+/* line 27, ../sass/registrations/_new.scss */
+.registrarse h1, .forget-password h1 {
+  font-size: 2em;
+  /*font-weight: bold;*/
+  padding-top: 1%;
+  text-align: left;
+  margin-bottom: 20px;
+  font-family: Helvetica;
+  color: #6E2F26;
+}
+/* line 36, ../sass/registrations/_new.scss */
+.registrarse .barrasuperior, .forget-password .barrasuperior {
+  margin-top: -3px;
+  margin-bottom: 3px;
+  width: 100%;
+  border-top: solid #F16B6B;
+}
+/* line 42, ../sass/registrations/_new.scss */
+.registrarse .barrainferior, .forget-password .barrainferior {
+  margin-top: 90px;
+  width: 100%;
+  border-top: solid #F16B6B;
+}
+/* line 47, ../sass/registrations/_new.scss */
+.registrarse p, .forget-password p {
+  font-family: Helvetica;
+  width: 77%;
+  font-size: 1.2em;
+}
+/* line 52, ../sass/registrations/_new.scss */
+.registrarse form, .forget-password form {
+  width: 80%;
+}
+/* line 54, ../sass/registrations/_new.scss */
+.registrarse form label, .forget-password form label {
+  font-weight: bold;
+  font-family: Helvetica;
+}
+/* line 63, ../sass/registrations/_new.scss */
+.registrarse form INPUT[type="password"]:focus, .forget-password form INPUT[type="password"]:focus, .registrarse form INPUT[type="text"]:focus, .forget-password form INPUT[type="text"]:focus, .registrarse form INPUT[type="email"]:focus, .forget-password form INPUT[type="email"]:focus, .registrarse select:focus, .forget-password select:focus {
+  background-color: #D35555;
+  color: white;
+  outline: none;
+}
+/* line 68, ../sass/registrations/_new.scss */
 .registrarse .input-corto, .forget-password .input-corto {
   width: 100%;
 }
 
-/* line 23, ../sass/registrations/_new.scss */
+/* line 72, ../sass/registrations/_new.scss */
+.formaregistro {
+  background-color: #fbfbfb;
+  width: 50%;
+  z-index: 10;
+}
+
+/* line 78, ../sass/registrations/_new.scss */
+.espacioinferior {
+  background-color: #F16B6B;
+  width: 25%;
+  float: right;
+  margin-right: 50%;
+  margin-top: -3px;
+  min-height: 155px;
+  position: relative;
+  z-index: 20;
+}
+
+/* line 88, ../sass/registrations/_new.scss */
+.btn-registrar {
+  background: #6E2F26;
+  color: white;
+  border: none;
+  cursor: pointer;
+  float: right;
+  font-family: Helvetica;
+  margin-right: 13%;
+  padding: 9px;
+  text-align: center;
+  width: 20%;
+}
+
+/* line 106, ../sass/registrations/_new.scss */
 .sin-margen {
   margin-bottom: 0;
 }
 
-/* line 27, ../sass/registrations/_new.scss */
+/* line 110, ../sass/registrations/_new.scss */
 .texto-validacion {
   color: #c0a16b;
   font-size: 12px;
@@ -10741,7 +10835,7 @@ input:focus:-moz-placeholder {
   padding-left: 10px;
 }
 
-/* line 34, ../sass/registrations/_new.scss */
+/* line 117, ../sass/registrations/_new.scss */
 .tiene-error {
   border-color: #66512c;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
@@ -10749,12 +10843,347 @@ input:focus:-moz-placeholder {
 }
 
 @media (min-width: 768px) {
-  /* line 41, ../sass/registrations/_new.scss */
+  /* line 124, ../sass/registrations/_new.scss */
   .registrarse, .forget-password {
-    width: 400px;
-    margin: 0 auto;
+    width: 85%;
+    margin-left: 4%;
+    /*margin: 0 auto;*/
   }
 }
+/*!
+ * Datepicker for Bootstrap
+ *
+ * Copyright 2012 Stefan Petre
+ * Improvements by Ashley Novak
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+/* line 31, ../sass/registrations/_datepicker.scss */
+.datepicker {
+  padding: 4px;
+  border-radius: 4px;
+  /*.dow {
+    border-top: 1px solid #ddd !important;
+  }*/
+}
+/* line 34, ../sass/registrations/_datepicker.scss */
+.datepicker.datepicker-inline {
+  width: 220px;
+}
+/* line 37, ../sass/registrations/_datepicker.scss */
+.datepicker.datepicker-dropdown {
+  position: absolute;
+  left: 0;
+  z-index: 9999;
+}
+/* line 41, ../sass/registrations/_datepicker.scss */
+.datepicker.datepicker-dropdown:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ccc;
+  border-top: 0;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+/* line 51, ../sass/registrations/_datepicker.scss */
+.datepicker.datepicker-dropdown:after {
+  content: '';
+  display: inline-block;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #fff;
+  border-top: 0;
+  position: absolute;
+}
+/* line 60, ../sass/registrations/_datepicker.scss */
+.datepicker.datepicker-dropdown.datepicker-orient-left:before {
+  left: 107px;
+}
+/* line 61, ../sass/registrations/_datepicker.scss */
+.datepicker.datepicker-dropdown.datepicker-orient-left:after {
+  left: 108px;
+}
+/* line 62, ../sass/registrations/_datepicker.scss */
+.datepicker.datepicker-dropdown.datepicker-orient-right:before {
+  right: 107px;
+}
+/* line 63, ../sass/registrations/_datepicker.scss */
+.datepicker.datepicker-dropdown.datepicker-orient-right:after {
+  right: 108px;
+}
+/* line 64, ../sass/registrations/_datepicker.scss */
+.datepicker.datepicker-dropdown.datepicker-orient-top:before {
+  top: -7px;
+}
+/* line 65, ../sass/registrations/_datepicker.scss */
+.datepicker.datepicker-dropdown.datepicker-orient-top:after {
+  top: -6px;
+}
+/* line 66, ../sass/registrations/_datepicker.scss */
+.datepicker.datepicker-dropdown.datepicker-orient-bottom:before {
+  bottom: -7px;
+  border-bottom: 0;
+  border-top: 7px solid #999;
+}
+/* line 71, ../sass/registrations/_datepicker.scss */
+.datepicker.datepicker-dropdown.datepicker-orient-bottom:after {
+  bottom: -6px;
+  border-bottom: 0;
+  border-top: 6px solid #fff;
+}
+/* line 77, ../sass/registrations/_datepicker.scss */
+.datepicker > div {
+  display: none;
+}
+/* line 80, ../sass/registrations/_datepicker.scss */
+.datepicker.days div.datepicker-days {
+  display: block;
+}
+/* line 83, ../sass/registrations/_datepicker.scss */
+.datepicker.months div.datepicker-months {
+  display: block;
+}
+/* line 86, ../sass/registrations/_datepicker.scss */
+.datepicker.years div.datepicker-years {
+  display: block;
+}
+/* line 89, ../sass/registrations/_datepicker.scss */
+.datepicker table {
+  margin: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 98, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td, .datepicker table tr th {
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  border: none;
+}
+/* line 111, ../sass/registrations/_datepicker.scss */
+.table-striped .datepicker table tr td, .table-striped .datepicker table tr th {
+  background-color: transparent;
+}
+/* line 116, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td.day:hover, .datepicker table tr td.day.focused {
+  background: #eeeeee;
+  cursor: pointer;
+}
+/* line 120, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td.old, .datepicker table tr td.new {
+  color: #777777;
+}
+/* line 124, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td.disabled, .datepicker table tr td.disabled:hover {
+  background: none;
+  color: #777777;
+  cursor: default;
+}
+/* line 130, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td.today, .datepicker table tr td.today:hover, .datepicker table tr td.today.disabled, .datepicker table tr td.today.disabled:hover {
+  color: #333333;
+  background-color: #5bc0de;
+  border-color: #2390b0;
+}
+/* line 16, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td.today:focus, .datepicker table tr td.today:active, .datepicker table tr td.today.active, .datepicker table tr td.today:hover:focus, .datepicker table tr td.today:hover:active, .datepicker table tr td.today:hover.active, .datepicker table tr td.today.disabled:focus, .datepicker table tr td.today.disabled:active, .datepicker table tr td.today.disabled.active, .datepicker table tr td.today.disabled:hover:focus, .datepicker table tr td.today.disabled:hover:active, .datepicker table tr td.today.disabled:hover.active {
+  color: #333333;
+  background-color: rgba(241, 107, 107, 0.9);
+  border-color: #19667d;
+}
+/* line 24, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td.today:hover, .datepicker table tr td.today:hover:hover, .datepicker table tr td.today.disabled:hover, .datepicker table tr td.today.disabled:hover:hover {
+  color: #333333;
+  background-color: #F16B6B;
+  border-color: #19667d;
+}
+/* line 137, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td.today:hover:hover {
+  color: #000;
+}
+/* line 141, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td.today.active:hover {
+  color: #fff;
+}
+/* line 144, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td.range, .datepicker table tr td.range:hover, .datepicker table tr td.range.disabled, .datepicker table tr td.range.disabled:hover {
+  background: #eeeeee;
+  border-radius: 0;
+}
+/* line 151, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td.range.today, .datepicker table tr td.range.today:hover, .datepicker table tr td.range.today.disabled, .datepicker table tr td.range.today.disabled:hover {
+  color: #000;
+  background-color: #5bc0de;
+  border-color: #2390b0;
+  border-radius: 0;
+}
+/* line 16, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td.range.today:focus, .datepicker table tr td.range.today:active, .datepicker table tr td.range.today.active, .datepicker table tr td.range.today:hover:focus, .datepicker table tr td.range.today:hover:active, .datepicker table tr td.range.today:hover.active, .datepicker table tr td.range.today.disabled:focus, .datepicker table tr td.range.today.disabled:active, .datepicker table tr td.range.today.disabled.active, .datepicker table tr td.range.today.disabled:hover:focus, .datepicker table tr td.range.today.disabled:hover:active, .datepicker table tr td.range.today.disabled:hover.active {
+  color: #000;
+  background-color: rgba(241, 107, 107, 0.9);
+  border-color: #19667d;
+}
+/* line 24, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td.range.today:hover, .datepicker table tr td.range.today:hover:hover, .datepicker table tr td.range.today.disabled:hover, .datepicker table tr td.range.today.disabled:hover:hover {
+  color: #000;
+  background-color: #F16B6B;
+  border-color: #19667d;
+}
+/* line 159, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td.selected, .datepicker table tr td.selected:hover, .datepicker table tr td.selected.disabled, .datepicker table tr td.selected.disabled:hover {
+  color: #fff;
+  background-color: #777777;
+  border-color: #555555;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+/* line 16, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td.selected:focus, .datepicker table tr td.selected:active, .datepicker table tr td.selected.active, .datepicker table tr td.selected:hover:focus, .datepicker table tr td.selected:hover:active, .datepicker table tr td.selected:hover.active, .datepicker table tr td.selected.disabled:focus, .datepicker table tr td.selected.disabled:active, .datepicker table tr td.selected.disabled.active, .datepicker table tr td.selected.disabled:hover:focus, .datepicker table tr td.selected.disabled:hover:active, .datepicker table tr td.selected.disabled:hover.active {
+  color: #fff;
+  background-color: rgba(241, 107, 107, 0.9);
+  border-color: #373737;
+}
+/* line 24, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td.selected:hover, .datepicker table tr td.selected:hover:hover, .datepicker table tr td.selected.disabled:hover, .datepicker table tr td.selected.disabled:hover:hover {
+  color: #fff;
+  background-color: #F16B6B;
+  border-color: #373737;
+}
+/* line 166, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td.active, .datepicker table tr td.active:hover, .datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled:hover {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #337ab7;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+/* line 16, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td.active:focus, .datepicker table tr td.active:active, .datepicker table tr td.active.active, .datepicker table tr td.active:hover:focus, .datepicker table tr td.active:hover:active, .datepicker table tr td.active:hover.active, .datepicker table tr td.active.disabled:focus, .datepicker table tr td.active.disabled:active, .datepicker table tr td.active.disabled.active, .datepicker table tr td.active.disabled:hover:focus, .datepicker table tr td.active.disabled:hover:active, .datepicker table tr td.active.disabled:hover.active {
+  color: #fff;
+  background-color: rgba(241, 107, 107, 0.9);
+  border-color: #265a88;
+}
+/* line 24, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td.active:hover, .datepicker table tr td.active:hover:hover, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active.disabled:hover:hover {
+  color: #fff;
+  background-color: #F16B6B;
+  border-color: #265a88;
+}
+/* line 173, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td span {
+  display: block;
+  width: 23%;
+  height: 54px;
+  line-height: 54px;
+  float: left;
+  margin: 1%;
+  cursor: pointer;
+  border-radius: 4px;
+}
+/* line 182, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td span:hover {
+  background: #eeeeee;
+}
+/* line 185, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td span.disabled, .datepicker table tr td span.disabled:hover {
+  background: none;
+  color: #777777;
+  cursor: default;
+}
+/* line 191, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td span.active, .datepicker table tr td span.active:hover, .datepicker table tr td span.active.disabled, .datepicker table tr td span.active.disabled:hover {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+/* line 16, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td span.active:focus, .datepicker table tr td span.active:active, .datepicker table tr td span.active.active, .datepicker table tr td span.active:hover:focus, .datepicker table tr td span.active:hover:active, .datepicker table tr td span.active:hover.active, .datepicker table tr td span.active.disabled:focus, .datepicker table tr td span.active.disabled:active, .datepicker table tr td span.active.disabled.active, .datepicker table tr td span.active.disabled:hover:focus, .datepicker table tr td span.active.disabled:hover:active, .datepicker table tr td span.active.disabled:hover.active {
+  color: #fff;
+  background-color: rgba(241, 107, 107, 0.9);
+  border-color: #204d74;
+}
+/* line 24, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td span.active:hover, .datepicker table tr td span.active:hover:hover, .datepicker table tr td span.active.disabled:hover, .datepicker table tr td span.active.disabled:hover:hover {
+  color: #fff;
+  background-color: #F16B6B;
+  border-color: #204d74;
+}
+/* line 198, ../sass/registrations/_datepicker.scss */
+.datepicker table tr td span.old, .datepicker table tr td span.new {
+  color: #777777;
+}
+/* line 205, ../sass/registrations/_datepicker.scss */
+.datepicker th.datepicker-switch {
+  width: 145px;
+}
+/* line 209, ../sass/registrations/_datepicker.scss */
+.datepicker thead tr:first-child th,
+.datepicker tfoot tr th {
+  cursor: pointer;
+  color: #F16B6B;
+  /* $brand-primary; */
+}
+/* line 213, ../sass/registrations/_datepicker.scss */
+.datepicker thead tr:first-child th:hover,
+.datepicker tfoot tr th:hover {
+  background: #eeeeee;
+}
+/* line 222, ../sass/registrations/_datepicker.scss */
+.datepicker .cw {
+  font-size: 10px;
+  width: 12px;
+  padding: 0 2px 0 5px;
+  vertical-align: middle;
+}
+/* line 228, ../sass/registrations/_datepicker.scss */
+.datepicker thead tr:first-child th.cw {
+  cursor: default;
+  background-color: transparent;
+}
+
+/* line 235, ../sass/registrations/_datepicker.scss */
+.input-group.date .input-group-addon i {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+/* line 243, ../sass/registrations/_datepicker.scss */
+.input-daterange input {
+  text-align: center;
+}
+/* line 246, ../sass/registrations/_datepicker.scss */
+.input-daterange input:first-child {
+  border-radius: 3px 0 0 3px;
+}
+/* line 249, ../sass/registrations/_datepicker.scss */
+.input-daterange input:last-child {
+  border-radius: 0 3px 3px 0;
+}
+/* line 252, ../sass/registrations/_datepicker.scss */
+.input-daterange .input-group-addon {
+  width: auto;
+  min-width: 16px;
+  padding: 4px 5px;
+  font-weight: normal;
+  line-height: 1.42857;
+  text-align: center;
+  text-shadow: 0 1px 0 #fff;
+  vertical-align: middle;
+  background-color: #eeeeee;
+  border: solid #ccc;
+  border-width: 1px 0;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
 /*--- • 2 • e REGLAS EXCLUSIVAS de PERFIL de USUARIO ---------*/
 /* line 3, ../sass/users/_show.scss */
 .banco {

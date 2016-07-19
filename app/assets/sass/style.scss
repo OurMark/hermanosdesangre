@@ -27,6 +27,7 @@ $icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
 @import "static/donors";
 @import "sessions/new";
 @import "registrations/new";
+@import "registrations/datepicker";
 @import "users/show";
 @import "ongs/new";
 @import "ongs/ong_search";
@@ -36,4 +37,5 @@ $icon-font-path: "bootstrap-sass/assets/fonts/bootstrap/";
 @import "ongs/index";
 @import "ongs/ong_registered";
 @import "passwords/new";
+
 

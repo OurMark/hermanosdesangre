@@ -15,4 +15,17 @@
 //= require jquery_ujs
 //= require bootstrap-sass/assets/javascripts/bootstrap.min
 //= require twitter/typeahead
+//= require bootstrap-datepicker/core
+//= require bootstrap-datepicker/locales/bootstrap-datepicker.es.js
 //= require_tree .
+
+$(document).ready(function(){
+    $('.datepicker').datepicker({
+        format: 'dd/mm/yyyy',
+        clearBtn: true,
+        language: 'es',
+        orientation: 'bottom right',
+        daysOfWeekHighlighted: '0,6',
+        autoclose: true
+    });
+});
