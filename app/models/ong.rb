@@ -1,16 +1,22 @@
 class Ong < ActiveRecord::Base
   self.table_name = 'ong'
+  # This constant is to set the topic id for Blood Donation topic.
+  # Every ONG which is a blood bank has 'tagged' with the Blood Donation Topic
+  TOPIC_ID = 5 # BLOOD_DONATION
   has_many :ong_admins
   has_many :ong_admins, foreign_key: :ong_ong_id
   has_many :users, through: :ong_admins, foreign_key: :admins_user_id
   has_one :ong_detail
   has_many :ong_calendars
   has_and_belongs_to_many :topics, :join_table => :ong_topic
+  has_many :bookings
 
   self.inheritance_column = :_type_disabled
 
+  default_scope {includes(:topics).where(topic: {topic_id:  TOPIC_ID})}
   scope :limited_to, ->(num) { order('ong_id').limit(num) }
-  scope :blood_donation, -> {includes(:topics).where("topic.name = ? ", 'BLOOD_DONATION')}
+  scope :has_detail, -> { includes(:ong_detail).where.not(ong_details: {:id => nil})}
+  scope :has_calendar, -> { includes(:ong_calendars).where.not(ong_calendars: {:id => nil})}
 
   after_create :add_topic
 
@@ -31,12 +37,12 @@ class Ong < ActiveRecord::Base
     false
   end
 
-  def has_calendar()
-    
+  def has_calendar?
+    !self.ong_calendars.nil?
   end
 
-  def has_details?()
-    ong_detail.present?
+  def has_details?
+    !self.ong_detail.nil?
   end
   
   private
