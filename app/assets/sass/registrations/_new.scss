@@ -2,18 +2,101 @@
 =            register form styles            =
 ============================================*/
 .registrarse {
-  h1 {
-    font-size: 2.5em;
+  .finputCorto {
+    width: 41%;
+    float: left;
+    margin-right: 5%;
+    margin-bottom: 5px;
+  }
+  .inputs {
+    width: 100%;
+    -webkit-transition: background 500ms ease;
+    background-color: $whiteSmoke;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px dashed $mainRed;
+    font-family: $formFont;
+    font-size: 17px;
     font-weight: bold;
-    text-align: center;
+    height: 30px;
+    padding-left: 10px;
+    transition: background 500ms ease;
+  }
+
+  h1 {
+    font-size: 2em;
+    /*font-weight: bold;*/
+    padding-top: 1%;
+    text-align: left;
+    margin-bottom: 20px;
+    font-family: Helvetica;
+    color: $saddleBrown;
+  }
+  .barrasuperior {
+    margin-top: -3px;
+    margin-bottom: 3px;
+    width: 100%;
+    border-top: solid $softRed;
+  }
+  .barrainferior {
+    margin-top: 90px;
+    width: 100%;
+    border-top: solid $softRed;
+  }
+  p {
+    font-family: Helvetica;
+    width: 77%;
+    font-size: 1.2em;
+  }
+  form {
+    width: 80%;
+    label {
+      font-weight: bold;
+      font-family: Helvetica;
+
+    }
+  }
+  form INPUT[type="password"], form INPUT[type="text"], form INPUT[type="email"], select {
+    @extend .inputs;
+  }
+  form INPUT[type="password"]:focus, form INPUT[type="text"]:focus, form INPUT[type="email"]:focus, select:focus {
+    background-color: $mainRed;
+    color: white;
+    outline: none;
   }
   .input-corto {
     width: 100%;
   }
 }
+.formaregistro {
+  background-color: #fbfbfb;
+  width: 50%;
+  z-index: 10;
+}
 
+.espacioinferior {
+  background-color: $softRed;
+  width: 25%;
+  float: right;
+  margin-right: 50%;
+  margin-top: -3px;
+  min-height: 155px;
+  position: relative;
+  z-index: 20;
+}
 .btn-registrar {
-  @extend .submit-button;
+    background: $saddleBrown;
+    color: white;
+    border: none;
+    cursor: pointer;
+    float: right;
+    font-family: $formFont;
+    margin-right: 13%;
+    padding: 9px;
+    text-align: center;
+    width: 20%;
+
 }
 
 .btn-enviar {
@@ -39,8 +122,8 @@
 
 @media (min-width: 768px) {
   .registrarse {
-    width: 400px;
-    margin: 0 auto;
+    width: 85%;
+    margin-left: 4%;
+    /*margin: 0 auto;*/
   }
 }
-

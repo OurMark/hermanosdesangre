@@ -13,6 +13,7 @@ gem 'tzinfo-data'
 
 gem 'jquery-rails'
 gem 'twitter-typeahead-rails'
+gem 'bootstrap-datepicker-rails'
 
 gem 'turbolinks'
 gem 'jbuilder'

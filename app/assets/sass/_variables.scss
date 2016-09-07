@@ -28,6 +28,11 @@ $quieroDonar: asset-path('quierodonar_btn.png');
 $quieroDonar2: asset-path('big-gota.png');
 $email: "http://w.sharethis.com/images/email_16.png";
 $bolsa: asset-path('bolsa.png');
+// Sprite icons path
+// -------------------------
+$iconSpritePath: asset-path('glyphicons-halflings.png') !default;
+$iconWhiteSpritePath: asset-path('glyphicons-halflings-white.png') !default;
+
 
 
 // ong serch width
@@ -35,6 +40,7 @@ $ong-search-width: 315px;
 
 /* FONTS */
 $mainFont: 'Oswald', sans-serif;
+$formFont: Helvetica;
 
 
 // Media Queries
