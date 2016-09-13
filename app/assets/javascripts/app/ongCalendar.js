@@ -29,8 +29,9 @@
       diasAMostrar = $('.dia');
 
     diasAMostrar.eq(0).text(lunes.format('ddd DD'));
-    for (var i = 1; i < 7; i++)
-      diasAMostrar.eq(i).text(lunes.add(1, 'days').format('ddd DD'));
+    for (var i = 1; i < 7; i++){
+        diasAMostrar.eq(i).text(lunes.add(1, 'days').format('ddd DD'));
+    }
 
     primerFecha = moment(lunesEstaSemana, hoyFormat);
     segundaFecha = moment(ultimoDiaSemana, hoyFormat);
@@ -53,15 +54,6 @@
       var turnos;
 
         for (var dias = 0; dias < 7; dias++){
-          /*
-          if (dia y horario tiene entre 1 y cant maxima de turnos )
-            turnos += '<td class="habilitado">cant turnos<i></i></td>';
-          else
-            if (dia y horario tiene cant maxima de turnos o mas))
-              turnos += '<td class="deshabilitado">cant turnos<i></i></td>';
-            else
-              turnos += '<td class="habilitado"></td>';
-          */
           turnos += '<td class="habilitado"></td>';
         }
         return turnos;
@@ -85,11 +77,13 @@
   function renderizarTurnos() {
     var duracion = lapsoTiempo;
 
-    if ( duracion != 0 )
-      imprimirTurnos(duracion, fechaAHora(inicioTurnos), fechaAHora(finTurnos));
+    if ( duracion != 0 ){
+        imprimirTurnos(duracion, fechaAHora(inicioTurnos), fechaAHora(finTurnos));
+    }
 
-    if (fechaAHora(inicioTurnosDiferenciado) != 0 )
-      imprimirTurnos(duracion, fechaAHora(inicioTurnosDiferenciado), fechaAHora(finTurnosDiferenciado));
+    if (fechaAHora(inicioTurnosDiferenciado) != 0 ){
+        imprimirTurnos(duracion, fechaAHora(inicioTurnosDiferenciado), fechaAHora(finTurnosDiferenciado));
+    }
   }
 
   $(document).on('ready', function() {

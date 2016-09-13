@@ -9,7 +9,7 @@ class Ong < ActiveRecord::Base
   has_one :ong_detail
   has_many :ong_calendars
   has_and_belongs_to_many :topics, :join_table => :ong_topic
-  has_many :bookings
+  has_many :bookingsdon
 
   self.inheritance_column = :_type_disabled
 
