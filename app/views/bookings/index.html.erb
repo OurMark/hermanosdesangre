@@ -2,7 +2,7 @@
   <div class="margen-inferior">
     <h3>Calendario</h3>
     <span>Configuración actual con disponibilidad: </span>
-    <span class="titulo-rosa"><%= @beds %> donantes por turno</span>
+    <span class="titulo-rosa"><%= @beds || 0 %> donantes por turno</span>
   </div>
   <div class="semana">
     <span class="semana-anterior"><</span>
@@ -20,7 +20,8 @@
         <th class="dia" data-target="#alertaDia"></th>
         <th class="dia" data-target="#alertaDia"></th>
         <th class="dia" data-target="#alertaDia"></th>
-      </tr>    </thead>
+      </tr>
+    </thead>
     <tbody>
     </tbody>
   </table>

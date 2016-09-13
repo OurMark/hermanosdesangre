@@ -6,25 +6,26 @@ class BookingsController < ApplicationController
   def index
     @month = params[:month] || Time.now.month
     @year = params[:year] || Time.now.year
-    @beds = OngDetail.where(ong_id: @ong.ong_id).take.beds
-    @timelapse = OngDetail.where(ong_id: @ong.ong_id).take.timelapse
-    @inicio_turnos = OngCalendar.where(ong_id: @ong.ong_id).take.start_time
-    @fin_turnos = OngCalendar.where(ong_id: @ong.ong_id).take.end_time
-    @inicio_turnos_diferenciado = OngCalendar.where(ong_id: @ong.ong_id).take.start_time_differential
-    @fin_turnos_diferenciado = OngCalendar.where(ong_id: @ong.ong_id).take.end_time_differental
+    @beds = @ong.ong_detail.beds
+    @timelapse = @ong.ong_detail.timelapse
+    @inicio_turnos = OngCalendar.where(ong_id: @ong.ong_id).pluck(:day, :start_time)
+    @fin_turnos = OngCalendar.where(ong_id: @ong.ong_id).pluck(:day,:end_time)
+    @inicio_turnos_diferenciado = OngCalendar.where(ong_id: @ong.ong_id).pluck(:day,:start_time_differential)
+    @fin_turnos_diferenciado = OngCalendar.where(ong_id: @ong.ong_id).pluck(:day,:end_time_differental)
     @turnos_ocupados = Booking.where(ong_id: @ong.ong_id)
   end
 
   def new
-    @booking = Booking.new(ong_id: @ong.id, start_time: params[:hour])
+    @booking = Booking.new(ong_id: @ong.id, start_at: params[:hour])
   end
 
   def create
+    byebug
     @booking =  Booking.new(booking_params)
     @booking.user = current_user
     @booking.ong = @ong
     if @booking.save
-      redirect_to ong_bookings_path(@ong, method: :get)
+      redirect_to ong_bookings_path(@ong)
     else
       render 'new'
     end
