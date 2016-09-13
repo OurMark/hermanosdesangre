@@ -6,6 +6,13 @@ class BookingsController < ApplicationController
   def index
     @month = params[:month] || Time.now.month
     @year = params[:year] || Time.now.year
+    @beds = OngDetail.where(ong_id: @ong.ong_id).take.beds
+    @timelapse = OngDetail.where(ong_id: @ong.ong_id).take.timelapse
+    @inicio_turnos = OngCalendar.where(ong_id: @ong.ong_id).take.start_time
+    @fin_turnos = OngCalendar.where(ong_id: @ong.ong_id).take.end_time
+    @inicio_turnos_diferenciado = OngCalendar.where(ong_id: @ong.ong_id).take.start_time_differential
+    @fin_turnos_diferenciado = OngCalendar.where(ong_id: @ong.ong_id).take.end_time_differental
+    @turnos_ocupados = Booking.where(ong_id: @ong.ong_id)
   end
 
   def new
@@ -13,7 +20,8 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking =  Booking.new(params[:booking].permit(:ong_id, :start_time, :length, :dni))
+    @booking =  Booking.new(booking_params)
+    @booking.user = current_user
     @booking.ong = @ong
     if @booking.save
       redirect_to ong_bookings_path(@ong, method: :get)
@@ -80,6 +88,10 @@ class BookingsController < ApplicationController
       @ong = Ong.find(params[:ong_id])
       Rails.logger.debug @ong.to_json
     end
+  end
+
+  def booking_params
+    params[:booking].permit(:ong_id, :length, :dni, :date, :start_at)
   end
 
 end
