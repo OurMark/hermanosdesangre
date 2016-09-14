@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
 
   has_many :ong_admins, foreign_key: :admins_user_id
   has_many :ongs, through: :ong_admins, foreign_key: :ong_ong_id
+  has_many :bookings
 
   validates_associated :user_detail
   validates_presence_of :user_detail
