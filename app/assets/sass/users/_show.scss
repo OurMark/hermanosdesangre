@@ -283,3 +283,12 @@ ul.ong_botones {
     min-height: inherit;
   }
 }
+
+ul.booking-list li {
+  list-style: none;
+  margin-left: 20px;
+  a {
+    color: #F16B6B;
+    margin-left: 10px;
+  }
+}

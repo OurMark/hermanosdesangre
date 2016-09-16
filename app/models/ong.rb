@@ -44,6 +44,10 @@ class Ong < ActiveRecord::Base
   def has_details?
     !self.ong_detail.nil?
   end
+
+  def full_address
+    "#{self.address}, #{self.city}, #{self.addressState}"
+  end
   
   private
 

@@ -13,8 +13,9 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking =  Booking.new(params[:booking].permit(:ong_id, :start_time, :length, :dni))
-    @booking.ong = @ong
+    @booking =  Booking.new(params[:booking].permit(:ong_id, :start_time, :length, :dni, :day))
+    @booking.ong  = @ong
+    @booking.user = current_user
     if @booking.save
       redirect_to ong_bookings_path(@ong, method: :get)
     else
