@@ -2,7 +2,7 @@
     <p>
       <%= f.label 'start_time', 'Solicite su turno' %>
       <%= f.date_field :date %>
-      <%= f.time_select :start_time, { minute_step: @ong.timelapse } %>
+      <%= f.time_select :start_at, { minute_step: @ong.timelapse } %>
       
       <%= f.label :dni %>
       <%= f.text_field :dni, value: current_user.dni %>

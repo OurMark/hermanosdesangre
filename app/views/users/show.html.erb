@@ -23,10 +23,10 @@
     <% @next_bookings.each do |booking|%>
     <li>
       <strong>
-      <%= booking.day ? booking.day.strftime("%d/%m/%Y") : '-' %>
-      <%= booking.start_time.strftime("%H:%M") %>,
+      <%= booking.date ? booking.date.strftime("%d/%m/%Y") : '-' %>
+      <%= booking.start_at.strftime("%H:%M") %>,
       <%= booking.ong.name %>
-      </strong><%= link_to "Eliminar", ong_booking_path(booking.ong, booking), method: :delete, data: {confirm: "Está seguro que desea eliminar el turno #{booking.day ? booking.day.strftime('%d/%m/%Y') : '-'} #{booking.start_time.strftime('%H:%M')}, #{booking.ong.name} ?"} %>  
+      </strong><%= link_to "Eliminar", ong_booking_path(booking.ong, booking), method: :delete, data: {confirm: "Está seguro que desea eliminar el turno #{booking.date ? booking.date.strftime('%d/%m/%Y') : '-'} #{booking.start_at.strftime('%H:%M')}, #{booking.ong.name} ?"} %>  
     </li>
     <% end %>
   </ul>
@@ -37,8 +37,8 @@
     <ul class='booking-list'>
       <li>
         <strong>
-        <%= @last_booking.day ? @last_booking.day.strftime("%d/%m/%Y") : '-'%>
-        <%= @last_booking.start_time.strftime("%H:%M") %>,
+        <%= @last_booking.date ? @last_booking.date.strftime("%d/%m/%Y") : '-'%>
+        <%= @last_booking.start_at.strftime("%H:%M") %>,
         <%= @last_booking.ong.name %> 
         </strong>
       </li>
