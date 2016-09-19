@@ -1,7 +1,8 @@
 <div class="configuracion-calendario">
   <div class="margen-inferior">
     <h3>Calendario</h3>
-    <span>Configuración actual con disponibilidad: </span><span class="titulo-rosa">4 donantes por turno</span>
+    <span>Configuración actual con disponibilidad: </span>
+    <span class="titulo-rosa"><%= @beds || 0 %> donantes por turno</span>
   </div>
   <div class="semana">
     <span class="semana-anterior"><</span>
@@ -12,46 +13,16 @@
     <thead>
       <tr>
         <th></th>
-        <th class="dia"></th>
-        <th class="dia"></th>
-        <th class="dia"></th>
-        <th class="dia"></th>
-        <th class="dia"></th>
-        <th class="dia"></th>
-        <th class="dia"></th>
+        <th class="dia" data-target="#alertaDia"></th>
+        <th class="dia" data-target="#alertaDia"></th>
+        <th class="dia" data-target="#alertaDia"></th>
+        <th class="dia" data-target="#alertaDia"></th>
+        <th class="dia" data-target="#alertaDia"></th>
+        <th class="dia" data-target="#alertaDia"></th>
+        <th class="dia" data-target="#alertaDia"></th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">8.00</th>
-        <td class="habilitado"></td>
-        <td class="habilitado"></td>
-        <td class="habilitado">3<i></i></td>
-        <td class="deshabilitado"></td>
-        <td class="habilitado"></td>
-        <td class="habilitado">2<i></i></td>
-        <td class="deshabilitado"></td>
-      </tr>
-      <tr>
-        <th scope="row">8.30</th>
-        <td class="habilitado"></td>
-        <td class="habilitado"></td>
-        <td class="habilitado"></td>
-        <td class="deshabilitado"></td>
-        <td class="habilitado"></td>
-        <td class="habilitado"></td>
-        <td class="deshabilitado"></td>
-      </tr>
-      <tr>
-        <th scope="row">9.00</th>
-        <td class="habilitado completo">4<i></i></td>
-        <td class="habilitado"></td>
-        <td class="habilitado">3<i></i></td>
-        <td class="deshabilitado"></td>
-        <td class="habilitado"></td>
-        <td class="habilitado"></td>
-        <td class="deshabilitado"></td>
-      </tr>
     </tbody>
   </table>
   <div class="margen-izquierdo margen-inferior">
@@ -86,5 +57,32 @@
       </tr>
     </tbody>
   </table>
+  <div class="modal fade" id="alertaDia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title semana" id="myModalLabel">Bloquear día</h4>
+        </div>
+        <div class="modal-body titulo-rosa">
+          El día seleccionado tiene donantes ya registrados. <br><br>
+          Enviar un mensaje de cancelación automática a todos los donantes.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger btn-ok" data-dismiss="modal">Ok</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 </div>
-</div>
+
+<script type="text/javascript">
+   var inicioTurnos = '<%= @inicio_turnos %>',
+       finTurnos = '<%= @fin_turnos %>',
+       lapsoTiempo = '<%= @timelapse %>',
+       inicioTurnosDiferenciado = '<%= @inicio_turnos_diferenciado %>',
+       finTurnosDiferenciado = '<%= @fin_turnos_diferenciado %>',
+       turnosOcupados = '<%= @turnos_ocupados.to_json.html_safe %>';
+
+</script>
