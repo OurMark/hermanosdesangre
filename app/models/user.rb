@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   has_one :user_locale
   has_many :user_badges
   has_many :badges, through: :user_badges
+  has_many :bookings
+  
   accepts_nested_attributes_for :user_locale
   accepts_nested_attributes_for :user_detail
 
