@@ -1,8 +1,11 @@
 <%= form_for([@ong, @booking]) do |f| %>
     <p>
-      <%= f.label 'start_at', 'Solicite su turno' %>
-      <%= f.datetime_select :start_at, { minute_step: @ong.timelapse } %>
-      <%= f.text_field :dni %>
+      <%= f.label 'start_time', 'Solicite su turno' %>
+      <%= f.date_field :date %>
+      <%= f.time_select :start_at, { minute_step: @ong.timelapse } %>
+      
+      <%= f.label :dni %>
+      <%= f.text_field :dni, value: current_user.dni %>
     </p>
     <p><%= f.submit 'Reservar' %></p>
 <% end %>

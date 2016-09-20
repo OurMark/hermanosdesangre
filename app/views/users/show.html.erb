@@ -18,6 +18,32 @@
     </div>
   </div>
   <%= render partial: 'badges', locals: { badges: current_user.badges } %>
-  <h4 class="badgets-title"><a href="@">Próximo turno: <strong>Fecha hora, lugar</strong> - Ver todos.</a></h4>
+  <h4 class="badgets-title">Próximos turnos:</h4>
+  <ul class='booking-list'>
+    <% @next_bookings.each do |booking|%>
+    <li>
+      <strong>
+      <%= booking.date ? booking.date.strftime("%d/%m/%Y") : '-' %>
+      <%= booking.start_at.strftime("%H:%M") %>,
+      <%= booking.ong.name %>
+      </strong><%= link_to "Eliminar", ong_booking_path(booking.ong, booking), method: :delete, data: {confirm: "Está seguro que desea eliminar el turno #{booking.date ? booking.date.strftime('%d/%m/%Y') : '-'} #{booking.start_at.strftime('%H:%M')}, #{booking.ong.name} ?"} %>  
+    </li>
+    <% end %>
+  </ul>
+      
+
+  <% if @last_booking %>
+    <h4 class="badgets-title">Ultima Donacion:</h4>
+    <ul class='booking-list'>
+      <li>
+        <strong>
+        <%= @last_booking.date ? @last_booking.date.strftime("%d/%m/%Y") : '-'%>
+        <%= @last_booking.start_at.strftime("%H:%M") %>,
+        <%= @last_booking.ong.name %> 
+        </strong>
+      </li>
+    </ul>
+  <% end %>
+  
   <%= link_to "Registrar mi Banco de Sangre u ONG de donación", ong_search_path,{ :class =>"botonONG"}%>
 </div>

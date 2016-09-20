@@ -20,7 +20,7 @@ class BookingsController < ApplicationController
   end
 
   def create
-    byebug
+    #byebug
     @booking =  Booking.new(booking_params)
     @booking.user = current_user
     @booking.ong = @ong
@@ -45,7 +45,7 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id]).destroy
     if @booking.destroy
-      flash[:notice] = "Booking: #{@booking.start_time.strftime('%e %b %Y %H:%M%p')} to #{@booking.end_time.strftime('%e %b %Y %H:%M%p')} deleted"
+      flash[:notice] = "Booking was deleted."
       redirect_to ong_bookings_path(@ong)
     else
       render 'index'
