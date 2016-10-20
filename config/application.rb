@@ -19,8 +19,8 @@ module Bloodbrothers
 	config.assets.enabled = true
 
 	# Version of your assets, change this if you want to expire all your assets
-	config.assets.version = '1.0'
-    config.assets.precompile += ['style.css']
+	config.assets.version = '1.05'
+    config.assets.precompile += ['style.css','jquery-ui.min.css', 'fullcalendar.css', 'fullcalendar.print.css', 'bookings.js']
     config.action_view.field_error_proc = Proc.new { |html_tag, instance| html_tag }
   end
 end

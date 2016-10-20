@@ -25,7 +25,7 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @booking = Booking.find(params[:id])
+    @booking = Booking.find(params[:id]) if params[:id].is_a?(Integer)
   end
 
   def day_bookings
