@@ -1,3 +1,4 @@
 class OngCalendar < ActiveRecord::Base
-	belongs_to :ong
+  belongs_to :ong
+  
 end

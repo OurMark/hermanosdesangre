@@ -26,7 +26,7 @@
 /.sass-cache/
 
 # ignore everything in the "stylesheets" directory:
-/app/assets/stylesheets/*
+#/app/assets/stylesheets/*
 
 # ignore node modules
 /node_modules/

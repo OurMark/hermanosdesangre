@@ -13,10 +13,17 @@
 // Loads all Bootstrap javascripts
 //= require jquery
 //= require jquery_ujs
+//= require vendor/jquery-ui.min
+//= require vendor/jquery.popupWindow
+
 //= require bootstrap-sass/assets/javascripts/bootstrap.min
 //= require twitter/typeahead
 //= require bootstrap-datepicker/core
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.es.js
+
+//= require vendor/moment.min
+//= require vendor/fullcalendar
+//= require vendor/gcal
 //= require_tree .
 
 $(document).ready(function(){

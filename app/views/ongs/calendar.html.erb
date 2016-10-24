@@ -10,8 +10,7 @@
         <%= label_tag('days-all', 'All') %>
         <%= check_box_tag('days-all', 1, false, class: 'days-all') %>
       </div>
-      <%  @days = ['LU', 'MA', 'MI' , 'JU', 'VI', 'SA', 'DO']
-      for @each in @days %>
+      <% for @each in @days %>
       <div class="col-sm-1 col-xs-3">
         <%= label_tag('days-' + @each, @each) %>
         <%= check_box_tag(@each + '[dif]', 1, false, class: 'days-each') %>

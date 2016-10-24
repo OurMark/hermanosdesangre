@@ -1,0 +1,53 @@
+<div class="configuracion-calendario">
+  <div class="semana">
+    <span class="semana-anterior"><</span>
+    <p class="texto-semana" style="text-align:center;font-size:20px;"></p>
+    <span class="semana-posterior">></span>
+  </div>
+  <table id="calendario-form" class="tabla-calendario margen-inferior">
+    <thead>
+      <tr>
+        <th></th>
+        <th class="dia" data-target="#alertaDia"></th>
+        <th class="dia" data-target="#alertaDia"></th>
+        <th class="dia" data-target="#alertaDia"></th>
+        <th class="dia" data-target="#alertaDia"></th>
+        <th class="dia" data-target="#alertaDia"></th>
+        <th class="dia" data-target="#alertaDia"></th>
+        <th class="dia" data-target="#alertaDia"></th>
+      </tr>
+    </thead>
+    <tbody>
+    <% start_at = @ong.start_time
+       end_at   = @ong.end_time
+       time_str = start_at
+    %>
+    <% (start_at.strftime("%H").to_i..end_at.strftime("%H").to_i - 1).to_a.each do |h| %>
+      <% (0..59).step(@timelapse).to_a.each do |m| %>
+        <tr>
+          <td></td>
+          <% 7.times do |i|%>
+            <td class="#{disponibilidad(@turnos_ocupados, time_str)}"><%= link_to time_str.strftime("%H:%M"), '#add-booking', data: {date: '', time: time_str}, class: 'add-booking' %></td>
+          <% end %>
+        </tr>
+        <% time_str = time_str + @timelapse.minutes %>
+      <% end %>
+    <% end %>
+    
+    </tbody>
+  </table>
+  <div class="margen-izquierdo margen-inferior">
+    <div>
+      <div class="cuadrado habilitado"></div>
+      <span class="opciones-calendario">Turnos disponibles</span>
+    </div>
+    <div>
+      <div class="cuadrado deshabilitado"></div>
+      <span class="opciones-calendario">Turnos bloqueados</span>
+    </div>
+    <div>
+      <div class="cuadrado completo"></div>
+      <span class="opciones-calendario">Turnos ocupados</span>
+    </div>
+  </div>
+</div>
