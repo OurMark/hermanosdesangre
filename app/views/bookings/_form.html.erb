@@ -1,11 +1,25 @@
-<%= form_for([@ong, @booking]) do |f| %>
-    <p>
-      <%= f.label 'start_time', 'Solicite su turno' %>
-      <%= f.date_field :date %>
-      <%= f.time_select :start_at, { minute_step: @ong.timelapse } %>
-      
-      <%= f.label :dni %>
-      <%= f.text_field :dni, value: current_user.dni %>
-    </p>
-    <p><%= f.submit 'Reservar' %></p>
-<% end %>
+<div id="calendar"></div>
+
+<div id="add_turn" style="display:none;">
+  <div id="time_for_turn"></div>
+  <%= form_for Booking.new, :url => {:controller => 'bookings', :action => 'create'} do |f|%>
+    
+    <%= f.hidden_field :date  %>
+    <%= f.hidden_field :length , value: @ong.timelapse %>
+    <%= f.time_field :start_at, step: @ong.timelapse %>
+    <%= f.label :dni %>
+    <%= f.text_field :dni, value: current_user.dni %>
+
+    <div class="dialog-actions">
+      <%= f.submit 'Reservar'%> o <%= link_to "Cancelar", '#', :onclick => "$('#add_turn').dialog('close');"%>
+    </div>
+  <% end %>
+</div>
+
+<div style="visibility:none;">
+  <% @bookings.each do |t| %>
+    <span class="event" data_date_start="<%= t.date_start %>" data_user="<%= t.user.full_name %>" data_ong="<%= t.ong.name %>" data_date_end="<%= t.date_end %>"></span>
+  <% end%>
+</div>
+
+<br/>

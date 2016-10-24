@@ -50,4 +50,8 @@ class User < ActiveRecord::Base
   def bloodtype
     self.user_detail.bloodtype
   end
+
+  def full_name
+    "#{self.name} #{self.surname}"
+  end
 end

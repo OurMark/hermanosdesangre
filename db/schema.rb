@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20160629001958) do
     t.integer "daysOfEvent"
   end
 
-  add_index "Classfield_daysOfEvent", ["Classfield_classfield_id"], name: "FKE372E48FC992F60B", using: :btree
+  add_index "classfield_daysofevent", ["Classfield_classfield_id"], name: "FKE372E48FC992F60B", using: :btree
 
   create_table "Layout", primary_key: "layout_id", force: true do |t|
     t.string "description"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20160629001958) do
     t.string  "roles"
   end
 
-  add_index "OMUser_roles", ["OMUser_user_id"], name: "FK12B041C7B1CCEB0", using: :btree
+  add_index "omuser_roles", ["OMUser_user_id"], name: "FK12B041C7B1CCEB0", using: :btree
 
   create_table "OngApprovalHistory", primary_key: "history_id", force: true do |t|
     t.text    "additionalHistoryInformation", limit: 2147483647
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20160629001958) do
     t.integer "processing_admin_id",          limit: 8,          null: false
   end
 
-  add_index "OngApprovalHistory", ["processing_admin_id"], name: "FK40483D693AEDD7EE", using: :btree
+  add_index "ongapprovalhistory", ["processing_admin_id"], name: "FK40483D693AEDD7EE", using: :btree
 
   create_table "Template", primary_key: "template_id", force: true do |t|
     t.string  "state"
@@ -53,9 +53,9 @@ ActiveRecord::Schema.define(version: 20160629001958) do
     t.integer "topic_id",  limit: 8
   end
 
-  add_index "Template", ["layout_id"], name: "FKB515309AE61D6308", using: :btree
-  add_index "Template", ["ong_id"], name: "FKB515309A35AA59EC", using: :btree
-  add_index "Template", ["topic_id"], name: "FKB515309AC0F48C0C", using: :btree
+  add_index "template", ["layout_id"], name: "FKB515309AE61D6308", using: :btree
+  add_index "template", ["ong_id"], name: "FKB515309A35AA59EC", using: :btree
+  add_index "template", ["topic_id"], name: "FKB515309AC0F48C0C", using: :btree
 
   create_table "alert", primary_key: "config_id", force: true do |t|
     t.integer "alert"

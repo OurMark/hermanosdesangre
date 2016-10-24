@@ -4,19 +4,12 @@ class BookingsController < ApplicationController
   layout 'myaccount', only: [:index]
 
   def index
-    @month = params[:month] || Time.now.month
-    @year = params[:year] || Time.now.year
-    @beds = @ong.ong_detail.beds
-    @timelapse = @ong.ong_detail.timelapse
-    @inicio_turnos = OngCalendar.where(ong_id: @ong.ong_id).pluck(:day, :start_time)
-    @fin_turnos = OngCalendar.where(ong_id: @ong.ong_id).pluck(:day,:end_time)
-    @inicio_turnos_diferenciado = OngCalendar.where(ong_id: @ong.ong_id).pluck(:day,:start_time_differential)
-    @fin_turnos_diferenciado = OngCalendar.where(ong_id: @ong.ong_id).pluck(:day,:end_time_differental)
-    @turnos_ocupados = Booking.where(ong_id: @ong.ong_id)
+    calendar_vars
   end
 
   def new
     @booking = Booking.new(ong_id: @ong.id, start_at: params[:hour])
+    @bookings = @ong.bookings
   end
 
   def create
@@ -32,7 +25,7 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @booking = Booking.find(params[:id])
+    @booking = Booking.find(params[:id]) if params[:id].is_a?(Integer)
   end
 
   def day_bookings
@@ -93,6 +86,18 @@ class BookingsController < ApplicationController
 
   def booking_params
     params[:booking].permit(:ong_id, :length, :dni, :date, :start_at)
+  end
+
+  def calendar_vars
+    @month = params[:month] || Time.now.month
+    @year = params[:year] || Time.now.year
+    @beds = @ong.beds
+    @timelapse = @ong.timelapse
+    @inicio_turnos = OngCalendar.where(ong_id: @ong.ong_id).pluck(:day, :start_time)
+    @fin_turnos = OngCalendar.where(ong_id: @ong.ong_id).pluck(:day,:end_time)
+    @inicio_turnos_diferenciado = OngCalendar.where(ong_id: @ong.ong_id).pluck(:day,:start_time_differential)
+    @fin_turnos_diferenciado = OngCalendar.where(ong_id: @ong.ong_id).pluck(:day,:end_time_differental)
+    @turnos_ocupados = @ong.bookings
   end
 
 end

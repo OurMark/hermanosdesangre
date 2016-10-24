@@ -95,7 +95,7 @@ class OngsController < ApplicationController
   def calendar
     @ong = Ong.find(params[:ong_id])
     @ong_calendar = @ong.ong_calendars
-    @days = ['ALL', 'LU', 'MA', 'MI' , 'JU', 'VI', 'SA', 'DO']
+    @days = ['LU', 'MA', 'MI' , 'JU', 'VI', 'SA', 'DO']
     @intervalo_horario = []
     (00..23).each do |hour|
       ['00', '30'].each do |minutes|
